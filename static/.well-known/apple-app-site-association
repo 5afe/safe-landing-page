@@ -1,0 +1,23 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "ZKG876RKJ8.io.gnosis.safe",
+                "paths": ["/walletconnect", "/walletconnect/*"]
+            },
+            {
+                "appID": "ZKG876RKJ8.io.gnosis.safe.dev",
+                "paths": ["/walletconnect", "/walletconnect/*"]
+            },
+            {
+                "appID": "ZKG876RKJ8.io.gnosis.safe.adhoc",
+                "paths": ["/walletconnect", "/walletconnect/*"]
+            },
+            {
+                "appID": "ZKG876RKJ8.io.gnosis.safe.prerelease",
+                "paths": ["/walletconnect", "/walletconnect/*"]
+            }
+        ]
+    }
+}

@@ -1,9 +1,12 @@
 import { createGlobalStyle } from 'styled-components'
+import reset from 'styled-reset'
 
-export default createGlobalStyle`
-  body{
-    -webkit-font-smoothing: antialiased;
-    margin: 0;
-    background: #FBFBFB; 
+const GlobalStyles = createGlobalStyle`
+  ${reset}
+
+  body {
+    font-family: Averta, sans-serif;
   }
 `
+
+export default GlobalStyles

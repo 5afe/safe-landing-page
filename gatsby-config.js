@@ -2,14 +2,14 @@ const path = require('path')
 
 module.exports = {
   siteMetadata: {
-    site: `Gnonce-starter`,
-    title: `Gatsby Starter Gnonce`,
-    titleTemplate: `%s - Gnonce`,
-    description: `Gatsby + Typescript + Styled Components = 💖`,
-    siteUrl: `https://gatsby-starter-gnonce.netlify.com/`,
+    site: `Gnosis-safe`,
+    title: `Gnosis Safe`,
+    titleTemplate: `%s - Gnosis Safe`,
+    description: `The Gnosis Safe aims to provide all users with a convenient, yet secure way to manage their funds and interact with decentralized applications on Ethereum.`,
+    siteUrl: `https://gnosis-safe.io`,
     language: `en`,
     color: `#003580`,
-    twitter: 'gnonce',
+    twitter: 'gnosisSafe',
   },
   plugins: [
     {
@@ -20,16 +20,11 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-react-svg',
       options: {
-        name: `Gnonce`,
-        short_name: `Gnonce`,
-        start_url: `/`,
-        background_color: `#003580`,
-        theme_color: `#003580`,
-        display: `standalone`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
-        include_favicon: true, // Include favicon
+        rule: {
+          include: /assets/,
+        },
       },
     },
     `gatsby-plugin-sitemap`,
@@ -38,6 +33,5 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-offline`,
   ],
 }
