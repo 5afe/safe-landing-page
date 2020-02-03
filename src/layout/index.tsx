@@ -3,8 +3,8 @@ import styled, { ThemeProvider } from 'styled-components'
 
 import theme from '../styles/theme'
 import GlobalStyles from '../styles/globalStyles'
+import Head from '../components/Layout/Head'
 
-import Head from '../components/Head'
 
 interface ILayoutProps {
   children: any
