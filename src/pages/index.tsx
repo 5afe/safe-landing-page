@@ -1,9 +1,7 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-
-// Layout
-import Layout from '../layout/index'
+import Layout from '../components/Layout'
 
 // Components
 import Image from '../components/Image'

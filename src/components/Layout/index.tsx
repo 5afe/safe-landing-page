@@ -5,7 +5,6 @@ import theme from '../styles/theme'
 import GlobalStyles from '../styles/globalStyles'
 import Head from '../components/Layout/Head'
 
-
 interface ILayoutProps {
   children: any
   location: {
@@ -17,7 +16,7 @@ const Wrapper = styled.div`
   display: flex;
 `
 
-export default ({ children, location }: ILayoutProps) => {
+const Layout: React.FC<ILayoutProps> = ({ children, location }) => {
   return (
     <Wrapper>
       <GlobalStyles />
@@ -26,3 +25,5 @@ export default ({ children, location }: ILayoutProps) => {
     </Wrapper>
   )
 }
+
+export default Layout
