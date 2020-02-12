@@ -1,9 +1,8 @@
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
-
-import theme from '../styles/theme'
-import GlobalStyles from '../styles/globalStyles'
-import Head from '../components/Layout/Head'
+import Head from './Head'
+import theme from '../../styles/theme'
+import GlobalStyles from '../../styles/globalStyles'
 
 interface ILayoutProps {
   children: any

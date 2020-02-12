@@ -1,12 +1,7 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-
-// Layout
-import Layout from '../layout/index'
-
-// Components
-import Image from '../components/Image'
+import Layout from '../components/Layout'
 import Heading from '../components/Heading'
 
 interface IndexPageProps {
@@ -44,7 +39,6 @@ export default ({ data, location }: IndexPageProps) => {
   return (
     <Layout location={location}>
       <Wrapper>
-        <Image img={image.childImageSharp} />
         <Heading
           title="404 Page not found!"
           subtitle={site.siteMetadata.description}
@@ -53,17 +47,3 @@ export default ({ data, location }: IndexPageProps) => {
     </Layout>
   )
 }
-
-export const NotFoundQuery = graphql`
-  query NotFoundPageQuery {
-    image: file(relativePath: { eq: "icon.png" }) {
-      ...fluidImage
-    }
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-  }
-`
