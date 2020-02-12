@@ -1,7 +1,9 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import ButtonLink from '../../ui/ButtonLink'
 import Divider from './Divider'
 import Spacer from './Spacer'
+import Link from '../../ui/Link'
 import Logo from '../../../assets/multisig-logo.svg'
 
 const HeaderItemPadding = css`
@@ -35,7 +37,7 @@ const NavListItem = styled.li`
   ${HeaderItemPadding}
 `
 
-const NavLink = styled.a``
+const NavLink = styled(Link)``
 
 const SLogo = styled(Logo)`
   height: 40px;
@@ -52,9 +54,14 @@ const Header: React.FC<{}> = () => {
       <NavContainer>
         <NavList>
           <Divider />
-          <NavListItem>Security</NavListItem>
+          <NavListItem>
+            <Link to="/security">Security</Link>
+          </NavListItem>
           <Divider />
-          <NavListItem>NavLink</NavListItem>
+          <NavListItem>
+            <ButtonLink url="/gnosis-safe.io">Open App</ButtonLink>
+          </NavListItem>
+          <Divider />
         </NavList>
       </NavContainer>
     </Container>
