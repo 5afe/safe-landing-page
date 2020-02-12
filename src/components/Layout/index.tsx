@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
-import Head from './Head'
+import HTMLHead from './HTMLHead'
 import theme from '../../styles/theme'
 import GlobalStyles from '../../styles/globalStyles'
 
@@ -19,7 +19,7 @@ const Layout: React.FC<ILayoutProps> = ({ children, location }) => {
   return (
     <Wrapper>
       <GlobalStyles />
-      <Head pathname={location.pathname} />
+      <HTMLHead pathname={location.pathname} />
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </Wrapper>
   )
