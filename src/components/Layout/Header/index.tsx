@@ -1,4 +1,5 @@
 import React from 'react'
+import Headroom from 'react-headroom'
 import styled, { css } from 'styled-components'
 import ButtonLink from '../../ui/ButtonLink'
 import Divider from './Divider'
@@ -17,7 +18,7 @@ const Container = styled.header`
   width: 100%;
   height: 56px;
   box-shadow: 3px 4px 14px 0 rgba(0, 0, 0, 0.15);
-  border: ${p => `solid 1px ${p.theme.palette.greyGreen}`};
+  border-bottom: ${p => `solid 1px ${p.theme.palette.greyGreen}`};
   background-color: ${p => p.theme.palette.pink};
 `
 
@@ -45,8 +46,8 @@ const SLogo = styled(Logo)`
   ${HeaderItemPadding}
 `
 
-const Header: React.FC<{}> = () => {
-  return (
+const Header: React.FC<{}> = () => (
+  <Headroom>
     <Container>
       <SLogo />
       <Divider />
@@ -65,7 +66,7 @@ const Header: React.FC<{}> = () => {
         </NavList>
       </NavContainer>
     </Container>
-  )
-}
+  </Headroom>
+)
 
 export default Header
