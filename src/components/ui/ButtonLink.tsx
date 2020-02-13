@@ -75,6 +75,15 @@ const colorsCSS = css`
 
     return p.theme.palette.pink
   }};
+  box-shadow: ${(p: BtnLinkProps) => {
+    const { colorScheme } = p
+
+    if (colorScheme === 'white') {
+      return '1px 2px 10px 0 rgba(40, 54, 61, 0.18)'
+    }
+
+    return '1px 2px 10px 0 rgba(212, 212, 211, 0.59)'
+  }};
 `
 
 const SButtonLink = styled(ButtonLink)`
@@ -84,7 +93,6 @@ const SButtonLink = styled(ButtonLink)`
   border-radius: 8px;
   text-decoration: none;
   white-space: nowrap;
-  box-shadow: 1px 2px 10px 0 rgba(212, 212, 211, 0.59);
 
   &:hover {
     background-color: ${p => p.theme.palette.pink};

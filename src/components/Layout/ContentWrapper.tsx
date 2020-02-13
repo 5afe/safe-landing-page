@@ -6,6 +6,7 @@ const SWrapper = styled.div`
 
   @media screen and (max-width: 840px) {
     max-width: 630px;
+    padding: 0 10px;
   }
   @media screen and (max-width: 767px) {
     padding: 0 23px;
