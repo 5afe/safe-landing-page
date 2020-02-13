@@ -16,10 +16,7 @@ const Wrapper = styled.div`
 export default () => {
   return (
     <Layout location={location}>
-      <Wrapper>
-        <MainSection />
-      </Wrapper>
+      <MainSection />
     </Layout>
   )
 }
-

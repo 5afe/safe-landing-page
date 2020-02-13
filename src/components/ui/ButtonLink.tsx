@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 import styled, { css } from 'styled-components'
+import { ITheme } from '../../styles/theme'
 
 interface ELProps {
   to: string
@@ -20,14 +21,16 @@ const ExternalLink: React.FC<ELProps> = ({
   </a>
 )
 
-interface Props {
+interface BtnLinkProps {
   url: string
   children: React.ReactNode
   target?: string
   className?: string
+  colorScheme?: ColorScheme
+  theme: ITheme
 }
 
-const ButtonLink: React.FC<Props> = ({
+const ButtonLink: React.FC<BtnLinkProps> = ({
   url,
   children,
   target = '_blank',
@@ -43,9 +46,40 @@ const ButtonLink: React.FC<Props> = ({
   )
 }
 
+type ColorScheme = 'navy' | 'green' | 'white'
+
+const colorsCSS = css`
+  background-color: ${(p: BtnLinkProps) => {
+    const { colorScheme } = p
+
+    if (colorScheme === 'navy') {
+      return p.theme.palette.navy
+    }
+
+    if (colorScheme === 'white') {
+      return p.theme.palette.pink
+    }
+
+    return p.theme.palette.primary
+  }};
+  color: ${(p: BtnLinkProps) => {
+    const { colorScheme } = p
+
+    if (colorScheme === 'navy') {
+      return p.theme.palette.pink
+    }
+
+    if (colorScheme === 'white') {
+      return p.theme.palette.navy
+    }
+
+    return p.theme.palette.pink
+  }};
+`
+
 const SButtonLink = styled(ButtonLink)`
-  background-color: ${p => p.theme.palette.primary};
-  color: ${p => p.theme.palette.pink};
+  ${colorsCSS}
+
   padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
@@ -55,7 +89,7 @@ const SButtonLink = styled(ButtonLink)`
   &:hover {
     background-color: ${p => p.theme.palette.pink};
     color: ${p => p.theme.palette.navy};
-  } 
+  }
 `
 
 export default SButtonLink

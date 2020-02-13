@@ -34,10 +34,12 @@
     "react-headroom": "^3.0.0",
     "react-helmet": "^5.2.1",
     "styled-components": "5.0.1",
+    "styled-normalize": "^8.0.7",
     "styled-reset": "^4.1.0",
     "typescript": "^3.7.4"
   },
   "devDependencies": {
+    "@types/react-headroom": "^2.2.1",
     "prettier": "^1.19.1",
     "tslint": "6.0.0",
     "tslint-config-airbnb": "^5.11.2",

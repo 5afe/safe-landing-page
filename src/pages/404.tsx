@@ -2,7 +2,7 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Layout from '../components/Layout'
-import Heading from '../components/Heading'
+import Heading from '../components/ui/Heading'
 
 interface IndexPageProps {
   location: {
@@ -39,10 +39,7 @@ export default ({ data, location }: IndexPageProps) => {
   return (
     <Layout location={location}>
       <Wrapper>
-        <Heading
-          title="404 Page not found!"
-          subtitle={site.siteMetadata.description}
-        />
+        <Heading>404 Page not found!</Heading>
       </Wrapper>
     </Layout>
   )
