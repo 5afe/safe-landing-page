@@ -38,6 +38,7 @@ const LCol = styled.div`
 const RCol = styled.div`
   flex-basis: 42%;
   width: 100%;
+  position: relative;
 `
 
 const SImg = styled(Img)`
@@ -45,11 +46,26 @@ const SImg = styled(Img)`
   box-shadow: 3px 4px 14px 0 rgba(0, 0, 0, 0.15);
 `
 
+const Screenshot2Container = styled.div`
+  position: absolute;
+  top: -63%;
+  right: -20%;
+  width: 100%;
+  z-index: -1;
+`
+
 const MainSection = () => (
   <StaticQuery
     query={graphql`
       query {
         screenshot1: file(relativePath: { eq: "screenshot-1.png" }) {
+          childImageSharp {
+            fluid(quality: 100, maxWidth: 600) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        screenshot2: file(relativePath: { eq: "screenshot-2.png" }) {
           childImageSharp {
             fluid(quality: 100, maxWidth: 600) {
               ...GatsbyImageSharpFluid_withWebp
@@ -77,6 +93,9 @@ const MainSection = () => (
           </LCol>
           <RCol>
             <SImg fluid={data.screenshot1.childImageSharp.fluid} />
+            <Screenshot2Container>
+              <SImg fluid={data.screenshot2.childImageSharp.fluid} />
+            </Screenshot2Container>
           </RCol>
         </SWrapper>
       </Container>
