@@ -32,11 +32,19 @@ const SHeading = styled.h3`
 
 const SForm = styled.form`
   display: flex;
+  position: relative;
 `
 
 const SInput = styled(Input)`
   width: 100%;
   margin-right: 50px;
+`
+
+const SMsg = styled.p`
+  position: absolute;
+  top: 120%;
+  max-width: 250px;
+  min-height: 50px;
 `
 
 const GetNotified = () => {
@@ -88,6 +96,7 @@ const GetNotified = () => {
           <Button colorScheme="white" type="submit">
             Sign up
           </Button>
+          {msg && <SMsg>{msg}</SMsg>}
         </SForm>
       </RCol>
     </Row>

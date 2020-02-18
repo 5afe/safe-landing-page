@@ -51,6 +51,7 @@ const SButton = styled.button<BtnProps>`
 
   padding: 10px 20px;
   border-radius: 8px;
+  font-size: 16px;
   text-decoration: none;
   white-space: nowrap;
 
