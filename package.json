@@ -13,14 +13,14 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
-    "@types/react": "^16.9.17",
+    "@types/react": "16.9.20",
     "@types/react-dom": "^16.9.4",
     "@types/react-helmet": "^5.0.14",
     "@types/styled-components": "4.4.3",
     "babel-plugin-styled-components": "^1.10.6",
-    "gatsby": "2.19.17",
+    "gatsby": "2.19.18",
     "gatsby-image": "2.2.41",
-    "gatsby-plugin-client-side-redirect": "^0.0.2",
+    "gatsby-plugin-client-side-redirect": "1.0.0",
     "gatsby-plugin-react-helmet": "^3.1.18",
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sharp": "^2.3.10",
