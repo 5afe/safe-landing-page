@@ -2,10 +2,19 @@ import React from 'react'
 import styled from 'styled-components'
 import Testimonial from './Testimonial'
 import ContentWrapper from '../../Layout/ContentWrapper'
+import BgGraySVG from '../../../assets/bg-gray.svg'
 
 const SectionContainer = styled.section`
   padding: 240px 0 279px;
   color: ${p => p.theme.palette.bgPrimary};
+  position: relative;
+`
+
+const SBgSVG = styled(BgGraySVG)`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
 `
 
 const SectionHeading = styled.h3`
@@ -96,6 +105,7 @@ const Testimonials = () => {
           </STestimonial3>
         </TestimonialsContainer>
       </ContentWrapper>
+      <SBgSVG />
     </SectionContainer>
   )
 }
