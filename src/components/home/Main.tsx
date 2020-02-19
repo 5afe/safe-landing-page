@@ -7,7 +7,7 @@ import Heading from '../ui/Heading'
 import ButtonLink from '../ui/ButtonLink'
 import LinesSVG from '../../assets/lines.svg'
 
-const Container = styled.div`
+const Container = styled.main`
   height: calc(100vh - 56px);
   position: relative;
 `

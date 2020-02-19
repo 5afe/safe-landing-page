@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import MainSection from '../components/home/Main'
 import TrustedBy from '../components/home/TrustedBy'
 import Features from '../components/home/Features'
+import Testimonials from '../components/home/Testimonials'
 
 const Wrapper = styled.div`
   width: 100%;
@@ -21,6 +22,7 @@ export default () => {
       <MainSection />
       <TrustedBy />
       <Features />
+      <Testimonials />
     </Layout>
   )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import ContentWrapper from '../Layout/ContentWrapper'
 
-const Container = styled.div`
+const Container = styled.section`
   padding-top: 50px;
   padding-bottom: 315px;
 `
