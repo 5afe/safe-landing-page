@@ -36,6 +36,7 @@ const TestimonialContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 1px 2px 10px 0 rgba(212, 212, 211, 0.59);
 
   padding: 13px;
   border-radius: 4px;

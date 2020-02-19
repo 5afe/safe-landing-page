@@ -5,8 +5,7 @@ import ContentWrapper from '../../Layout/ContentWrapper'
 import BgGraySVG from '../../../assets/bg-gray.svg'
 
 const SectionContainer = styled.section`
-  padding: 240px 0 279px;
-  color: ${p => p.theme.palette.bgPrimary};
+  padding: 240px 0 144px;
   position: relative;
 `
 
@@ -50,64 +49,56 @@ const STestimonial3 = styled(Testimonial)`
   grid-row-end: 4;
 `
 
-const Testimonials = () => {
-  return (
-    <SectionContainer>
-      <ContentWrapper>
-        <TestimonialsContainer>
-          <SectionHeading>Testimonials</SectionHeading>
-          <Testimonial author="Jacques-Yves Cousteau" colorScheme="white">
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim.”
-          </Testimonial>
-          <Testimonial author="Jacques-Yves Cousteau" colorScheme="navy">
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim.”
-          </Testimonial>
-          <Testimonial author="Jacques-Yves Cousteau">
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim.”
-          </Testimonial>
-          <Testimonial author="Jacques-Yves Cousteau">
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim.”
-          </Testimonial>
-          <Testimonial author="Jacques-Yves Cousteau" colorScheme="white">
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim.”
-          </Testimonial>
-          <STestimonial1 author="Jacques-Yves Cousteau" colorScheme="white">
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim.”“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim.”“Lorem ipsum dolor sit amet,
-          </STestimonial1>
-          <STestimonial2 author="Jacques-Yves Cousteau" colorScheme="navy">
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim.”“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim.”
-          </STestimonial2>
-          <STestimonial3 author="Jacques-Yves Cousteau" colorScheme="white">
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim.”“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim.”“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-            do eiusmod
-          </STestimonial3>
-        </TestimonialsContainer>
-      </ContentWrapper>
-      <SBgSVG />
-    </SectionContainer>
-  )
-}
+const Testimonials = () => (
+  <SectionContainer>
+    <ContentWrapper>
+      <TestimonialsContainer>
+        <SectionHeading>Testimonials</SectionHeading>
+        <Testimonial author="Jacques-Yves Cousteau" colorScheme="white">
+          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim.”
+        </Testimonial>
+        <Testimonial author="Jacques-Yves Cousteau" colorScheme="navy">
+          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim.”
+        </Testimonial>
+        <Testimonial author="Jacques-Yves Cousteau">
+          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim.”
+        </Testimonial>
+        <Testimonial author="Jacques-Yves Cousteau">
+          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim.”
+        </Testimonial>
+        <Testimonial author="Jacques-Yves Cousteau" colorScheme="white">
+          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim.”
+        </Testimonial>
+        <STestimonial1 author="Jacques-Yves Cousteau" colorScheme="white">
+          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim.”“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim.”“Lorem ipsum dolor sit amet,
+        </STestimonial1>
+        <STestimonial2 author="Jacques-Yves Cousteau" colorScheme="navy">
+          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim.”“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim.”
+        </STestimonial2>
+        <STestimonial3 author="Jacques-Yves Cousteau" colorScheme="white">
+          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim.”“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim.”“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod
+        </STestimonial3>
+      </TestimonialsContainer>
+    </ContentWrapper>
+    <SBgSVG />
+  </SectionContainer>
+)
 
 export default Testimonials
