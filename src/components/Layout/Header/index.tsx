@@ -74,7 +74,6 @@ const Header: React.FC<{}> = () => (
           <NavListItem>
             <ButtonLink url="/gnosis-safe.io">Open App</ButtonLink>
           </NavListItem>
-          <Divider />
         </NavList>
       </NavContainer>
     </Container>
