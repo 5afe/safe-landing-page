@@ -1,0 +1,88 @@
+import React from 'react'
+import styled from 'styled-components'
+import ContentWrapper from '../Layout/ContentWrapper'
+import Heading from '../ui/Heading'
+import ButtonLink from '../ui/ButtonLink'
+import LinesSVG from '../../assets/lines.svg'
+
+const Container = styled.div`
+  height: calc(100vh - 56px);
+  position: relative;
+  background-color: ${p => p.theme.palette.greyBackground};
+`
+
+const SWrapper = styled(ContentWrapper)`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+`
+
+const SHeading = styled(Heading)`
+  margin-bottom: 30px;
+`
+const Text = styled.p`
+  font-size: 25px;
+  line-height: normal;
+  letter-spacing: 0.56px;
+  color: ${p => p.theme.palette.navy};
+`
+
+const LCol = styled.div`
+  flex-basis: 32%;
+  flex-direction: column;
+  height: 300px;
+`
+
+const RCol = styled.div`
+  flex-basis: 55%;
+  position: relative;
+  height: 300px;
+`
+
+const UsdWorthValue = styled.div`
+  height: 132px;
+  font-size: 115px;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 2.56px;
+  text-align: center;
+  border: 2px solid ${p => p.theme.palette.primary};
+  border-radius: 5px;
+  color: ${p => p.theme.palette.primary};
+  margin-bottom: 42px;
+`
+
+const UsdWorthNotes = styled.p`
+  height: 60px;
+  font-size: 25px;
+  color: ${p => p.theme.palette.primary};
+  letter-spacing: -0.24px;
+  height: auto;
+  margin-bottom: 10px;
+`
+
+const UsdWorthDate = styled.p`
+  height: 19px;
+  font-size: 15px;
+  color: ${p => p.theme.palette.primary};
+  letter-spacing: -0.15px;
+`
+
+const MainSection = () => (
+  <Container>
+    <SWrapper>
+      <LCol>
+        <SHeading>A new standard for smart contract security</SHeading>
+        <Text>How we make sure your funds are safe</Text>
+      </LCol>
+      <RCol>
+        <UsdWorthValue>10 460 020</UsdWorthValue>
+        <UsdWorthNotes>USD worth of digital assets securely stored in Gnosis Safes</UsdWorthNotes>
+        <UsdWorthDate>(as of feb 8TH 2020)</UsdWorthDate>
+      </RCol>
+    </SWrapper>
+  </Container>
+)
+
+export default MainSection

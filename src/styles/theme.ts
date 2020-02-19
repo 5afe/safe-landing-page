@@ -7,6 +7,7 @@ export interface ITheme {
     navy: string
     greyGreen: string
     lightGrey: string
+    greyBackground: string
   }
   spacing: {
     unit: number
@@ -21,7 +22,8 @@ const mainTheme = {
     pink: '#f7f5f5',
     navy: '#001428',
     greyGreen: '#b3b5b3',
-    lightGrey: '#d4d5d3'
+    lightGrey: '#d4d5d3',
+    greyBackground: '#f4f4f4'
   },
   spacing: {
     unit: 8,
