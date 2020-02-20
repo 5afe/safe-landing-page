@@ -23,7 +23,7 @@ const mainTheme = {
     navy: '#001428',
     greyGreen: '#b3b5b3',
     lightGrey: '#d4d5d3',
-    greyBackground: '#f4f4f4'
+    greyBackground: '#f4f4f4',
   },
   spacing: {
     unit: 8,

@@ -78,7 +78,9 @@ const MainSection = () => (
       </LCol>
       <RCol>
         <UsdWorthValue>10 460 020</UsdWorthValue>
-        <UsdWorthNotes>USD worth of digital assets securely stored in Gnosis Safes</UsdWorthNotes>
+        <UsdWorthNotes>
+          USD worth of digital assets securely stored in Gnosis Safes
+        </UsdWorthNotes>
         <UsdWorthDate>(as of feb 8TH 2020)</UsdWorthDate>
       </RCol>
     </SWrapper>
