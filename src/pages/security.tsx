@@ -4,6 +4,9 @@ import Layout from '../components/Layout'
 import MainSection from '../components/security/Main'
 import Description from '../components/security/Description'
 import FormallyVerified from '../components/security/FormallyVerified'
+import Insurance from '../components/security/Insurance'
+import Audits from '../components/security/Audits'
+import BugBounty from '../components/security/BugBounty'
 
 const Wrapper = styled.div`
   width: 100%;
@@ -21,6 +24,9 @@ export default () => {
       <MainSection />
       <Description />
       <FormallyVerified />
+      <Audits />
+      <Insurance />
+      <BugBounty />
     </Layout>
   )
 }
