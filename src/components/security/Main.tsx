@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import ContentWrapper from '../Layout/ContentWrapper'
 import Heading from '../ui/Heading'
 import ButtonLink from '../ui/ButtonLink'
-import LinesSVG from '../../assets/lines.svg'
 
 const Container = styled.div`
   height: calc(100vh - 56px);
   position: relative;
   background-color: ${p => p.theme.palette.greyBackground};
+  color: ${p => p.theme.palette.navy};
 `
 
 const SWrapper = styled(ContentWrapper)`
@@ -21,11 +21,11 @@ const SWrapper = styled(ContentWrapper)`
 const SHeading = styled(Heading)`
   margin-bottom: 30px;
 `
+
 const Text = styled.p`
   font-size: 25px;
   line-height: normal;
   letter-spacing: 0.56px;
-  color: ${p => p.theme.palette.navy};
 `
 
 const LCol = styled.div`
@@ -38,6 +38,7 @@ const RCol = styled.div`
   flex-basis: 55%;
   position: relative;
   height: 300px;
+  color: ${p => p.theme.palette.primary};
 `
 
 const UsdWorthValue = styled.div`
@@ -47,16 +48,14 @@ const UsdWorthValue = styled.div`
   line-height: normal;
   letter-spacing: 2.56px;
   text-align: center;
-  border: 2px solid ${p => p.theme.palette.primary};
   border-radius: 5px;
-  color: ${p => p.theme.palette.primary};
   margin-bottom: 42px;
+  border: 2px solid ${p => p.theme.palette.primary};
 `
 
 const UsdWorthNotes = styled.p`
   height: 60px;
   font-size: 25px;
-  color: ${p => p.theme.palette.primary};
   letter-spacing: -0.24px;
   height: auto;
   margin-bottom: 10px;
@@ -65,7 +64,6 @@ const UsdWorthNotes = styled.p`
 const UsdWorthDate = styled.p`
   height: 19px;
   font-size: 15px;
-  color: ${p => p.theme.palette.primary};
   letter-spacing: -0.15px;
 `
 

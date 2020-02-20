@@ -18,7 +18,6 @@ const SImg = styled(Img)`
 `
 
 const Container = styled.div`
-  padding: 112px 0;
   background-color: ${p => p.theme.palette.greyBackground};
 `
 
@@ -36,7 +35,7 @@ const LCol = styled.div`
 `
 
 const RCol = styled.div`
-  max-width: 880px;
+  flex-basis: 72.5%;
 `
 
 const SubCol = styled.p`
