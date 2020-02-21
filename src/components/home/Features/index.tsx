@@ -15,7 +15,7 @@ const SFeature = styled(Feature)`
   margin-bottom: 47px;
 `
 
-const Container = styled.div`
+const Container = styled.section`
   padding: 112px 0;
   background-color: rgba(0, 140, 115, 0.88);
 `

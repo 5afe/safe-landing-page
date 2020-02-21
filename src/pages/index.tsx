@@ -1,19 +1,10 @@
 import * as React from 'react'
-import styled from 'styled-components'
 import Layout from '../components/Layout'
 import MainSection from '../components/home/Main'
 import TrustedBy from '../components/home/TrustedBy'
 import Features from '../components/home/Features'
-
-const Wrapper = styled.div`
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: ${p => p.theme.spacing.unit * 3}px;
-`
+import Testimonials from '../components/home/Testimonials'
+import MultisigMobile from '../components/home/MultisigMobile'
 
 export default () => {
   return (
@@ -21,6 +12,8 @@ export default () => {
       <MainSection />
       <TrustedBy />
       <Features />
+      <Testimonials />
+      <MultisigMobile />
     </Layout>
   )
 }

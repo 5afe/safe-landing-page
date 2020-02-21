@@ -7,6 +7,10 @@ import Input from '../../ui/Input'
 const Row = styled.div`
   display: flex;
   height: 100%;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 const Container = styled.div`
