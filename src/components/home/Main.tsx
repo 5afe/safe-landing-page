@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import ContentWrapper from '../Layout/ContentWrapper'
 import Heading from '../ui/Heading'
 import ButtonLink from '../ui/ButtonLink'
-import LinesSVG from '../../assets/lines.svg'
+import LinesSVG from '../../assets/lines2.svg'
 
 const Container = styled.main`
   height: calc(100vh - 56px);
