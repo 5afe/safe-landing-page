@@ -69,6 +69,18 @@ export default ({
           <meta name="twitter:description" content={seo.description} />
           <meta name="twitter:image" content={seo.image} />
           <meta name="twitter:url" content={seo.url} />
+          <link
+            rel="icon"
+            type="image/png"
+            href="/img/favicon-32x32.png"
+            sizes="32x32"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            href="/img/favicon-16x16.png"
+            sizes="16x16"
+          />
         </Helmet>
       )
     }}

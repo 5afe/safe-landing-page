@@ -54,6 +54,7 @@ const SButton = styled.button<BtnProps>`
   font-size: 16px;
   text-decoration: none;
   white-space: nowrap;
+  cursor: pointer;
 
   &:hover {
     background-color: ${p => p.theme.palette.pink};
