@@ -35,7 +35,7 @@ const Wrapper = styled.div`
 
 export default ({ data, location }: IndexPageProps) => {
   return (
-    <Layout location={location}>
+    <Layout>
       <Wrapper>
         <Heading>404 Page not found!</Heading>
       </Wrapper>
