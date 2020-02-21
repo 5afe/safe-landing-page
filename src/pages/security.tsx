@@ -10,7 +10,7 @@ import BugBounty from '../components/security/BugBounty'
 
 export default () => {
   return (
-    <Layout location={location}>
+    <Layout>
       <MainSection />
       <Description />
       <FormallyVerified />
