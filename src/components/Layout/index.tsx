@@ -7,9 +7,6 @@ import GlobalStyles from '../../styles/globalStyles'
 
 interface ILayoutProps {
   children: any
-  location: {
-    pathname: string
-  }
 }
 
 const Layout: React.FC<ILayoutProps> = ({ children }) => {

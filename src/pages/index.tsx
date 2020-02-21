@@ -8,7 +8,7 @@ import MultisigMobile from '../components/home/MultisigMobile'
 import Social from '../components/home/Social'
 
 export default () => (
-  <Layout location={location}>
+  <Layout>
     <MainSection />
     <TrustedBy />
     <Features />

@@ -7,7 +7,6 @@ interface IHeadProps {
   description?: string
   thumbnail?: string
   article?: boolean
-  pathname: string
 }
 
 export default ({
