@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Layout from '../components/Layout'
 import Heading from '../components/ui/Heading'
@@ -35,7 +34,6 @@ const Wrapper = styled.div`
 `
 
 export default ({ data, location }: IndexPageProps) => {
-  const { image, site } = data
   return (
     <Layout location={location}>
       <Wrapper>
