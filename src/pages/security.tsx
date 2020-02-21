@@ -8,16 +8,6 @@ import Insurance from '../components/security/Insurance'
 import Audits from '../components/security/Audits'
 import BugBounty from '../components/security/BugBounty'
 
-const Wrapper = styled.div`
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: ${p => p.theme.spacing.unit * 3}px;
-`
-
 export default () => {
   return (
     <Layout location={location}>

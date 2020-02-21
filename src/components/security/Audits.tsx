@@ -6,7 +6,6 @@ import BgGray from '../../assets/bg-gray.svg'
 const Container = styled.div`
   padding: 277px 0 136px 0;
   position: relative;
-  background-color: ${p => p.theme.palette.greyBackground};
   z-index: -1;
   color: ${p => p.theme.palette.navy};
 `

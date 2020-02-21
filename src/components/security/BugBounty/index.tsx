@@ -14,7 +14,7 @@ const Container = styled.div`
   background-color: rgba(0, 140, 115, 0.88);
   color: ${p => p.theme.palette.navy};
   position: relative;
-  z-index: -1;
+  overflow: hidden;
 `
 
 const Row = styled.div`
@@ -54,14 +54,20 @@ const Text = styled.p`
 const SLinesSVG = styled(LinesSVG)`
   position: absolute;
   left: 0;
-  bottom: 0;
-  z-index: -1;
+  top: 0;
+  opacity: 0.27;
+  stroke: #d8d8d8;
+`
+
+const SContentWrapper = styled(ContentWrapper)`
+  position: relative;
+  z-index: 100;
 `
 
 const BugBounty = () => (
   <Container>
     <SLinesSVG />
-    <ContentWrapper>
+    <SContentWrapper>
       <Row>
         <LCol>
           <LHeading>Our biggest bug bounty program ever</LHeading>
@@ -79,7 +85,7 @@ const BugBounty = () => (
         To this day, no major or critical issues have been found in the
         codebase!
       </SHeading>
-    </ContentWrapper>
+    </SContentWrapper>
   </Container>
 )
 

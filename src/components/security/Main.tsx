@@ -7,7 +7,6 @@ import ButtonLink from '../ui/ButtonLink'
 const Container = styled.div`
   height: calc(100vh - 56px);
   position: relative;
-  background-color: ${p => p.theme.palette.greyBackground};
   color: ${p => p.theme.palette.navy};
 `
 

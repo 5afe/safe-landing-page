@@ -4,14 +4,13 @@ import Img from 'gatsby-image'
 import { StaticQuery, graphql } from 'gatsby'
 import ContentWrapper from '../Layout/ContentWrapper'
 import ButtonLink from '../ui/ButtonLink'
-import LinesSVG from '../../assets/lines.svg'
+import LinesSVG from '../../assets/bg-lines-03.svg'
 
 const Container = styled.div`
   padding: 175px 0 328px 0;
-  background-color: ${p => p.theme.palette.greyBackground};
-  z-index: -1;
   position: relative;
   color: ${p => p.theme.palette.navy};
+  overflow: hidden;
 `
 
 const Row = styled.div`
@@ -55,9 +54,9 @@ const BoldText = styled.p`
 const SLinesSVG = styled(LinesSVG)`
   position: absolute;
   left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0;
   z-index: -1;
+  opacity: 0.31;
 `
 
 const Insurance = () => (

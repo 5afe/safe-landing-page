@@ -13,12 +13,12 @@ const SGnosisSafeOutline = styled(GnosisSafeOutline)`
   left: -150px;
   bottom: -85px;
   height: 382px;
+  z-index: -1;
 `
 
 const Container = styled.div`
   padding-top: 50px;
   padding-bottom: 241px;
-  background-color: ${p => p.theme.palette.greyBackground};
   color: ${p => p.theme.palette.navy};
 `
 
