@@ -27,6 +27,7 @@ const SLinesSVG = styled(LinesSVG)`
   position: absolute;
   left: 0;
   bottom: 0;
+  stroke: #008c73;
   z-index: -1;
 `
 

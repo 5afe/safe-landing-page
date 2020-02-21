@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Testimonial from './Testimonial'
 import ContentWrapper from '../../Layout/ContentWrapper'
-import BgGraySVG from '../../../assets/bg-gray.svg'
+import BgGraySVG from '../../../assets/bg-gray-half.svg'
 
 const SectionContainer = styled.section`
   padding: 240px 0 144px;

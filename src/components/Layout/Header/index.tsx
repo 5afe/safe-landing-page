@@ -56,13 +56,24 @@ const Header: React.FC<{}> = () => (
         <NavList>
           <Divider />
           <NavListItem>
+            <Link to="/">Overview</Link>
+          </NavListItem>
+          <Divider />
+          <NavListItem>
             <Link to="/security">Security</Link>
+          </NavListItem>
+          <Divider />
+          <NavListItem>
+            <Link to="/enterprises">Enterprises</Link>
+          </NavListItem>
+          <Divider />
+          <NavListItem>
+            <Link to="/developers">Developers</Link>
           </NavListItem>
           <Divider />
           <NavListItem>
             <ButtonLink url="/gnosis-safe.io">Open App</ButtonLink>
           </NavListItem>
-          <Divider />
         </NavList>
       </NavContainer>
     </Container>

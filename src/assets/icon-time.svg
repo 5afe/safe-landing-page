@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#1C9781" d="M70.5 35.5c0 19.33-15.67 35-35 35s-35-15.67-35-35 15.67-35 35-35 35 15.67 35 35"/>
+        <path stroke="#001428" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M70.5 35.5c0 19.33-15.67 35-35 35s-35-15.67-35-35 15.67-35 35-35 35 15.67 35 35z"/>
+        <path fill="#1C9781" d="M21.043 19.151l10.914 13.707"/>
+        <path stroke="#001428" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M21.043 19.151l10.914 13.707"/>
+        <path fill="#1C9781" d="M48.888 29.918l-8.595 3.779"/>
+        <path stroke="#001428" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M48.888 29.918l-8.595 3.779"/>
+        <path fill="#1C9781" d="M39.235 35.5a3.735 3.735 0 1 1-7.47 0 3.735 3.735 0 0 1 7.47 0"/>
+        <path stroke="#001428" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M39.235 35.5a3.735 3.735 0 1 1-7.47 0 3.735 3.735 0 0 1 7.47 0z"/>
+        <path fill="#001428" d="M35.5 4.9a2.377 2.377 0 1 1 0 4.754 2.377 2.377 0 0 1 0-4.754M35.5 61.819a2.376 2.376 0 1 1 .001 4.752 2.376 2.376 0 0 1-.002-4.752M61.583 35.736a2.377 2.377 0 1 1 4.754 0 2.377 2.377 0 0 1-4.754 0"/>
+    </g>
+</svg>

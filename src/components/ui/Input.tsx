@@ -9,14 +9,15 @@ const SInput = styled.input`
   font-size: 16px;
   padding-bottom: 10px;
   letter-spacing: 0.36px;
-  transition: border-bottom-color .3s;
+  transition: border-bottom-color 0.3s;
 
   &::placeholder {
     color: ${p => p.theme.palette.navy};
     font-family: Averta;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     outline: 0;
     border-bottom-color: ${p => p.theme.palette.pink};
   }
