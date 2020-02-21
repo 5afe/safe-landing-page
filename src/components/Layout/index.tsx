@@ -12,11 +12,11 @@ interface ILayoutProps {
   }
 }
 
-const Layout: React.FC<ILayoutProps> = ({ children, location }) => {
+const Layout: React.FC<ILayoutProps> = ({ children }) => {
   return (
     <>
       <GlobalStyles />
-      <HTMLHead pathname={location.pathname} />
+      <HTMLHead />
       <ThemeProvider theme={theme}>
         <Header />
         {children}

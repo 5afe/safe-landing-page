@@ -14,7 +14,6 @@ export default ({
   title,
   description,
   thumbnail,
-  pathname,
   article,
 }: IHeadProps) => (
   <StaticQuery
@@ -37,7 +36,7 @@ export default ({
         title: title || defaultTitle,
         description: description || defaultDescription,
         image: thumbnail || `${siteUrl}/assets/og-image.png`,
-        url: `${siteUrl}${pathname}`,
+        url: `${siteUrl}`,
         twitter,
       }
       return (
