@@ -18,7 +18,7 @@ const SSmallHeading = styled.h3`
 `
 
 const SRightSmallHeading = styled(SSmallHeading)`
-  color: ${p => p.theme.palette.primary}
+  color: ${p => p.theme.palette.primary};
 `
 
 const Container = styled.div`
@@ -46,9 +46,7 @@ const Col = styled.div`
   display: flex;
 `
 
-const RCol = styled.div`
-
-`
+const RCol = styled.div``
 
 const SubCol = styled.p`
   flex-basis: 33%;
@@ -88,14 +86,20 @@ const Repositories = () => (
               </SubCol>
               <SubCol>
                 <Row>
-                  <SButtonLink url="https://github.com/gnosis/safe-contracts/blob/development/contracts/GnosisSafe.sol" colorScheme="navy">
+                  <SButtonLink
+                    url="https://github.com/gnosis/safe-contracts/blob/development/contracts/GnosisSafe.sol"
+                    colorScheme="navy"
+                  >
                     Core
                   </SButtonLink>
                 </Row>
               </SubCol>
               <SubCol>
                 <Row>
-                  <SButtonLink url="https://github.com/gnosis/safe-contracts/tree/development/contracts/modules" colorScheme="navy">
+                  <SButtonLink
+                    url="https://github.com/gnosis/safe-contracts/tree/development/contracts/modules"
+                    colorScheme="navy"
+                  >
                     Modules
                   </SButtonLink>
                 </Row>
@@ -109,14 +113,20 @@ const Repositories = () => (
               </SubCol>
               <SubCol>
                 <Row>
-                  <SButtonLink url="https://github.com/gnosis/safe-transaction-service" colorScheme="navy">
+                  <SButtonLink
+                    url="https://github.com/gnosis/safe-transaction-service"
+                    colorScheme="navy"
+                  >
                     Transaction indexer
                   </SButtonLink>
                 </Row>
               </SubCol>
               <SubCol>
                 <Row>
-                  <SButtonLink url="https://github.com/gnosis/safe-relay-service" colorScheme="navy">
+                  <SButtonLink
+                    url="https://github.com/gnosis/safe-relay-service"
+                    colorScheme="navy"
+                  >
                     Relay
                   </SButtonLink>
                 </Row>
@@ -134,14 +144,20 @@ const Repositories = () => (
               </SubCol>
               <SubCol>
                 <Row>
-                  <SButtonLink url="https://github.com/gnosis/safe-react" colorScheme="green">
+                  <SButtonLink
+                    url="https://github.com/gnosis/safe-react"
+                    colorScheme="green"
+                  >
                     Web interface
                   </SButtonLink>
                 </Row>
               </SubCol>
               <SubCol>
                 <Row>
-                  <SButtonLink url="https://github.com/gnosis/contract-proxy-kit" colorScheme="green">
+                  <SButtonLink
+                    url="https://github.com/gnosis/contract-proxy-kit"
+                    colorScheme="green"
+                  >
                     Proxy kit
                   </SButtonLink>
                 </Row>
@@ -149,19 +165,24 @@ const Repositories = () => (
             </Row>
             <Row>
               <SubCol>
-                <Row>
-                </Row>
+                <Row></Row>
               </SubCol>
               <SubCol>
                 <Row>
-                  <SButtonLink url="https://github.com/gnosis/safe-android" colorScheme="green">
+                  <SButtonLink
+                    url="https://github.com/gnosis/safe-android"
+                    colorScheme="green"
+                  >
                     Android app
                   </SButtonLink>
                 </Row>
               </SubCol>
               <SubCol>
                 <Row>
-                  <SButtonLink url="https://github.com/gnosis/safe-ios" colorScheme="green">
+                  <SButtonLink
+                    url="https://github.com/gnosis/safe-ios"
+                    colorScheme="green"
+                  >
                     iOS app
                   </SButtonLink>
                 </Row>

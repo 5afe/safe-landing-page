@@ -75,16 +75,24 @@ const Contracts = () => (
         <RCol>
           <Row>
             <SubLCol>
-              The smart contracts enable developers to make interactions with decentralized protocols more user-friendly, enabling features such as batched transactions, recovery mechanisms, and gas abstraction.
+              The smart contracts enable developers to make interactions with
+              decentralized protocols more user-friendly, enabling features such
+              as batched transactions, recovery mechanisms, and gas abstraction.
             </SubLCol>
             <SubRCol>
               <Row>
-                <SButtonLink url="https://gnosis-safe.readthedocs.io/en/latest/contracts/index.html" colorScheme="white">
+                <SButtonLink
+                  url="https://gnosis-safe.readthedocs.io/en/latest/contracts/index.html"
+                  colorScheme="white"
+                >
                   Documentation
                 </SButtonLink>
               </Row>
               <Row>
-                <SButtonLink url="https://github.com/gnosis/safe-contracts/releases" colorScheme="navy">
+                <SButtonLink
+                  url="https://github.com/gnosis/safe-contracts/releases"
+                  colorScheme="navy"
+                >
                   Releases
                 </SButtonLink>
               </Row>
@@ -99,11 +107,18 @@ const Contracts = () => (
         <RCol>
           <Row>
             <SubLCol>
-              The Contract Proxy Kit (CPK) lets your users benefit from a smart contract account that is tied to their regular wallet. Use this plug-and-play solution to deploy a smart contract account under the hood for every one of your users and build a better experience.
+              The Contract Proxy Kit (CPK) lets your users benefit from a smart
+              contract account that is tied to their regular wallet. Use this
+              plug-and-play solution to deploy a smart contract account under
+              the hood for every one of your users and build a better
+              experience.
             </SubLCol>
             <SubRCol>
               <Row>
-                <SButtonLink url="https://github.com/gnosis/contract-proxy-kit" colorScheme="white">
+                <SButtonLink
+                  url="https://github.com/gnosis/contract-proxy-kit"
+                  colorScheme="white"
+                >
                   Integrate Proxy Kit
                 </SButtonLink>
               </Row>

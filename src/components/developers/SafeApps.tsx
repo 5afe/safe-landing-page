@@ -68,8 +68,8 @@ const SafeApps = () => (
           <Row>
             <SHeading>
               With over $1B worth of digital assets held in Gnosis Multisigs
-              alone, it’s essential for the dapp ecosystem to access this untapped
-              market.
+              alone, it’s essential for the dapp ecosystem to access this
+              untapped market.
             </SHeading>
           </Row>
           <Row>
