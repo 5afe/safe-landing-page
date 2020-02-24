@@ -8,6 +8,9 @@ const Container = styled.footer`
   padding-bottom: 20px;
   color: ${p => p.theme.palette.navy};
   letter-spacing: 0.24px;
+  background-color: ${p =>
+    p.backgroundColor === 'green' && p.theme.palette.primary};
+  opacity: ${p => p.backgroundColor === 'green' && 0.88};
 `
 
 const Copyright = styled.p`
@@ -19,9 +22,10 @@ const Link = styled.a`
   color: ${p => p.theme.palette.navy};
 `
 
-const Legal: React.FC = () => {
+const Legal: React.FC = ({ location, theme }) => {
+  const backgroundColor = location.pathname === '/security' && 'green'
   return (
-    <Container>
+    <Container backgroundColor={backgroundColor}>
       <Copyright>© Gnosis {new Date().getFullYear()}</Copyright>
       {' | '}
       <Link

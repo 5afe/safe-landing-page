@@ -8,15 +8,13 @@ import Insurance from '../components/security/Insurance'
 import Audits from '../components/security/Audits'
 import BugBounty from '../components/security/BugBounty'
 
-export default () => {
-  return (
-    <Layout>
-      <MainSection />
-      <Description />
-      <FormallyVerified />
-      <Audits />
-      <Insurance />
-      <BugBounty />
-    </Layout>
-  )
-}
+export default ({ location }) => (
+  <Layout location={location}>
+    <MainSection />
+    <Description />
+    <FormallyVerified />
+    <Audits />
+    <Insurance />
+    <BugBounty />
+  </Layout>
+)

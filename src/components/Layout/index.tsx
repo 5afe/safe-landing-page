@@ -10,18 +10,16 @@ interface ILayoutProps {
   children: any
 }
 
-const Layout: React.FC<ILayoutProps> = ({ children }) => {
-  return (
-    <>
-      <GlobalStyles />
-      <HTMLHead />
-      <ThemeProvider theme={theme}>
-        <Header />
-        {children}
-        <Footer />
-      </ThemeProvider>
-    </>
-  )
-}
+const Layout: React.FC<ILayoutProps> = ({ location, children }) => (
+  <>
+    <GlobalStyles />
+    <HTMLHead />
+    <ThemeProvider theme={theme}>
+      <Header />
+      {children}
+      <Footer location={location} />
+    </ThemeProvider>
+  </>
+)
 
 export default Layout

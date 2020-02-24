@@ -7,14 +7,12 @@ import SafeApps from '../components/developers/SafeApps'
 import Contracts from '../components/developers/Contracts'
 import Repositories from '../components/developers/Repositories'
 
-export default () => {
-  return (
-    <Layout location={location}>
-      <Description />
-      <Projects />
-      <Contracts />
-      <SafeApps />
-      <Repositories />
-    </Layout>
-  )
-}
+export default ({ location }) => (
+  <Layout location={location}>
+    <Description />
+    <Projects />
+    <Contracts />
+    <SafeApps />
+    <Repositories />
+  </Layout>
+)
