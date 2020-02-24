@@ -5,13 +5,13 @@ import ContentWrapper from '../../Layout/ContentWrapper'
 import BgGraySVG from '../../../assets/bg-gray-half.svg'
 
 const SectionContainer = styled.section`
-  padding: 240px 0 144px;
+  padding: 228px 0 144px;
   position: relative;
 `
 
 const SBgSVG = styled(BgGraySVG)`
   position: absolute;
-  bottom: 0;
+  top: 0;
   width: 100%;
   z-index: -1;
 `
