@@ -38,8 +38,8 @@ const STestimonial1 = styled(Testimonial)`
 `
 
 const STestimonial2 = styled(Testimonial)`
-  grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
   grid-row-start: 3;
 `
 
@@ -49,12 +49,24 @@ const STestimonial3 = styled(Testimonial)`
   grid-row-end: 4;
 `
 
+const STestimonial4 = styled(Testimonial)`
+  grid-column-start: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+`
+
+const STestimonial5 = styled(Testimonial)`
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: 4;
+`
+
 const Testimonials = () => (
   <SectionContainer>
     <ContentWrapper>
       <TestimonialsContainer>
         <SectionHeading>Testimonials</SectionHeading>
-        <Testimonial
+        <STestimonial4
           author="Jason Goldberg, Founder & CEO, Pepo/OST"
           colorScheme="white"
         >
@@ -62,7 +74,7 @@ const Testimonials = () => (
           modularity, flexibility, and security, allowing Pepo to take advantage
           of session keys, multi-device management, and account recovery —
           granting our users peace of mind while using a new social network.
-        </Testimonial>
+        </STestimonial4>
         <Testimonial
           author="Eric Conner, EthHub / Into The Ether Podcast"
           colorScheme="navy"
@@ -72,12 +84,12 @@ const Testimonials = () => (
           led us to it. It gives us peace of mind while running our crypto
           business
         </Testimonial>
-        <Testimonial author="Runtime Verification">
+        <STestimonial5 author="Runtime Verification">
           From October 2018 to February 2019, we were engaged in the formal
           verification of the Gnosis Safe smart contract. We loved working with
           Gnosis developers, and we’re very impressed by their commitment to
           security in general, and formal verification in particular.
-        </Testimonial>
+        </STestimonial5>
         <STestimonial1
           author="Taylor Monahan, Founder & CEO, MyCrypto"
           colorScheme="white"
