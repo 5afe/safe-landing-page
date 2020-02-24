@@ -74,11 +74,11 @@ const MainSection = () => (
         <Text>How we make sure your funds are safe</Text>
       </LCol>
       <RCol>
-        <UsdWorthValue>10 460 020</UsdWorthValue>
+        <UsdWorthValue>24,568,527</UsdWorthValue>
         <UsdWorthNotes>
           USD worth of digital assets securely stored in Gnosis Safes
         </UsdWorthNotes>
-        <UsdWorthDate>(as of feb 8TH 2020)</UsdWorthDate>
+        <UsdWorthDate>(as of feb 21TH 2020)</UsdWorthDate>
       </RCol>
     </SWrapper>
   </Container>

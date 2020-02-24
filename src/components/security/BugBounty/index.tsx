@@ -77,7 +77,7 @@ const BugBounty = () => (
         </LCol>
         <RCol>
           <Card img={TimeIcon} title="Running for 20 months" />
-          <Card img={MoneyIcon} title="Up to $100 000 per bug" />
+          <Card img={MoneyIcon} title="Up to $100,000 per bug" />
           <Card img={MoneyBagIcon} title="Running for 20 months" />
         </RCol>
       </Row>
