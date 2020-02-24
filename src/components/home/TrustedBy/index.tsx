@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import ContentWrapper from '../../Layout/ContentWrapper'
 
@@ -31,24 +31,20 @@ const SHeading = styled.h3`
   letter-spacing: 0.56px;
 `
 
-const TrustedBy = () => (
-  <StaticQuery query={sectionQuery}>
-    {data => {
-      console.log(data)
+const TrustedBy = () => {
+  const data = useStaticQuery(sectionQuery)
 
-      return (
-        <Container>
-          <SWrapper>
-            <LCol>
-              <SHeading>Trusted by</SHeading>
-            </LCol>
-            <RCol></RCol>
-          </SWrapper>
-        </Container>
-      )
-    }}
-  </StaticQuery>
-)
+  return (
+    <Container>
+      <SWrapper>
+        <LCol>
+          <SHeading>Trusted by</SHeading>
+        </LCol>
+        <RCol></RCol>
+      </SWrapper>
+    </Container>
+  )
+}
 
 const sectionQuery = graphql`
   query {
