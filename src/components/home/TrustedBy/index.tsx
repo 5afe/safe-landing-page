@@ -25,7 +25,7 @@ const RCol = styled.div`
   width: 100%;
 
   display: grid;
-  grid-template-columns: repeat(3, 160px);
+  grid-template-columns: repeat(4, 160px);
   grid-column-gap: 91px;
   grid-row-gap: 51px;
 `

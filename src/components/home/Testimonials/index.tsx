@@ -26,7 +26,7 @@ const TestimonialsContainer = styled.div`
   display: grid;
 
   grid-template-columns: repeat(4, 278px);
-  grid-template-rows: repeat(3, 168px);
+  grid-template-rows: repeat(6, 84px);
   grid-row-gap: 32px;
   justify-content: space-between;
 `
@@ -34,30 +34,37 @@ const TestimonialsContainer = styled.div`
 const STestimonial1 = styled(Testimonial)`
   grid-column-start: 2;
   grid-row-start: 1;
-  grid-row-end: 3;
+  grid-row-end: 5;
 `
 
 const STestimonial2 = styled(Testimonial)`
   grid-column-start: 2;
   grid-column-end: 4;
-  grid-row-start: 3;
+  grid-row-start: 5;
+  grid-row-end: 7;
 `
 
 const STestimonial3 = styled(Testimonial)`
   grid-column-start: 4;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 7;
 `
 
 const STestimonial4 = styled(Testimonial)`
   grid-column-start: 3;
   grid-row-start: 1;
-  grid-row-end: 3;
+  grid-row-end: 5;
 `
 
 const STestimonial5 = styled(Testimonial)`
   grid-column-start: 1;
-  grid-row-start: 2;
+  grid-row-start: 3;
+  grid-row-end: 7;
+`
+
+const STestimonial6 = styled(Testimonial)`
+  grid-column-start: 4;
+  grid-row-start: 1;
   grid-row-end: 4;
 `
 
@@ -75,7 +82,7 @@ const Testimonials = () => (
           of session keys, multi-device management, and account recovery —
           granting our users peace of mind while using a new social network.
         </STestimonial4>
-        <Testimonial
+        <STestimonial6
           author="Eric Conner, EthHub / Into The Ether Podcast"
           colorScheme="navy"
         >
@@ -83,13 +90,13 @@ const Testimonials = () => (
           The track record of Gnosis and their commitment to security is what
           led us to it. It gives us peace of mind while running our crypto
           business
-        </Testimonial>
-        <STestimonial5 author="Runtime Verification">
+        </STestimonial6>
+        <STestimonial3 author="Runtime Verification">
           From October 2018 to February 2019, we were engaged in the formal
           verification of the Gnosis Safe smart contract. We loved working with
           Gnosis developers, and we’re very impressed by their commitment to
           security in general, and formal verification in particular.
-        </STestimonial5>
+        </STestimonial3>
         <STestimonial1
           author="Taylor Monahan, Founder & CEO, MyCrypto"
           colorScheme="white"
@@ -111,7 +118,7 @@ const Testimonials = () => (
           composed of persons that we trust. We're making the transition to the
           Safe Multisig over the next few months.
         </STestimonial2>
-        <STestimonial3
+        <STestimonial5
           author="Manuel Garcia, CEO, Protofire"
           colorScheme="white"
         >
@@ -122,7 +129,7 @@ const Testimonials = () => (
           companies in the crypto space, most of our income arrives to the Safe
           Mulltisig. That's how important the Gnosis Safe Multisig is to us and
           how much we trust the technology and the team behind its development.
-        </STestimonial3>
+        </STestimonial5>
       </TestimonialsContainer>
     </ContentWrapper>
     <SBgSVG />
