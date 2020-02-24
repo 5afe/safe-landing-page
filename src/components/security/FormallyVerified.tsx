@@ -5,6 +5,10 @@ import { StaticQuery, graphql } from 'gatsby'
 import ContentWrapper from '../Layout/ContentWrapper'
 import ButtonLink from '../ui/ButtonLink'
 
+const SContentWrapper = styled(ContentWrapper)`
+  color: ${p => p.theme.palette.navy}
+`
+
 const SRuntimeLogo = styled.div`
   display: flex;
   justify-content: flex-end;
@@ -63,7 +67,7 @@ const FormallyVerified = () => (
     `}
   >
     {data => (
-      <ContentWrapper>
+      <SContentWrapper>
         <SRuntimeLogo>
           <SImg fluid={data.rv.childImageSharp.fluid} />
         </SRuntimeLogo>
@@ -96,7 +100,7 @@ const FormallyVerified = () => (
             </Row>
           </RCol>
         </Row>
-      </ContentWrapper>
+      </SContentWrapper>
     )}
   </StaticQuery>
 )
