@@ -26,7 +26,7 @@ const TestimonialsContainer = styled.div`
   display: grid;
 
   grid-template-columns: repeat(4, 278px);
-  grid-template-rows: repeat(6, 84px);
+  grid-template-rows: repeat(5, 100px);
   grid-row-gap: 32px;
   justify-content: space-between;
 `
@@ -34,32 +34,32 @@ const TestimonialsContainer = styled.div`
 const STestimonial1 = styled(Testimonial)`
   grid-column-start: 2;
   grid-row-start: 1;
-  grid-row-end: 5;
+  grid-row-end: 4;
 `
 
 const STestimonial2 = styled(Testimonial)`
   grid-column-start: 2;
   grid-column-end: 4;
-  grid-row-start: 5;
-  grid-row-end: 7;
+  grid-row-start: 4;
+  grid-row-end: 6;
 `
 
 const STestimonial3 = styled(Testimonial)`
   grid-column-start: 4;
   grid-row-start: 4;
-  grid-row-end: 7;
+  grid-row-end: 6;
 `
 
 const STestimonial4 = styled(Testimonial)`
   grid-column-start: 3;
   grid-row-start: 1;
-  grid-row-end: 5;
+  grid-row-end: 4;
 `
 
 const STestimonial5 = styled(Testimonial)`
   grid-column-start: 1;
-  grid-row-start: 3;
-  grid-row-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 6;
 `
 
 const STestimonial6 = styled(Testimonial)`
