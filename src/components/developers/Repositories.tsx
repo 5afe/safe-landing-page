@@ -24,7 +24,6 @@ const SRightSmallHeading = styled(SSmallHeading)`
 const Container = styled.div`
   position: relative;
   padding-top: 107px;
-  padding-bottom: 122px;
   color: ${p => p.theme.palette.navy};
 `
 
@@ -60,6 +59,16 @@ const SButtonLink = styled(ButtonLink)`
   width: 180px;
   text-align: center;
   margin-left: 20px;
+`
+
+const LoveMessage = styled.h3`
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 0.56px;
+  text-align: center;
+  line-height: normal;
+  padding-top: 169px;
+  padding-bottom: 16px;
 `
 
 const Repositories = () => (
@@ -187,6 +196,7 @@ const Repositories = () => (
           </RCol>
         </Col>
       </Row>
+      <LoveMessage>Gnosis &hearts; Developers</LoveMessage>
     </ContentWrapper>
   </Container>
 )
