@@ -54,7 +54,7 @@ const Text = styled.p`
 const SLinesSVG = styled(LinesSVG)`
   position: absolute;
   left: 0;
-  top: 0;
+  bottom: 0;
   opacity: 0.27;
   stroke: #d8d8d8;
 `
