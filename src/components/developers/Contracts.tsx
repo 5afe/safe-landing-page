@@ -57,17 +57,13 @@ const SLinesSVG = styled(LinesSVG)`
   bottom: 0;
   stroke: #d8d8d8;
   opacity: 0.27;
-`
-
-const SContentWrapper = styled(ContentWrapper)`
-  position: relative;
-  z-index: 100;
+  z-index: -1;
 `
 
 const Contracts = () => (
   <Container>
     <SLinesSVG />
-    <SContentWrapper>
+    <ContentWrapper>
       <Row>
         <LCol>
           <SHeading>Smart Contracts</SHeading>
@@ -126,7 +122,7 @@ const Contracts = () => (
           </Row>
         </RCol>
       </Row>
-    </SContentWrapper>
+    </ContentWrapper>
   </Container>
 )
 

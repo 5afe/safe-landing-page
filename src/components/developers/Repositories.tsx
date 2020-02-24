@@ -34,6 +34,7 @@ const SLinesSVG = styled(LinesSVG)`
   bottom: 0;
   stroke: #d8d8d8;
   opacity: 0.27;
+  z-index: -1;
 `
 
 const Row = styled.div`
@@ -61,15 +62,10 @@ const SButtonLink = styled(ButtonLink)`
   margin-left: 20px;
 `
 
-const SContentWrapper = styled(ContentWrapper)`
-  position: relative;
-  z-index: 100;
-`
-
 const Repositories = () => (
   <Container>
     <SLinesSVG />
-    <SContentWrapper>
+    <ContentWrapper>
       <SHeading>
         We believe in open source.
         <br />
@@ -191,7 +187,7 @@ const Repositories = () => (
           </RCol>
         </Col>
       </Row>
-    </SContentWrapper>
+    </ContentWrapper>
   </Container>
 )
 

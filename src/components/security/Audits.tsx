@@ -3,12 +3,18 @@ import styled from 'styled-components'
 import ContentWrapper from '../Layout/ContentWrapper'
 import BgGray from '../../assets/bg-gray.svg'
 
+const Link = styled.a`
+  text-decoration: none;
+  color: ${p => p.theme.palette.navy};
+`
+
 const Container = styled.div`
   padding: 277px 0 136px 0;
   position: relative;
-  z-index: -1;
   color: ${p => p.theme.palette.navy};
 `
+
+const SContentWrapper = styled(ContentWrapper)``
 
 const Row = styled.div`
   display: flex;
@@ -67,8 +73,8 @@ const AuditAuthor = styled.p`
 
 const SBgGray = styled(BgGray)`
   position: absolute;
-  z-index: -1;
   bottom: 0;
+  z-index: -2;
 `
 
 const Audit = ({ date, author }: { string; string }) => (
@@ -81,7 +87,7 @@ const Audit = ({ date, author }: { string; string }) => (
 const Audits = () => (
   <Container>
     <SBgGray />
-    <ContentWrapper>
+    <SContentWrapper>
       <Row>
         <LCol>
           <SHeading>Audits</SHeading>
@@ -92,15 +98,30 @@ const Audits = () => (
           </Description>
         </LCol>
         <RCol>
-          <Audit date="Jul. 4th, 2018" author="Alexey Akhunov (v0.2.0)" />
-          <Audit
-            date="Feb. 27th, 2019"
-            author="Runtime Verification (v1.0.0)"
-          />
-          <Audit date="Nov. 11th, 2019" author="G0 Group (v1.1.0 & v1.1.1)" />
+          <Link
+            href="https://github.com/gnosis/safe-contracts/blob/v1.1.1/docs/alexey_audit.md"
+            target="_blank"
+          >
+            <Audit date="Jul. 4th, 2018" author="Alexey Akhunov (v0.2.0)" />
+          </Link>
+          <Link
+            href="https://github.com/gnosis/safe-contracts/blob/v1.1.1/docs/Gnosis_Safe_Formal_Verification_Report_1_0_0.pdf"
+            target="_blank"
+          >
+            <Audit
+              date="Feb. 27th, 2019"
+              author="Runtime Verification (v1.0.0)"
+            />
+          </Link>
+          <Link
+            href="https://github.com/gnosis/safe-contracts/blob/v1.1.1/docs/audit_1_1_1.md"
+            target="_blank"
+          >
+            <Audit date="Nov. 11th, 2019" author="G0 Group (v1.1.0 & v1.1.1)" />
+          </Link>
         </RCol>
       </Row>
-    </ContentWrapper>
+    </SContentWrapper>
   </Container>
 )
 
