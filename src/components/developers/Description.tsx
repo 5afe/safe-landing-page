@@ -25,7 +25,7 @@ const SWrapper = styled(ContentWrapper)`
 const SLinesSVG = styled(LinesSVG)`
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -50px;
   stroke: #008c73;
   opacity: 0.4;
   z-index: -1;
