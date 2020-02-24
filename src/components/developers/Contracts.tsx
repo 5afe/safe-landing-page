@@ -17,10 +17,6 @@ const Row = styled.div`
   margin-bottom: 20px;
 `
 
-const LRow = styled.div`
-  margin-top: 60px;
-`
-
 const LCol = styled.div`
   flex-basis: 25%;
 `

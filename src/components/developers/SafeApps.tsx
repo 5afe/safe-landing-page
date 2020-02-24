@@ -5,7 +5,7 @@ import ButtonLink from '../ui/ButtonLink'
 import LinesSVG from '../../assets/lines.svg'
 
 const Container = styled.div`
-  margin-top: 127px;
+  margin-top: 200px;
   margin-bottom: 211px;
   position: relative;
   color: ${p => p.theme.palette.navy};

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import ContentWrapper from '../Layout/ContentWrapper'
 
 const Container = styled.section`
-  padding-top: 145px;
+  padding: 145px 0;
 `
 
 const SWrapper = styled(ContentWrapper)`
@@ -27,6 +27,7 @@ const SHeading = styled.h3`
   font-size: 25px;
   font-weight: 800;
   letter-spacing: 0.56px;
+  line-height: normal;
 `
 
 const Projects = () => (
