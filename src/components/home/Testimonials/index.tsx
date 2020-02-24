@@ -91,16 +91,13 @@ const Testimonials = () => (
           led us to it. It gives us peace of mind while running our crypto
           business
         </STestimonial6>
-        <STestimonial3 author="Runtime Verification">
+        <STestimonial3 author="Runtime Verification" colorScheme="white">
           From October 2018 to February 2019, we were engaged in the formal
           verification of the Gnosis Safe smart contract. We loved working with
           Gnosis developers, and we’re very impressed by their commitment to
           security in general, and formal verification in particular.
         </STestimonial3>
-        <STestimonial1
-          author="Taylor Monahan, Founder & CEO, MyCrypto"
-          colorScheme="white"
-        >
+        <STestimonial1 author="Taylor Monahan, Founder & CEO, MyCrypto">
           The Gnosis Safe Multisig is the clear leader when it comes to a
           product that balances usability, security, and self-custody. The
           longevity of their smart contracts is evidence of the Gnosis team’s
