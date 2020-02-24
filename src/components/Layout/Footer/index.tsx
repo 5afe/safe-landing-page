@@ -23,7 +23,8 @@ const Link = styled.a`
 `
 
 const Legal: React.FC = ({ location, theme }) => {
-  const backgroundColor = location.pathname === '/security' && 'green'
+  const backgroundColor =
+    location && location.pathname === '/security' && 'green'
   return (
     <Container backgroundColor={backgroundColor}>
       <Copyright>© Gnosis {new Date().getFullYear()}</Copyright>

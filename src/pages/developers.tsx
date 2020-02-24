@@ -15,5 +15,6 @@ export default ({ location }) => (
     <Projects />
     <Contracts />
     <SafeApps />
+    <Repositories />
   </Layout>
 )
