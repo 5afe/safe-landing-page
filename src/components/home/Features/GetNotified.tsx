@@ -13,11 +13,6 @@ const Row = styled.div`
   }
 `
 
-const Container = styled.div`
-  padding: 112px 0;
-  background-color: rgba(0, 140, 115, 0.88);
-`
-
 const LCol = styled.div`
   flex-basis: 28%;
   flex-direction: column;

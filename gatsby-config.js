@@ -30,8 +30,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
-        endpoint:
-          'https://gnosis.us13.list-manage.com/subscribe/post?u=1a123436baa68728b8cfa3402&amp;id=05732a8a78',
+        endpoint: // Gnosis Safe Multisig Audience
+          'https://gnosis.us13.list-manage.com/subscribe/post?u=1a123436baa68728b8cfa3402&amp;id=4a4457c2ce',
       },
     },
     `gatsby-plugin-sitemap`,
