@@ -62,10 +62,10 @@ const Header: React.FC<{}> = () => (
           <NavListItem>
             <Link to="/security">Security</Link>
           </NavListItem>
-          <Divider />
+          {/*<Divider />
           <NavListItem>
             <Link to="/enterprises">Enterprises</Link>
-          </NavListItem>
+          </NavListItem>*/}
           <Divider />
           <NavListItem>
             <Link to="/developers">Developers</Link>
