@@ -5,6 +5,10 @@ import { StaticQuery, graphql } from 'gatsby'
 import ContentWrapper from '../Layout/ContentWrapper'
 import ButtonLink from '../ui/ButtonLink'
 
+const SContentWrapper = styled(ContentWrapper)`
+  color: ${p => p.theme.palette.navy};
+`
+
 const SRuntimeLogo = styled.div`
   display: flex;
   justify-content: flex-end;
@@ -63,7 +67,7 @@ const FormallyVerified = () => (
     `}
   >
     {data => (
-      <ContentWrapper>
+      <SContentWrapper>
         <SRuntimeLogo>
           <SImg fluid={data.rv.childImageSharp.fluid} />
         </SRuntimeLogo>
@@ -71,7 +75,10 @@ const FormallyVerified = () => (
           <LCol>
             <SHeading>Formally verified</SHeading>
             <LRow>
-              <ButtonLink url="/" colorScheme="navy">
+              <ButtonLink
+                url="https://github.com/gnosis/safe-contracts/blob/78494bcdbc61b3db52308a25f0556c42cf656ab1/docs/Gnosis_Safe_Formal_Verification_Report_1_0_0.pdf"
+                colorScheme="navy"
+              >
                 Formal verification report
               </ButtonLink>
             </LRow>
@@ -96,7 +103,7 @@ const FormallyVerified = () => (
             </Row>
           </RCol>
         </Row>
-      </ContentWrapper>
+      </SContentWrapper>
     )}
   </StaticQuery>
 )

@@ -9,12 +9,7 @@ interface IHeadProps {
   article?: boolean
 }
 
-export default ({
-  title,
-  description,
-  thumbnail,
-  article,
-}: IHeadProps) => (
+export default ({ title, description, thumbnail, article }: IHeadProps) => (
   <StaticQuery
     query={QueryHead}
     render={({

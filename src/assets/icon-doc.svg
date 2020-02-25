@@ -1,20 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="68px" height="71px" viewBox="0 0 68 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 62 (101010) - https://sketch.com -->
-    <title>FB4D3196-B10F-44DE-9445-D6F652B76FC6</title>
-    <desc>Created with sketchtool.</desc>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="icon_doc">
-            <g id="Group-12">
-                <polyline id="Fill-1" fill="#1C9781" points="49.254 19.5083 49.254 70.4993 0.5 70.4993 0.5 0.4993 30.224 0.4993"></polyline>
-                <polyline id="Stroke-2" stroke="#001428" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="49.254 19.5083 49.254 70.4993 0.5 70.4993 0.5 0.4993 30.224 0.4993"></polyline>
-                <polygon id="Fill-4" fill="#1C9781" points="49.254 19.4146 30.32 19.5116 30.32 0.4996"></polygon>
-                <polygon id="Stroke-5" stroke="#001428" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="49.254 19.4146 30.32 19.5116 30.32 0.4996"></polygon>
-                <polygon id="Fill-7" fill="#1C9781" points="27.6681 61.0835 36.9131 59.0195 62.7781 33.1545 55.5971 25.9735 29.7311 51.8375"></polygon>
-                <polygon id="Stroke-8" stroke="#001428" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="27.6681 61.0835 36.9131 59.0195 62.7781 33.1545 55.5971 25.9735 29.7311 51.8375"></polygon>
-                <polygon id="Fill-9" fill="#1C9781" points="60.7062 20.8628 67.8882 28.0448 62.7782 33.1548 55.5972 25.9728"></polygon>
-                <polygon id="Stroke-10" stroke="#001428" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="60.7062 20.8628 67.8882 28.0448 62.7782 33.1548 55.5972 25.9728"></polygon>
-            </g>
-        </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 76 76">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#1C9781" d="M49.254 19.508L49.254 70.499 0.5 70.499 0.5 0.499 30.224 0.499" transform="translate(4 3)"/>
+        <path stroke="#001428" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M49.254 19.508L49.254 70.499 0.5 70.499 0.5 0.499 30.224 0.499" transform="translate(4 3)"/>
+        <path fill="#1C9781" d="M49.254 19.415L30.32 19.512 30.32 0.5z" transform="translate(4 3)"/>
+        <path stroke="#001428" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M49.254 19.415L30.32 19.512 30.32 0.5z" transform="translate(4 3)"/>
+        <path fill="#1C9781" d="M27.668 61.084L36.913 59.02 62.778 33.154 55.597 25.974 29.731 51.837z" transform="translate(4 3)"/>
+        <path stroke="#001428" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M27.668 61.084L36.913 59.02 62.778 33.154 55.597 25.974 29.731 51.837z" transform="translate(4 3)"/>
+        <path fill="#1C9781" d="M60.706 20.863L67.888 28.045 62.778 33.155 55.597 25.973z" transform="translate(4 3)"/>
+        <path stroke="#001428" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M60.706 20.863L67.888 28.045 62.778 33.155 55.597 25.973z" transform="translate(4 3)"/>
     </g>
 </svg>
