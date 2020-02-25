@@ -8,6 +8,8 @@ export interface ITheme {
     greyGreen: string
     lightGrey: string
     greyBackground: string
+    darkGreenBlue: string
+    slateGray: string
   }
   spacing: {
     unit: number
@@ -24,6 +26,8 @@ const mainTheme = {
     greyGreen: '#b3b5b3',
     lightGrey: '#d4d5d3',
     greyBackground: '#f4f4f4',
+    darkGreenBlue: '#1e594f',
+    slateGray: '#5d6d74'
   },
   spacing: {
     unit: 8,

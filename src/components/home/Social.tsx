@@ -30,6 +30,11 @@ const RCol = styled.div`
   justify-content: space-between;
 `
 
+const SImage = styled(Image)`
+  box-shadow: 1px 2px 10px 0 rgba(212, 212, 211, 0.59);
+  border-radius: 50%;
+`
+
 const sectionQuery = graphql`
   query {
     github: file(relativePath: { eq: "github-icon.png" }) {
@@ -81,22 +86,22 @@ const Social: React.FC = () => (
             </LCol>
             <RCol>
               <a href="https://twitter.com/gnosisSafe" target="_blank">
-                <Image fixed={data.twitter.childImageSharp.fixed}></Image>
+                <SImage fixed={data.twitter.childImageSharp.fixed} />
               </a>
               <a href="mailto:safe@gnosis.io" target="_blank">
-                <Image fixed={data.email.childImageSharp.fixed}></Image>
+                <SImage fixed={data.email.childImageSharp.fixed} />
               </a>
               <a href="https://blog.gnosis.pm/tagged/safe" target="_blank">
-                <Image fixed={data.medium.childImageSharp.fixed}></Image>
+                <SImage fixed={data.medium.childImageSharp.fixed} />
               </a>
               <a href="https://t.me/GnosisSafe" target="_blank">
-                <Image fixed={data.telegram.childImageSharp.fixed}></Image>
+                <SImage fixed={data.telegram.childImageSharp.fixed} />
               </a>
               <a
                 href="https://github.com/gnosis?utf8=%E2%9C%93&q=safe"
                 target="_blank"
               >
-                <Image fixed={data.github.childImageSharp.fixed}></Image>
+                <SImage fixed={data.github.childImageSharp.fixed} />
               </a>
             </RCol>
           </Row>

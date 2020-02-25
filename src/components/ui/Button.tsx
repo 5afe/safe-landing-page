@@ -44,6 +44,22 @@ const colorsCSS = css`
 
     return '1px 2px 10px 0 rgba(212, 212, 211, 0.59)'
   }};
+
+  &:hover {
+    background-color: ${(p: BtnProps) => {
+      const { colorScheme } = p
+
+      if (colorScheme === 'white') {
+        return p.theme.palette.greyGreen
+      }
+
+      if (colorScheme === 'navy') {
+        return p.theme.palette.slateGray
+      }
+
+      return p.theme.palette.darkGreenBlue
+    }};
+  }
 `
 
 const SButton = styled.button<BtnProps>`
@@ -55,11 +71,8 @@ const SButton = styled.button<BtnProps>`
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
-
-  &:hover {
-    background-color: ${p => p.theme.palette.pink};
-    color: ${p => p.theme.palette.navy};
-  }
+  border: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 `
 
 export default SButton

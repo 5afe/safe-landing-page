@@ -84,6 +84,22 @@ const colorsCSS = css`
 
     return '1px 2px 10px 0 rgba(212, 212, 211, 0.59)'
   }};
+
+  &:hover {
+    background-color: ${(p: BtnLinkProps) => {
+      const { colorScheme } = p
+
+      if (colorScheme === 'white') {
+        return p.theme.palette.greyGreen
+      }
+
+      if (colorScheme === 'navy') {
+        return p.theme.palette.slateGray
+      }
+
+      return p.theme.palette.darkGreenBlue
+    }};
+  }
 `
 
 const SButtonLink = styled(ButtonLink)`
@@ -93,11 +109,7 @@ const SButtonLink = styled(ButtonLink)`
   border-radius: 8px;
   text-decoration: none;
   white-space: nowrap;
-
-  &:hover {
-    background-color: ${p => p.theme.palette.pink};
-    color: ${p => p.theme.palette.navy};
-  }
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 `
 
 export default SButtonLink

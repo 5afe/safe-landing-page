@@ -22,7 +22,7 @@ const Link = styled.a`
   color: ${p => p.theme.palette.navy};
 `
 
-const Legal: React.FC = ({ location, theme }) => {
+const Footer: React.FC = ({ location }) => {
   const backgroundColor =
     location && location.pathname === '/security' && 'green'
   return (
@@ -64,4 +64,4 @@ const Legal: React.FC = ({ location, theme }) => {
   )
 }
 
-export default Legal
+export default Footer

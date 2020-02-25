@@ -54,7 +54,9 @@ const SLogo = styled(Logo)`
 const Header: React.FC<{}> = () => (
   <SHeadroom>
     <Container>
-      <SLogo />
+      <Link to="/">
+        <SLogo />
+      </Link>
       <Divider />
       <Spacer />
       <NavContainer>
@@ -77,7 +79,7 @@ const Header: React.FC<{}> = () => (
           </NavListItem>
           <Divider />
           <NavListItem>
-            <ButtonLink url="/gnosis-safe.io">Open App</ButtonLink>
+            <ButtonLink url="https://gnosis-safe.io/app" target="_self">Open App</ButtonLink>
           </NavListItem>
         </NavList>
       </NavContainer>
