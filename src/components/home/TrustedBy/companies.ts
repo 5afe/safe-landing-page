@@ -7,7 +7,7 @@ interface TrustedByEntry {
 const TRUSTED_BY_COMPANIES: TrustedByEntry[] = [
   {
     name: 'Aragon',
-    imageURL: '/images/aragon.png',
+    imageURL: '/images/aragon.svg',
     websiteURL: 'https://aragon.org/',
   },
   {
@@ -17,7 +17,7 @@ const TRUSTED_BY_COMPANIES: TrustedByEntry[] = [
   },
   {
     name: 'ENS',
-    imageURL: '/images/ENS.png',
+    imageURL: '/images/ens.svg',
     websiteURL: 'https://ens.domains/',
   },
   {
@@ -37,7 +37,7 @@ const TRUSTED_BY_COMPANIES: TrustedByEntry[] = [
   },
   {
     name: 'Protofire',
-    imageURL: '/images/protofire.png',
+    imageURL: '/images/protofire.svg',
     websiteURL: 'https://protofire.io/',
   },
   {
