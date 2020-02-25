@@ -54,7 +54,7 @@ const Text = styled.p`
 const SLinesSVG = styled(LinesSVG)`
   position: absolute;
   left: 0;
-  top: 0;
+  bottom: 0;
   opacity: 0.27;
   stroke: #d8d8d8;
 `
@@ -77,7 +77,7 @@ const BugBounty = () => (
         </LCol>
         <RCol>
           <Card img={TimeIcon} title="Running for 20 months" />
-          <Card img={MoneyIcon} title="Up to $100 000 per bug" />
+          <Card img={MoneyIcon} title="Up to $100,000 per bug" />
           <Card img={MoneyBagIcon} title="Running for 20 months" />
         </RCol>
       </Row>

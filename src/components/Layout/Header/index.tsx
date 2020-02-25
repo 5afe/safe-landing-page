@@ -12,6 +12,11 @@ const HeaderItemPadding = css`
   padding-right: 16px;
 `
 
+const SHeadroom = styled(Headroom)`
+  z-index: 1000;
+  position: relative;
+`
+
 const Container = styled.header`
   display: flex;
   align-items: center;
@@ -47,7 +52,7 @@ const SLogo = styled(Logo)`
 `
 
 const Header: React.FC<{}> = () => (
-  <Headroom>
+  <SHeadroom>
     <Container>
       <SLogo />
       <Divider />
@@ -62,10 +67,10 @@ const Header: React.FC<{}> = () => (
           <NavListItem>
             <Link to="/security">Security</Link>
           </NavListItem>
-          <Divider />
+          {/*<Divider />
           <NavListItem>
             <Link to="/enterprises">Enterprises</Link>
-          </NavListItem>
+          </NavListItem>*/}
           <Divider />
           <NavListItem>
             <Link to="/developers">Developers</Link>
@@ -77,7 +82,7 @@ const Header: React.FC<{}> = () => (
         </NavList>
       </NavContainer>
     </Container>
-  </Headroom>
+  </SHeadroom>
 )
 
 export default Header

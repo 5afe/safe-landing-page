@@ -7,8 +7,8 @@ import Testimonials from '../components/home/Testimonials'
 import MultisigMobile from '../components/home/MultisigMobile'
 import Social from '../components/home/Social'
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <MainSection />
     <TrustedBy />
     <Features />

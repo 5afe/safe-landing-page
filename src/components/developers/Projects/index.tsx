@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import ContentWrapper from '../../Layout/ContentWrapper'
-import { TRUSTED_BY_COMPANIES } from './companies'
+import { PROJECTS } from './projects'
 
 const Container = styled.section`
-  padding-top: 50px;
-  padding-bottom: 315px;
+  padding-top: 150px;
+  padding-bottom: 230px;
   color: ${p => p.theme.palette.navy};
 `
 
@@ -16,14 +16,13 @@ const SWrapper = styled(ContentWrapper)`
 `
 
 const LCol = styled.div`
-  flex-basis: 16%;
+  flex-basis: 25%;
   flex-direction: column;
 `
 
 const RCol = styled.div`
-  flex-basis: 65%;
+  flex-basis: 72.5%;
   width: 100%;
-
   display: grid;
   grid-template-columns: repeat(4, 160px);
   grid-column-gap: 91px;
@@ -34,11 +33,13 @@ const SHeading = styled.h3`
   font-size: 25px;
   font-weight: 800;
   letter-spacing: 0.56px;
+  line-height: normal;
 `
 
 const ImageAnchor = styled.a`
   max-width: 160px;
   max-height: 54px;
+  text-align: center;
 `
 
 const Image = styled.img`
@@ -48,21 +49,21 @@ const Image = styled.img`
   max-height: 54px;
 `
 
-const TrustedBy = () => (
+const Projects = () => (
   <Container>
     <SWrapper>
       <LCol>
-        <SHeading>Trusted by</SHeading>
+        <SHeading>Projects building on Gnosis Safe</SHeading>
       </LCol>
       <RCol>
-        {TRUSTED_BY_COMPANIES.map(company => (
+        {PROJECTS.map(project => (
           <ImageAnchor
-            key={company.name}
-            title={company.name}
-            href={company.websiteURL}
+            key={project.name}
+            title={project.name}
+            href={project.websiteURL}
             target="_blank"
           >
-            <Image src={company.imageURL}></Image>
+            <Image src={project.imageURL}></Image>
           </ImageAnchor>
         ))}
       </RCol>
@@ -70,4 +71,4 @@ const TrustedBy = () => (
   </Container>
 )
 
-export default TrustedBy
+export default Projects

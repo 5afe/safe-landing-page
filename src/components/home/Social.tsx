@@ -92,7 +92,10 @@ const Social: React.FC = () => (
               <a href="https://t.me/GnosisSafe" target="_blank">
                 <Image fixed={data.telegram.childImageSharp.fixed}></Image>
               </a>
-              <a href="https://github.com/gnosis?utf8=%E2%9C%93&q=safe" target="_blank">
+              <a
+                href="https://github.com/gnosis?utf8=%E2%9C%93&q=safe"
+                target="_blank"
+              >
                 <Image fixed={data.github.childImageSharp.fixed}></Image>
               </a>
             </RCol>

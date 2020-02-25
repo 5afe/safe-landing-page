@@ -82,7 +82,10 @@ const Insurance = () => (
           Click below and use the smart contract address
           gnosissafe.nexusmutual.eth to get cover!
           <LRow>
-            <ButtonLink url="/" colorScheme="navy">
+            <ButtonLink
+              url="https://app.nexusmutual.io/#/SmartContractCover"
+              colorScheme="navy"
+            >
               Get a quote
             </ButtonLink>
           </LRow>
