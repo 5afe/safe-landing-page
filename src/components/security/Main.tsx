@@ -40,16 +40,17 @@ const RCol = styled.div`
   color: ${p => p.theme.palette.primary};
 `
 
-const UsdWorthValue = styled.div`
-  height: 132px;
+const UsdWorthValue = styled.h1`
+  padding: 14px 18px 0;
   font-size: 115px;
   font-weight: 800;
-  line-height: normal;
+  line-height: 1;
   letter-spacing: 2.56px;
   text-align: center;
   border-radius: 5px;
   margin-bottom: 42px;
   border: 2px solid ${p => p.theme.palette.primary};
+  white-space: nowrap;
 `
 
 const UsdWorthNotes = styled.p`

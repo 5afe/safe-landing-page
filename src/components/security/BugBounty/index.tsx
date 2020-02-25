@@ -10,7 +10,7 @@ import MoneyBagIcon from '../../../assets/icon-moneybag.svg'
 import LinesSVG from '../../../assets/lines.svg'
 
 const Container = styled.div`
-  padding: 112px 0;
+  padding: 112px 0 170px;
   background-color: rgba(0, 140, 115, 0.88);
   color: ${p => p.theme.palette.navy};
   position: relative;
@@ -25,15 +25,14 @@ const Row = styled.div`
 `
 
 const LCol = styled.div`
-  flex-basis: 25%;
+  flex-basis: 41%;
   flex-direction: column;
 `
 
 const RCol = styled.div`
-  flex-basis: 72.5%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex-basis: 50%;
 `
 
 const LHeading = styled(Heading)`
@@ -45,16 +44,11 @@ const SHeading = styled(Heading)`
   margin-bottom: 100px;
 `
 
-const Text = styled.p`
-  letter-spacing: 0.36px;
-  margin-bottom: 37px;
-  line-height: normal;
-`
-
 const SLinesSVG = styled(LinesSVG)`
   position: absolute;
   left: 0;
-  bottom: 0;
+  top: 0;
+  transform: translateY(-20%);
   opacity: 0.27;
   stroke: #d8d8d8;
 `
@@ -70,7 +64,13 @@ const BugBounty = () => (
     <SContentWrapper>
       <Row>
         <LCol>
-          <LHeading>Our biggest bug bounty program ever</LHeading>
+          <LHeading>
+            Our biggest
+            <br />
+            bug bounty
+            <br />
+            program ever
+          </LHeading>
           <ButtonLink url="/" colorScheme="white">
             Start bug hunting
           </ButtonLink>

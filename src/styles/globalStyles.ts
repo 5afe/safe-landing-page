@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: Averta, sans-serif;
     background-color: #f4f4f4;
+    position: relative;
   }
 `
 

@@ -22,18 +22,18 @@ const LRow = styled.div`
   margin-top: 50px;
 `
 
-const LCol = styled.p`
+const LCol = styled.div`
   flex-basis: 25%;
 `
 
-const CCol = styled.p`
+const CCol = styled.div`
   flex-basis: 35%;
   padding-right: 30px;
   letter-spacing: 0.36px;
   line-height: normal;
 `
 
-const RCol = styled.p`
+const RCol = styled.div`
   flex-basis: 35%;
   font-size: 16px;
   letter-spacing: 0.36px;
@@ -46,9 +46,12 @@ const SHeading = styled.h3`
   letter-spacing: 0.56px;
 `
 
-const BoldText = styled.p`
-  font-weight: 800;
+const Text = styled.p`
   display: inline;
+
+  b {
+    font-weight: 800;
+  }
 `
 
 const SLinesSVG = styled(LinesSVG)`
@@ -72,18 +75,18 @@ const Insurance = () => (
           </SHeading>
         </LCol>
         <CCol>
-          <BoldText>
-            Still have doubts about the smart contracts’ security?
-          </BoldText>
-          You can insure funds stored in the Gnosis Safe against potential smart
-          contract attacks, through Nexus Mutual services.
+          <Text>
+            <b>Still have doubts about the smart contracts’ security?</b> You
+            can insure funds stored in the Gnosis Safe against potential smart
+            contract attacks, through Nexus Mutual services.
+          </Text>
         </CCol>
         <RCol>
           Click below and use the smart contract address
           gnosissafe.nexusmutual.eth to get cover!
           <LRow>
             <ButtonLink
-              url="https://app.nexusmutual.io/#/SmartContractCover"
+              url="https://nexusmutual.io/"
               colorScheme="navy"
             >
               Get a quote

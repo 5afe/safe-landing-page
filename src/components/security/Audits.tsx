@@ -52,6 +52,8 @@ const SAudit = styled.div`
   margin-bottom: 20px;
   display: flex;
   padding: 20px;
+  justify-content: space-between;
+  align-items: center;
 `
 
 const AuditDate = styled.p`
@@ -77,10 +79,21 @@ const SBgGray = styled(BgGray)`
   z-index: -2;
 `
 
-const Audit = ({ date, author }: { string; string }) => (
+const Arrow = styled.span`
+  font-size: 45px;
+  font-weight: bold;
+`
+
+interface AuditProps {
+  date: string
+  author: string
+}
+
+const Audit: React.FC<AuditProps> = ({ date, author }) => (
   <SAudit>
     <AuditDate>{date}</AuditDate>
     <AuditAuthor>{author}</AuditAuthor>
+    <Arrow>→</Arrow>
   </SAudit>
 )
 

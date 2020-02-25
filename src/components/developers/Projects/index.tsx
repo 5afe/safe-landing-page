@@ -47,6 +47,7 @@ const Image = styled.img`
   width: auto;
   height: auto;
   max-height: 54px;
+  border-radius: 50%;
 `
 
 const Projects = () => (

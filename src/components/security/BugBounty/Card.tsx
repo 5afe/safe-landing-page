@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 const SContainer = styled.div`
@@ -23,7 +23,12 @@ const ImageContainer = styled.div`
   margin-right: 20px;
 `
 
-const Card = ({ img, title }: { Component; string }) => {
+interface CardProps {
+  img: React.Component
+  title: string
+}
+
+const Card: React.FC<CardProps> = ({ img, title }) => {
   const Image = img || null
 
   return (

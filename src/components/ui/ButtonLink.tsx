@@ -105,6 +105,7 @@ const colorsCSS = css`
 const SButtonLink = styled(ButtonLink)`
   ${colorsCSS}
 
+  display: inline-block;
   padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;

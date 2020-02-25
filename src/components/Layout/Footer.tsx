@@ -5,12 +5,11 @@ const Container = styled.footer`
   width: 100%;
   text-align: center;
   font-size: 11px;
-  padding-bottom: 20px;
   color: ${p => p.theme.palette.navy};
   letter-spacing: 0.24px;
-  background-color: ${p =>
-    p.backgroundColor === 'green' && p.theme.palette.primary};
-  opacity: ${p => p.backgroundColor === 'green' && 0.88};
+  position: absolute;
+  bottom: 10px;
+  background-color: transparent;
 `
 
 const Copyright = styled.p`
@@ -22,46 +21,42 @@ const Link = styled.a`
   color: ${p => p.theme.palette.navy};
 `
 
-const Footer: React.FC = ({ location }) => {
-  const backgroundColor =
-    location && location.pathname === '/security' && 'green'
-  return (
-    <Container backgroundColor={backgroundColor}>
-      <Copyright>© Gnosis {new Date().getFullYear()}</Copyright>
-      {' | '}
-      <Link
-        href="https://safe.gnosis.io/terms"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Terms
-      </Link>
-      {' | '}
-      <Link
-        href="https://safe.gnosis.io/privacy"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Privacy
-      </Link>
-      {' | '}
-      <Link
-        href="https://safe.gnosis.io/licenses"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Licenses
-      </Link>
-      {' | '}
-      <Link
-        href="https://safe.gnosis.io/imprint"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Imprint
-      </Link>
-    </Container>
-  )
-}
+const Footer: React.FC = () => (
+  <Container>
+    <Copyright>© Gnosis {new Date().getFullYear()}</Copyright>
+    {' | '}
+    <Link
+      href="https://safe.gnosis.io/terms"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Terms
+    </Link>
+    {' | '}
+    <Link
+      href="https://safe.gnosis.io/privacy"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Privacy
+    </Link>
+    {' | '}
+    <Link
+      href="https://safe.gnosis.io/licenses"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Licenses
+    </Link>
+    {' | '}
+    <Link
+      href="https://safe.gnosis.io/imprint"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Imprint
+    </Link>
+  </Container>
+)
 
 export default Footer
