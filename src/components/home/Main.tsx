@@ -85,7 +85,7 @@ const MainSection = () => (
               The most trusted platform to store digital assets on Ethereum
             </SHeading>
             <ButtonLink
-              url="https://gnosis-safe.io"
+              url="https://gnosis-safe.io/app"
               colorScheme="navy"
               target="_self"
             >

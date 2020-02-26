@@ -24,6 +24,7 @@ const SRightSmallHeading = styled(SSmallHeading)`
 const Container = styled.div`
   position: relative;
   padding-top: 107px;
+  padding-bottom: 20px;
   color: ${p => p.theme.palette.navy};
 `
 
