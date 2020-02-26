@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
   siteMetadata: {
     site: `Gnosis-safe`,
-    description: `The Gnosis Safe aims to provide all users with a convenient, yet secure way to manage their funds and interact with decentralized applications on Ethereum.`,
+    description: `Gnosis Safe Multisig is the most trusted platform to manage digital assets on Ethereum`,
     siteUrl: `https://gnosis-safe.io`,
     language: `en`,
     color: `#003580`,
@@ -28,7 +28,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
-        endpoint: // Gnosis Safe Multisig Audience
+        // Gnosis Safe Multisig Audience
+        endpoint:
           'https://gnosis.us13.list-manage.com/subscribe/post?u=1a123436baa68728b8cfa3402&amp;id=4a4457c2ce',
       },
     },
