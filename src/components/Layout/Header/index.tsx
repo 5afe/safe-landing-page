@@ -43,7 +43,11 @@ const NavListItem = styled.li`
   ${HeaderItemPadding}
 `
 
-const NavLink = styled(Link)``
+const NavLink = styled(Link)`
+  &.active {
+    color: ${p => p.theme.palette.primary};
+  }
+`
 
 const SLogo = styled(Logo)`
   height: 40px;
@@ -63,11 +67,11 @@ const Header: React.FC<{}> = () => (
         <NavList>
           <Divider />
           <NavListItem>
-            <Link to="/">Overview</Link>
+            <NavLink activeClassName="active" to="/">Overview</NavLink>
           </NavListItem>
           <Divider />
           <NavListItem>
-            <Link to="/security">Security</Link>
+            <NavLink activeClassName="active" to="/security">Security</NavLink>
           </NavListItem>
           {/*<Divider />
           <NavListItem>
@@ -75,7 +79,7 @@ const Header: React.FC<{}> = () => (
           </NavListItem>*/}
           <Divider />
           <NavListItem>
-            <Link to="/developers">Developers</Link>
+            <NavLink activeClassName="active" to="/developers">Developers</NavLink>
           </NavListItem>
           <Divider />
           <NavListItem>
