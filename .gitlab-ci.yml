@@ -1,0 +1,85 @@
+stages:
+  - build
+  - deploy-development-staging
+  - deploy-production
+
+variables:
+  AWS_DEFAULT_REGION: us-east-1
+  STAGING_BUCKET_NAME: safe.staging.gnosisdev.com
+  BUILDED_FILES_DIR: "public"
+
+build project:
+  stage: build
+  tags:
+    - node-full
+  cache:
+    key:
+      files:
+        - package.json
+        - yarn.lock
+    paths:
+      - node_modules/
+      - .yarn
+  before_script:
+    - rm -rf .cache
+    - rm -rf public
+    - yarn config set cache-folder .yarn
+    - yarn install
+  script:
+    - yarn build
+  only:
+    - master
+    - tags
+  artifacts:
+    paths:
+     - public/
+    expire_in: 1 week
+
+deploy staging:
+  stage: deploy-development-staging
+  tags:
+    - python
+  environment:
+    name: staging
+    url: http://safe.staging.gnosisdev.com
+  before_script:
+    - pip install awscli # Install the SDK
+  script:
+    - aws s3 sync public/ s3://${STAGING_BUCKET_NAME}/current --delete --exclude "*.html" --cache-control max-age=31536000,public
+    - aws s3 sync public/ s3://${STAGING_BUCKET_NAME}/current --delete --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
+    # Special case - .well-known/apple-app-site-association must have "Content-type: application/json"
+    - aws s3 sync public/ s3://${STAGING_BUCKET_NAME}/current --delete --exclude "*" --include "apple-app-site-association" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
+  only:
+    - master
+
+package release version:
+  stage: deploy-development-staging
+  tags:
+    - python
+  environment:
+    name: releases/${CI_COMMIT_TAG}
+  before_script:
+    - pip install awscli # Install the SDK
+  script:
+    - aws s3 sync public/ s3://${STAGING_BUCKET_NAME}/releases/${CI_COMMIT_TAG} --delete --exclude "*.html" --cache-control max-age=31536000,public
+    - aws s3 sync public/ s3://${STAGING_BUCKET_NAME}/releases/${CI_COMMIT_TAG} --delete --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
+    # Special case - .well-known/apple-app-site-association must have "Content-type: application/json"
+    - aws s3 sync public/ s3://${STAGING_BUCKET_NAME}/current --delete --exclude "*" --include "apple-app-site-association" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
+  only:
+    - tags
+
+prepare production manual deployment:
+  stage: deploy-production
+  tags:
+    - python
+  before_script:
+    - apk add curl
+  script:
+    - curl -X POST
+      -F token=b2714eed58515d73bf6eab463cfc6d
+      -F ref=master
+      -F "variables[TRIGGER_RELEASE_COMMIT_TAG]=${CI_COMMIT_TAG}"
+      -F "variables[TRIGGER_USER_EMAIL]=${GITLAB_USER_EMAIL}"
+      https://gitlab.gnosisdev.com/api/v4/projects/34/trigger/pipeline
+  only:
+    - tags
