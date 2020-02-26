@@ -9,6 +9,9 @@ interface IHeadProps {
   article?: boolean
 }
 
+const getTitle = (title?: string) =>
+  title ? `${title} - Gnosis Safe` : 'Gnosis Safe'
+
 export default ({ title, description, thumbnail, article }: IHeadProps) => (
   <StaticQuery
     query={QueryHead}
@@ -16,8 +19,6 @@ export default ({ title, description, thumbnail, article }: IHeadProps) => (
       site: {
         siteMetadata: {
           site,
-          defaultTitle,
-          titleTemplate,
           defaultDescription,
           language,
           siteUrl,
@@ -27,16 +28,16 @@ export default ({ title, description, thumbnail, article }: IHeadProps) => (
       },
     }) => {
       const seo = {
-        title: title || defaultTitle,
         description: description || defaultDescription,
         image: thumbnail || `${siteUrl}/assets/og-image.png`,
         url: `${siteUrl}`,
         twitter,
       }
-      return (
-        <Helmet title={seo.title} titleTemplate={titleTemplate}>
-          <html lang={language} />
+      const generatedTitle = getTitle(title)
 
+      return (
+        <Helmet title={generatedTitle}>
+          <html lang={language} />
           <meta name="description" content={seo.description} />
           <meta name="image" content={seo.image} />
           <meta name="theme-color" content={color} />
@@ -44,7 +45,7 @@ export default ({ title, description, thumbnail, article }: IHeadProps) => (
           <link rel="canonical" href={seo.url} />
 
           <meta property="og:url" content={seo.url} />
-          <meta property="og:title" content={seo.title} />
+          <meta property="og:title" content={generatedTitle} />
           <meta property="og:description" content={seo.description} />
           <meta property="og:image" content={seo.image} />
           {article && <meta property="og:type" content="article" />}
@@ -58,7 +59,7 @@ export default ({ title, description, thumbnail, article }: IHeadProps) => (
 
           <meta name="twitter:creator" content={seo.twitter} />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content={seo.title} />
+          <meta name="twitter:title" content={generatedTitle} />
           <meta name="twitter:description" content={seo.description} />
           <meta name="twitter:image" content={seo.image} />
           <meta name="twitter:url" content={seo.url} />
@@ -92,8 +93,6 @@ const QueryHead = graphql`
       siteMetadata {
         site
         siteUrl
-        defaultTitle: title
-        titleTemplate
         defaultDescription: description
         language
         color
