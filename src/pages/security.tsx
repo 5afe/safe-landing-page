@@ -8,8 +8,8 @@ import Insurance from '../components/security/Insurance'
 import Audits from '../components/security/Audits'
 import BugBounty from '../components/security/BugBounty'
 
-export default ({ location }) => (
-  <Layout location={location}>
+export default () => (
+  <Layout title="Security">
     <MainSection />
     <Description />
     <FormallyVerified />

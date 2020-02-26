@@ -8,16 +8,17 @@ import GlobalStyles from '../../styles/globalStyles'
 
 interface ILayoutProps {
   children: any
+  title: string
 }
 
-const Layout: React.FC<ILayoutProps> = ({ location, children }) => (
+const Layout: React.FC<ILayoutProps> = ({ children, title }) => (
   <>
     <GlobalStyles />
-    <HTMLHead />
+    <HTMLHead title={title} />
     <ThemeProvider theme={theme}>
       <Header />
       {children}
-      <Footer location={location} />
+      <Footer />
     </ThemeProvider>
   </>
 )
