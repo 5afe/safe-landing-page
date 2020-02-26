@@ -8,8 +8,8 @@ import SafeApps from '../components/developers/SafeApps'
 import Contracts from '../components/developers/Contracts'
 import Repositories from '../components/developers/Repositories'
 
-export default ({ location }) => (
-  <Layout location={location}>
+export default () => (
+  <Layout title="Developers">
     <MainSection />
     <Description />
     <Projects />
