@@ -3,8 +3,6 @@ const path = require('path')
 module.exports = {
   siteMetadata: {
     site: `Gnosis-safe`,
-    title: `Gnosis Safe`,
-    titleTemplate: `%s - Gnosis Safe`,
     description: `The Gnosis Safe aims to provide all users with a convenient, yet secure way to manage their funds and interact with decentralized applications on Ethereum.`,
     siteUrl: `https://gnosis-safe.io`,
     language: `en`,
