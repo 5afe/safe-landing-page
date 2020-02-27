@@ -11,21 +11,27 @@ const SectionContainer = styled.div`
 
 const Row = styled.div`
   display: flex;
+  @media screen and (max-width: 1240px) {
+    display: block;
+    padding: 0 12px;
+  }
 `
 
 const LCol = styled.div`
   flex-basis: 40%;
-
   display: flex;
   align-items: center;
   height: 60px%;
+  @media screen and (max-width: 1240px) {
+    padding: 32px 0;
+  }
 `
 
 const RCol = styled.div`
   flex-basis: 60%;
-
   display: flex;
   justify-content: space-between;
+  bor
 `
 
 const SImage = styled(Image)`
