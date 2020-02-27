@@ -7,8 +7,6 @@ import Heading from '../ui/Heading'
 
 const SectionContainer = styled.div`
   padding-bottom: 80px;
-
-  background-color: ${p => p.theme.palette.pink};
 `
 
 const Row = styled.div`
