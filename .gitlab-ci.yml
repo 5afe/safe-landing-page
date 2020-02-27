@@ -49,11 +49,11 @@ deploy dev rinkeby:
   before_script:
     - pip install awscli # Install the SDK
   script:
-    - aws s3 sync public/ s3://${DEV_BUCKET_NAME}/ --delete --exclude "*.html" --exclude "/page-data" --cache-control max-age=31536000,public
-    - aws s3 sync public/ s3://${DEV_BUCKET_NAME}/ --delete --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
-    - aws s3 sync public/ s3://${DEV_BUCKET_NAME}/ --delete --exclude "*" --include "/page-data" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
+    - aws s3 sync public/ s3://${DEV_BUCKET_NAME}/ --exclude "*.html" --exclude "/page-data" --cache-control max-age=31536000,public
+    - aws s3 sync public/ s3://${DEV_BUCKET_NAME}/ --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
+    - aws s3 sync public/ s3://${DEV_BUCKET_NAME}/ --exclude "*" --include "/page-data" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
     # Special case - .well-known/apple-app-site-association must have "Content-type: application/json"
-    - aws s3 sync public/ s3://${DEV_BUCKET_NAME}/ --delete --exclude "*" --include "apple-app-site-association" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
+    - aws s3 sync public/ s3://${DEV_BUCKET_NAME}/ --exclude "*" --include "apple-app-site-association" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
   only:
     - develop
 
@@ -67,11 +67,11 @@ deploy staging rinkeby:
   before_script:
     - pip install awscli # Install the SDK
   script:
-    - aws s3 sync public/ s3://${STAGING_BUCKET_RINKEBY_NAME}/current --delete --exclude "*.html" --exclude "/page-data" --cache-control max-age=31536000,public
-    - aws s3 sync public/ s3://${STAGING_BUCKET_RINKEBY_NAME}/current --delete --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
-    - aws s3 sync public/ s3://${STAGING_BUCKET_RINKEBY_NAME}/current --delete --exclude "*" --include "/page-data" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
+    - aws s3 sync public/ s3://${STAGING_BUCKET_RINKEBY_NAME}/current --exclude "*.html" --exclude "/page-data" --cache-control max-age=31536000,public
+    - aws s3 sync public/ s3://${STAGING_BUCKET_RINKEBY_NAME}/current --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
+    - aws s3 sync public/ s3://${STAGING_BUCKET_RINKEBY_NAME}/current --exclude "*" --include "/page-data" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
     # Special case - .well-known/apple-app-site-association must have "Content-type: application/json"
-    - aws s3 sync public/ s3://${STAGING_BUCKET_RINKEBY_NAME}/current --delete --exclude "*" --include "apple-app-site-association" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
+    - aws s3 sync public/ s3://${STAGING_BUCKET_RINKEBY_NAME}/current --exclude "*" --include "apple-app-site-association" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
   only:
     - master
 
@@ -85,11 +85,11 @@ deploy staging mainnet:
   before_script:
     - pip install awscli # Install the SDK
   script:
-    - aws s3 sync public/ s3://${STAGING_BUCKET_MAINNET_NAME}/current --delete --exclude "*.html" --exclude "/page-data" --cache-control max-age=31536000,public
-    - aws s3 sync public/ s3://${STAGING_BUCKET_MAINNET_NAME}/current --delete --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
-    - aws s3 sync public/ s3://${STAGING_BUCKET_MAINNET_NAME}/current --delete --exclude "*" --include "/page-data" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
+    - aws s3 sync public/ s3://${STAGING_BUCKET_MAINNET_NAME}/current --exclude "*.html" --exclude "/page-data" --cache-control max-age=31536000,public
+    - aws s3 sync public/ s3://${STAGING_BUCKET_MAINNET_NAME}/current --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
+    - aws s3 sync public/ s3://${STAGING_BUCKET_MAINNET_NAME}/current --exclude "*" --include "/page-data" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
     # Special case - .well-known/apple-app-site-association must have "Content-type: application/json"
-    - aws s3 sync public/ s3://${STAGING_BUCKET_MAINNET_NAME}/current --delete --exclude "*" --include "apple-app-site-association" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
+    - aws s3 sync public/ s3://${STAGING_BUCKET_MAINNET_NAME}/current --exclude "*" --include "apple-app-site-association" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
   only:
     - master
 
