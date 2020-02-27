@@ -1,6 +1,5 @@
 stages:
   - build
-  - deploy-development-dev
   - deploy-development-staging
   - deploy-production
 
@@ -40,7 +39,7 @@ build project:
 
 
 deploy dev rinkeby:
-  stage: deploy-development-dev
+  stage: deploy-development-staging
   tags:
     - python
   environment:
