@@ -7,6 +7,9 @@ import BgGraySVG from '../../../assets/bg-gray-half.svg'
 const Container = styled.section`
   padding: 228px 0 144px;
   position: relative;
+  @media screen and (max-width: 1240px) {
+    padding: 0;
+  }
 `
 
 const SContentWrapper = styled(ContentWrapper)`
@@ -24,15 +27,22 @@ const SectionHeading = styled.h3`
   font-size: 25px;
   font-weight: 800;
   letter-spacing: 0.56px;
+  @media screen and (max-width: 1240px) {
+    display: none;
+  }
 `
 
 const TestimonialsContainer = styled.div`
-  display: grid;
-
-  grid-template-columns: repeat(4, 278px);
-  grid-template-rows: repeat(6, 84px);
-  grid-row-gap: 32px;
-  justify-content: space-between;
+  @media screen and (min-width: 1241px) {
+    display: grid;
+    grid-template-columns: repeat(4, 278px);
+    grid-template-rows: repeat(6, 84px);
+    grid-row-gap: 32px;
+    justify-content: space-between;
+  }
+  @media screen and (max-width: 1240px) {
+    padding: 40px 40px 0 40px;
+  }
 `
 
 const STestimonial1 = styled(Testimonial)`
@@ -46,6 +56,10 @@ const STestimonial2 = styled(Testimonial)`
   grid-column-end: 4;
   grid-row-start: 5;
   grid-row-end: 7;
+
+  @media screen and (max-width: 1240px) {
+    display: none;
+  }
 `
 
 const STestimonial3 = styled(Testimonial)`
@@ -58,12 +72,20 @@ const STestimonial4 = styled(Testimonial)`
   grid-column-start: 3;
   grid-row-start: 1;
   grid-row-end: 5;
+
+  @media screen and (max-width: 1240px) {
+    display: none;
+  }
 `
 
 const STestimonial5 = styled(Testimonial)`
   grid-column-start: 1;
   grid-row-start: 3;
   grid-row-end: 7;
+
+  @media screen and (max-width: 1240px) {
+    display: none;
+  }
 `
 
 const STestimonial6 = styled(Testimonial)`

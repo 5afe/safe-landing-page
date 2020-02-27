@@ -37,11 +37,12 @@ const TestimonialContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 1px 2px 10px 0 rgba(212, 212, 211, 0.59);
-
   padding: 13px;
   border-radius: 4px;
-
   ${colorsCSS}
+  @media screen and (max-width: 1240px) {
+    margin-bottom: 40px;
+  }
 `
 
 const Quote = styled.p`
@@ -52,6 +53,7 @@ const Quote = styled.p`
 const Author = styled.p`
   font-weight: bold;
   text-align: end;
+  padding-top: 30px;
 `
 
 type ColorScheme = 'navy' | 'green' | 'white'
