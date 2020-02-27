@@ -18,6 +18,7 @@ const SFeature = styled(Feature)`
 const Container = styled.section`
   padding: 112px 0;
   background-color: rgba(0, 140, 115, 0.88);
+  overflow: hidden;
 `
 
 const Row = styled.div`

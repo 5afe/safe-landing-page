@@ -10,6 +10,7 @@ import LinesSVG from '../../assets/lines2.svg'
 const Container = styled.main`
   height: calc(100vh - 56px);
   position: relative;
+  overflow: hidden;
 `
 
 const SWrapper = styled(ContentWrapper)`

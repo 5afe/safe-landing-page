@@ -25,6 +25,7 @@ const Container = styled.header`
   box-shadow: 3px 4px 14px 0 rgba(0, 0, 0, 0.15);
   border-bottom: ${p => `solid 1px ${p.theme.palette.greyGreen}`};
   background-color: ${p => p.theme.palette.pink};
+  overflow: hidden;
 `
 
 const NavContainer = styled.nav`

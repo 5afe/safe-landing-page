@@ -9,6 +9,7 @@ const Container = styled.div`
   height: calc(100vh - 56px);
   position: relative;
   color: ${p => p.theme.palette.navy};
+  overflow: hidden;
 `
 
 const SWrapper = styled(ContentWrapper)`

@@ -10,7 +10,6 @@ import Button from '../../ui/Button'
 
 const Container = styled.div`
   flex-basis: 83%;
-
   display: flex;
   height: 408px;
   flex-direction: column;

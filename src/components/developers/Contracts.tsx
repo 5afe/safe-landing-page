@@ -9,6 +9,7 @@ const Container = styled.div`
   color: ${p => p.theme.palette.navy};
   padding-top: 112px;
   background-color: rgba(0, 140, 115, 0.88);
+  overflow: hidden;
 `
 
 const Row = styled.div`

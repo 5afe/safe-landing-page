@@ -4,9 +4,13 @@ import Testimonial from './Testimonial'
 import ContentWrapper from '../../Layout/ContentWrapper'
 import BgGraySVG from '../../../assets/bg-gray-half.svg'
 
-const SectionContainer = styled.section`
+const Container = styled.section`
   padding: 228px 0 144px;
   position: relative;
+`
+
+const SContentWrapper = styled(ContentWrapper)`
+  overflow: hidden;
 `
 
 const SBgSVG = styled(BgGraySVG)`
@@ -69,8 +73,8 @@ const STestimonial6 = styled(Testimonial)`
 `
 
 const Testimonials = () => (
-  <SectionContainer>
-    <ContentWrapper>
+  <Container>
+    <SContentWrapper>
       <TestimonialsContainer>
         <SectionHeading>Testimonials</SectionHeading>
         <STestimonial4
@@ -128,9 +132,9 @@ const Testimonials = () => (
           how much we trust the technology and the team behind its development.
         </STestimonial5>
       </TestimonialsContainer>
-    </ContentWrapper>
+    </SContentWrapper>
     <SBgSVG />
-  </SectionContainer>
+  </Container>
 )
 
 export default Testimonials
