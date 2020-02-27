@@ -1,5 +1,6 @@
 stages:
   - build
+  - deploy-development-dev
   - deploy-development-staging
   - deploy-production
 
@@ -57,7 +58,7 @@ deploy dev rinkeby:
     - develop
 
 deploy staging rinkeby:
-  stage: deploy-development-staging-rinkeby
+  stage: deploy-development-staging
   tags:
     - python
   environment:
@@ -75,7 +76,7 @@ deploy staging rinkeby:
     - master
 
 deploy staging mainnet:
-  stage: deploy-development-staging-mainnet
+  stage: deploy-development-staging
   tags:
     - python
   environment:
