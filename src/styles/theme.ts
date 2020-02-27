@@ -27,7 +27,7 @@ const mainTheme = {
     lightGrey: '#d4d5d3',
     greyBackground: '#f4f4f4',
     darkGreenBlue: '#1e594f',
-    slateGray: '#5d6d74'
+    slateGray: '#5d6d74',
   },
   spacing: {
     unit: 8,
