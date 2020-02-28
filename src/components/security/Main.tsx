@@ -9,6 +9,9 @@ const Container = styled.div`
   position: relative;
   color: ${p => p.theme.palette.navy};
   overflow: hidden;
+  @media screen and (max-width: 1240px) {
+    height: auto;
+  }
 `
 
 const SWrapper = styled(ContentWrapper)`
@@ -16,22 +19,37 @@ const SWrapper = styled(ContentWrapper)`
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  @media screen and (max-width: 1240px) {
+    display: block;
+    padding: 0 12px;
+  }
 `
 
 const SHeading = styled(Heading)`
   margin-bottom: 30px;
+  @media screen and (max-width: 1240px) {
+    font-size: 28px;
+    margin-top: 30px;
+  }
 `
 
 const Text = styled.p`
   font-size: 25px;
   line-height: normal;
   letter-spacing: 0.56px;
+  @media screen and (max-width: 1240px) {
+    font-size: 16px;
+  }
 `
 
 const LCol = styled.div`
   flex-basis: 32%;
   flex-direction: column;
   height: 300px;
+  @media screen and (max-width: 1240px) {
+    height: auto;
+    margin-bottom: 30px;
+  }
 `
 
 const RCol = styled.div`
@@ -39,6 +57,10 @@ const RCol = styled.div`
   position: relative;
   height: 300px;
   color: ${p => p.theme.palette.primary};
+  @media screen and (max-width: 1240px) {
+    height: auto;
+    margin-bottom: 30px;
+  }
 `
 
 const UsdWorthValue = styled.h1`
@@ -52,6 +74,9 @@ const UsdWorthValue = styled.h1`
   margin-bottom: 42px;
   border: 2px solid ${p => p.theme.palette.primary};
   white-space: nowrap;
+  @media screen and (max-width: 1240px) {
+    font-size: 50px;
+  }
 `
 
 const UsdWorthNotes = styled.p`
@@ -60,12 +85,25 @@ const UsdWorthNotes = styled.p`
   letter-spacing: -0.24px;
   height: auto;
   margin-bottom: 10px;
+  @media screen and (max-width: 1240px) {
+    margin-bottom: 0;
+    display: inline;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: -0.16px;
+  }
 `
 
 const UsdWorthDate = styled.p`
   height: 19px;
   font-size: 15px;
   letter-spacing: -0.15px;
+  @media screen and (max-width: 1240px) {
+    display: inline;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: -0.16px;
+  }
 `
 
 const MainSection = () => (
@@ -78,7 +116,7 @@ const MainSection = () => (
       <RCol>
         <UsdWorthValue>24,568,527</UsdWorthValue>
         <UsdWorthNotes>
-          USD worth of digital assets securely stored in Gnosis Safes
+          {'USD worth of digital assets securely stored in Gnosis Safes '}
         </UsdWorthNotes>
         <UsdWorthDate>(as of feb 21TH 2020)</UsdWorthDate>
       </RCol>
