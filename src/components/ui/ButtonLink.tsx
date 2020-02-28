@@ -26,6 +26,7 @@ interface BtnLinkProps {
   children: React.ReactNode
   target?: string
   className?: string
+  explicitExternal?: boolean
   colorScheme?: ColorScheme
   theme: ITheme
 }
@@ -35,9 +36,10 @@ const ButtonLink: React.FC<BtnLinkProps> = ({
   children,
   target = '_blank',
   className = '',
+  explicitExternal = false,
 }) => {
   const internalLink = /^\/(?!\/)/.test(url)
-  const LinkComponent = internalLink ? Link : ExternalLink
+  const LinkComponent = internalLink && !explicitExternal ? Link : ExternalLink
 
   return (
     <LinkComponent to={url} target={target} className={className}>
