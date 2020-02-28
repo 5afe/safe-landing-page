@@ -67,11 +67,15 @@ const Header: React.FC<{}> = () => (
         <NavList>
           <Divider />
           <NavListItem>
-            <NavLink activeClassName="active" to="/">Overview</NavLink>
+            <NavLink activeClassName="active" to="/">
+              Overview
+            </NavLink>
           </NavListItem>
           <Divider />
           <NavListItem>
-            <NavLink activeClassName="active" to="/security">Security</NavLink>
+            <NavLink activeClassName="active" to="/security">
+              Security
+            </NavLink>
           </NavListItem>
           {/*<Divider />
           <NavListItem>
@@ -79,11 +83,19 @@ const Header: React.FC<{}> = () => (
           </NavListItem>*/}
           <Divider />
           <NavListItem>
-            <NavLink activeClassName="active" to="/developers">Developers</NavLink>
+            <NavLink activeClassName="active" to="/developers">
+              Developers
+            </NavLink>
           </NavListItem>
           <Divider />
           <NavListItem>
-            <ButtonLink url="https://gnosis-safe.io/app" target="_self">Open App</ButtonLink>
+            <ButtonLink
+              url="/app"
+              target="_self"
+              explicitExternal
+            >
+              Open App
+            </ButtonLink>
           </NavListItem>
         </NavList>
       </NavContainer>
