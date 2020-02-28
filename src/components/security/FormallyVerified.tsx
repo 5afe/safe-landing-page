@@ -13,6 +13,9 @@ const SRuntimeLogo = styled.div`
   display: flex;
   justify-content: flex-end;
   margin-bottom: 34px;
+  @media screen and (max-width: 1240px) {
+    display: none;
+  }
 `
 
 const SImg = styled(Img)`
@@ -24,6 +27,9 @@ const SImg = styled(Img)`
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 1240px) {
+    display: block;
+  }
 `
 
 const SecondRow = styled(Row)`
@@ -32,10 +38,16 @@ const SecondRow = styled(Row)`
 
 const LCol = styled.div`
   flex-basis: 25%;
+  @media screen and (max-width: 1240px) {
+    padding: 0 12px;
+  }
 `
 
 const RCol = styled.div`
   flex-basis: 72.5%;
+  @media screen and (max-width: 1240px) {
+    padding: 0 12px;
+  }
 `
 
 const Text = styled.p`
@@ -43,12 +55,28 @@ const Text = styled.p`
   letter-spacing: 0.36px;
   font-size: 16px;
   line-height: normal;
+  @media screen and (max-width: 1240px) {
+    margin-top: 30px;
+  }
 `
 
-const SHeading = styled.h3`
+const SHeading1 = styled.h3`
   font-size: 25px;
   font-weight: 800;
   letter-spacing: 0.56px;
+  @media screen and (max-width: 1240px) {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+`
+
+const SHeading2 = styled.h3`
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 0.56px;
+  @media screen and (max-width: 1240px) {
+    font-size: 16px;
+  }
 `
 
 const FormallyVerified = () => (
@@ -72,13 +100,13 @@ const FormallyVerified = () => (
         </SRuntimeLogo>
         <Row>
           <LCol>
-            <SHeading>Formally verified</SHeading>
+            <SHeading1>Formally verified</SHeading1>
           </LCol>
           <RCol>
-            <SHeading>
+            <SHeading2>
               The Gnosis Safe core smart contracts have passed the highest
               possible security standard in the industry: Formal Verification.
-            </SHeading>
+            </SHeading2>
           </RCol>
         </Row>
         <SecondRow>
