@@ -55,6 +55,7 @@ const SHeading = styled.h3`
   color: ${p => p.theme.palette.navy};
   @media screen and (max-width: 1240px) {
     padding: 30px 0;
+    font-size: 28px;
   }
 `
 

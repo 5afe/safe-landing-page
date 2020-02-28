@@ -32,6 +32,7 @@ const SHeading = styled(Heading)`
   max-width: 400px;
   @media screen and (max-width: 1240px) {
     max-width: 100%;
+    font-size: 28px;
   }
 `
 

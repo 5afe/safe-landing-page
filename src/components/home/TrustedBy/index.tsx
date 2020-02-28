@@ -46,6 +46,7 @@ const SHeading = styled.h3`
   letter-spacing: 0.56px;
   @media screen and (max-width: 1240px) {
     padding: 30px 0;
+    font-size: 28px;
   }
 `
 
