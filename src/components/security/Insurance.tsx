@@ -11,15 +11,25 @@ const Container = styled.div`
   position: relative;
   color: ${p => p.theme.palette.navy};
   overflow: hidden;
+  @media screen and (max-width: 1240px) {
+    padding: 90px 0 40px 0;
+  }
 `
 
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 1240px) {
+    display: block;
+    padding: 0 12px;
+  }
 `
 
 const LRow = styled.div`
   margin-top: 50px;
+  @media screen and (max-width: 1240px) {
+    margin-top: 30px;
+  }
 `
 
 const LCol = styled.div`
@@ -31,6 +41,9 @@ const CCol = styled.div`
   padding-right: 30px;
   letter-spacing: 0.36px;
   line-height: normal;
+  @media screen and (max-width: 1240px) {
+    margin-top: 30px;
+  }
 `
 
 const RCol = styled.div`
@@ -38,6 +51,9 @@ const RCol = styled.div`
   font-size: 16px;
   letter-spacing: 0.36px;
   line-height: normal;
+  @media screen and (max-width: 1240px) {
+    margin-top: 30px;
+  }
 `
 
 const SHeading = styled.h3`
@@ -48,7 +64,6 @@ const SHeading = styled.h3`
 
 const Text = styled.p`
   display: inline;
-
   b {
     font-weight: 800;
   }
