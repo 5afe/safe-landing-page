@@ -64,7 +64,11 @@ const MobileMenu = ({ toggleMobileMenu, mobileMenuOpened }) => {
             </NavLink>
           </NavListItem>
           <NavListItem>
-            <ButtonLink url="https://gnosis-safe.io/app" target="_self">
+            <ButtonLink
+              url="/app"
+              target="_self"
+              explicitExternal
+            >
               Open App
             </ButtonLink>
           </NavListItem>

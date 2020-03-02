@@ -119,7 +119,11 @@ const Header: React.FC<{}> = ({ toggleMobileMenu, mobileMenuOpened }) => (
         </NavListItem>
         <Divider />
         <NavListItem>
-          <ButtonLink url="https://gnosis-safe.io/app" target="_self">
+          <ButtonLink
+              url="/app"
+              target="_self"
+              explicitExternal
+            >
             Open App
           </ButtonLink>
         </NavListItem>
