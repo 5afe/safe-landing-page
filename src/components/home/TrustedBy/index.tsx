@@ -36,7 +36,9 @@ const RCol = styled.div`
   grid-column-gap: 91px;
   grid-row-gap: 51px;
   @media screen and (max-width: 1240px) {
-    grid-template-columns: repeat(auto-fill, 160px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
   }
 `
 
@@ -51,8 +53,11 @@ const SHeading = styled.h3`
 `
 
 const ImageAnchor = styled.a`
-  max-width: 160px;
   max-height: 54px;
+  @media screen and (max-width: 1240px) {
+    max-height: 35px;
+    display: ${p => p.companyName === "Aragon" ? "none" : "block"}
+  }
 `
 
 const Image = styled.img`
@@ -60,6 +65,10 @@ const Image = styled.img`
   max-height: 54px;
   width: auto;
   height: auto;
+  @media screen and (max-width: 1240px) {
+    max-width: 104px;
+    max-height: 35px;
+  }
 `
 
 const TrustedBy = () => (
@@ -75,6 +84,7 @@ const TrustedBy = () => (
             title={company.name}
             href={company.websiteURL}
             target="_blank"
+            companyName={company.name}
           >
             <Image src={company.imageURL}></Image>
           </ImageAnchor>
