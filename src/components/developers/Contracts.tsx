@@ -37,7 +37,7 @@ const RCol = styled.div`
   }
 `
 
-const SubLCol = styled.p`
+const SubLCol = styled.div`
   flex-basis: 67%;
   letter-spacing: 0.36px;
   font-size: 16px;
@@ -47,7 +47,7 @@ const SubLCol = styled.p`
   }
 `
 
-const SubRCol = styled.p`
+const SubRCol = styled.div`
   flex-basis: 178px;
   letter-spacing: 0.36px;
   font-size: 16px;

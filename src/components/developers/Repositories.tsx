@@ -75,7 +75,7 @@ const RCol = styled.div`
   width: 100%;
 `
 
-const SubCol = styled.p`
+const SubCol = styled.div`
   flex-basis: 33%;
   letter-spacing: 0.36px;
   font-size: 16px;
