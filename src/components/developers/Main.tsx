@@ -21,7 +21,6 @@ const SWrapper = styled(ContentWrapper)`
   justify-content: space-between;
   height: 100%;
   @media screen and (max-width: 1240px) {
-    --display: block;
     padding: 0 12px;
     align-items: flex-start;
   }

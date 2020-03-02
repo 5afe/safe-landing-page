@@ -11,9 +11,15 @@ const HeaderMenu: React.FC<{}> = () => {
 
   return (
     <>
-      <Header toggleMobileMenu={toggleMobileMenu} mobileMenuOpened={mobileMenuOpened} />
+      <Header
+        toggleMobileMenu={toggleMobileMenu}
+        mobileMenuOpened={mobileMenuOpened}
+      />
       {mobileMenuOpened && (
-        <MobileMenu toggleMobileMenu={toggleMobileMenu} mobileMenuOpened={mobileMenuOpened} />
+        <MobileMenu
+          toggleMobileMenu={toggleMobileMenu}
+          mobileMenuOpened={mobileMenuOpened}
+        />
       )}
     </>
   )

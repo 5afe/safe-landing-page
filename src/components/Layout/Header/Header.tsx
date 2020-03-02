@@ -23,8 +23,9 @@ const Container = styled.header`
   align-items: center;
   width: 100%;
   height: 56px;
-  box-shadow: ${p => !p.mobileMenuOpened ? "3px 4px 14px 0 rgba(0, 0, 0, 0.15)" : "none"};
-  border-bottom: ${p => !p.mobileMenuOpened ? "solid 1px #b3b5b3" : "none"};
+  box-shadow: ${p =>
+    !p.mobileMenuOpened ? '3px 4px 14px 0 rgba(0, 0, 0, 0.15)' : 'none'};
+  border-bottom: ${p => (!p.mobileMenuOpened ? 'solid 1px #b3b5b3' : 'none')};
   background-color: ${p => p.theme.palette.pink};
   overflow: hidden;
 `
