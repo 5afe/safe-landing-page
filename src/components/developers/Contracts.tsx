@@ -100,7 +100,7 @@ const Contracts = () => (
             <SubRCol>
               <Row>
                 <SButtonLink
-                  url="https://gnosis-safe.readthedocs.io/en/latest/contracts/index.html"
+                  url="https://docs.gnosis.io/safe/docs/docs1/"
                   colorScheme="white"
                 >
                   Documentation
@@ -134,7 +134,7 @@ const Contracts = () => (
             <SubRCol>
               <Row>
                 <SButtonLink
-                  url="https://github.com/gnosis/contract-proxy-kit"
+                  url="https://docs.gnosis.io/safe/docs/cpktutorial1/"
                   colorScheme="white"
                 >
                   Integrate Proxy Kit
