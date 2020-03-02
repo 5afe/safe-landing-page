@@ -8,12 +8,19 @@ const Container = styled.section`
   padding-bottom: 230px;
   color: ${p => p.theme.palette.navy};
   overflow: hidden;
+  @media screen and (max-width: 1240px) {
+    padding: 0;
+  }
 `
 
 const SWrapper = styled(ContentWrapper)`
   display: flex;
   justify-content: space-between;
   height: 100%;
+  @media screen and (max-width: 1240px) {
+    display: block;
+    padding: 0px 10px 40px 10px;
+  }
 `
 
 const LCol = styled.div`
@@ -28,6 +35,11 @@ const RCol = styled.div`
   grid-template-columns: repeat(4, 160px);
   grid-column-gap: 91px;
   grid-row-gap: 51px;
+  @media screen and (max-width: 1240px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
 `
 
 const SHeading = styled.h3`
@@ -35,19 +47,21 @@ const SHeading = styled.h3`
   font-weight: 800;
   letter-spacing: 0.56px;
   line-height: normal;
+  @media screen and (max-width: 1240px) {
+    padding: 30px 0;
+    font-size: 28px;
+  }
 `
 
 const ImageAnchor = styled.a`
-  max-width: 160px;
   max-height: 54px;
-  text-align: center;
 `
 
 const Image = styled.img`
   max-width: 160px;
+  max-height: 54px;
   width: auto;
   height: auto;
-  max-height: 54px;
   border-radius: 50%;
 `
 
