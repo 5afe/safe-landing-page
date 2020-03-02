@@ -13,7 +13,6 @@ const Container = styled.div`
   @media screen and (max-width: 1240px) {
     padding: 0;
   }
-  --border: 1px solid red;
 `
 
 const SHeading = styled(Heading)`
@@ -22,6 +21,7 @@ const SHeading = styled(Heading)`
   @media screen and (max-width: 1240px) {
     font-size: 28px;
     margin-bottom: 30px;
+    padding: 0 12px;
   }
 `
 
