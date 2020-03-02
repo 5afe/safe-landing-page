@@ -23,7 +23,7 @@ const Row = styled.div`
 `
 
 const LRow = styled.div`
-  margin-top: 60px;
+  margin-top: 65px;
   @media screen and (max-width: 1240px) {
     margin: 0 0 40px 0;
   }
