@@ -13,6 +13,7 @@ const Container = styled.div`
   @media screen and (max-width: 1240px) {
     padding: 0;
   }
+  --border: 1px solid red;
 `
 
 const SHeading = styled(Heading)`
@@ -108,7 +109,7 @@ const LoveMessage = styled.h3`
   padding-bottom: 16px;
   @media screen and (max-width: 1240px) {
     padding: 0;
-    margin-bottom: 30px;
+    padding: 10px 0 40px 0;
   }
 `
 
