@@ -15,6 +15,9 @@ const Container = styled.div`
   color: ${p => p.theme.palette.navy};
   position: relative;
   overflow: hidden;
+  @media screen and (max-width: 1240px) {
+    padding: 0;
+  }
 `
 
 const Row = styled.div`
@@ -22,6 +25,11 @@ const Row = styled.div`
   justify-content: space-between;
   height: 100%;
   margin-bottom: 80px;
+  @media screen and (max-width: 1240px) {
+    display: block;
+    margin-bottom: 40px;
+    padding: 0 12px;
+  }
 `
 
 const LCol = styled.div`
@@ -33,15 +41,31 @@ const RCol = styled.div`
   display: flex;
   flex-direction: column;
   flex-basis: 50%;
+  @media screen and (max-width: 1240px) {
+    margin-top: 40px;
+  }
 `
 
 const LHeading = styled(Heading)`
   margin-bottom: 43px;
+  max-width: 330px;
+  @media screen and (max-width: 1240px) {
+    margin-bottom: 30px;
+    font-size: 25px;
+    padding-top: 30px;
+    max-width: 100%;
+  }
 `
 
 const SHeading = styled(Heading)`
   margin-top: 166px;
   margin-bottom: 100px;
+  @media screen and (max-width: 1240px) {
+    margin-top: 0;
+    padding: 0 12px;
+    margin-bottom: 70px;
+    font-size: 25px;
+  }
 `
 
 const SLinesSVG = styled(LinesSVG)`
@@ -51,6 +75,9 @@ const SLinesSVG = styled(LinesSVG)`
   transform: translateY(-20%);
   opacity: 0.27;
   stroke: #d8d8d8;
+  @media screen and (max-width: 1240px) {
+    display: none;
+  }
 `
 
 const SContentWrapper = styled(ContentWrapper)`
@@ -64,13 +91,7 @@ const BugBounty = () => (
     <SContentWrapper>
       <Row>
         <LCol>
-          <LHeading>
-            Our biggest
-            <br />
-            bug bounty
-            <br />
-            program ever
-          </LHeading>
+          <LHeading>Our biggest bug bounty program ever</LHeading>
           <ButtonLink url="/" colorScheme="white">
             Start bug hunting
           </ButtonLink>

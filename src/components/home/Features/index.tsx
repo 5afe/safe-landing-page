@@ -56,6 +56,7 @@ const SHeading = styled.h3`
   margin-bottom: 29px;
   @media screen and (max-width: 1240px) {
     margin: 30px 0;
+    font-size: 28px;
   }
 `
 

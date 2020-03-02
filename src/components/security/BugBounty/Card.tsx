@@ -16,6 +16,9 @@ const STitle = styled.h6`
   font-weight: 800;
   line-height: normal;
   letter-spacing: 0.56px;
+  @media screen and (max-width: 1240px) {
+    font-size: 16px;
+  }
 `
 
 const ImageContainer = styled.div`
