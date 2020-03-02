@@ -21,9 +21,8 @@ const LCol = styled.div`
   flex-basis: 40%;
   display: flex;
   align-items: center;
-  height: 60px%;
   @media screen and (max-width: 1240px) {
-    padding: 32px 0;
+    padding: 30px 0;
   }
 `
 
@@ -31,12 +30,15 @@ const RCol = styled.div`
   flex-basis: 60%;
   display: flex;
   justify-content: space-between;
-  bor
 `
 
 const SImage = styled(Image)`
   box-shadow: 1px 2px 10px 0 rgba(212, 212, 211, 0.59);
   border-radius: 50%;
+  @media screen and (max-width: 1240px) {
+    max-height: 40px;
+    max-width: 40px;
+  }
 `
 
 const sectionQuery = graphql`
