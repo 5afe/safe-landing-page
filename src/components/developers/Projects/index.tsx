@@ -7,6 +7,7 @@ const Container = styled.section`
   padding-top: 150px;
   padding-bottom: 230px;
   color: ${p => p.theme.palette.navy};
+  overflow: hidden;
 `
 
 const SWrapper = styled(ContentWrapper)`

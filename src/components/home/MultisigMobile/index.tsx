@@ -6,8 +6,10 @@ import LinesSVG from '../../../assets/lines.svg'
 
 const SectionContainer = styled.section`
   padding: 135px 0 407px;
-  background-color: ${p => p.theme.palette.pink};
   position: relative;
+  @media screen and (max-width: 1240px) {
+    padding: 0;
+  }
 `
 
 const SRow = styled(ContentWrapper)`

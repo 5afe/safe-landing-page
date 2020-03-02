@@ -10,6 +10,7 @@ const Container = styled.footer`
   position: absolute;
   bottom: 10px;
   background-color: transparent;
+  overflow: hidden;
 `
 
 const Copyright = styled.p`

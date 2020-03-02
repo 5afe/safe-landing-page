@@ -6,20 +6,27 @@ import Input from '../../ui/Input'
 
 const Row = styled.div`
   display: flex;
-  height: 100%;
-
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  @media screen and (max-width: 1240px) {
+    display: block;
   }
 `
 
+const Col = styled.div`
+  flex-basis: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`
+
 const LCol = styled.div`
-  flex-basis: 28%;
+  flex-basis: 25%;
   flex-direction: column;
 `
 
 const RCol = styled.div`
-  flex-basis: 35%;
+  flex-basis: 72.5%;
 `
 
 const SHeading = styled.h3`
@@ -32,18 +39,31 @@ const SHeading = styled.h3`
 const SForm = styled.form`
   display: flex;
   position: relative;
+  @media screen and (max-width: 1240px) {
+    display: block;
+  }
 `
 
 const SInput = styled(Input)`
   width: 100%;
   margin-right: 50px;
+  @media screen and (max-width: 1240px) {
+    max-width: 440px;
+    margin-right: 0;
+  }
 `
 
 const SMsg = styled.p`
-  position: absolute;
-  top: 120%;
-  max-width: 250px;
-  min-height: 50px;
+  margin-top: 5px;
+`
+
+const SButton = styled(Button)`
+  max-width: 100px;
+  @media screen and (max-width: 1240px) {
+    max-width: 205px;
+    margin: 40px 0;
+    margin-right: 0;
+  }
 `
 
 const GetNotified = () => {
@@ -84,18 +104,24 @@ const GetNotified = () => {
       </LCol>
       <RCol>
         <SForm onSubmit={handleSubmit}>
-          <SInput
-            type="email"
-            placeholder="Your Email Address"
-            value={email}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-              setEmail(e.target.value)
-            }}
-          />
-          <Button colorScheme="white" type="submit">
-            Sign up
-          </Button>
-          {msg && <SMsg>{msg}</SMsg>}
+          <Row>
+            <Col>
+              <SInput
+                type="email"
+                placeholder="Your Email Address"
+                value={email}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                  setEmail(e.target.value)
+                }}
+              />
+              {msg && <SMsg>{msg}</SMsg>}
+            </Col>
+            <Col>
+              <SButton colorScheme="white" type="submit">
+                Sign up
+              </SButton>
+            </Col>
+          </Row>
         </SForm>
       </RCol>
     </Row>

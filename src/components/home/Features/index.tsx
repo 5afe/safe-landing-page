@@ -13,11 +13,20 @@ import WarningIcon from '../../../assets/icon-warning.svg'
 
 const SFeature = styled(Feature)`
   margin-bottom: 47px;
+  position: relative;
+  @media screen and (max-width: 1240px) {
+    margin: 0 0 30px 0;
+  }
 `
 
 const Container = styled.section`
   padding: 112px 0;
   background-color: rgba(0, 140, 115, 0.88);
+  overflow: hidden;
+  color: ${p => p.theme.palette.navy};
+  @media screen and (max-width: 1240px) {
+    padding: 0 12px;
+  }
 `
 
 const Row = styled.div`
@@ -25,6 +34,10 @@ const Row = styled.div`
   justify-content: space-between;
   height: 100%;
   margin-bottom: 80px;
+  @media screen and (max-width: 1240px) {
+    display: block;
+    margin-bottom: 40px;
+  }
 `
 
 const LCol = styled.div`
@@ -41,12 +54,25 @@ const SHeading = styled.h3`
   font-weight: 800;
   letter-spacing: 0.56px;
   margin-bottom: 29px;
+  @media screen and (max-width: 1240px) {
+    margin: 30px 0;
+  }
 `
 
 const Text = styled.p`
   letter-spacing: 0.36px;
   margin-bottom: 37px;
   line-height: normal;
+  @media screen and (max-width: 1240px) {
+    letter-spacing: normal;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 800;
+  }
+`
+
+const SButtonLink = styled(ButtonLink)`
+  margin-bottom: 40px;
 `
 
 const Features = () => (
@@ -60,9 +86,9 @@ const Features = () => (
             <br />
             Let us know!
           </Text>
-          <ButtonLink url="http://safe.cnflx.io/" colorScheme="white">
+          <SButtonLink url="http://safe.cnflx.io/" colorScheme="white">
             Feature idea board
-          </ButtonLink>
+          </SButtonLink>
         </LCol>
         <Col>
           <SFeature img={DocIcon} title="Multi-signature">

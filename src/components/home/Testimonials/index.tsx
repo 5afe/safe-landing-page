@@ -4,9 +4,16 @@ import Testimonial from './Testimonial'
 import ContentWrapper from '../../Layout/ContentWrapper'
 import BgGraySVG from '../../../assets/bg-gray-half.svg'
 
-const SectionContainer = styled.section`
+const Container = styled.section`
   padding: 228px 0 144px;
   position: relative;
+  @media screen and (max-width: 1240px) {
+    padding: 0;
+  }
+`
+
+const SContentWrapper = styled(ContentWrapper)`
+  overflow: hidden;
 `
 
 const SBgSVG = styled(BgGraySVG)`
@@ -20,15 +27,22 @@ const SectionHeading = styled.h3`
   font-size: 25px;
   font-weight: 800;
   letter-spacing: 0.56px;
+  @media screen and (max-width: 1240px) {
+    display: none;
+  }
 `
 
 const TestimonialsContainer = styled.div`
-  display: grid;
-
-  grid-template-columns: repeat(4, 278px);
-  grid-template-rows: repeat(6, 84px);
-  grid-row-gap: 32px;
-  justify-content: space-between;
+  @media screen and (min-width: 1241px) {
+    display: grid;
+    grid-template-columns: repeat(4, 278px);
+    grid-template-rows: repeat(6, 84px);
+    grid-row-gap: 32px;
+    justify-content: space-between;
+  }
+  @media screen and (max-width: 1240px) {
+    padding: 40px 40px 0 40px;
+  }
 `
 
 const STestimonial1 = styled(Testimonial)`
@@ -42,6 +56,10 @@ const STestimonial2 = styled(Testimonial)`
   grid-column-end: 4;
   grid-row-start: 5;
   grid-row-end: 7;
+
+  @media screen and (max-width: 1240px) {
+    display: none;
+  }
 `
 
 const STestimonial3 = styled(Testimonial)`
@@ -54,12 +72,20 @@ const STestimonial4 = styled(Testimonial)`
   grid-column-start: 3;
   grid-row-start: 1;
   grid-row-end: 5;
+
+  @media screen and (max-width: 1240px) {
+    display: none;
+  }
 `
 
 const STestimonial5 = styled(Testimonial)`
   grid-column-start: 1;
   grid-row-start: 3;
   grid-row-end: 7;
+
+  @media screen and (max-width: 1240px) {
+    display: none;
+  }
 `
 
 const STestimonial6 = styled(Testimonial)`
@@ -69,8 +95,8 @@ const STestimonial6 = styled(Testimonial)`
 `
 
 const Testimonials = () => (
-  <SectionContainer>
-    <ContentWrapper>
+  <Container>
+    <SContentWrapper>
       <TestimonialsContainer>
         <SectionHeading>Testimonials</SectionHeading>
         <STestimonial4
@@ -128,9 +154,9 @@ const Testimonials = () => (
           how much we trust the technology and the team behind its development.
         </STestimonial5>
       </TestimonialsContainer>
-    </ContentWrapper>
+    </SContentWrapper>
     <SBgSVG />
-  </SectionContainer>
+  </Container>
 )
 
 export default Testimonials

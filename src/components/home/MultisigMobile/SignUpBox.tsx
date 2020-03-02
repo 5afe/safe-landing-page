@@ -10,30 +10,39 @@ import Button from '../../ui/Button'
 
 const Container = styled.div`
   flex-basis: 83%;
-
   display: flex;
-  height: 408px;
+  min-height: 408px;
   flex-direction: column;
   background-color: ${p => p.theme.palette.primary};
-  border-radius: 4px;
   box-shadow: 3px 4px 14px 0 rgba(0, 0, 0, 0.22);
-  padding: 30px 152px 97px 37px;
   position: relative;
+  border-radius: 4px;
+  padding: 30px 152px 97px 37px;
+  @media screen and (max-width: 1240px) {
+    flex-basis: 100%;
+    padding: 0 12px;
+    border-radius: 0px;
+  }
 `
 
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  @media screen and (max-width: 1240px) {
+    display: block;
+  }
 `
 
 const Form = styled.form`
   margin-top: 110px;
+  @media screen and (max-width: 1240px) {
+    margin-top: 50px;
+  }
 `
 
 const Col = styled.div`
   flex-basis: 48%;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -44,6 +53,9 @@ const SHeading = styled.h3`
   font-weight: 800;
   letter-spacing: 1px;
   color: ${p => p.theme.palette.navy};
+  @media screen and (max-width: 1240px) {
+    padding: 30px 0;
+  }
 `
 
 const SText = styled.p`
@@ -61,13 +73,18 @@ const SInput = styled(Input)`
 
 const SButton = styled(Button)`
   max-width: 205px;
+  @media screen and (max-width: 1240px) {
+    margin: 40px 0;
+  }
 `
 
 const ImgContainer = styled.div`
   position: absolute;
-
   top: 40%;
-  right: -188px;
+  right: 0;
+  @media screen and (max-width: 1240px) {
+    display: none;
+  }
 `
 
 const PhoneImg = styled(Image)`
@@ -125,51 +142,53 @@ const SignUpBox = () => {
   return (
     <StaticQuery query={sectionQuery}>
       {data => (
-        <Container>
-          <Row>
-            <Col>
-              <SHeading>
-                Safe Multisig
-                <br />
-                Mobile App
-              </SHeading>
-            </Col>
-            <Col>
-              <SText>
-                We are launching a mobile companion
-                <br />
-                app for the Safe Multisig later this year.
-                <br />
-                Sign up to be the first one to get
-                <br />
-                your hands on it!
-              </SText>
-            </Col>
-          </Row>
-          <Form onSubmit={handleSubmit}>
+        <>
+          <Container>
             <Row>
               <Col>
-                <SInput
-                  type="email"
-                  placeholder="Your Email Address"
-                  value={email}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                    setEmail(e.target.value)
-                  }}
-                />
-                {msg && <SMsg>{msg}</SMsg>}
+                <SHeading>
+                  Safe Multisig
+                  <br />
+                  Mobile App
+                </SHeading>
               </Col>
               <Col>
-                <SButton colorScheme="white" type="submit">
-                  Sign up for early access
-                </SButton>
+                <SText>
+                  We are launching a mobile companion
+                  <br />
+                  app for the Safe Multisig later this year.
+                  <br />
+                  Sign up to be the first one to get
+                  <br />
+                  your hands on it!
+                </SText>
               </Col>
             </Row>
-          </Form>
+            <Form onSubmit={handleSubmit}>
+              <Row>
+                <Col>
+                  <SInput
+                    type="email"
+                    placeholder="Your Email Address"
+                    value={email}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                      setEmail(e.target.value)
+                    }}
+                  />
+                  {msg && <SMsg>{msg}</SMsg>}
+                </Col>
+                <Col>
+                  <SButton colorScheme="white" type="submit">
+                    Sign up for early access
+                  </SButton>
+                </Col>
+              </Row>
+            </Form>
+          </Container>
           <ImgContainer>
             <PhoneImg fixed={data.phone.childImageSharp.fixed} />
           </ImgContainer>
-        </Container>
+        </>
       )}
     </StaticQuery>
   )

@@ -10,6 +10,10 @@ import LinesSVG from '../../assets/lines2.svg'
 const Container = styled.main`
   height: calc(100vh - 56px);
   position: relative;
+  overflow: hidden;
+  @media screen and (max-width: 1240px) {
+    height: auto;
+  }
 `
 
 const SWrapper = styled(ContentWrapper)`
@@ -17,10 +21,18 @@ const SWrapper = styled(ContentWrapper)`
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  @media screen and (max-width: 1240px) {
+    display: block;
+    padding: 30px 10px 40px 10px;
+  }
 `
 
 const SHeading = styled(Heading)`
   margin-bottom: 50px;
+  max-width: 400px;
+  @media screen and (max-width: 1240px) {
+    max-width: 100%;
+  }
 `
 
 const SLinesSVG = styled(LinesSVG)`
@@ -29,6 +41,9 @@ const SLinesSVG = styled(LinesSVG)`
   bottom: 0;
   stroke: #008c73;
   z-index: -1;
+  @media screen and (max-width: 1240px) {
+    top: 170px;
+  }
 `
 
 const LCol = styled.div`
@@ -40,6 +55,10 @@ const RCol = styled.div`
   flex-basis: 42%;
   width: 100%;
   position: relative;
+  @media screen and (max-width: 1240px) {
+    margin-top: 150px;
+    max-width: 500px;
+  }
 `
 
 const SImg = styled(Img)`
@@ -53,6 +72,9 @@ const Screenshot2Container = styled.div`
   right: -20%;
   width: 100%;
   z-index: -1;
+  @media screen and (max-width: 1240px) {
+    top: -40%;
+  }
 `
 
 const MainSection = () => (

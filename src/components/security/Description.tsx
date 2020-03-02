@@ -20,6 +20,7 @@ const Container = styled.div`
   padding-top: 50px;
   padding-bottom: 241px;
   color: ${p => p.theme.palette.navy};
+  overflow: hidden;
 `
 
 const SWrapper = styled(ContentWrapper)`
