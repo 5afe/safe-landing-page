@@ -5,9 +5,23 @@ import Heading from '../ui/Heading'
 import ButtonLink from '../ui/ButtonLink'
 import LinesSVG from '../../assets/bg-lines-03.svg'
 
+const Container = styled.div`
+  position: relative;
+  padding-top: 107px;
+  padding-bottom: 20px;
+  color: ${p => p.theme.palette.navy};
+  @media screen and (max-width: 1240px) {
+    padding: 0;
+  }
+`
+
 const SHeading = styled(Heading)`
   letter-spacing: 1px;
   margin-bottom: 54px;
+  @media screen and (max-width: 1240px) {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
 `
 
 const SSmallHeading = styled.h3`
@@ -15,17 +29,13 @@ const SSmallHeading = styled.h3`
   font-weight: 800;
   letter-spacing: 0.56px;
   width: 130px;
+  @media screen and (max-width: 1240px) {
+    width: auto;
+  }
 `
 
 const SRightSmallHeading = styled(SSmallHeading)`
   color: ${p => p.theme.palette.primary};
-`
-
-const Container = styled.div`
-  position: relative;
-  padding-top: 107px;
-  padding-bottom: 20px;
-  color: ${p => p.theme.palette.navy};
 `
 
 const SLinesSVG = styled(LinesSVG)`
@@ -35,9 +45,22 @@ const SLinesSVG = styled(LinesSVG)`
   stroke: #d8d8d8;
   opacity: 0.27;
   z-index: -1;
+  @media screen and (max-width: 1240px) {
+    display: none;
+  }
 `
 
 const Row = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  width: 100%;
+  @media screen and (max-width: 1240px) {
+    display: block;
+  }
+`
+
+const SubRow = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
@@ -47,19 +70,32 @@ const Col = styled.div`
   display: flex;
 `
 
-const RCol = styled.div``
+const RCol = styled.div`
+  width: 100%;
+`
 
 const SubCol = styled.p`
   flex-basis: 33%;
   letter-spacing: 0.36px;
   font-size: 16px;
   line-height: normal;
+  @media screen and (max-width: 1240px) {
+    flex-basis: 50%;
+    text-align: center;
+    padding: 0 10px;
+  }
 `
 
 const SButtonLink = styled(ButtonLink)`
   width: 180px;
   text-align: center;
   margin-left: 20px;
+  @media screen and (max-width: 1240px) {
+    margin: 0;
+  }
+  @media screen and (max-width: 640px) {
+    width: 100%;
+  }
 `
 
 const LoveMessage = styled.h3`
@@ -70,6 +106,10 @@ const LoveMessage = styled.h3`
   line-height: normal;
   padding-top: 169px;
   padding-bottom: 16px;
+  @media screen and (max-width: 1240px) {
+    padding: 0;
+    margin-bottom: 30px;
+  }
 `
 
 const Repositories = () => (
@@ -86,57 +126,53 @@ const Repositories = () => (
           <RCol>
             <Row>
               <SubCol>
-                <Row>
+                <SubRow>
                   <SSmallHeading>Contracts</SSmallHeading>
-                </Row>
+                </SubRow>
               </SubCol>
-              <SubCol>
-                <Row>
+              <SubRow>
+                <SubCol>
                   <SButtonLink
                     url="https://github.com/gnosis/safe-contracts/blob/development/contracts/GnosisSafe.sol"
                     colorScheme="navy"
                   >
                     Core
                   </SButtonLink>
-                </Row>
-              </SubCol>
-              <SubCol>
-                <Row>
+                </SubCol>
+                <SubCol>
                   <SButtonLink
                     url="https://github.com/gnosis/safe-contracts/tree/development/contracts/modules"
                     colorScheme="navy"
                   >
                     Modules
                   </SButtonLink>
-                </Row>
-              </SubCol>
+                </SubCol>
+              </SubRow>
             </Row>
             <Row>
               <SubCol>
-                <Row>
+                <SubRow>
                   <SSmallHeading>Services</SSmallHeading>
-                </Row>
+                </SubRow>
               </SubCol>
-              <SubCol>
-                <Row>
+              <SubRow>
+                <SubCol>
                   <SButtonLink
                     url="https://github.com/gnosis/safe-transaction-service"
                     colorScheme="navy"
                   >
                     Transaction indexer
                   </SButtonLink>
-                </Row>
-              </SubCol>
-              <SubCol>
-                <Row>
+                </SubCol>
+                <SubCol>
                   <SButtonLink
                     url="https://github.com/gnosis/safe-relay-service"
                     colorScheme="navy"
                   >
                     Relay
                   </SButtonLink>
-                </Row>
-              </SubCol>
+                </SubCol>
+              </SubRow>
             </Row>
           </RCol>
         </Col>
@@ -144,55 +180,51 @@ const Repositories = () => (
           <RCol>
             <Row>
               <SubCol>
-                <Row>
+                <SubRow>
                   <SRightSmallHeading>Clients</SRightSmallHeading>
-                </Row>
+                </SubRow>
               </SubCol>
-              <SubCol>
-                <Row>
+              <SubRow>
+                <SubCol>
                   <SButtonLink
                     url="https://github.com/gnosis/safe-react"
                     colorScheme="green"
                   >
                     Web interface
                   </SButtonLink>
-                </Row>
-              </SubCol>
-              <SubCol>
-                <Row>
+                </SubCol>
+                <SubCol>
                   <SButtonLink
                     url="https://github.com/gnosis/contract-proxy-kit"
                     colorScheme="green"
                   >
                     Proxy kit
                   </SButtonLink>
-                </Row>
-              </SubCol>
+                </SubCol>
+              </SubRow>
             </Row>
             <Row>
               <SubCol>
-                <Row></Row>
+                <SubRow></SubRow>
               </SubCol>
-              <SubCol>
-                <Row>
+              <SubRow>
+                <SubCol>
                   <SButtonLink
                     url="https://github.com/gnosis/safe-android"
                     colorScheme="green"
                   >
                     Android app
                   </SButtonLink>
-                </Row>
-              </SubCol>
-              <SubCol>
-                <Row>
+                </SubCol>
+                <SubCol>
                   <SButtonLink
                     url="https://github.com/gnosis/safe-ios"
                     colorScheme="green"
                   >
                     iOS app
                   </SButtonLink>
-                </Row>
-              </SubCol>
+                </SubCol>
+              </SubRow>
             </Row>
           </RCol>
         </Col>
