@@ -9,23 +9,38 @@ const Container = styled.div`
   margin-bottom: 211px;
   position: relative;
   color: ${p => p.theme.palette.navy};
+  @media screen and (max-width: 1240px) {
+    margin: 0;
+  }
 `
 
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 1240px) {
+    display: block;
+  }
 `
 
 const LRow = styled.div`
   margin-top: 60px;
+  @media screen and (max-width: 1240px) {
+    margin: 0 0 40px 0;
+  }
 `
 
 const LCol = styled.div`
   flex-basis: 25%;
+  @media screen and (max-width: 1240px) {
+    padding: 0 12px;
+  }
 `
 
 const RCol = styled.div`
   flex-basis: 72.5%;
+  @media screen and (max-width: 1240px) {
+    padding: 0 12px 30px 12px;
+  }
 `
 
 const SubCol = styled.p`
@@ -40,6 +55,19 @@ const SHeading = styled.h3`
   font-size: 25px;
   font-weight: 800;
   letter-spacing: 0.56px;
+  @media screen and (max-width: 1240px) {
+    padding: 30px 0;
+    font-size: 28px;
+  }
+`
+
+const SSubHeading = styled.h3`
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 0.56px;
+  @media screen and (max-width: 1240px) {
+    font-size: 16px;
+  }
 `
 
 const SLinesSVG = styled(LinesSVG)`
@@ -49,6 +77,10 @@ const SLinesSVG = styled(LinesSVG)`
   stroke: #008c73;
   opacity: 0.4;
   z-index: -1;
+  @media screen and (max-width: 1240px) {
+    bottom: 0;
+    opacity: 0.5;
+  }
 `
 
 const SafeApps = () => (
@@ -66,11 +98,11 @@ const SafeApps = () => (
         </LCol>
         <RCol>
           <Row>
-            <SHeading>
+            <SSubHeading>
               With over $1B worth of digital assets held in Gnosis Multisigs
               alone, it’s essential for the dapp ecosystem to access this
               untapped market.
-            </SHeading>
+            </SSubHeading>
           </Row>
           <Row>
             <SubCol>

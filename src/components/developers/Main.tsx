@@ -10,6 +10,9 @@ const Container = styled.div`
   position: relative;
   color: ${p => p.theme.palette.navy};
   overflow: hidden;
+  @media screen and (max-width: 1240px) {
+    height: auto;
+  }
 `
 
 const SWrapper = styled(ContentWrapper)`
@@ -17,22 +20,41 @@ const SWrapper = styled(ContentWrapper)`
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  @media screen and (max-width: 1240px) {
+    padding: 0 12px;
+    align-items: flex-start;
+  }
 `
 
 const SHeading = styled(Heading)`
   margin-bottom: 30px;
+  @media screen and (max-width: 1240px) {
+    margin-bottom: 0;
+    font-size: 28px;
+    max-width: 180px;
+    padding: 30px 0 45px 0;
+  }
 `
 
 const Text = styled.p`
   font-size: 25px;
   line-height: normal;
   letter-spacing: 0.56px;
+  @media screen and (max-width: 1240px) {
+    font-size: 16px;
+    letter-spacing: 0.36px;
+    max-width: 230px;
+  }
 `
 
 const LCol = styled.div`
   flex-basis: 29%;
   flex-direction: column;
   height: 300px;
+  @media screen and (max-width: 1240px) {
+    height: auto;
+    flex-basis: 70%;
+  }
 `
 
 const RCol = styled.div`
@@ -40,6 +62,10 @@ const RCol = styled.div`
   position: relative;
   height: 300px;
   color: ${p => p.theme.palette.primary};
+  @media screen and (max-width: 1240px) {
+    flex-basis: 30%;
+    height: 130px;
+  }
 `
 
 const Triangle = styled.span`
@@ -52,6 +78,12 @@ const Triangle = styled.span`
   position: absolute;
   left: 0;
   top: -40px;
+  @media screen and (max-width: 1240px) {
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    left: -15px;
+  }
 `
 
 const SmallRectangle = styled.span`
@@ -63,6 +95,11 @@ const SmallRectangle = styled.span`
   position: absolute;
   left: 70px;
   bottom: 0;
+  @media screen and (max-width: 1240px) {
+    height: 14px;
+    width: 44px;
+    left: 10px;
+  }
 `
 
 const BigRectangle = styled.span`
@@ -75,6 +112,9 @@ const BigRectangle = styled.span`
   position: absolute;
   right: 0;
   top: -50px;
+  @media screen and (max-width: 1240px) {
+    display: none;
+  }
 `
 
 const Circle = styled.span`
@@ -87,6 +127,9 @@ const Circle = styled.span`
   position: absolute;
   right: 100px;
   bottom: 50px;
+  @media screen and (max-width: 1240px) {
+    display: none;
+  }
 `
 
 const SSafeLogo = styled(SafeLogo)`
@@ -97,6 +140,13 @@ const SSafeLogo = styled(SafeLogo)`
   position: absolute;
   top: 0;
   left: 260px;
+  @media screen and (max-width: 1240px) {
+    width: 52px;
+    height: 52px;
+    right: 0;
+    left: auto;
+    top: 50px;
+  }
 `
 
 const MainSection = () => (

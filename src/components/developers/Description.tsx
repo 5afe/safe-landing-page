@@ -6,6 +6,10 @@ import LinesSVG from '../../assets/lines.svg'
 
 const SHeading = styled(Heading)`
   letter-spacing: 1px;
+  @media screen and (max-width: 1240px) {
+    font-size: 16px;
+    padding: 0 12px;
+  }
 `
 
 const Container = styled.div`
@@ -13,6 +17,9 @@ const Container = styled.div`
   padding-top: 107px;
   padding-bottom: 122px;
   color: ${p => p.theme.palette.navy};
+  @media screen and (max-width: 1240px) {
+    padding: 30px 0;
+  }
 `
 
 const SWrapper = styled(ContentWrapper)`

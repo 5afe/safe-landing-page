@@ -10,12 +10,19 @@ const Container = styled.div`
   padding-top: 112px;
   background-color: rgba(0, 140, 115, 0.88);
   overflow: hidden;
+  @media screen and (max-width: 1240px) {
+    padding: 20px 12px 30px 12px;
+  }
 `
 
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  @media screen and (max-width: 1240px) {
+    display: block;
+    margin-bottom: 0;
+  }
 `
 
 const LCol = styled.div`
@@ -25,16 +32,22 @@ const LCol = styled.div`
 const RCol = styled.div`
   flex-basis: 72.5%;
   margin-bottom: 60px;
+  @media screen and (max-width: 1240px) {
+    margin-bottom: 0;
+  }
 `
 
-const SubLCol = styled.p`
+const SubLCol = styled.div`
   flex-basis: 67%;
   letter-spacing: 0.36px;
   font-size: 16px;
   line-height: normal;
+  @media screen and (max-width: 1240px) {
+    padding-bottom: 30px;
+  }
 `
 
-const SubRCol = styled.p`
+const SubRCol = styled.div`
   flex-basis: 178px;
   letter-spacing: 0.36px;
   font-size: 16px;
@@ -45,11 +58,19 @@ const SHeading = styled.h3`
   font-size: 25px;
   font-weight: 800;
   letter-spacing: 0.56px;
+  @media screen and (max-width: 1240px) {
+    padding: 30px 0;
+    font-size: 28px;
+  }
 `
 
 const SButtonLink = styled(ButtonLink)`
   width: 100%;
   text-align: center;
+  @media screen and (max-width: 1240px) {
+    width: 178px;
+    margin-bottom: 20px;
+  }
 `
 
 const SLinesSVG = styled(LinesSVG)`
@@ -79,7 +100,7 @@ const Contracts = () => (
             <SubRCol>
               <Row>
                 <SButtonLink
-                  url="https://gnosis-safe.readthedocs.io/en/latest/contracts/index.html"
+                  url="https://docs.gnosis.io/safe/docs/docs1/"
                   colorScheme="white"
                 >
                   Documentation
@@ -113,7 +134,7 @@ const Contracts = () => (
             <SubRCol>
               <Row>
                 <SButtonLink
-                  url="https://github.com/gnosis/contract-proxy-kit"
+                  url="https://docs.gnosis.io/safe/docs/cpktutorial1/"
                   colorScheme="white"
                 >
                   Integrate Proxy Kit
