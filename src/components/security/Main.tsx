@@ -63,16 +63,20 @@ const RCol = styled.div`
   }
 `
 
-const UsdWorthValue = styled.h1`
-  padding: 14px 18px 0;
-  font-size: 115px;
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: 2.56px;
-  text-align: center;
+const UsdWorthValueContainer = styled.div`
+  padding: 15px;
   border-radius: 5px;
   margin-bottom: 42px;
   border: 2px solid ${p => p.theme.palette.primary};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+const UsdWorthValue = styled.h1`
+  font-size: 115px;
+  font-weight: 800;
+  letter-spacing: 2.56px;
   white-space: nowrap;
   @media screen and (max-width: 1240px) {
     font-size: 50px;
@@ -114,7 +118,9 @@ const MainSection = () => (
         <Text>How we make sure your funds are safe</Text>
       </LCol>
       <RCol>
-        <UsdWorthValue>24,568,527</UsdWorthValue>
+        <UsdWorthValueContainer>
+          <UsdWorthValue>24,568,527</UsdWorthValue>
+        </UsdWorthValueContainer>
         <UsdWorthNotes>
           {'USD worth of digital assets securely stored in Gnosis Safes '}
         </UsdWorthNotes>
