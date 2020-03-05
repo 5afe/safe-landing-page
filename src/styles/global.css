@@ -3,8 +3,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Averta-Regular'),
-    url('/fonts/Averta-normal.woff2') format('woff2');
+  src: url('/fonts/Averta-normal.woff2') format('woff2');
 }
 
 @font-face {
@@ -12,8 +11,7 @@
   font-style: normal;
   font-weight: 800;
   font-display: swap;
-  src: local('Averta-Extrabold'),
-    url('/fonts/Averta-ExtraBold.woff2') format('woff2');
+  src: url('/fonts/Averta-ExtraBold.woff2') format('woff2');
 }
 
 body {
