@@ -64,13 +64,17 @@ const RCol = styled.div`
 `
 
 const UsdWorthValueContainer = styled.div`
-  padding: 15px;
+  padding: 15px 15px 0;
   border-radius: 5px;
   margin-bottom: 42px;
   border: 2px solid ${p => p.theme.palette.primary};
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 1240px) {
+    padding-bottom: 10px;
+  }
 `
 
 const UsdWorthValue = styled.h1`
@@ -124,7 +128,7 @@ const MainSection = () => (
         <UsdWorthNotes>
           {'USD worth of digital assets securely stored in Gnosis Safes '}
         </UsdWorthNotes>
-        <UsdWorthDate>(as of feb 21TH 2020)</UsdWorthDate>
+        <UsdWorthDate>(as of Feb 21st 2020)</UsdWorthDate>
       </RCol>
     </SWrapper>
   </Container>

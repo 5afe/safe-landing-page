@@ -85,7 +85,15 @@ const LogoDivider = styled(Divider)`
   }
 `
 
-const Header: React.FC<{}> = ({ toggleMobileMenu, mobileMenuOpened }) => (
+interface HeaderProps {
+  toggleMobileMenu: Function
+  mobileMenuOpened: boolean
+}
+
+const Header: React.FC<HeaderProps> = ({
+  toggleMobileMenu,
+  mobileMenuOpened,
+}) => (
   <Container mobileMenuOpened={mobileMenuOpened}>
     <Link to="/">
       <SLogo />
@@ -119,11 +127,7 @@ const Header: React.FC<{}> = ({ toggleMobileMenu, mobileMenuOpened }) => (
         </NavListItem>
         <Divider />
         <NavListItem>
-          <ButtonLink
-              url="/app"
-              target="_self"
-              explicitExternal
-            >
+          <ButtonLink url="/app" target="_self" explicitExternal>
             Open App
           </ButtonLink>
         </NavListItem>
