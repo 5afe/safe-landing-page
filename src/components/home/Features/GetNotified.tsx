@@ -77,7 +77,7 @@ const GetNotified = () => {
       const { result, msg } = await addToMailchimp(email)
 
       let message
-      if (result != 'success') {
+      if (result !== 'success') {
         message = msg || 'Sorry. Unable to subscribe. Please try again later.'
 
         if (msg && msg.indexOf('already subscribed') >= 0) {

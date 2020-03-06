@@ -26,35 +26,19 @@ const Footer: React.FC = () => (
   <Container>
     <Copyright>© Gnosis {new Date().getFullYear()}</Copyright>
     {' | '}
-    <Link
-      href="https://safe.gnosis.io/terms"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <Link href="/terms" target="_blank" rel="noopener noreferrer">
       Terms
     </Link>
     {' | '}
-    <Link
-      href="https://safe.gnosis.io/privacy"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <Link href="/privacy" target="_blank" rel="noopener noreferrer">
       Privacy
     </Link>
     {' | '}
-    <Link
-      href="https://safe.gnosis.io/licenses"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <Link href="/licenses" target="_blank" rel="noopener noreferrer">
       Licenses
     </Link>
     {' | '}
-    <Link
-      href="https://safe.gnosis.io/imprint"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <Link href="/imprint" target="_blank" rel="noopener noreferrer">
       Imprint
     </Link>
   </Container>

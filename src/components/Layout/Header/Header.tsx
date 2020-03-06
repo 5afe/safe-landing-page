@@ -5,7 +5,6 @@ import ButtonLink from '../../ui/ButtonLink'
 import Divider from './Divider'
 import Spacer from './Spacer'
 import Link from '../../ui/Link'
-import MobileMenu from './MobileMenu'
 import Logo from '../../../assets/multisig-logo.svg'
 
 const HeaderItemPadding = css`

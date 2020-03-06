@@ -1,5 +1,4 @@
 import * as React from 'react'
-import styled from 'styled-components'
 import Layout from '../components/Layout'
 import MainSection from '../components/developers/Main'
 import Description from '../components/developers/Description'
