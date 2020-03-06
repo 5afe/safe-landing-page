@@ -91,21 +91,22 @@ const Social: React.FC = () => (
               <Heading small>Get In Touch</Heading>
             </LCol>
             <RCol>
-              <a href="https://twitter.com/gnosisSafe" target="_blank">
+              <a href="https://twitter.com/gnosisSafe" target="_blank" rel="noopener noreferrer">
                 <SImage fixed={data.twitter.childImageSharp.fixed} />
               </a>
-              <a href="mailto:safe@gnosis.io" target="_blank">
+              <a href="mailto:safe@gnosis.io" target="_blank" rel="noopener noreferrer">
                 <SImage fixed={data.email.childImageSharp.fixed} />
               </a>
-              <a href="https://blog.gnosis.pm/tagged/safe" target="_blank">
+              <a href="https://blog.gnosis.pm/tagged/safe" target="_blank" rel="noopener noreferrer">
                 <SImage fixed={data.medium.childImageSharp.fixed} />
               </a>
-              <a href="https://t.me/GnosisSafe" target="_blank">
+              <a href="https://t.me/GnosisSafe" target="_blank" rel="noopener noreferrer">
                 <SImage fixed={data.telegram.childImageSharp.fixed} />
               </a>
               <a
                 href="https://github.com/gnosis?utf8=%E2%9C%93&q=safe"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <SImage fixed={data.github.childImageSharp.fixed} />
               </a>

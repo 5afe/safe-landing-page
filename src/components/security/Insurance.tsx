@@ -1,7 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
-import { StaticQuery, graphql } from 'gatsby'
 import ContentWrapper from '../Layout/ContentWrapper'
 import ButtonLink from '../ui/ButtonLink'
 import LinesSVG from '../../assets/bg-lines-03.svg'

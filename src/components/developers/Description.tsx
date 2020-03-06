@@ -22,13 +22,6 @@ const Container = styled.div`
   }
 `
 
-const SWrapper = styled(ContentWrapper)`
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
-`
-
 const SLinesSVG = styled(LinesSVG)`
   position: absolute;
   left: 0;

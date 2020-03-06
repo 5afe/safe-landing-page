@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import ContentWrapper from '../Layout/ContentWrapper'
 import Heading from '../ui/Heading'
-import ButtonLink from '../ui/ButtonLink'
 import SafeLogo from '../../assets/safe-logo.svg'
 
 const Container = styled.div`

@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import addToMailchimp from 'gatsby-plugin-mailchimp'
 import { graphql, StaticQuery } from 'gatsby'
 import Image from 'gatsby-image'
-import addToMailchimp from 'gatsby-plugin-mailchimp'
 import Input from '../../ui/Input'
 import Button from '../../ui/Button'
 
@@ -124,7 +124,7 @@ const SignUpBox = () => {
       )
 
       let message
-      if (result != 'success') {
+      if (result !== 'success') {
         message = msg || 'Sorry. Unable to subscribe. Please try again later.'
 
         if (msg && msg.indexOf('already subscribed') >= 0) {
