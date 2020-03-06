@@ -5388,7 +5388,7 @@ gatsby-page-utils@^0.0.39:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
-gatsby-plugin-client-side-redirect@1.0.0:
+gatsby-plugin-client-side-redirect@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-client-side-redirect/-/gatsby-plugin-client-side-redirect-1.0.0.tgz#fc58a90e9869278e95aca461a4a5a724967e55b9"
   integrity sha512-ci6PBeZeF5B3Z5G59gYTC3/YY9QNG1xJor7cEVt8Yo743/cRoPLtCxEw9mEYOhGJ+qscKGBn/2FA3M6deOWgFg==
