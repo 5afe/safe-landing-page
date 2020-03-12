@@ -126,7 +126,7 @@ const Header: React.FC<HeaderProps> = ({
         </NavListItem>
         <Divider />
         <NavListItem>
-          <ButtonLink url="/app" target="_self" explicitExternal>
+          <ButtonLink url="/app/#" target="_self" explicitExternal>
             Open App
           </ButtonLink>
         </NavListItem>
