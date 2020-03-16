@@ -5,7 +5,7 @@ import { PROJECTS } from './projects'
 
 const Container = styled.section`
   padding-top: 50px;
-  padding-bottom: 230px;
+  padding-bottom: 150px;
   color: ${p => p.theme.palette.grey};
   background-color: ${p => p.theme.palette.navy};
   overflow: hidden;
@@ -55,7 +55,14 @@ const SHeading = styled.h3`
 `
 
 const ImageAnchor = styled.a`
-  max-height: 54px;
+  height: 54px;
+  @media screen and (max-width: 1240px) {
+    height: 35px;
+  }
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  z-index: 1;
 `
 
 const Image = styled.img`
@@ -63,7 +70,10 @@ const Image = styled.img`
   max-height: 54px;
   width: auto;
   height: auto;
-  border-radius: 50%;
+  @media screen and (max-width: 1240px) {
+    max-width: 104px;
+    max-height: 35px;
+  }
 `
 
 const Projects = () => (
