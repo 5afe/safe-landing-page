@@ -13,12 +13,12 @@ const HeaderItemPadding = css`
 `
 
 const SHeadroom = styled(Headroom)`
-  z-index: 1000;
   position: relative;
 `
 
 const Container = styled.header`
   display: flex;
+  position: relative;
   align-items: center;
   width: 100%;
   height: 56px;
@@ -27,6 +27,7 @@ const Container = styled.header`
   border-bottom: ${p => (!p.mobileMenuOpened ? 'solid 1px #b3b5b3' : 'none')};
   background-color: ${p => p.theme.palette.pink};
   overflow: hidden;
+  z-index: 1000;
 `
 
 const NavContainer = styled.nav`
@@ -116,6 +117,12 @@ const Header: React.FC<HeaderProps> = ({
         <NavListItem>
           <NavLink activeClassName="active" to="/security">
             Security
+          </NavLink>
+        </NavListItem>
+        <Divider />
+        <NavListItem>
+          <NavLink activeClassName="active" to="/enterprises">
+            Enterprises
           </NavLink>
         </NavListItem>
         <Divider />
