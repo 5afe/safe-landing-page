@@ -5,7 +5,7 @@ const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 1px 2px 10px 0 rgba(212, 212, 211, 0.59);
+  box-shadow: 1px 2px 10px 0 rgba(40, 54, 61, 0.18);
   padding: 10px;
   border-radius: 4px;
   font-size: 15px;

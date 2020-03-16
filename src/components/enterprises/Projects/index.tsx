@@ -55,14 +55,14 @@ const SHeading = styled.h3`
 `
 
 const ImageAnchor = styled.a`
-  height: 54px;
-  @media screen and (max-width: 1240px) {
-    height: 35px;
-  }
+  height: 70px;
   display: flex;
   flex-flow: column;
   justify-content: center;
   z-index: 1;
+  @media screen and (max-width: 1240px) {
+    height: 35px;
+  }
 `
 
 const Image = styled.img`
