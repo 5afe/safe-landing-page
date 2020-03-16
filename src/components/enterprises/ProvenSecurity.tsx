@@ -64,6 +64,10 @@ const SSubHeading = styled.h3`
   }
 `
 
+const SButtonLink = styled(ButtonLink)`
+  box-shadow: none;
+`
+
 const ProvenSecurity = () => (
   <Container>
     <ContentWrapper>
@@ -81,9 +85,9 @@ const ProvenSecurity = () => (
           </Row>
           <Row>
             <SubCol>
-              <ButtonLink url="/security" colorScheme="green">
+              <SButtonLink url="/security" colorScheme="green">
                 See security properties
-              </ButtonLink>
+              </SButtonLink>
             </SubCol>
           </Row>
         </RCol>

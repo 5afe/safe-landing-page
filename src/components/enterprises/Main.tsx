@@ -66,6 +66,7 @@ const ButtonsRow = styled.div`
 const SButtonLink = styled(ButtonLink)`
   text-align: center;
   width: 178px;
+  box-shadow: none;
   @media screen and (max-width: 1240px) {
     padding: 10px 0;
     margin-bottom: 20px;
