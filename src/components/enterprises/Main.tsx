@@ -56,7 +56,7 @@ const LCol = styled.div`
 const ButtonsRow = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 390px;
+  width: 410px;
   @media screen and (max-width: 1240px) {
     display: block;
     width: 180px;
@@ -65,7 +65,7 @@ const ButtonsRow = styled.div`
 
 const SButtonLink = styled(ButtonLink)`
   text-align: center;
-  width: 178px;
+  width: 185px;
   box-shadow: none;
   @media screen and (max-width: 1240px) {
     padding: 10px 0;
