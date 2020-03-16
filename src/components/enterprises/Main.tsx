@@ -84,16 +84,16 @@ const MainSection = () => (
         <ButtonsRow>
           <SButtonLink
             colorScheme="white"
-            url="/app"
-            target="_self"
+            url="https://drive.google.com/file/d/1n1b6bV9zrruFwZnayNDvwCbXE2FluABK/view"
+            target="_blank"
             explicitExternal
           >
             Download brochure
           </SButtonLink>
           <SButtonLink
             colorScheme="green"
-            url="/app"
-            target="_self"
+            url="https://calendly.com/anna-george/30min"
+            target="_blank"
             explicitExternal
           >
             Contact expert
