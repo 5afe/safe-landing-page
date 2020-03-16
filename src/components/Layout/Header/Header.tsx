@@ -14,11 +14,11 @@ const HeaderItemPadding = css`
 
 const SHeadroom = styled(Headroom)`
   position: relative;
+  z-index: 1000;
 `
 
 const Container = styled.header`
   display: flex;
-  position: relative;
   align-items: center;
   width: 100%;
   height: 56px;
@@ -27,7 +27,6 @@ const Container = styled.header`
   border-bottom: ${p => (!p.mobileMenuOpened ? 'solid 1px #b3b5b3' : 'none')};
   background-color: ${p => p.theme.palette.pink};
   overflow: hidden;
-  z-index: 1000;
 `
 
 const NavContainer = styled.nav`
@@ -94,52 +93,54 @@ const Header: React.FC<HeaderProps> = ({
   toggleMobileMenu,
   mobileMenuOpened,
 }) => (
-  <Container mobileMenuOpened={mobileMenuOpened}>
-    <Link to="/">
-      <SLogo />
-    </Link>
-    <LogoDivider />
-    <Spacer />
-    <MobileNavContainer onClick={() => toggleMobileMenu()}>
-      <BurgerLine />
-      <BurgerLine />
-      <BurgerLine />
-    </MobileNavContainer>
-    <NavContainer>
-      <NavList>
-        <Divider />
-        <NavListItem>
-          <NavLink activeClassName="active" to="/">
-            Overview
-          </NavLink>
-        </NavListItem>
-        <Divider />
-        <NavListItem>
-          <NavLink activeClassName="active" to="/security">
-            Security
-          </NavLink>
-        </NavListItem>
-        <Divider />
-        <NavListItem>
-          <NavLink activeClassName="active" to="/enterprises">
-            Enterprises
-          </NavLink>
-        </NavListItem>
-        <Divider />
-        <NavListItem>
-          <NavLink activeClassName="active" to="/developers">
-            Developers
-          </NavLink>
-        </NavListItem>
-        <Divider />
-        <NavListItem>
-          <ButtonLink url="/app" target="_self" explicitExternal>
-            Open App
-          </ButtonLink>
-        </NavListItem>
-      </NavList>
-    </NavContainer>
-  </Container>
+  <SHeadroom>
+    <Container mobileMenuOpened={mobileMenuOpened}>
+      <Link to="/">
+        <SLogo />
+      </Link>
+      <LogoDivider />
+      <Spacer />
+      <MobileNavContainer onClick={() => toggleMobileMenu()}>
+        <BurgerLine />
+        <BurgerLine />
+        <BurgerLine />
+      </MobileNavContainer>
+      <NavContainer>
+        <NavList>
+          <Divider />
+          <NavListItem>
+            <NavLink activeClassName="active" to="/">
+              Overview
+            </NavLink>
+          </NavListItem>
+          <Divider />
+          <NavListItem>
+            <NavLink activeClassName="active" to="/security">
+              Security
+            </NavLink>
+          </NavListItem>
+          <Divider />
+          <NavListItem>
+            <NavLink activeClassName="active" to="/enterprises">
+              Enterprises
+            </NavLink>
+          </NavListItem>
+          <Divider />
+          <NavListItem>
+            <NavLink activeClassName="active" to="/developers">
+              Developers
+            </NavLink>
+          </NavListItem>
+          <Divider />
+          <NavListItem>
+            <ButtonLink url="/app" target="_self" explicitExternal>
+              Open App
+            </ButtonLink>
+          </NavListItem>
+        </NavList>
+      </NavContainer>
+    </Container>
+  </SHeadroom>
 )
 
 export default Header
