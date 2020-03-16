@@ -10,6 +10,10 @@ import Logo from '../../../assets/multisig-logo.svg'
 const HeaderItemPadding = css`
   padding-left: 16px;
   padding-right: 16px;
+  @media screen and (max-width: 1240px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 `
 
 const SHeadroom = styled(Headroom)`
