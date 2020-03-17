@@ -85,8 +85,8 @@ const FormallyVerified = () => (
       query {
         rv: file(relativePath: { eq: "runtime-verification-logo.png" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 100) {
-              ...GatsbyImageSharpFluid_withWebp
+            fixed(width: 170) {
+              ...GatsbyImageSharpFixed_withWebp
             }
           }
         }
@@ -96,7 +96,7 @@ const FormallyVerified = () => (
     {data => (
       <SContentWrapper>
         <SRuntimeLogo>
-          <SImg fluid={data.rv.childImageSharp.fluid} />
+          <SImg fixed={data.rv.childImageSharp.fixed} />
         </SRuntimeLogo>
         <Row>
           <LCol>

@@ -7,7 +7,8 @@ export interface ITheme {
     navy: string
     greyGreen: string
     lightGrey: string
-    greyBackground: string
+    grey: string
+    greyPale: string
     darkGreenBlue: string
     slateGray: string
   }
@@ -25,7 +26,8 @@ const mainTheme = {
     navy: '#001428',
     greyGreen: '#b3b5b3',
     lightGrey: '#d4d5d3',
-    greyBackground: '#f4f4f4',
+    grey: '#f4f4f4',
+    greyPale: '#e8e7e6',
     darkGreenBlue: '#1e594f',
     slateGray: '#5d6d74',
   },

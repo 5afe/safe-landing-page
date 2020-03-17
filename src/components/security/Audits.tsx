@@ -95,6 +95,7 @@ const SBgGray = styled(BgGray)`
   @media screen and (max-width: 1240px) {
     top: 0;
   }
+  fill: #e9e9e9;
 `
 
 const Arrow = styled.span`

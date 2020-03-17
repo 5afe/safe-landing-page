@@ -12,10 +12,6 @@ const Container = styled.section`
   }
 `
 
-const SContentWrapper = styled(ContentWrapper)`
-  overflow: hidden;
-`
-
 const SBgSVG = styled(BgGraySVG)`
   position: absolute;
   top: 0;
@@ -96,7 +92,7 @@ const STestimonial6 = styled(Testimonial)`
 
 const Testimonials = () => (
   <Container>
-    <SContentWrapper>
+    <ContentWrapper>
       <TestimonialsContainer>
         <SectionHeading>Testimonials</SectionHeading>
         <STestimonial4
@@ -154,7 +150,7 @@ const Testimonials = () => (
           how much we trust the technology and the team behind its development.
         </STestimonial5>
       </TestimonialsContainer>
-    </SContentWrapper>
+    </ContentWrapper>
     <SBgSVG />
   </Container>
 )

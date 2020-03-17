@@ -67,6 +67,7 @@ const SHeading = styled.h3`
 const SButtonLink = styled(ButtonLink)`
   width: 100%;
   text-align: center;
+  box-shadow: 1px 2px 10px 0 rgba(40, 54, 61, 0.18);
   @media screen and (max-width: 1240px) {
     width: 178px;
     margin-bottom: 20px;
