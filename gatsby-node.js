@@ -20,7 +20,7 @@ exports.createPages = ({ actions }) => {
 
   createRedirect({
     fromPath: "/terms",
-    toPath: "/terms-of-use-032020.html",
+    toPath: "/terms-of-use-032020_1.html",
     isPermanent: true,
   })
 
