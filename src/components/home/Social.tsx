@@ -64,7 +64,7 @@ const sectionQuery = graphql`
         }
       }
     }
-    telegram: file(relativePath: { eq: "telegram-icon.png" }) {
+    discord: file(relativePath: { eq: "discord-icon.png" }) {
       childImageSharp {
         fixed(width: 60) {
           ...GatsbyImageSharpFixed_withWebp
@@ -100,8 +100,8 @@ const Social: React.FC = () => (
               <a href="https://blog.gnosis.pm/tagged/safe" target="_blank" rel="noopener noreferrer">
                 <SImage fixed={data.medium.childImageSharp.fixed} />
               </a>
-              <a href="https://t.me/GnosisSafe" target="_blank" rel="noopener noreferrer">
-                <SImage fixed={data.telegram.childImageSharp.fixed} />
+              <a href="https://discord.gg/FPMRAwK" target="_blank" rel="noopener noreferrer">
+                <SImage fixed={data.discord.childImageSharp.fixed} />
               </a>
               <a
                 href="https://github.com/gnosis?utf8=%E2%9C%93&q=safe"
