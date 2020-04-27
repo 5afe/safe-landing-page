@@ -88,7 +88,7 @@ const Features = () => (
             Let us know!
           </Text>
           <SButtonLink url="http://safe.cnflx.io/" colorScheme="white">
-            Feature idea board
+            Request a feature
           </SButtonLink>
         </LCol>
         <Col>
