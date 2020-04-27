@@ -122,12 +122,12 @@ const MainSection = () => (
       </LCol>
       <RCol>
         <UsdWorthValueContainer>
-          <UsdWorthValue>24,568,527</UsdWorthValue>
+          <UsdWorthValue>26,513,996</UsdWorthValue>
         </UsdWorthValueContainer>
         <UsdWorthNotes>
           {'USD worth of digital assets securely stored in Gnosis Safes '}
         </UsdWorthNotes>
-        <UsdWorthDate>(as of Feb 21st 2020)</UsdWorthDate>
+        <UsdWorthDate>(as of April 18th 2020)</UsdWorthDate>
       </RCol>
     </SWrapper>
   </Container>
