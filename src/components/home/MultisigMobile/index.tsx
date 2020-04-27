@@ -24,7 +24,7 @@ const SLinesSVG = styled(LinesSVG)`
 `
 
 const MultisigMobile = () => (
-  <SectionContainer>
+  <SectionContainer id="mobile">
     <SLinesSVG />
     <SRow>
       <SignUpBox />

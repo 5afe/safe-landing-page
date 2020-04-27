@@ -48,7 +48,7 @@ const ButtonLink: React.FC<BtnLinkProps> = ({
   )
 }
 
-type ColorScheme = 'navy' | 'green' | 'white'
+type ColorScheme = 'navy' | 'green' | 'white' | 'grey'
 
 const colorsCSS = css`
   background-color: ${(p: BtnLinkProps) => {
@@ -60,6 +60,10 @@ const colorsCSS = css`
 
     if (colorScheme === 'white') {
       return p.theme.palette.pink
+    }
+
+    if (colorScheme === 'grey') {
+      return p.theme.palette.greyGreen
     }
 
     return p.theme.palette.primary
@@ -96,6 +100,10 @@ const colorsCSS = css`
       }
 
       if (colorScheme === 'navy') {
+        return p.theme.palette.slateGray
+      }
+
+      if (colorScheme === 'grey') {
         return p.theme.palette.slateGray
       }
 

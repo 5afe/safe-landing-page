@@ -25,7 +25,7 @@ const Container = styled.header`
   display: flex;
   align-items: center;
   width: 100%;
-  height: ${(p) => !p.mobileMenuOpened ? '55px' : '53px' };
+  height: ${(p) => (!p.mobileMenuOpened ? '55px' : '53px')};
   box-shadow: ${(p) =>
     !p.mobileMenuOpened ? '0 2px 4px 0 rgba(212, 212, 211, 0.59)' : 'none'};
   border-bottom: ${(p) =>
@@ -139,7 +139,7 @@ const Header: React.FC<HeaderProps> = ({
           </NavListItem>
           <Divider />
           <NavListItem>
-            <ButtonLink url="/app" target="_self" explicitExternal>
+            <ButtonLink url="/app/#" target="_self" explicitExternal>
               Open App
             </ButtonLink>
           </NavListItem>
