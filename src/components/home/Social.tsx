@@ -83,7 +83,7 @@ const sectionQuery = graphql`
 
 const Social: React.FC = () => (
   <StaticQuery query={sectionQuery}>
-    {data => (
+    {(data) => (
       <SectionContainer>
         <ContentWrapper>
           <Row>
@@ -91,16 +91,32 @@ const Social: React.FC = () => (
               <Heading small>Get In Touch</Heading>
             </LCol>
             <RCol>
-              <a href="https://twitter.com/gnosisSafe" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://twitter.com/gnosisSafe"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <SImage fixed={data.twitter.childImageSharp.fixed} />
               </a>
-              <a href="mailto:safe@gnosis.io" target="_blank" rel="noopener noreferrer">
+              <a
+                href="mailto:safe@gnosis.io"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <SImage fixed={data.email.childImageSharp.fixed} />
               </a>
-              <a href="https://blog.gnosis.pm/tagged/safe" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://blog.gnosis.pm/tagged/safe"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <SImage fixed={data.medium.childImageSharp.fixed} />
               </a>
-              <a href="https://discord.gg/FPMRAwK" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://discord.gg/FPMRAwK"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <SImage fixed={data.discord.childImageSharp.fixed} />
               </a>
               <a

@@ -23,7 +23,7 @@ const Container = styled.section`
   padding: 112px 0;
   background-color: rgba(0, 140, 115, 0.88);
   overflow: hidden;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 1240px) {
     padding: 0 12px;
   }
@@ -94,8 +94,8 @@ const Features = () => (
         <Col>
           <SFeature img={DocIcon} title="Multi-signature">
             Fully customize how you manage your digital assets, with the option
-            to require multiple signatures to confirm transactions for additional
-            security.
+            to require multiple signatures to confirm transactions for
+            additional security.
           </SFeature>
           <SFeature img={SafeIcon} title="Security-first">
             The Safe Multisig is the only formally verified and audited smart
@@ -103,7 +103,7 @@ const Features = () => (
           </SFeature>
           <SFeature img={GroupIcon} title="Gasless Signatures">
             Enhanced efficiency and user experience with gasless signatures.
-            Confirm or reject transactions instantly with no fee required. 
+            Confirm or reject transactions instantly with no fee required.
           </SFeature>
         </Col>
         <Col>

@@ -26,16 +26,16 @@ const Container = styled.header`
   align-items: center;
   width: 100%;
   height: 56px;
-  box-shadow: ${p =>
+  box-shadow: ${(p) =>
     !p.mobileMenuOpened ? '3px 4px 14px 0 rgba(0, 0, 0, 0.15)' : 'none'};
-  border-bottom: ${p => (!p.mobileMenuOpened ? 'solid 1px #b3b5b3' : 'none')};
-  background-color: ${p => p.theme.palette.pink};
+  border-bottom: ${(p) => (!p.mobileMenuOpened ? 'solid 1px #b3b5b3' : 'none')};
+  background-color: ${(p) => p.theme.palette.pink};
   overflow: hidden;
 `
 
 const NavContainer = styled.nav`
   font-weight: 800;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 1240px) {
     display: none;
   }
@@ -56,7 +56,7 @@ const MobileNavContainer = styled.nav`
 const BurgerLine = styled.div`
   height: 2px;
   width: 18px;
-  background-color: ${p => p.theme.palette.navy};
+  background-color: ${(p) => p.theme.palette.navy};
   margin-bottom: 3px;
   display: block;
 `
@@ -73,7 +73,7 @@ const NavListItem = styled.li`
 
 const NavLink = styled(Link)`
   &.active {
-    color: ${p => p.theme.palette.primary};
+    color: ${(p) => p.theme.palette.primary};
   }
 `
 

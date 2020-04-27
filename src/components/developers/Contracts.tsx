@@ -6,7 +6,7 @@ import LinesSVG from '../../assets/bg-lines-03.svg'
 
 const Container = styled.div`
   position: relative;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
   padding-top: 112px;
   background-color: rgba(0, 140, 115, 0.88);
   overflow: hidden;

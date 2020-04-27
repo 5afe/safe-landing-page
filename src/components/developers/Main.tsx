@@ -7,7 +7,7 @@ import SafeLogo from '../../assets/safe-logo.svg'
 const Container = styled.div`
   height: calc(100vh - 56px);
   position: relative;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
   overflow: hidden;
   @media screen and (max-width: 1240px) {
     height: auto;
@@ -60,7 +60,7 @@ const RCol = styled.div`
   flex-basis: 55%;
   position: relative;
   height: 300px;
-  color: ${p => p.theme.palette.primary};
+  color: ${(p) => p.theme.palette.primary};
   @media screen and (max-width: 1240px) {
     flex-basis: 30%;
     height: 130px;
@@ -73,7 +73,7 @@ const Triangle = styled.span`
   transform: rotate(25deg);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   border: solid 1px #979797;
-  background-color: ${p => p.theme.palette.navy};
+  background-color: ${(p) => p.theme.palette.navy};
   position: absolute;
   left: 0;
   top: -40px;
@@ -90,7 +90,7 @@ const SmallRectangle = styled.span`
   height: 48px;
   border-radius: 4px;
   box-shadow: 3px 4px 14px 0 rgba(0, 0, 0, 0.12);
-  background-color: ${p => p.theme.palette.greyGreen};
+  background-color: ${(p) => p.theme.palette.greyGreen};
   position: absolute;
   left: 70px;
   bottom: 0;
@@ -107,7 +107,7 @@ const BigRectangle = styled.span`
   transform: rotate(-25deg);
   border-radius: 4px;
   box-shadow: 3px 4px 14px 0 rgba(0, 0, 0, 0.12);
-  background-color: ${p => p.theme.palette.greyGreen};
+  background-color: ${(p) => p.theme.palette.greyGreen};
   position: absolute;
   right: 0;
   top: -50px;
@@ -122,7 +122,7 @@ const Circle = styled.span`
   height: 70px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   border: solid 1px #979797;
-  background-color: ${p => p.theme.palette.navy};
+  background-color: ${(p) => p.theme.palette.navy};
   position: absolute;
   right: 100px;
   bottom: 50px;

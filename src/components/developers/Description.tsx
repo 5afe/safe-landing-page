@@ -16,7 +16,7 @@ const Container = styled.div`
   position: relative;
   padding-top: 107px;
   padding-bottom: 122px;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 1240px) {
     padding: 30px 0;
   }

@@ -5,7 +5,7 @@ const Container = styled.footer`
   width: 100%;
   text-align: center;
   font-size: 11px;
-  color: ${p =>
+  color: ${(p) =>
     p.title === 'Enterprises' ? p.theme.palette.white : p.theme.palette.navy};
   letter-spacing: 0.24px;
   position: absolute;
@@ -20,7 +20,7 @@ const Copyright = styled.p`
 
 const Link = styled.a`
   text-decoration: none;
-  color: ${p =>
+  color: ${(p) =>
     p.title === 'Enterprises' ? p.theme.palette.white : p.theme.palette.navy};
 `
 

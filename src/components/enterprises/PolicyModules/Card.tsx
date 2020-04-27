@@ -11,8 +11,8 @@ const CardContainer = styled.div`
   font-size: 15px;
   letter-spacing: 0.33px;
   min-height: 80px;
-  color: ${p => p.theme.palette.navy};
-  background-color: ${p => p.theme.palette.greyPale};
+  color: ${(p) => p.theme.palette.navy};
+  background-color: ${(p) => p.theme.palette.greyPale};
   margin-bottom: 16px;
 `
 

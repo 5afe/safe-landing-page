@@ -9,7 +9,7 @@ const Container = styled.div`
   position: relative;
   padding-top: 107px;
   padding-bottom: 20px;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 1240px) {
     padding: 0;
   }
@@ -36,7 +36,7 @@ const SSmallHeading = styled.h3`
 `
 
 const SRightSmallHeading = styled(SSmallHeading)`
-  color: ${p => p.theme.palette.primary};
+  color: ${(p) => p.theme.palette.primary};
 `
 
 const SLinesSVG = styled(LinesSVG)`

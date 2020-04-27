@@ -8,7 +8,7 @@ const Container = styled.div`
   margin-top: 200px;
   margin-bottom: 211px;
   position: relative;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 1240px) {
     margin: 0;
   }

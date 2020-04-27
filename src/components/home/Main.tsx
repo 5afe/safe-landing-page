@@ -99,7 +99,7 @@ const MainSection = () => (
       }
     `}
   >
-    {data => (
+    {(data) => (
       <Container>
         <SLinesSVG />
         <SWrapper>
