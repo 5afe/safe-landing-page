@@ -94,25 +94,26 @@ const Features = () => (
         <Col>
           <SFeature img={DocIcon} title="Multi-signature">
             Fully customize how you manage your digital assets, with the option
-            to require multiple signatures to confirm transactions.
+            to require multiple signatures to confirm transactions for additional
+            security.
           </SFeature>
           <SFeature img={SafeIcon} title="Security-first">
             The Safe Multisig is the only formally verified and audited smart
-            contract wallet. Learn more about how we put best practices in
-            security first.
+            contract wallet. Learn more about how we put security first.
           </SFeature>
-          <SFeature img={GroupIcon} title="Address Book">
-            Save counterparty addresses to make sending transactions even
-            easier.
+          <SFeature img={GroupIcon} title="Gasless Signatures">
+            Enhanced efficiency and user experience with gasless signatures.
+            Confirm or reject transactions instantly with no fee required. 
           </SFeature>
         </Col>
         <Col>
           <SFeature img={WalletIcon} title="Wallet-agnostic">
-            Use your favorite wallet to sign transactions. No matter if it’s a
-            mobile wallet, browser extension, or hardware wallet.
+            Use your favorite wallet to sign transactions. A wide range of
+            support for hardware, browser or mobile wallets gives maximum
+            flexibility.
           </SFeature>
           <SFeature img={PersonIcon} title="Non-custodial">
-            You are fully in charge of your digital assets. As a self-sovereign
+            You are always in charge of your digital assets. As a self-sovereign
             wallet solution, no one is able to access or freeze any of your
             funds.
           </SFeature>
