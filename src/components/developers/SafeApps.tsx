@@ -91,7 +91,10 @@ const SafeApps = () => (
         <LCol>
           <SHeading>Safe Apps</SHeading>
           <LRow>
-            <ButtonLink url="https://docs.gnosis.io/safe/docs/sdks_safe_apps/" colorScheme="navy">
+            <ButtonLink
+              url="https://docs.gnosis.io/safe/docs/sdks_safe_apps/"
+              colorScheme="navy"
+            >
               Build a Safe App
             </ButtonLink>
           </LRow>

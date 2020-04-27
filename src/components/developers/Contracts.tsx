@@ -145,6 +145,30 @@ const Contracts = () => (
           </Row>
         </RCol>
       </Row>
+      <Row>
+        <LCol>
+          <SHeading>Safe-CLI</SHeading>
+        </LCol>
+        <RCol>
+          <Row>
+            <SubLCol>
+              The Safe Command Line Interface allows experienced users and
+              developers to perform operations and query data right from the
+              console.
+            </SubLCol>
+            <SubRCol>
+              <Row>
+                <SButtonLink
+                  url="https://github.com/gnosis/safe-cli"
+                  colorScheme="white"
+                >
+                  Download Safe-CLI
+                </SButtonLink>
+              </Row>
+            </SubRCol>
+          </Row>
+        </RCol>
+      </Row>
     </ContentWrapper>
   </Container>
 )
