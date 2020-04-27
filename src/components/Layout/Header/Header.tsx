@@ -25,11 +25,12 @@ const Container = styled.header`
   display: flex;
   align-items: center;
   width: 100%;
-  height: 56px;
+  height: ${(p) => !p.mobileMenuOpened ? '55px' : '53px' };
   box-shadow: ${(p) =>
-    !p.mobileMenuOpened ? '3px 4px 14px 0 rgba(0, 0, 0, 0.15)' : 'none'};
-  border-bottom: ${(p) => (!p.mobileMenuOpened ? 'solid 1px #b3b5b3' : 'none')};
-  background-color: ${(p) => p.theme.palette.pink};
+    !p.mobileMenuOpened ? '0 2px 4px 0 rgba(212, 212, 211, 0.59)' : 'none'};
+  border-bottom: ${(p) =>
+    !p.mobileMenuOpened ? `solid 2px ${p.theme.palette.greyPale}` : 'none'};
+  background-color: ${(p) => p.theme.palette.white};
   overflow: hidden;
 `
 
@@ -78,8 +79,9 @@ const NavLink = styled(Link)`
 `
 
 const SLogo = styled(Logo)`
-  height: 40px;
+  height: 32px;
   ${HeaderItemPadding}
+  margin-right: 2px;
 `
 
 const LogoDivider = styled(Divider)`
