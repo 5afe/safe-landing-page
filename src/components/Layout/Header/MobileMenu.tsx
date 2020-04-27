@@ -65,7 +65,7 @@ const MobileMenu = ({ toggleMobileMenu, mobileMenuOpened }) => {
           </NavListItem>
           <NavListItem>
             <ButtonLink
-              url="/app/#/"
+              url="/app/#"
               target="_self"
               explicitExternal
             >

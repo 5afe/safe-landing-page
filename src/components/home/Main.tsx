@@ -109,7 +109,7 @@ const MainSection = () => (
             </SHeading>
             <ButtonLink
               colorScheme="navy"
-              url="/app/#/"
+              url="/app/#"
               target="_self"
               explicitExternal
             >
