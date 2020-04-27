@@ -106,7 +106,7 @@ const LoveMessage = styled.h3`
   text-align: center;
   line-height: normal;
   padding-top: 169px;
-  padding-bottom: 16px;
+  padding-bottom: 30px;
   @media screen and (max-width: 1240px) {
     padding: 0;
     padding: 10px 0 40px 0;
