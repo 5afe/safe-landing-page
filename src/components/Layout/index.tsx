@@ -18,7 +18,7 @@ const Layout: React.FC<ILayoutProps> = ({ children, title }) => (
     <ThemeProvider theme={theme}>
       <Header />
       {children}
-      <Footer />
+      <Footer title={title} />
     </ThemeProvider>
   </>
 )

@@ -10,11 +10,15 @@ import Logo from '../../../assets/multisig-logo.svg'
 const HeaderItemPadding = css`
   padding-left: 16px;
   padding-right: 16px;
+  @media screen and (max-width: 1240px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 `
 
 const SHeadroom = styled(Headroom)`
-  z-index: 1000;
   position: relative;
+  z-index: 1000;
 `
 
 const Container = styled.header`
@@ -93,46 +97,54 @@ const Header: React.FC<HeaderProps> = ({
   toggleMobileMenu,
   mobileMenuOpened,
 }) => (
-  <Container mobileMenuOpened={mobileMenuOpened}>
-    <Link to="/">
-      <SLogo />
-    </Link>
-    <LogoDivider />
-    <Spacer />
-    <MobileNavContainer onClick={() => toggleMobileMenu()}>
-      <BurgerLine />
-      <BurgerLine />
-      <BurgerLine />
-    </MobileNavContainer>
-    <NavContainer>
-      <NavList>
-        <Divider />
-        <NavListItem>
-          <NavLink activeClassName="active" to="/">
-            Overview
-          </NavLink>
-        </NavListItem>
-        <Divider />
-        <NavListItem>
-          <NavLink activeClassName="active" to="/security">
-            Security
-          </NavLink>
-        </NavListItem>
-        <Divider />
-        <NavListItem>
-          <NavLink activeClassName="active" to="/developers">
-            Developers
-          </NavLink>
-        </NavListItem>
-        <Divider />
-        <NavListItem>
-          <ButtonLink url="/app/#" target="_self" explicitExternal>
-            Open App
-          </ButtonLink>
-        </NavListItem>
-      </NavList>
-    </NavContainer>
-  </Container>
+  <SHeadroom>
+    <Container mobileMenuOpened={mobileMenuOpened}>
+      <Link to="/">
+        <SLogo />
+      </Link>
+      <LogoDivider />
+      <Spacer />
+      <MobileNavContainer onClick={() => toggleMobileMenu()}>
+        <BurgerLine />
+        <BurgerLine />
+        <BurgerLine />
+      </MobileNavContainer>
+      <NavContainer>
+        <NavList>
+          <Divider />
+          <NavListItem>
+            <NavLink activeClassName="active" to="/">
+              Overview
+            </NavLink>
+          </NavListItem>
+          <Divider />
+          <NavListItem>
+            <NavLink activeClassName="active" to="/security">
+              Security
+            </NavLink>
+          </NavListItem>
+          <Divider />
+          <NavListItem>
+            <NavLink activeClassName="active" to="/enterprises">
+              Enterprises
+            </NavLink>
+          </NavListItem>
+          <Divider />
+          <NavListItem>
+            <NavLink activeClassName="active" to="/developers">
+              Developers
+            </NavLink>
+          </NavListItem>
+          <Divider />
+          <NavListItem>
+            <ButtonLink url="/app" target="_self" explicitExternal>
+              Open App
+            </ButtonLink>
+          </NavListItem>
+        </NavList>
+      </NavContainer>
+    </Container>
+  </SHeadroom>
 )
 
 export default Header

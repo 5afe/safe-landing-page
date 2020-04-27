@@ -38,8 +38,15 @@ const NavLink = styled(Link)`
     color: ${p => p.theme.palette.primary};
   }
 `
+interface MobileMenuProps {
+  toggleMobileMenu: Function
+  mobileMenuOpened: boolean
+}
 
-const MobileMenu = ({ toggleMobileMenu, mobileMenuOpened }) => {
+const MobileMenu: React.FC<MobileMenuProps> = ({
+  toggleMobileMenu,
+  mobileMenuOpened,
+}) => {
   return (
     <Container>
       <Header
@@ -59,16 +66,17 @@ const MobileMenu = ({ toggleMobileMenu, mobileMenuOpened }) => {
             </NavLink>
           </NavListItem>
           <NavListItem>
+            <NavLink activeClassName="active" to="/enterprises">
+              Enterprises
+            </NavLink>
+          </NavListItem>
+          <NavListItem>
             <NavLink activeClassName="active" to="/developers">
               Developers
             </NavLink>
           </NavListItem>
           <NavListItem>
-            <ButtonLink
-              url="/app/#"
-              target="_self"
-              explicitExternal
-            >
+            <ButtonLink url="/app/#" target="_self" explicitExternal>
               Open App
             </ButtonLink>
           </NavListItem>
