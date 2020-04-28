@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { /* useEffect,*/ useState } from 'react'
 import DownloadButtons from './DownloadButtons'
 
 const Clients = () => {
@@ -6,6 +6,8 @@ const Clients = () => {
     'https://github.com/gnosis/safe-react/releases'
   )
 
+  /*
+  // Uncomment when the safe-react files are available:
   useEffect(() => {
     if (navigator.appVersion.indexOf('Win') !== -1) {
       setDesktopAppUrl('<WINDOWS_APP_URL>')
@@ -20,6 +22,7 @@ const Clients = () => {
       setDesktopAppUrl('<LINUX_APP_URL>')
     }
   }, [])
+  */
 
   return <DownloadButtons desktopAppUrl={desktopAppUrl} />
 }
