@@ -22,17 +22,20 @@ const FooterContainer = styled.div`
 `
 
 const Item = styled.div`
-  color: ${(p) => p.title === 'Enterprises' ? p.theme.palette.white : p.theme.palette.navy};
+  color: ${(p) =>
+    p.title === 'Enterprises' ? p.theme.palette.white : p.theme.palette.navy};
   font-size: 13px;
 `
 
 const Sep = styled.span`
-  color: ${(p) => p.title === 'Enterprises' ? p.theme.palette.white : p.theme.palette.navy};
+  color: ${(p) =>
+    p.title === 'Enterprises' ? p.theme.palette.white : p.theme.palette.navy};
   margin: 0 10px;
 `
 
 const SLink = styled(Link)`
-  color: ${(p) => p.title === 'Security' ? p.theme.palette.navy : p.theme.palette.primary};
+  color: ${(p) =>
+    p.title === 'Security' ? p.theme.palette.navy : p.theme.palette.primary};
   text-decoration: none;
 
   &:hover: {

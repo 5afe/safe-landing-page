@@ -133,35 +133,38 @@ const Feature = styled.div`
 `
 
 function useInterval(callback: any, delay: number | undefined) {
-  const savedCallback = useRef();
+  const savedCallback = useRef()
 
   useEffect(() => {
-    savedCallback.current = callback;
-  });
+    savedCallback.current = callback
+  })
 
   useEffect(() => {
     function tick() {
-      savedCallback.current();
+      savedCallback.current()
     }
 
     if (delay) {
-      const id = setInterval(tick, delay);
-      return () => clearInterval(id);
+      const id = setInterval(tick, delay)
+      return () => clearInterval(id)
     }
-  }, [delay]);
+  }, [delay])
 }
 
 const MainSection = () => {
   const [currentFeature, setCurrentFeature] = useState(0)
-  const [isRunning, setIsRunning] = useState(true);
+  const [isRunning, setIsRunning] = useState(true)
 
-  useInterval(() => {
-    if (currentFeature < 4) {
-      setCurrentFeature(currentFeature + 1)
-    } else {
-      setCurrentFeature(0)
-    }
-  }, isRunning ? 2000 : undefined);
+  useInterval(
+    () => {
+      if (currentFeature < 4) {
+        setCurrentFeature(currentFeature + 1)
+      } else {
+        setCurrentFeature(0)
+      }
+    },
+    isRunning ? 2000 : undefined
+  )
 
   const activateFeature = (featureNumber: number) => {
     setIsRunning(false)

@@ -122,8 +122,9 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => (
             Conveniently manage your digital assets
             <br />
             on-the-go.
+          </Text>
+          <Text>
             <b>
-              {' '}
               <a href="/#mobile">Get early access here</a>
             </b>
             .
