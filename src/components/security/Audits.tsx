@@ -5,13 +5,13 @@ import BgGray from '../../assets/bg-gray.svg'
 
 const Link = styled.a`
   text-decoration: none;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
 `
 
 const Container = styled.div`
   padding: 277px 0 136px 0;
   position: relative;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 1240px) {
     padding: 30px 0 0 0;
   }
@@ -59,7 +59,7 @@ const SAudit = styled.div`
   max-width: 776px;
   border-radius: 8px;
   box-shadow: 1px 2px 10px 0 rgba(40, 54, 61, 0.18);
-  background-color: ${p => p.theme.palette.pink};
+  background-color: ${(p) => p.theme.palette.pink};
   margin-bottom: 20px;
   display: flex;
   padding: 20px;

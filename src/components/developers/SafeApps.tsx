@@ -8,7 +8,7 @@ const Container = styled.div`
   margin-top: 200px;
   margin-bottom: 211px;
   position: relative;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 1240px) {
     margin: 0;
   }
@@ -74,7 +74,7 @@ const SLinesSVG = styled(LinesSVG)`
   position: absolute;
   left: 0;
   bottom: -250px;
-  stroke: #008c73;
+  stroke: ${(p) => p.theme.palette.primary};
   opacity: 0.4;
   z-index: -1;
   @media screen and (max-width: 1240px) {
@@ -91,8 +91,11 @@ const SafeApps = () => (
         <LCol>
           <SHeading>Safe Apps</SHeading>
           <LRow>
-            <ButtonLink url="https://t.me/GnosisSafe" colorScheme="navy">
-              Build your first Safe App
+            <ButtonLink
+              url="https://docs.gnosis.io/safe/docs/sdks_safe_apps/"
+              colorScheme="navy"
+            >
+              Build a Safe App
             </ButtonLink>
           </LRow>
         </LCol>

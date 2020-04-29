@@ -10,7 +10,7 @@ interface Props {
 
 const SContainer = styled.div`
   display: flex;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
 `
 
 const SFeatureTitle = styled.h6`

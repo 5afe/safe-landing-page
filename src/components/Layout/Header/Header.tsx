@@ -25,17 +25,18 @@ const Container = styled.header`
   display: flex;
   align-items: center;
   width: 100%;
-  height: 56px;
-  box-shadow: ${p =>
-    !p.mobileMenuOpened ? '3px 4px 14px 0 rgba(0, 0, 0, 0.15)' : 'none'};
-  border-bottom: ${p => (!p.mobileMenuOpened ? 'solid 1px #b3b5b3' : 'none')};
-  background-color: ${p => p.theme.palette.pink};
+  height: ${(p) => (!p.mobileMenuOpened ? '55px' : '53px')};
+  box-shadow: ${(p) =>
+    !p.mobileMenuOpened ? '0 2px 4px 0 rgba(212, 212, 211, 0.59)' : 'none'};
+  border-bottom: ${(p) =>
+    !p.mobileMenuOpened ? `solid 2px ${p.theme.palette.greyPale}` : 'none'};
+  background-color: ${(p) => p.theme.palette.white};
   overflow: hidden;
 `
 
 const NavContainer = styled.nav`
   font-weight: 800;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 1240px) {
     display: none;
   }
@@ -56,7 +57,7 @@ const MobileNavContainer = styled.nav`
 const BurgerLine = styled.div`
   height: 2px;
   width: 18px;
-  background-color: ${p => p.theme.palette.navy};
+  background-color: ${(p) => p.theme.palette.navy};
   margin-bottom: 3px;
   display: block;
 `
@@ -71,15 +72,21 @@ const NavListItem = styled.li`
   ${HeaderItemPadding}
 `
 
+const NavListLink = styled.a`
+  text-decoration: none;
+  color: ${(p) => p.theme.palette.navy};
+`
+
 const NavLink = styled(Link)`
   &.active {
-    color: ${p => p.theme.palette.primary};
+    color: ${(p) => p.theme.palette.primary};
   }
 `
 
 const SLogo = styled(Logo)`
-  height: 40px;
+  height: 32px;
   ${HeaderItemPadding}
+  margin-right: 2px;
 `
 
 const LogoDivider = styled(Divider)`
@@ -137,7 +144,13 @@ const Header: React.FC<HeaderProps> = ({
           </NavListItem>
           <Divider />
           <NavListItem>
-            <ButtonLink url="/app" target="_self" explicitExternal>
+            <NavListLink href="https://help.gnosis-safe.io" target="_blank">
+              Help
+            </NavListLink>
+          </NavListItem>
+          <Divider />
+          <NavListItem>
+            <ButtonLink url="/app/#" target="_self" explicitExternal>
               Open App
             </ButtonLink>
           </NavListItem>

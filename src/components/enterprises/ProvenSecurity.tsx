@@ -7,8 +7,8 @@ const Container = styled.div`
   padding-top: 100px;
   padding-bottom: 100px;
   position: relative;
-  color: ${p => p.theme.palette.white};
-  background-color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.white};
+  background-color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 1240px) {
     padding: 0;
   }
@@ -48,7 +48,7 @@ const SHeading = styled.h3`
   font-size: 25px;
   font-weight: 800;
   letter-spacing: 0.56px;
-  color: ${p => p.theme.palette.grey};
+  color: ${(p) => p.theme.palette.grey};
   @media screen and (max-width: 1240px) {
     padding: 30px 0;
     font-size: 28px;

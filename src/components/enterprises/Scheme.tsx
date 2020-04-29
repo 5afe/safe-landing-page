@@ -6,8 +6,8 @@ const Container = styled.div`
   padding-top: 100px;
   padding-bottom: 100px;
   position: relative;
-  color: ${p => p.theme.palette.white};
-  background-color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.white};
+  background-color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 1240px) {
     padding: 0 0 30px 0;
   }
@@ -51,7 +51,7 @@ const SHeading = styled.h3`
   font-size: 25px;
   font-weight: 800;
   letter-spacing: 0.11px;
-  color: ${p => p.theme.palette.grey};
+  color: ${(p) => p.theme.palette.grey};
   @media screen and (max-width: 1240px) {
     padding: 30px 0;
     font-size: 28px;
@@ -80,8 +80,8 @@ const Level1 = styled(Level)`
 `
 
 const Level2 = styled.div`
-  border: 2px solid ${p => p.theme.palette.slateGray};
-  color: ${p => p.theme.palette.slateGray};
+  border: 2px solid ${(p) => p.theme.palette.slateGray};
+  color: ${(p) => p.theme.palette.slateGray};
   flex-basis: 29%;
   height: 60px;
   width: 100%;
@@ -93,29 +93,29 @@ const Level2 = styled.div`
     font-size: 12px;
   }
   @media screen and (max-width: 1240px) {
-    border: 1px solid ${p => p.theme.palette.slateGray};
+    border: 1px solid ${(p) => p.theme.palette.slateGray};
   }
 `
 
 const Level3 = styled(Level)`
-  background-color: ${p => p.theme.palette.primary};
+  background-color: ${(p) => p.theme.palette.primary};
   flex-basis: 29%;
 `
 
 const Level4 = styled(Level)`
-  border: 2px solid ${p => p.theme.palette.slateGray};
-  color: ${p => p.theme.palette.slateGray};
+  border: 2px solid ${(p) => p.theme.palette.slateGray};
+  color: ${(p) => p.theme.palette.slateGray};
   @media screen and (max-width: 1240px) {
-    border: 1px solid ${p => p.theme.palette.slateGray};
+    border: 1px solid ${(p) => p.theme.palette.slateGray};
   }
 `
 
 const Level5 = styled(Level)`
-  border: 2px solid ${p => p.theme.palette.slateGray};
-  color: ${p => p.theme.palette.slateGray};
+  border: 2px solid ${(p) => p.theme.palette.slateGray};
+  color: ${(p) => p.theme.palette.slateGray};
   flex-basis: 46.5%;
   @media screen and (max-width: 1240px) {
-    border: 1px solid ${p => p.theme.palette.slateGray};
+    border: 1px solid ${(p) => p.theme.palette.slateGray};
   }
 `
 
@@ -139,30 +139,30 @@ const ArrowUp = styled.div`
   height: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-bottom: 8px solid ${p => p.theme.palette.grey};
+  border-bottom: 8px solid ${(p) => p.theme.palette.grey};
   @media screen and (max-width: 1240px) {
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
-    border-bottom: 4px solid ${p => p.theme.palette.grey};
+    border-bottom: 4px solid ${(p) => p.theme.palette.grey};
   }
 `
 const ArrowLine = styled.div`
-  border-left: 2px solid ${p => p.theme.palette.grey};
+  border-left: 2px solid ${(p) => p.theme.palette.grey};
   height: 21px;
   @media screen and (max-width: 1240px) {
     height: 10px;
-    border-left: 1px solid ${p => p.theme.palette.grey};
+    border-left: 1px solid ${(p) => p.theme.palette.grey};
   }
 `
 
 const ArrowDown = styled.div`
   width: 0;
   height: 0;
-  border-top: 8px solid ${p => p.theme.palette.grey};
+  border-top: 8px solid ${(p) => p.theme.palette.grey};
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   @media screen and (max-width: 1240px) {
-    border-top: 4px solid ${p => p.theme.palette.grey};
+    border-top: 4px solid ${(p) => p.theme.palette.grey};
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
   }
@@ -174,7 +174,7 @@ const LegendContainer = styled.div`
   height: 120px;
   justify-content: space-between;
   margin-bottom: 20px;
-  color: ${p => p.theme.palette.pink};
+  color: ${(p) => p.theme.palette.pink};
   @media screen and (max-width: 1240px) {
     height: 80px;
   }
@@ -198,11 +198,11 @@ const LegendBox = styled.div`
 `
 
 const LegendBox1 = styled(LegendBox)`
-  background-color: ${p => p.theme.palette.primary};
+  background-color: ${(p) => p.theme.palette.primary};
 `
 
 const LegendBox2 = styled(LegendBox)`
-  border: 2px solid ${p => p.theme.palette.pink};
+  border: 2px solid ${(p) => p.theme.palette.pink};
 `
 
 const LegendText = styled.p`

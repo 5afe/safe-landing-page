@@ -6,7 +6,7 @@ import { PROJECTS } from './projects'
 const Container = styled.section`
   padding-top: 150px;
   padding-bottom: 230px;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
   overflow: hidden;
   @media screen and (max-width: 1240px) {
     padding: 0;
@@ -72,7 +72,7 @@ const Projects = () => (
         <SHeading>Projects building on Gnosis Safe</SHeading>
       </LCol>
       <RCol>
-        {PROJECTS.map(project => (
+        {PROJECTS.map((project) => (
           <ImageAnchor
             key={project.name}
             title={project.name}

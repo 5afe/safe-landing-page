@@ -5,6 +5,7 @@ import Header from './Header'
 import Footer from './Footer'
 import theme from '../../styles/theme'
 import GlobalStyles from '../../styles/globalStyles'
+import CookiesBanner from '../../utils/CookiesBanner'
 
 interface ILayoutProps {
   children: any
@@ -19,6 +20,7 @@ const Layout: React.FC<ILayoutProps> = ({ children, title }) => (
       <Header />
       {children}
       <Footer title={title} />
+      <CookiesBanner />
     </ThemeProvider>
   </>
 )

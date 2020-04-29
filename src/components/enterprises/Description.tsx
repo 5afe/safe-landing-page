@@ -5,7 +5,7 @@ import Heading from '../ui/Heading'
 
 const SHeading = styled(Heading)`
   letter-spacing: 1px;
-  color: ${p => p.theme.palette.white};
+  color: ${(p) => p.theme.palette.white};
   @media screen and (max-width: 1240px) {
     font-size: 16px;
     padding: 0 12px;
@@ -16,7 +16,7 @@ const Container = styled.div`
   position: relative;
   padding-top: 107px;
   padding-bottom: 122px;
-  background-color: ${p => p.theme.palette.navy};
+  background-color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 1240px) {
     padding: 30px 0 20px 0;
   }
