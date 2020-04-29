@@ -163,7 +163,7 @@ const MainSection = () => {
         setCurrentFeature(0)
       }
     },
-    isRunning ? 2000 : undefined
+    isRunning ? 5000 : undefined
   )
 
   const activateFeature = (featureNumber: number) => {
