@@ -72,6 +72,11 @@ const NavListItem = styled.li`
   ${HeaderItemPadding}
 `
 
+const NavListLink = styled.a`
+  text-decoration: none;
+  color: ${(p) => p.theme.palette.navy};
+`
+
 const NavLink = styled(Link)`
   &.active {
     color: ${(p) => p.theme.palette.primary};
@@ -136,6 +141,12 @@ const Header: React.FC<HeaderProps> = ({
             <NavLink activeClassName="active" to="/developers">
               Developers
             </NavLink>
+          </NavListItem>
+          <Divider />
+          <NavListItem>
+            <NavListLink href="https://help.gnosis-safe.io" target="_blank">
+              Help
+            </NavListLink>
           </NavListItem>
           <Divider />
           <NavListItem>

@@ -32,6 +32,11 @@ const NavListItem = styled.li`
   padding: 25px 0;
 `
 
+const NavListLink = styled.a`
+  text-decoration: none;
+  color: ${(p) => p.theme.palette.navy};
+`
+
 const NavLink = styled(Link)`
   text-decoration: none;
   &.active {
@@ -74,6 +79,11 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
             <NavLink activeClassName="active" to="/developers">
               Developers
             </NavLink>
+          </NavListItem>
+          <NavListItem>
+            <NavListLink href="https://help.gnosis-safe.io" target="_blank">
+              Help
+            </NavListLink>
           </NavListItem>
           <NavListItem>
             <ButtonLink url="/app/#" target="_self" explicitExternal>
