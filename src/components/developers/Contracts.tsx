@@ -101,7 +101,7 @@ const Contracts = () => (
             <SubRCol>
               <Row>
                 <SButtonLink
-                  url="https://docs.gnosis.io/safe/docs/docs1/"
+                  url="https://docs.gnosis.io/safe/docs/contracts_intro/"
                   colorScheme="white"
                 >
                   Documentation
