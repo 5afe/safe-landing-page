@@ -55,13 +55,18 @@ const RCol = styled.div`
   width: 750px;
   position: relative;
   @media screen and (max-width: 1240px) {
-    margin-left: 40px;
-    max-width: 500px;
+    max-width: 700px;
+    width: auto;
+    margin: 0 auto;
   }
 `
 
 const Slider = styled.div`
   position: relative;
+  margin: 0 auto;
+  @media screen and (max-width: 1240px) {
+    margin: 0 40px;
+  }
 `
 
 const SImg = styled(Img)`
@@ -76,6 +81,10 @@ const BalancesContainer = styled.div`
   width: 200px;
   z-index: 10;
   display: ${(p) => (p.active ? 'block' : 'none')};
+  @media screen and (max-width: 1240px) {
+    width: 100px;
+    left: -20px;
+  }
 `
 
 const WalletOptionsContainer = styled.div`
@@ -85,6 +94,10 @@ const WalletOptionsContainer = styled.div`
   width: 380px;
   z-index: 10;
   display: ${(p) => (p.active ? 'block' : 'none')};
+  @media screen and (max-width: 1240px) {
+    width: 190px;
+    left: 70px;
+  }
 `
 
 const TransactionsContainer = styled.div`
@@ -94,6 +107,10 @@ const TransactionsContainer = styled.div`
   width: 240px;
   z-index: 10;
   display: ${(p) => (p.active ? 'block' : 'none')};
+  @media screen and (max-width: 1240px) {
+    width: 120px;
+    top: -10px;
+  }
 `
 
 const AddressBookContainer = styled.div`
@@ -103,6 +120,10 @@ const AddressBookContainer = styled.div`
   width: 452px;
   z-index: 10;
   display: ${(p) => (p.active ? 'block' : 'none')};
+  @media screen and (max-width: 1240px) {
+    width: 226px;
+    right: -20px;
+  }
 `
 
 const NftContainer = styled.div`
@@ -112,6 +133,9 @@ const NftContainer = styled.div`
   width: 266px;
   z-index: 10;
   display: ${(p) => (p.active ? 'block' : 'none')};
+  @media screen and (max-width: 1240px) {
+    width: 133px;
+  }
 `
 
 const SliderMenu = styled.div`
@@ -119,17 +143,33 @@ const SliderMenu = styled.div`
   padding: 0 30px;
   margin-top: 10px;
   display: flex;
+  @media screen and (max-width: 1240px) {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-top: 40px;
+  }
 `
 
 const Feature = styled.div`
-  border-top: 2px solid
-    ${(p) => (p.active ? p.theme.palette.primary : '#b2b5b2')};
   color: ${(p) => (p.active ? p.theme.palette.primary : '#b2b5b2')};
   width: 128px;
-  padding: 15px 0;
   font-size: 16px;
   font-weight: 800;
   cursor: pointer;
+  @media screen and (max-width: 1240px) {
+    width: 50%;
+    float: left;
+  }
+`
+
+const InnerFeature = styled.div`
+  border-top: 2px solid;
+  ${(p) => (p.active ? p.theme.palette.primary : '#b2b5b2')};
+  padding: 15px 0;
+  @media screen and (max-width: 1240px) {
+    margin: 0 10px;
+  }
 `
 
 function useInterval(callback: any, delay: number | undefined) {
@@ -258,35 +298,35 @@ const MainSection = () => {
                   onMouseEnter={() => activateFeature(0)}
                   onMouseLeave={deactivateFeature}
                 >
-                  Balances
+                  <InnerFeature>Balances</InnerFeature>
                 </Feature>
                 <Feature
                   active={currentFeature === 1}
                   onMouseEnter={() => activateFeature(1)}
                   onMouseLeave={deactivateFeature}
                 >
-                  Wallet options
+                  <InnerFeature>Wallet options</InnerFeature>
                 </Feature>
                 <Feature
                   active={currentFeature === 2}
                   onMouseEnter={() => activateFeature(2)}
                   onMouseLeave={deactivateFeature}
                 >
-                  Transactions
+                  <InnerFeature>Transactions</InnerFeature>
                 </Feature>
                 <Feature
                   active={currentFeature === 3}
                   onMouseEnter={() => activateFeature(3)}
                   onMouseLeave={deactivateFeature}
                 >
-                  Address book
+                  <InnerFeature>Address book</InnerFeature>
                 </Feature>
                 <Feature
                   active={currentFeature === 4}
                   onMouseEnter={() => activateFeature(4)}
                   onMouseLeave={deactivateFeature}
                 >
-                  NFTs
+                  <InnerFeature>NFTs</InnerFeature>
                 </Feature>
               </SliderMenu>
             </RCol>
