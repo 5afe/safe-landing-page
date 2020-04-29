@@ -13,7 +13,7 @@ const Container = styled.div`
   display: flex;
   min-height: 408px;
   flex-direction: column;
-  background-color: ${p => p.theme.palette.primary};
+  background-color: ${(p) => p.theme.palette.primary};
   box-shadow: 3px 4px 14px 0 rgba(0, 0, 0, 0.22);
   position: relative;
   border-radius: 4px;
@@ -52,7 +52,7 @@ const SHeading = styled.h3`
   font-size: 45px;
   font-weight: 800;
   letter-spacing: 1px;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 1240px) {
     padding: 30px 0;
     font-size: 28px;
@@ -64,7 +64,7 @@ const SText = styled.p`
   font-weight: 800;
   line-height: normal;
   letter-spacing: 0.36px;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
 `
 
 const SInput = styled(Input)`
@@ -142,7 +142,7 @@ const SignUpBox = () => {
 
   return (
     <StaticQuery query={sectionQuery}>
-      {data => (
+      {(data) => (
         <>
           <Container>
             <Row>

@@ -21,10 +21,12 @@ const SLinesSVG = styled(LinesSVG)`
   left: 0;
   bottom: 150px;
   width: 100%;
+  opacity: 0.5;
+  stroke: ${(p) => p.theme.palette.primary};
 `
 
 const MultisigMobile = () => (
-  <SectionContainer>
+  <SectionContainer id="mobile">
     <SLinesSVG />
     <SRow>
       <SignUpBox />

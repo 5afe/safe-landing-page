@@ -16,7 +16,7 @@ const Container = styled.div`
   position: relative;
   padding-top: 107px;
   padding-bottom: 122px;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 1240px) {
     padding: 30px 0;
   }
@@ -26,7 +26,7 @@ const SLinesSVG = styled(LinesSVG)`
   position: absolute;
   left: 0;
   bottom: -50px;
-  stroke: #008c73;
+  stroke: ${(p) => p.theme.palette.primary};
   opacity: 0.4;
   z-index: -1;
 `

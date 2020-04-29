@@ -6,7 +6,7 @@ import ContentWrapper from '../Layout/ContentWrapper'
 import ButtonLink from '../ui/ButtonLink'
 
 const SContentWrapper = styled(ContentWrapper)`
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
 `
 
 const SRuntimeLogo = styled.div`
@@ -93,7 +93,7 @@ const FormallyVerified = () => (
       }
     `}
   >
-    {data => (
+    {(data) => (
       <SContentWrapper>
         <SRuntimeLogo>
           <SImg fixed={data.rv.childImageSharp.fixed} />

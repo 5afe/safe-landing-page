@@ -51,6 +51,11 @@ const PROJECTS: Project[] = [
     websiteURL: 'https://slock.it',
   },
   {
+    name: 'Superblocks',
+    imageURL: '/images/superblocks.png',
+    websiteURL: 'https://superblocks.com',
+  },
+  {
     name: 'Tasit',
     imageURL: '/images/tasit.png',
     websiteURL: 'https://tasit.io',

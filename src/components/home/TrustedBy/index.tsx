@@ -6,7 +6,7 @@ import { TRUSTED_BY_COMPANIES } from './companies'
 const Container = styled.section`
   padding-top: 50px;
   padding-bottom: 315px;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
   overflow: hidden;
   @media screen and (max-width: 1240px) {
     padding: 0;
@@ -56,7 +56,7 @@ const ImageAnchor = styled.a`
   max-height: 54px;
   @media screen and (max-width: 1240px) {
     max-height: 35px;
-    display: ${p => (p.companyName === 'Aragon' ? 'none' : 'block')};
+    display: ${(p) => (p.companyName === 'Aragon' ? 'none' : 'block')};
   }
 `
 
@@ -68,6 +68,7 @@ const Image = styled.img`
   @media screen and (max-width: 1240px) {
     max-width: 104px;
     max-height: 35px;
+    padding: 5px;
   }
 `
 
@@ -78,7 +79,7 @@ const TrustedBy = () => (
         <SHeading>Trusted by</SHeading>
       </LCol>
       <RCol>
-        {TRUSTED_BY_COMPANIES.map(company => (
+        {TRUSTED_BY_COMPANIES.map((company) => (
           <ImageAnchor
             key={company.name}
             title={company.name}

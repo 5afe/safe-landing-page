@@ -7,7 +7,7 @@ import LinesSVG from '../../assets/bg-lines-03.svg'
 const Container = styled.div`
   padding: 175px 0 328px 0;
   position: relative;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
   overflow: hidden;
   @media screen and (max-width: 1240px) {
     padding: 90px 0 40px 0;

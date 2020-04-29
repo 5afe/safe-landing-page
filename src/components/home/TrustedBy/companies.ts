@@ -51,9 +51,19 @@ const TRUSTED_BY_COMPANIES: TrustedByEntry[] = [
     websiteURL: 'https://runtimeverification.com/',
   },
   {
+    name: 'Synthetix',
+    imageURL: '/images/synthetix.png',
+    websiteURL: 'https://www.synthetix.io',
+  },
+  {
     name: 'UniLogin',
     imageURL: '/images/unilogin.png',
     websiteURL: 'https://unilogin.io/',
+  },
+  {
+    name: 'Zerion',
+    imageURL: '/images/zerion.png',
+    websiteURL: 'https://zerion.io',
   },
 ]
 

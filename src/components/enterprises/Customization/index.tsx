@@ -8,8 +8,8 @@ const Container = styled.section`
   padding: 112px 0;
   position: relative;
   overflow: hidden;
-  color: ${p => p.theme.palette.navy};
-  background-color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
+  background-color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 1240px) {
     padding: 0 12px;
   }
@@ -53,7 +53,7 @@ const SHeading = styled.h3`
   font-weight: 800;
   letter-spacing: 0.56px;
   margin-bottom: 36px;
-  color: ${p => p.theme.palette.grey};
+  color: ${(p) => p.theme.palette.grey};
   @media screen and (max-width: 1240px) {
     margin: 30px 0;
     font-size: 28px;
@@ -67,7 +67,7 @@ const SHeadingServices = styled(SHeading)`
 const Text = styled.p`
   letter-spacing: 0.36px;
   line-height: normal;
-  color: ${p => p.theme.palette.grey};
+  color: ${(p) => p.theme.palette.grey};
   @media screen and (max-width: 1240px) {
     letter-spacing: normal;
     margin-bottom: 30px;

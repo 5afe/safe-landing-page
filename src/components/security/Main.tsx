@@ -6,7 +6,7 @@ import Heading from '../ui/Heading'
 const Container = styled.div`
   height: calc(100vh - 56px);
   position: relative;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
   overflow: hidden;
   @media screen and (max-width: 1240px) {
     height: auto;
@@ -55,7 +55,7 @@ const RCol = styled.div`
   flex-basis: 55%;
   position: relative;
   height: 300px;
-  color: ${p => p.theme.palette.primary};
+  color: ${(p) => p.theme.palette.primary};
   @media screen and (max-width: 1240px) {
     height: auto;
     margin-bottom: 30px;
@@ -66,7 +66,7 @@ const UsdWorthValueContainer = styled.div`
   padding: 15px 15px 0;
   border-radius: 5px;
   margin-bottom: 42px;
-  border: 2px solid ${p => p.theme.palette.primary};
+  border: 2px solid ${(p) => p.theme.palette.primary};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,12 +122,12 @@ const MainSection = () => (
       </LCol>
       <RCol>
         <UsdWorthValueContainer>
-          <UsdWorthValue>24,568,527</UsdWorthValue>
+          <UsdWorthValue>26,513,996</UsdWorthValue>
         </UsdWorthValueContainer>
         <UsdWorthNotes>
           {'USD worth of digital assets securely stored in Gnosis Safes '}
         </UsdWorthNotes>
-        <UsdWorthDate>(as of Feb 21st 2020)</UsdWorthDate>
+        <UsdWorthDate>(as of April 18th 2020)</UsdWorthDate>
       </RCol>
     </SWrapper>
   </Container>

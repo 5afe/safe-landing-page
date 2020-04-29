@@ -6,8 +6,8 @@ import { PROJECTS } from './projects'
 const Container = styled.section`
   padding-top: 50px;
   padding-bottom: 150px;
-  color: ${p => p.theme.palette.grey};
-  background-color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.grey};
+  background-color: ${(p) => p.theme.palette.navy};
   overflow: hidden;
   @media screen and (max-width: 1240px) {
     padding: 0;
@@ -83,7 +83,7 @@ const Projects = () => (
         <SHeading>Used by</SHeading>
       </LCol>
       <RCol>
-        {PROJECTS.map(project => (
+        {PROJECTS.map((project) => (
           <ImageAnchor
             key={project.name}
             title={project.name}

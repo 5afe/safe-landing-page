@@ -26,7 +26,7 @@ const SGnosisSafeOutline = styled(GnosisSafeOutline)`
 const Container = styled.div`
   padding-top: 50px;
   padding-bottom: 241px;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
   overflow: hidden;
   @media screen and (max-width: 1240px) {
     font-size: 16px;

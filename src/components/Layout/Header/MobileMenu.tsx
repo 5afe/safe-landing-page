@@ -10,7 +10,7 @@ const Container = styled.div`
   top: 0;
   position: fixed;
   z-index: 1000;
-  background-color: ${p => p.theme.palette.pink};
+  background-color: ${(p) => p.theme.palette.pink};
 `
 
 const SMobileMenu = styled.div`
@@ -24,7 +24,7 @@ const NavList = styled.ul`
   padding: 0 20px;
   font-weight: 800;
   text-align: center;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
   font-size: 28px;
 `
 
@@ -32,10 +32,15 @@ const NavListItem = styled.li`
   padding: 25px 0;
 `
 
+const NavListLink = styled.a`
+  text-decoration: none;
+  color: ${(p) => p.theme.palette.navy};
+`
+
 const NavLink = styled(Link)`
   text-decoration: none;
   &.active {
-    color: ${p => p.theme.palette.primary};
+    color: ${(p) => p.theme.palette.primary};
   }
 `
 interface MobileMenuProps {
@@ -76,7 +81,12 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
             </NavLink>
           </NavListItem>
           <NavListItem>
-            <ButtonLink url="/app" target="_self" explicitExternal>
+            <NavListLink href="https://help.gnosis-safe.io" target="_blank">
+              Help
+            </NavListLink>
+          </NavListItem>
+          <NavListItem>
+            <ButtonLink url="/app/#" target="_self" explicitExternal>
               Open App
             </ButtonLink>
           </NavListItem>

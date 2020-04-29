@@ -8,7 +8,7 @@ import LinesSVG from '../../assets/bg-lines-03.svg'
 const Container = styled.main`
   height: calc(100vh - 56px);
   position: relative;
-  background-color: ${p => p.theme.palette.navy};
+  background-color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 1240px) {
     height: auto;
   }
@@ -29,7 +29,7 @@ const SWrapper = styled(ContentWrapper)`
 const SHeading = styled(Heading)`
   margin-bottom: 50px;
   max-width: 500px;
-  color: ${p => p.theme.palette.grey};
+  color: ${(p) => p.theme.palette.grey};
   @media screen and (max-width: 1240px) {
     max-width: 100%;
     font-size: 28px;

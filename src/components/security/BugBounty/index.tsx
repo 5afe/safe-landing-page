@@ -12,7 +12,7 @@ import LinesSVG from '../../../assets/lines.svg'
 const Container = styled.div`
   padding: 112px 0 170px;
   background-color: rgba(0, 140, 115, 0.88);
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
   position: relative;
   overflow: hidden;
   @media screen and (max-width: 1240px) {
@@ -97,7 +97,7 @@ const BugBounty = () => (
           </ButtonLink>
         </LCol>
         <RCol>
-          <Card img={TimeIcon} title="Running for 20 months" />
+          <Card img={TimeIcon} title="Running since July 2018" />
           <Card img={MoneyIcon} title="Up to $100,000 per bug" />
           <Card img={MoneyBagIcon} title="$2,500,000 honeypot" />
         </RCol>

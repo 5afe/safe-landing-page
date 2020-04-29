@@ -3,13 +3,6 @@ stages:
   - deploy-development-staging
   - deploy-production
 
-variables:
-  AWS_DEFAULT_REGION: us-east-1
-  DEV_BUCKET_NAME: gnosis-safe-team-development
-  STAGING_BUCKET_RINKEBY_NAME: gnosis-safe-team-staging
-  STAGING_BUCKET_MAINNET_NAME: gnosis-safe-team-mainnet-staging
-  BUILDED_FILES_DIR: "public"
-
 build project:
   stage: build
   tags:

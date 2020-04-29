@@ -9,7 +9,7 @@ const Container = styled.div`
   position: relative;
   padding-top: 107px;
   padding-bottom: 20px;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 1240px) {
     padding: 0;
   }
@@ -36,7 +36,7 @@ const SSmallHeading = styled.h3`
 `
 
 const SRightSmallHeading = styled(SSmallHeading)`
-  color: ${p => p.theme.palette.primary};
+  color: ${(p) => p.theme.palette.primary};
 `
 
 const SLinesSVG = styled(LinesSVG)`
@@ -106,7 +106,7 @@ const LoveMessage = styled.h3`
   text-align: center;
   line-height: normal;
   padding-top: 169px;
-  padding-bottom: 16px;
+  padding-bottom: 30px;
   @media screen and (max-width: 1240px) {
     padding: 0;
     padding: 10px 0 40px 0;

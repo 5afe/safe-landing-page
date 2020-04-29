@@ -5,13 +5,13 @@ import BgGray from '../../assets/bg-gray.svg'
 
 const Link = styled.a`
   text-decoration: none;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
 `
 
 const Container = styled.div`
   padding: 277px 0 136px 0;
   position: relative;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 1240px) {
     padding: 30px 0 0 0;
   }
@@ -59,7 +59,7 @@ const SAudit = styled.div`
   max-width: 776px;
   border-radius: 8px;
   box-shadow: 1px 2px 10px 0 rgba(40, 54, 61, 0.18);
-  background-color: ${p => p.theme.palette.pink};
+  background-color: ${(p) => p.theme.palette.pink};
   margin-bottom: 20px;
   display: flex;
   padding: 20px;
@@ -137,7 +137,7 @@ const Audits = () => (
             href="https://github.com/gnosis/safe-contracts/blob/v1.1.1/docs/alexey_audit.md"
             target="_blank"
           >
-            <Audit date="Jul. 4th, 2018" author="Alexey Akhunov (v0.2.0)" />
+            <Audit date="Jul. 4th, 2018" author="Alexey Akhunov (v0.1.0)" />
           </Link>
           <Link
             href="https://github.com/gnosis/safe-contracts/blob/v1.1.1/docs/Gnosis_Safe_Formal_Verification_Report_1_0_0.pdf"

@@ -6,7 +6,7 @@ import LinesSVG from '../../assets/bg-lines-03.svg'
 
 const Container = styled.div`
   position: relative;
-  color: ${p => p.theme.palette.navy};
+  color: ${(p) => p.theme.palette.navy};
   padding-top: 112px;
   background-color: rgba(0, 140, 115, 0.88);
   overflow: hidden;
@@ -139,6 +139,30 @@ const Contracts = () => (
                   colorScheme="white"
                 >
                   Integrate Proxy Kit
+                </SButtonLink>
+              </Row>
+            </SubRCol>
+          </Row>
+        </RCol>
+      </Row>
+      <Row>
+        <LCol>
+          <SHeading>Safe-CLI</SHeading>
+        </LCol>
+        <RCol>
+          <Row>
+            <SubLCol>
+              The Safe Command Line Interface allows experienced users and
+              developers to perform operations and query data right from the
+              console.
+            </SubLCol>
+            <SubRCol>
+              <Row>
+                <SButtonLink
+                  url="https://github.com/gnosis/safe-cli"
+                  colorScheme="white"
+                >
+                  Download Safe-CLI
                 </SButtonLink>
               </Row>
             </SubRCol>
