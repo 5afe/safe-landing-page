@@ -35,10 +35,11 @@ const Col = styled.div`
   }
 `
 
-const Text = styled.p`
-  margin-top: 29px;
+const Text = styled.div`
+  margin-top: 20px;
   font-size: 16px;
   letter-spacing: 0.36px;
+  min-height: ${(p) => p.minHeight ? '67px' : 0};
   color: ${(p) =>
     p.color === 'green' ? p.theme.palette.primary : p.theme.palette.navy};
   b {
@@ -76,7 +77,7 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => (
             Web
             <GlobeIcon />
           </SButtonLink>
-          <Text color="green">
+          <Text minHeight={true} color="green">
             Access the most recent version of the Safe Multisig directly in your
             browser.
           </Text>
@@ -96,7 +97,7 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => (
             Desktop
             <ScreenIcon />
           </SButtonLink>
-          <Text>
+          <Text minHeight>
             Download the Safe Multisig as a static desktop application for
             Windows, MacOS or Linux.
           </Text>
@@ -118,7 +119,7 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => (
             Mobile
             <MobileIcon />
           </SButtonLink>
-          <Text>
+          <Text minHeight>
             Conveniently manage your digital assets
             <br />
             on-the-go.
