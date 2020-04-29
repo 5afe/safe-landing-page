@@ -7,9 +7,6 @@ import Features from '../components/home/Features'
 import Testimonials from '../components/home/Testimonials'
 import MultisigMobile from '../components/home/MultisigMobile'
 import Social from '../components/home/Social'
-import { loadIntercom } from '../utils/intercom'
-
-loadIntercom()
 
 export default () => (
   <Layout title="Overview">

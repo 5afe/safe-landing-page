@@ -3,10 +3,12 @@ export const loadIntercom = () => {
   const APP_ID = process.env.GATSBY_INTERCOM_ID
 
   if (!APP_ID) {
-    console.error('[Intercom] - In order to use Intercom you need to add an appID')
+    console.error(
+      '[Intercom] - In order to use Intercom you need to add an appID'
+    )
     return null
   }
-  const d = document
+  const d = typeof window !== 'undefined' && window.document
   const s = d.createElement('script')
   s.type = 'text/javascript'
   s.async = true
@@ -15,9 +17,10 @@ export const loadIntercom = () => {
   x.parentNode.insertBefore(s, x)
 
   s.onload = () => {
-    window.Intercom('boot', {
-      app_id: APP_ID,
-      consent: true,
-    })
+    typeof window !== 'undefined' &&
+      window.Intercom('boot', {
+        app_id: APP_ID,
+        consent: true,
+      })
   }
 }

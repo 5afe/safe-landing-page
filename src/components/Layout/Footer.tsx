@@ -37,10 +37,14 @@ const SLink = styled(Link)`
   color: ${(p) =>
     p.title === 'Security' ? p.theme.palette.navy : p.theme.palette.primary};
   text-decoration: none;
-
   &:hover: {
     text-decoration: underline;
   }
+`
+const Preferences = styled.div`
+  color: ${(p) =>
+    p.title === 'Security' ? p.theme.palette.navy : p.theme.palette.primary};
+  cursor: pointer;
 `
 
 interface FooterProps {
@@ -51,7 +55,7 @@ const Footer = ({ title }: FooterProps) => {
   const date = new Date()
 
   const openCookiesHandler = () => {
-    //openCookieBanner(true)
+    window.postMessage('OPEN_COOKIE_BANNER')
   }
 
   return (
@@ -103,14 +107,9 @@ const Footer = ({ title }: FooterProps) => {
         Cookie Policy
       </SLink>
       <Sep title={title}>-</Sep>
-      <SLink
-        to=""
-        rel="noopener noreferrer"
-        title={title}
-        onClick={openCookiesHandler}
-      >
+      <Preferences title={title} onClick={openCookiesHandler}>
         Preferences
-      </SLink>
+      </Preferences>
     </FooterContainer>
   )
 }
