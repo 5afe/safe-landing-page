@@ -8,7 +8,7 @@ exports.createPages = ({ actions }) => {
 
   createRedirect({
     fromPath: "/privacy",
-    toPath: "/privacy-policy-012020.html",
+    toPath: "/privacy-policy-042020.html",
     isPermanent: true,
   })
 
@@ -20,13 +20,13 @@ exports.createPages = ({ actions }) => {
 
   createRedirect({
     fromPath: "/terms",
-    toPath: "/terms-of-use-032020_1.html",
+    toPath: "/terms-of-use-042020.html",
     isPermanent: true,
   })
 
   createRedirect({
     fromPath: "/cookie",
-    toPath: "/cookie-policy-012020.html",
+    toPath: "/cookie-policy-042020.html",
     isPermanent: true,
   })
 }

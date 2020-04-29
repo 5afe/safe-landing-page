@@ -81,7 +81,7 @@ const Footer = ({ title }: FooterProps) => {
       </SLink>
       <Sep title={title}>|</Sep>
       <SLink
-        to="/imprint"
+        to="/licenses"
         target="_blank"
         rel="noopener noreferrer"
         title={title}

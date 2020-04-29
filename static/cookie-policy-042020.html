@@ -1,0 +1,465 @@
+<html>
+<head><meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+span.cls_002{font-family:"Liberation Sans Narrow",serif;font-size:22.6px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_002{font-family:"Liberation Sans Narrow",serif;font-size:22.6px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_003{font-family:"Liberation Sans Narrow Italic",serif;font-size:11.0px;color:rgb(102,102,102);font-weight:normal;font-style:italic;text-decoration: none}
+div.cls_003{font-family:"Liberation Sans Narrow Italic",serif;font-size:11.0px;color:rgb(102,102,102);font-weight:normal;font-style:italic;text-decoration: none}
+span.cls_004{font-family:"Liberation Sans Narrow",serif;font-size:11.0px;color:rgb(102,102,102);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_004{font-family:"Liberation Sans Narrow",serif;font-size:11.0px;color:rgb(102,102,102);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_005{font-family:"Liberation Sans Narrow Bold",serif;font-size:11.0px;color:rgb(102,102,102);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_005{font-family:"Liberation Sans Narrow Bold",serif;font-size:11.0px;color:rgb(102,102,102);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_006{font-family:"Liberation Sans Narrow",serif;font-size:10.0px;color:rgb(102,102,102);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_006{font-family:"Liberation Sans Narrow",serif;font-size:10.0px;color:rgb(102,102,102);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_007{font-family:"Liberation Sans Narrow",serif;font-size:11.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_007{font-family:"Liberation Sans Narrow",serif;font-size:11.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_008{font-family:"Liberation Sans Narrow",serif;font-size:11.0px;color:rgb(0,51,160);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_008{font-family:"Liberation Sans Narrow",serif;font-size:11.0px;color:rgb(0,51,160);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_019{font-family:"Liberation Sans Narrow",serif;font-size:11.0px;color:rgb(0,51,160);font-weight:normal;font-style:normal;text-decoration: underline}
+div.cls_019{font-family:"Liberation Sans Narrow",serif;font-size:11.0px;color:rgb(0,51,160);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_009{font-family:"Liberation Sans Narrow",serif;font-size:18.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_009{font-family:"Liberation Sans Narrow",serif;font-size:18.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_010{font-family:"Liberation Sans Narrow Italic",serif;font-size:14.0px;color:rgb(102,102,102);font-weight:normal;font-style:italic;text-decoration: none}
+div.cls_010{font-family:"Liberation Sans Narrow Italic",serif;font-size:14.0px;color:rgb(102,102,102);font-weight:normal;font-style:italic;text-decoration: none}
+span.cls_011{font-family:"Liberation Sans Narrow",serif;font-size:10.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_011{font-family:"Liberation Sans Narrow",serif;font-size:10.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_012{font-family:"Liberation Sans Narrow",serif;font-size:10.0px;color:rgb(49,49,49);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_012{font-family:"Liberation Sans Narrow",serif;font-size:10.0px;color:rgb(49,49,49);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_013{font-family:"Liberation Sans Narrow",serif;font-size:9.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_013{font-family:"Liberation Sans Narrow",serif;font-size:9.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_014{font-family:"Liberation Sans Narrow",serif;font-size:12.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_014{font-family:"Liberation Sans Narrow",serif;font-size:12.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_015{font-family:"Liberation Sans Narrow",serif;font-size:10.0px;color:rgb(51,51,51);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_015{font-family:"Liberation Sans Narrow",serif;font-size:10.0px;color:rgb(51,51,51);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_016{font-family:"Liberation Sans Narrow",serif;font-size:9.1px;color:rgb(36,41,46);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_016{font-family:"Liberation Sans Narrow",serif;font-size:9.1px;color:rgb(36,41,46);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_017{font-family:"Liberation Sans Narrow",serif;font-size:10.6px;color:rgb(36,41,46);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_017{font-family:"Liberation Sans Narrow",serif;font-size:10.6px;color:rgb(36,41,46);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_018{font-family:"Liberation Sans Narrow",serif;font-size:10.0px;color:rgb(36,41,46);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_018{font-family:"Liberation Sans Narrow",serif;font-size:10.0px;color:rgb(36,41,46);font-weight:normal;font-style:normal;text-decoration: none}
+-->
+</style>
+<script type="text/javascript" src="bf1657b8-8a4e-11ea-8b25-0cc47a792c0a_id_bf1657b8-8a4e-11ea-8b25-0cc47a792c0a_files/wz_jsgraphics.js"></script>
+</head>
+<body>
+<div style="position:absolute;left:50%;margin-left:-306px;top:0px;width:612px;height:792px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+</div>
+<div style="position:absolute;left:72.00px;top:71.25px" class="cls_002"><span class="cls_002">Gnosis Cookie Policy</span></div>
+<div style="position:absolute;left:72.00px;top:144.26px" class="cls_003"><span class="cls_003">Last Updated: April, 2020</span></div>
+<div style="position:absolute;left:72.00px;top:199.75px" class="cls_004"><span class="cls_004">As described in our Privacy Policy, For general web-browsing of this website, your personal data</span></div>
+<div style="position:absolute;left:72.00px;top:219.25px" class="cls_004"><span class="cls_004">is not revealed to us, although certain statistical information is available to us via our internet</span></div>
+<div style="position:absolute;left:72.00px;top:238.75px" class="cls_004"><span class="cls_004">service provider as well as through the use of special tracking technologies. Such information</span></div>
+<div style="position:absolute;left:72.00px;top:258.26px" class="cls_004"><span class="cls_004">tells us about the pages you are clicking on or the hardware you are using, but not your name,</span></div>
+<div style="position:absolute;left:72.00px;top:277.76px" class="cls_004"><span class="cls_004">age, address or anything we can use to identify you personally.</span></div>
+<div style="position:absolute;left:72.00px;top:305.51px" class="cls_004"><span class="cls_004">This Cookie Policy sets out some further detail on how and why we use these technologies on</span></div>
+<div style="position:absolute;left:72.00px;top:325.01px" class="cls_004"><span class="cls_004">our website. The terms "Gnosis", "we", "us", and "our" includes Gnosis Ltd. and our affiliates.</span></div>
+<div style="position:absolute;left:72.00px;top:344.51px" class="cls_004"><span class="cls_004">The terms “you” and “your” includes our clients, business partners and users of this website. By</span></div>
+<div style="position:absolute;left:72.00px;top:364.00px" class="cls_004"><span class="cls_004">using our website, you consent to storage and access to cookies and other technologies on</span></div>
+<div style="position:absolute;left:72.00px;top:383.50px" class="cls_004"><span class="cls_004">your device, in accordance with this Cookie Policy.</span></div>
+<div style="position:absolute;left:72.00px;top:439.00px" class="cls_005"><span class="cls_005">What are cookies?</span></div>
+<div style="position:absolute;left:72.00px;top:466.75px" class="cls_004"><span class="cls_004">Cookies are a feature of web browser software that allows web servers to recognize the</span></div>
+<div style="position:absolute;left:72.00px;top:486.25px" class="cls_004"><span class="cls_004">computer or device used to access a website. A cookie is a small text file that a website saves</span></div>
+<div style="position:absolute;left:72.00px;top:505.76px" class="cls_004"><span class="cls_004">on your computer or mobile device when you visit the site. It enables the website to remember</span></div>
+<div style="position:absolute;left:72.00px;top:525.26px" class="cls_004"><span class="cls_004">your actions and preferences (such as login, language, font size and other display preferences)</span></div>
+<div style="position:absolute;left:72.00px;top:544.76px" class="cls_004"><span class="cls_004">over a period of time, so you don't have to keep re-entering them whenever you come back to</span></div>
+<div style="position:absolute;left:72.00px;top:564.26px" class="cls_004"><span class="cls_004">the site or browse from one page to another.</span></div>
+<div style="position:absolute;left:72.00px;top:592.01px" class="cls_005"><span class="cls_005">What are the different types of cookies?</span></div>
+<div style="position:absolute;left:72.00px;top:619.76px" class="cls_004"><span class="cls_004">A cookie can be classified by its lifespan and the domain to which it belongs.</span></div>
+<div style="position:absolute;left:72.00px;top:647.51px" class="cls_004"><span class="cls_004">By lifespan, a cookie is either a:</span></div>
+<div style="position:absolute;left:72.00px;top:676.25px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:90.00px;top:675.26px" class="cls_005"><span class="cls_005">session cookie</span><span class="cls_004"> which is erased when the user closes the browser; or</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-306px;top:802px;width:612px;height:792px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+</div>
+<div style="position:absolute;left:72.00px;top:72.50px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:90.00px;top:71.51px" class="cls_005"><span class="cls_005">persistent  cookie </span><span class="cls_004"> which  is  saved  to  the  hard  drive  and  remains  on  the  user's</span></div>
+<div style="position:absolute;left:90.00px;top:91.01px" class="cls_004"><span class="cls_004">computer/device for a pre-defined period of time.</span></div>
+<div style="position:absolute;left:72.00px;top:118.76px" class="cls_004"><span class="cls_004">As for the domain to which it belongs, cookies are either:</span></div>
+<div style="position:absolute;left:72.00px;top:147.50px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:90.00px;top:146.51px" class="cls_005"><span class="cls_005">first-party cookies </span><span class="cls_004">which are set by the web server of the visited page and share the same</span></div>
+<div style="position:absolute;left:90.00px;top:166.01px" class="cls_004"><span class="cls_004">domain (i.e. set by us); or</span></div>
+<div style="position:absolute;left:72.00px;top:194.75px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:90.00px;top:193.76px" class="cls_005"><span class="cls_005">third-party cookies</span><span class="cls_004"> stored by a different domain to the visited page's domain.</span></div>
+<div style="position:absolute;left:72.00px;top:221.51px" class="cls_005"><span class="cls_005">What cookies do we use and why?</span></div>
+<div style="position:absolute;left:72.00px;top:249.26px" class="cls_004"><span class="cls_004">We list all the cookies we use on this website in the </span><span class="cls_007">APPENDIX</span><span class="cls_008"> </span><span class="cls_004">below.</span></div>
+<div style="position:absolute;left:72.00px;top:277.01px" class="cls_004"><span class="cls_004">We do not use cookies set by ourselves via our web developers (first-party cookies). We only</span></div>
+<div style="position:absolute;left:72.00px;top:296.51px" class="cls_004"><span class="cls_004">have those set by others (third-party cookies).</span></div>
+<div style="position:absolute;left:72.00px;top:324.26px" class="cls_004"><span class="cls_004">Cookies are also sometimes classified by reference to their purpose. We use the following</span></div>
+<div style="position:absolute;left:72.00px;top:343.76px" class="cls_004"><span class="cls_004">cookies for the following purposes:</span></div>
+<div style="position:absolute;left:72.00px;top:372.50px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:90.00px;top:371.51px" class="cls_004"><span class="cls_004">Analytical/performance cookies: They allow us to recognize and count the number of visitors</span></div>
+<div style="position:absolute;left:90.00px;top:391.01px" class="cls_004"><span class="cls_004">and to see how visitors move around our website when they are using it, as well as dates</span></div>
+<div style="position:absolute;left:90.00px;top:410.51px" class="cls_004"><span class="cls_004">and times they visit. This helps us to improve the way our website works, for example, by</span></div>
+<div style="position:absolute;left:90.00px;top:430.01px" class="cls_004"><span class="cls_004">ensuring that users are finding what they are looking for easily.</span></div>
+<div style="position:absolute;left:72.00px;top:458.75px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:90.00px;top:457.76px" class="cls_004"><span class="cls_004">Targeting cookies: These cookies record your visit to our website, the pages you have</span></div>
+<div style="position:absolute;left:90.00px;top:477.26px" class="cls_004"><span class="cls_004">visited and the links you have followed, as well as time spent on our website, and the</span></div>
+<div style="position:absolute;left:90.00px;top:496.76px" class="cls_004"><span class="cls_004">websites visited just before and just after our website. We will use this information to make</span></div>
+<div style="position:absolute;left:90.00px;top:516.26px" class="cls_004"><span class="cls_004">our website and the advertising displayed on it more relevant to your interests. We may also</span></div>
+<div style="position:absolute;left:90.00px;top:535.76px" class="cls_004"><span class="cls_004">share this information with third parties for this purpose.</span></div>
+<div style="position:absolute;left:72.00px;top:563.51px" class="cls_004"><span class="cls_004">In general, we use cookies and other technologies (such as web server logs) on our website to</span></div>
+<div style="position:absolute;left:72.00px;top:583.01px" class="cls_004"><span class="cls_004">enhance your experience and to collect information about how our website is used. This</span></div>
+<div style="position:absolute;left:72.00px;top:602.51px" class="cls_004"><span class="cls_004">information is put together (‘aggregated’) and provides general and not individually specific</span></div>
+<div style="position:absolute;left:72.00px;top:622.01px" class="cls_004"><span class="cls_004">information. None of this information is therefore associated with you as an individual and the</span></div>
+<div style="position:absolute;left:72.00px;top:641.51px" class="cls_004"><span class="cls_004">cookie-related information is not used to identify you personally. It is therefore anonymized and</span></div>
+<div style="position:absolute;left:72.00px;top:661.01px" class="cls_004"><span class="cls_004">‘de-identified’. The pattern data is fully under our control and these cookies are not used for any</span></div>
+<div style="position:absolute;left:72.00px;top:680.51px" class="cls_004"><span class="cls_004">purpose other than those described here.</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-306px;top:1604px;width:612px;height:792px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+</div>
+<div style="position:absolute;left:72.00px;top:71.51px" class="cls_004"><span class="cls_004">We will retain and evaluate information on your recent visits to our website and how you move</span></div>
+<div style="position:absolute;left:72.00px;top:91.01px" class="cls_004"><span class="cls_004">around different sections of our website for analytics purposes to understand how people use</span></div>
+<div style="position:absolute;left:72.00px;top:110.51px" class="cls_004"><span class="cls_004">our website so that we can make it more intuitive. The information also helps us to understand</span></div>
+<div style="position:absolute;left:72.00px;top:130.01px" class="cls_004"><span class="cls_004">which parts of this website are most popular and generally to assess user behaviour and</span></div>
+<div style="position:absolute;left:72.00px;top:149.51px" class="cls_004"><span class="cls_004">characteristics to measure interest in and use of the various areas of our website. This then</span></div>
+<div style="position:absolute;left:72.00px;top:169.01px" class="cls_004"><span class="cls_004">allows us to improve our website and the way we market our business.</span></div>
+<div style="position:absolute;left:72.00px;top:196.76px" class="cls_004"><span class="cls_004">This information may also be used to help us to improve, administer and diagnose problems</span></div>
+<div style="position:absolute;left:72.00px;top:216.26px" class="cls_004"><span class="cls_004">with our server and website. The information also helps us monitor traffic on our website so that</span></div>
+<div style="position:absolute;left:72.00px;top:235.76px" class="cls_004"><span class="cls_004">we can manage our website's capacity and efficiency.</span></div>
+<div style="position:absolute;left:72.00px;top:263.51px" class="cls_005"><span class="cls_005">Other Technologies</span></div>
+<div style="position:absolute;left:72.00px;top:291.26px" class="cls_004"><span class="cls_004">We may allow others to provide analytics services and serve advertisements on our behalf. In</span></div>
+<div style="position:absolute;left:72.00px;top:310.76px" class="cls_004"><span class="cls_004">addition to the uses of cookies described above, these entities may use other methods, such as</span></div>
+<div style="position:absolute;left:72.00px;top:330.26px" class="cls_004"><span class="cls_004">the technologies described below, to collect information about your use of our website and other</span></div>
+<div style="position:absolute;left:72.00px;top:349.76px" class="cls_004"><span class="cls_004">websites and online services.</span></div>
+<div style="position:absolute;left:72.00px;top:377.51px" class="cls_004"><span class="cls_004">Pixels tags. Pixel tags (which are also called clear GIFs, web beacons, or pixels), are small</span></div>
+<div style="position:absolute;left:72.00px;top:397.01px" class="cls_004"><span class="cls_004">pieces of code that can be embedded on websites and emails. Pixels tags may be used to learn</span></div>
+<div style="position:absolute;left:72.00px;top:416.51px" class="cls_004"><span class="cls_004">how you interact with our website pages and emails, and this information helps us, and our</span></div>
+<div style="position:absolute;left:72.00px;top:436.01px" class="cls_004"><span class="cls_004">partners provide you with a more tailored experience.</span></div>
+<div style="position:absolute;left:72.00px;top:463.76px" class="cls_004"><span class="cls_004">Device Identifiers. A device identifier is a unique label can be used to identify a mobile device.</span></div>
+<div style="position:absolute;left:72.00px;top:483.26px" class="cls_004"><span class="cls_004">Device identifiers may be used to track, analyze and improve the performance of the website</span></div>
+<div style="position:absolute;left:72.00px;top:502.76px" class="cls_004"><span class="cls_004">and ads delivered.</span></div>
+<div style="position:absolute;left:72.00px;top:530.51px" class="cls_005"><span class="cls_005">What data are collected by cookies and other technologies on our website?</span></div>
+<div style="position:absolute;left:72.00px;top:558.26px" class="cls_004"><span class="cls_004">This information may include:</span></div>
+<div style="position:absolute;left:72.00px;top:587.00px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:94.77px;top:586.01px" class="cls_004"><span class="cls_004">the IP and logical address of the server you are using (but the last digits are anonymized so</span></div>
+<div style="position:absolute;left:90.00px;top:605.51px" class="cls_004"><span class="cls_004">we cannot identify you).</span></div>
+<div style="position:absolute;left:72.00px;top:634.25px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:94.76px;top:633.26px" class="cls_004"><span class="cls_004">the top level domain name from which you access the internet (for example .ie, .com, etc)</span></div>
+<div style="position:absolute;left:72.00px;top:662.00px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:94.76px;top:661.01px" class="cls_004"><span class="cls_004">the type of browser you are using,</span></div>
+<div style="position:absolute;left:72.00px;top:689.75px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:94.76px;top:688.76px" class="cls_004"><span class="cls_004">the date and time you access our website</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-306px;top:2406px;width:612px;height:792px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+</div>
+<div style="position:absolute;left:72.00px;top:72.50px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:94.76px;top:71.51px" class="cls_004"><span class="cls_004">the internet address linking to our website.</span></div>
+<div style="position:absolute;left:72.00px;top:99.25px" class="cls_004"><span class="cls_004">This website also uses cookies to:</span></div>
+<div style="position:absolute;left:72.00px;top:128.00px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:94.76px;top:127.01px" class="cls_004"><span class="cls_004">remember you and your actions while navigating between pages;</span></div>
+<div style="position:absolute;left:72.00px;top:155.75px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:94.76px;top:154.76px" class="cls_004"><span class="cls_004">remember if you have agreed (or not) to our use of cookies on our website;</span></div>
+<div style="position:absolute;left:72.00px;top:183.50px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:94.76px;top:182.50px" class="cls_004"><span class="cls_004">ensure the security of the website;</span></div>
+<div style="position:absolute;left:72.00px;top:211.25px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:94.76px;top:210.25px" class="cls_004"><span class="cls_004">monitor and improve the performance of servers hosting the site;</span></div>
+<div style="position:absolute;left:72.00px;top:239.00px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:94.76px;top:238.00px" class="cls_004"><span class="cls_004">distinguish users and sessions;</span></div>
+<div style="position:absolute;left:72.00px;top:266.75px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:94.76px;top:265.76px" class="cls_004"><span class="cls_004">Improving the speed of the site when you access content repeatedly;</span></div>
+<div style="position:absolute;left:72.00px;top:294.50px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:94.76px;top:293.51px" class="cls_004"><span class="cls_004">determine new sessions and visits;</span></div>
+<div style="position:absolute;left:72.00px;top:322.25px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:100.02px;top:321.26px" class="cls_004"><span class="cls_004">show the traffic source or campaign that explains how you may have reached our website;</span></div>
+<div style="position:absolute;left:90.00px;top:340.76px" class="cls_004"><span class="cls_004">and</span></div>
+<div style="position:absolute;left:72.00px;top:369.50px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:94.76px;top:368.50px" class="cls_004"><span class="cls_004">allow us to store any customization preferences where our website allows this</span></div>
+<div style="position:absolute;left:72.00px;top:396.25px" class="cls_004"><span class="cls_004">We  may  also  use  other services, such as </span><A HREF="https://www.google.com/intl/en/analytics/#?modal_active=none">Google Analytics</A> </span><span class="cls_008"> </span><span class="cls_004">(described below) or other</span></div>
+<div style="position:absolute;left:72.00px;top:415.75px" class="cls_004"><span class="cls_004">third-party cookies, to assist with analyzing performance on our website. As part of providing</span></div>
+<div style="position:absolute;left:72.00px;top:435.25px" class="cls_004"><span class="cls_004">these services, these service providers may use cookies and the technologies described below</span></div>
+<div style="position:absolute;left:72.00px;top:454.75px" class="cls_004"><span class="cls_004">to collect and store information about your device, such as time of visit, pages visited, time</span></div>
+<div style="position:absolute;left:72.00px;top:474.25px" class="cls_004"><span class="cls_004">spent on each page of our website, links clicked and conversion information, IP address,</span></div>
+<div style="position:absolute;left:72.00px;top:493.75px" class="cls_004"><span class="cls_004">browser, mobile network information, and type of operating system used.</span></div>
+<div style="position:absolute;left:72.00px;top:521.51px" class="cls_005"><span class="cls_005">Google Analytics Cookies</span></div>
+<div style="position:absolute;left:72.00px;top:549.26px" class="cls_004"><span class="cls_004">This  website  uses </span><span class="cls_008"> </span><A HREF="https://www.google.com/analytics/">Google  Analytics</A> </span><span class="cls_004">,  a  web  analytics  service  provided  by  Google, Inc.</span></div>
+<div style="position:absolute;left:72.00px;top:568.76px" class="cls_004"><span class="cls_004">("Google").</span></div>
+<div style="position:absolute;left:72.00px;top:596.51px" class="cls_004"><span class="cls_004">We use Google Analytics to track your preferences and also to identify popular sections of our</span></div>
+<div style="position:absolute;left:72.00px;top:616.01px" class="cls_004"><span class="cls_004">website. Use of Google Analytics in this way, enables us to adapt the content of our website</span></div>
+<div style="position:absolute;left:72.00px;top:635.51px" class="cls_004"><span class="cls_004">more specifically to your needs and thereby improve what we can offer to you.</span></div>
+<div style="position:absolute;left:72.00px;top:663.26px" class="cls_004"><span class="cls_004">Google will use this information for the purpose of evaluating your use of our website, compiling</span></div>
+<div style="position:absolute;left:72.00px;top:682.76px" class="cls_004"><span class="cls_004">reports on website activity for website operators and providing other services relating to website</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-306px;top:3208px;width:612px;height:792px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+</div>
+<div style="position:absolute;left:72.00px;top:71.51px" class="cls_004"><span class="cls_004">activity and internet usage. Google may also transfer this information to third parties where</span></div>
+<div style="position:absolute;left:72.00px;top:91.01px" class="cls_004"><span class="cls_004">required to do so by law, or where such third parties process the information on Google's behalf.</span></div>
+<div style="position:absolute;left:72.00px;top:110.51px" class="cls_004"><span class="cls_004">Google will not associate your IP address with any other data held by Google.</span></div>
+<div style="position:absolute;left:72.00px;top:138.26px" class="cls_005"><span class="cls_005">In particular Google Analytics tells us</span></div>
+<div style="position:absolute;left:72.00px;top:167.00px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:94.76px;top:166.01px" class="cls_005"><span class="cls_005">your IP address (last 3 digits are masked);</span></div>
+<div style="position:absolute;left:72.00px;top:194.75px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:94.76px;top:193.76px" class="cls_005"><span class="cls_005">the number of pages visited;</span></div>
+<div style="position:absolute;left:72.00px;top:222.50px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:94.76px;top:221.51px" class="cls_005"><span class="cls_005">the time and duration of the visit;</span></div>
+<div style="position:absolute;left:72.00px;top:250.25px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:94.76px;top:249.26px" class="cls_005"><span class="cls_005">your location;</span></div>
+<div style="position:absolute;left:72.00px;top:278.00px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:94.76px;top:277.01px" class="cls_005"><span class="cls_005">the website you came from (if any);</span></div>
+<div style="position:absolute;left:72.00px;top:305.75px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:105.27px;top:304.76px" class="cls_005"><span class="cls_005">the type of hardware you use (i.e. whether you are browsing from a desktop or a</span></div>
+<div style="position:absolute;left:90.00px;top:324.26px" class="cls_005"><span class="cls_005">mobile device);</span></div>
+<div style="position:absolute;left:72.00px;top:353.00px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:94.76px;top:352.01px" class="cls_005"><span class="cls_005">the software used (type of browser); and</span></div>
+<div style="position:absolute;left:72.00px;top:380.75px" class="cls_006"><span class="cls_006">·</span></div>
+<div style="position:absolute;left:90.00px;top:379.76px" class="cls_005"><span class="cls_005">your general interaction with our website.</span></div>
+<div style="position:absolute;left:76.56px;top:407.51px" class="cls_004"><span class="cls_004">As stated above, cookie-related information is not used to identify you personally, and what is</span></div>
+<div style="position:absolute;left:72.00px;top:427.01px" class="cls_004"><span class="cls_004">compiled is only aggregate data that tells us, for example, what countries we are most popular</span></div>
+<div style="position:absolute;left:72.00px;top:446.51px" class="cls_004"><span class="cls_004">in, but not that you live in a particular country or your precise location when you visited our</span></div>
+<div style="position:absolute;left:72.00px;top:466.01px" class="cls_004"><span class="cls_004">website (this is because we have only half the information- we know the country the person is</span></div>
+<div style="position:absolute;left:72.00px;top:485.51px" class="cls_004"><span class="cls_004">browsing from, but not the name of person who is browsing). In such an example Google will</span></div>
+<div style="position:absolute;left:72.00px;top:505.01px" class="cls_004"><span class="cls_004">analyze the number of users for us, but the relevant cookies do not reveal their identities.</span></div>
+<div style="position:absolute;left:72.00px;top:532.76px" class="cls_004"><span class="cls_004">By using this website, you consent to the processing of data about you by Google in the manner</span></div>
+<div style="position:absolute;left:72.00px;top:552.26px" class="cls_004"><span class="cls_004">and for the purposes set out above. Google Analytics, its purpose and function is further</span></div>
+<div style="position:absolute;left:72.00px;top:571.76px" class="cls_004"><span class="cls_004">explained on the </span><span class="cls_019">G<A HREF="https://www.google.com/analytics/">oogle Analytics website</A> </span><span class="cls_004">.</span></div>
+<div style="position:absolute;left:72.00px;top:599.51px" class="cls_004"><span class="cls_004">For more information about Google Analytics cookies, please see Google's help pages and</span></div>
+<div style="position:absolute;left:72.00px;top:619.01px" class="cls_004"><span class="cls_004">privacy policy: </span><A HREF="http://www.google.com/intl/en/policies/privacy/">Google's Privacy Policy</A><span class="cls_008"> </span><span class="cls_004">and </span><A HREF="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage">Google Analytics Help pages</A> </span><span class="cls_004">. For further information</span></div>
+<div style="position:absolute;left:72.00px;top:638.51px" class="cls_004"><span class="cls_004">about the use of these cookies by Google </span><span class="cls_019">c<A HREF="https://support.google.com/analytics/answer/6004245">lick here</A> </span><span class="cls_004">.</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-306px;top:4010px;width:612px;height:792px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+</div>
+<div style="position:absolute;left:72.00px;top:99.25px" class="cls_005"><span class="cls_005">What if you don’t agree to us monitoring your use of our website (even we don’t collect</span></div>
+<div style="position:absolute;left:72.00px;top:118.76px" class="cls_005"><span class="cls_005">your personal data)?</span></div>
+<div style="position:absolute;left:72.00px;top:146.51px" class="cls_004"><span class="cls_004">Enabling these cookies is not strictly necessary for our website to work but it will provide you</span></div>
+<div style="position:absolute;left:72.00px;top:166.01px" class="cls_004"><span class="cls_004">with a better browsing experience. You can delete or block the cookies we set, but if you do that,</span></div>
+<div style="position:absolute;left:72.00px;top:185.50px" class="cls_004"><span class="cls_004">some features of this website may not work as intended.</span></div>
+<div style="position:absolute;left:72.00px;top:213.25px" class="cls_004"><span class="cls_004">Most browsers are initially set to accept cookies. If you prefer, you can set your browser to</span></div>
+<div style="position:absolute;left:72.00px;top:232.75px" class="cls_004"><span class="cls_004">refuse   cookies  and </span><span class="cls_005"> control  and/or  delete </span><span class="cls_004"> cookies  as  you  wish  –  for  details,  see</span></div>
+<div style="position:absolute;left:72.00px;top:252.26px" class="cls_019"><span class="cls_019"> </span><A HREF="http://www.aboutcookies.org/">aboutcookies.org</A> <span class="cls_004">. You can delete all cookies that are already on your device and you can set</span></div>
+<div style="position:absolute;left:72.00px;top:271.76px" class="cls_004"><span class="cls_004">most browsers to prevent them from being placed. You should be aware that if you do this, you</span></div>
+<div style="position:absolute;left:72.00px;top:291.26px" class="cls_004"><span class="cls_004">may have to manually adjust some preferences every time you visit an Internet site and some</span></div>
+<div style="position:absolute;left:72.00px;top:310.76px" class="cls_004"><span class="cls_004">services and functionalities may not work if you do not accept the cookies they send.</span></div>
+<div style="position:absolute;left:72.00px;top:338.51px" class="cls_004"><span class="cls_004">Advertisers and business partners that you access on or through our website may also send</span></div>
+<div style="position:absolute;left:72.00px;top:358.00px" class="cls_004"><span class="cls_004">you cookies. We do not control any cookies outside of our website.</span></div>
+<div style="position:absolute;left:72.00px;top:385.75px" class="cls_004"><span class="cls_004">If you have any further questions regarding disabling cookies you should consult with your</span></div>
+<div style="position:absolute;left:72.00px;top:405.25px" class="cls_004"><span class="cls_004">preferred browser’s provider or manufacturer.</span></div>
+<div style="position:absolute;left:72.00px;top:433.00px" class="cls_004"><span class="cls_004">In order to implement your objection it may be necessary to install an opt-out cookie on your</span></div>
+<div style="position:absolute;left:72.00px;top:452.50px" class="cls_004"><span class="cls_004">browser. This cookie will only indicate that you have opted out. It is important to note, that for</span></div>
+<div style="position:absolute;left:72.00px;top:472.00px" class="cls_004"><span class="cls_004">technical reasons, the opt-out cookie will only affect the browser from which you actively object</span></div>
+<div style="position:absolute;left:72.00px;top:491.50px" class="cls_004"><span class="cls_004">from. If you delete the cookies in your browser or use a different end device or browser, you will</span></div>
+<div style="position:absolute;left:72.00px;top:511.01px" class="cls_004"><span class="cls_004">need to opt out again.</span></div>
+<div style="position:absolute;left:72.00px;top:538.76px" class="cls_004"><span class="cls_004">To opt out of being tracked by Google Analytics across all websites, Google has developed</span></div>
+<div style="position:absolute;left:72.00px;top:558.26px" class="cls_004"><span class="cls_004">Google Analytics opt-out browser add-on. If you would like to opt out of Google Analytics, you</span></div>
+<div style="position:absolute;left:72.00px;top:577.76px" class="cls_004"><span class="cls_004">have the option of downloading and installing this browser add-on which can be found under the</span></div>
+<div style="position:absolute;left:72.00px;top:597.26px" class="cls_004"><span class="cls_004">link: </span><span class="cls_019">h<A HREF="http://tools.google.com/dlpage/gaoptout">ttp://tools.google.com/dlpage/gaoptout</A> </span><span class="cls_004">.</span></div>
+<div style="position:absolute;left:72.00px;top:625.01px" class="cls_005"><span class="cls_005">Revisions to this Cookie Policy</span></div>
+<div style="position:absolute;left:72.00px;top:652.76px" class="cls_004"><span class="cls_004">On this website, you can always view the latest version of our Privacy Policy and our Cookie</span></div>
+<div style="position:absolute;left:72.00px;top:672.26px" class="cls_004"><span class="cls_004">Policy. We may modify this Cookie Policy from time to time. If we make changes to this Cookie</span></div>
+<div style="position:absolute;left:72.00px;top:691.76px" class="cls_004"><span class="cls_004">Policy, we will provide notice of such changes, such as by sending an email notification,</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-306px;top:4812px;width:612px;height:792px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+</div>
+<div style="position:absolute;left:72.00px;top:71.51px" class="cls_004"><span class="cls_004">providing notice through our website or updating the ‘Last Updated’ date at the beginning of this</span></div>
+<div style="position:absolute;left:72.00px;top:91.00px" class="cls_004"><span class="cls_004">Cookie Policy. The amended Cookie Policy will be effective immediately after the date it is</span></div>
+<div style="position:absolute;left:72.00px;top:110.50px" class="cls_004"><span class="cls_004">posted. By continuing to access or use our website after the effective date, you confirm your</span></div>
+<div style="position:absolute;left:72.00px;top:130.01px" class="cls_004"><span class="cls_004">acceptance of the revised Cookie Policy and all of the terms incorporated therein by reference.</span></div>
+<div style="position:absolute;left:72.00px;top:149.51px" class="cls_004"><span class="cls_004">We encourage you to review our Privacy Policy and our Cookie Policy whenever you access or</span></div>
+<div style="position:absolute;left:72.00px;top:169.01px" class="cls_004"><span class="cls_004">use our website to stay informed about our information practices and the choices available to</span></div>
+<div style="position:absolute;left:72.00px;top:188.50px" class="cls_004"><span class="cls_004">you.</span></div>
+<div style="position:absolute;left:72.00px;top:216.25px" class="cls_004"><span class="cls_004">If you do not accept changes which are made to this Cookie Policy, or take any measures</span></div>
+<div style="position:absolute;left:72.00px;top:235.75px" class="cls_004"><span class="cls_004">described above to opt-out by removing or rejecting cookies, you may continue to use this</span></div>
+<div style="position:absolute;left:72.00px;top:255.26px" class="cls_004"><span class="cls_004">website but accept that it may not display and/or function as intended by us. Any social media</span></div>
+<div style="position:absolute;left:72.00px;top:274.76px" class="cls_004"><span class="cls_004">channels connected to </span><span class="cls_005">Gnosis Ltd. </span><span class="cls_004">and third party applications will be subject to the privacy</span></div>
+<div style="position:absolute;left:72.00px;top:294.26px" class="cls_004"><span class="cls_004">and cookie policies and practices of the relevant platform providers which, unless otherwise</span></div>
+<div style="position:absolute;left:72.00px;top:313.76px" class="cls_004"><span class="cls_004">indicated, are not affiliated or associated with </span><span class="cls_005">Gnosis Ltd</span><span class="cls_004">. Your exercise of any rights to opt-out</span></div>
+<div style="position:absolute;left:72.00px;top:333.26px" class="cls_004"><span class="cls_004">may also impact how our information and content is displayed and/or accessible to you on this</span></div>
+<div style="position:absolute;left:72.00px;top:352.76px" class="cls_004"><span class="cls_004">website and on other websites.</span></div>
+<div style="position:absolute;left:72.00px;top:387.00px" class="cls_009"><span class="cls_009">APPENDIX</span></div>
+<div style="position:absolute;left:72.00px;top:437.50px" class="cls_007"><span class="cls_007">Overview of cookies placed and the consequences if the cookies are not placed</span></div>
+<div style="position:absolute;left:72.00px;top:467.50px" class="cls_010"><span class="cls_010">First-party cookies</span></div>
+<div style="position:absolute;left:77.25px;top:506.75px" class="cls_011"><span class="cls_011">Name    of</span></div>
+<div style="position:absolute;left:140.25px;top:506.75px" class="cls_011"><span class="cls_011">Purpose(s) of cookie</span></div>
+<div style="position:absolute;left:299.25px;top:506.75px" class="cls_011"><span class="cls_011">Storage</span></div>
+<div style="position:absolute;left:375.00px;top:506.75px" class="cls_011"><span class="cls_011">Consequences if</span></div>
+<div style="position:absolute;left:77.25px;top:520.25px" class="cls_011"><span class="cls_011">cookie</span></div>
+<div style="position:absolute;left:299.25px;top:520.25px" class="cls_011"><span class="cls_011">period</span></div>
+<div style="position:absolute;left:356.06px;top:520.25px" class="cls_011"><span class="cls_011">of</span></div>
+<div style="position:absolute;left:375.00px;top:520.25px" class="cls_011"><span class="cls_011">cookie    is   not</span></div>
+<div style="position:absolute;left:299.25px;top:533.75px" class="cls_011"><span class="cls_011">cookie</span></div>
+<div style="position:absolute;left:375.00px;top:533.75px" class="cls_011"><span class="cls_011">accepted</span></div>
+<div style="position:absolute;left:77.25px;top:562.25px" class="cls_011"><span class="cls_011">_ga</span></div>
+<div style="position:absolute;left:140.25px;top:562.25px" class="cls_011"><span class="cls_011">Used to distinguish users. Also</span></div>
+<div style="position:absolute;left:299.25px;top:562.25px" class="cls_011"><span class="cls_011">2 years from</span></div>
+<div style="position:absolute;left:375.00px;top:562.25px" class="cls_011"><span class="cls_011">User activity</span></div>
+<div style="position:absolute;left:140.25px;top:575.75px" class="cls_011"><span class="cls_011">used by Fortmatic wallet.</span></div>
+<div style="position:absolute;left:299.25px;top:575.75px" class="cls_011"><span class="cls_011">set/update</span></div>
+<div style="position:absolute;left:375.00px;top:575.75px" class="cls_011"><span class="cls_011">won't be tracked</span></div>
+<div style="position:absolute;left:77.25px;top:614.00px" class="cls_011"><span class="cls_011">_gid</span></div>
+<div style="position:absolute;left:140.25px;top:614.00px" class="cls_011"><span class="cls_011">Used to distinguish users. Also</span></div>
+<div style="position:absolute;left:299.25px;top:614.00px" class="cls_011"><span class="cls_011">24 hours</span></div>
+<div style="position:absolute;left:375.00px;top:614.00px" class="cls_011"><span class="cls_011">User activity</span></div>
+<div style="position:absolute;left:140.25px;top:627.50px" class="cls_011"><span class="cls_011">used by Fortmatic wallet.</span></div>
+<div style="position:absolute;left:375.00px;top:627.50px" class="cls_011"><span class="cls_011">won't be tracked</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-306px;top:5614px;width:612px;height:792px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+</div>
+<div style="position:absolute;left:77.25px;top:77.75px" class="cls_011"><span class="cls_011">_gat</span></div>
+<div style="position:absolute;left:140.25px;top:77.75px" class="cls_011"><span class="cls_011">Used to throttle request rate.</span></div>
+<div style="position:absolute;left:299.25px;top:77.75px" class="cls_011"><span class="cls_011">1 minute</span></div>
+<div style="position:absolute;left:375.00px;top:77.75px" class="cls_011"><span class="cls_011">User activity</span></div>
+<div style="position:absolute;left:140.25px;top:91.25px" class="cls_011"><span class="cls_011">Also used by Fortmatic wallet.</span></div>
+<div style="position:absolute;left:375.00px;top:91.25px" class="cls_011"><span class="cls_011">won't be tracked</span></div>
+<div style="position:absolute;left:77.25px;top:167.75px" class="cls_011"><span class="cls_011">AMP_TOK</span></div>
+<div style="position:absolute;left:140.25px;top:167.75px" class="cls_011"><span class="cls_011">Contains a token that can be</span></div>
+<div style="position:absolute;left:299.25px;top:167.75px" class="cls_011"><span class="cls_011">30 seconds to</span></div>
+<div style="position:absolute;left:375.00px;top:167.75px" class="cls_011"><span class="cls_011">User activity</span></div>
+<div style="position:absolute;left:77.25px;top:181.25px" class="cls_011"><span class="cls_011">EN</span></div>
+<div style="position:absolute;left:140.25px;top:181.25px" class="cls_011"><span class="cls_011">used to retrieve a Client ID from</span></div>
+<div style="position:absolute;left:299.25px;top:181.25px" class="cls_011"><span class="cls_011">1 year</span></div>
+<div style="position:absolute;left:375.00px;top:181.25px" class="cls_011"><span class="cls_011">won't be tracked</span></div>
+<div style="position:absolute;left:140.25px;top:194.75px" class="cls_011"><span class="cls_011">AMP Client ID service. Other</span></div>
+<div style="position:absolute;left:140.25px;top:208.25px" class="cls_011"><span class="cls_011">possible values indicate opt-out,</span></div>
+<div style="position:absolute;left:140.25px;top:221.75px" class="cls_011"><span class="cls_011">inflight request or an error</span></div>
+<div style="position:absolute;left:140.25px;top:235.25px" class="cls_011"><span class="cls_011">retrieving a Client ID from AMP</span></div>
+<div style="position:absolute;left:140.25px;top:248.75px" class="cls_011"><span class="cls_011">Client ID service.</span></div>
+<div style="position:absolute;left:77.25px;top:280.25px" class="cls_011"><span class="cls_011">_gac_&lt;pro</span></div>
+<div style="position:absolute;left:140.25px;top:280.25px" class="cls_011"><span class="cls_011">Contains campaign related</span></div>
+<div style="position:absolute;left:299.25px;top:280.25px" class="cls_011"><span class="cls_011">90 days</span></div>
+<div style="position:absolute;left:375.00px;top:280.25px" class="cls_011"><span class="cls_011">User activity</span></div>
+<div style="position:absolute;left:77.25px;top:293.75px" class="cls_011"><span class="cls_011">perty-id></span></div>
+<div style="position:absolute;left:140.25px;top:293.75px" class="cls_011"><span class="cls_011">information for the user</span></div>
+<div style="position:absolute;left:375.00px;top:293.75px" class="cls_011"><span class="cls_011">won't be tracked</span></div>
+<div style="position:absolute;left:77.25px;top:359.00px" class="cls_011"><span class="cls_011">intercom-id</span></div>
+<div style="position:absolute;left:140.25px;top:359.00px" class="cls_012"><span class="cls_012">Anonymous visitor identifier</span></div>
+<div style="position:absolute;left:299.25px;top:359.00px" class="cls_011"><span class="cls_011">9 months</span></div>
+<div style="position:absolute;left:375.00px;top:359.00px" class="cls_011"><span class="cls_011">User activity</span></div>
+<div style="position:absolute;left:77.25px;top:372.50px" class="cls_011"><span class="cls_011">-[app_id]</span></div>
+<div style="position:absolute;left:140.25px;top:372.50px" class="cls_012"><span class="cls_012">cookie</span></div>
+<div style="position:absolute;left:375.00px;top:372.50px" class="cls_011"><span class="cls_011">won’t be tracked,</span></div>
+<div style="position:absolute;left:375.00px;top:386.00px" class="cls_011"><span class="cls_011">live support via</span></div>
+<div style="position:absolute;left:375.00px;top:399.50px" class="cls_011"><span class="cls_011">Intercom won’t</span></div>
+<div style="position:absolute;left:375.00px;top:413.00px" class="cls_011"><span class="cls_011">be available</span></div>
+<div style="position:absolute;left:77.25px;top:437.75px" class="cls_011"><span class="cls_011">intercom-se</span></div>
+<div style="position:absolute;left:140.25px;top:437.75px" class="cls_012"><span class="cls_012">Identifier for each unique browser</span></div>
+<div style="position:absolute;left:299.25px;top:437.75px" class="cls_011"><span class="cls_011">1 week</span></div>
+<div style="position:absolute;left:375.00px;top:437.75px" class="cls_011"><span class="cls_011">User activity</span></div>
+<div style="position:absolute;left:77.25px;top:451.25px" class="cls_011"><span class="cls_011">ssion-[app_</span></div>
+<div style="position:absolute;left:140.25px;top:451.25px" class="cls_012"><span class="cls_012">session. This session cookie is</span></div>
+<div style="position:absolute;left:375.00px;top:451.25px" class="cls_011"><span class="cls_011">won’t be tracked,</span></div>
+<div style="position:absolute;left:77.25px;top:464.75px" class="cls_011"><span class="cls_011">id]</span></div>
+<div style="position:absolute;left:140.25px;top:464.75px" class="cls_012"><span class="cls_012">refreshed on each successful</span></div>
+<div style="position:absolute;left:375.00px;top:464.75px" class="cls_011"><span class="cls_011">live support via</span></div>
+<div style="position:absolute;left:140.25px;top:478.25px" class="cls_012"><span class="cls_012">logged-in ping, extending it to 1</span></div>
+<div style="position:absolute;left:375.00px;top:478.25px" class="cls_011"><span class="cls_011">Intercom won’t</span></div>
+<div style="position:absolute;left:140.25px;top:491.75px" class="cls_012"><span class="cls_012">week from that moment. The</span></div>
+<div style="position:absolute;left:375.00px;top:491.75px" class="cls_011"><span class="cls_011">be available</span></div>
+<div style="position:absolute;left:140.25px;top:505.25px" class="cls_012"><span class="cls_012">user can access their</span></div>
+<div style="position:absolute;left:140.25px;top:518.75px" class="cls_012"><span class="cls_012">conversations and have data</span></div>
+<div style="position:absolute;left:140.25px;top:532.25px" class="cls_012"><span class="cls_012">communicated on logged out</span></div>
+<div style="position:absolute;left:140.25px;top:545.75px" class="cls_012"><span class="cls_012">pages for 1 week, as long as the</span></div>
+<div style="position:absolute;left:140.25px;top:559.25px" class="cls_012"><span class="cls_012">session isn’t intentionally</span></div>
+<div style="position:absolute;left:140.25px;top:572.75px" class="cls_012"><span class="cls_012">terminated with</span></div>
+<div style="position:absolute;left:140.25px;top:586.25px" class="cls_012"><span class="cls_012">`Intercom(‘shutdown’)`, which</span></div>
+<div style="position:absolute;left:140.25px;top:599.75px" class="cls_012"><span class="cls_012">usually happens on logout</span></div>
+<div style="position:absolute;left:77.25px;top:644.25px" class="cls_013"><span class="cls_013">[version]_[ne</span></div>
+<div style="position:absolute;left:140.25px;top:644.00px" class="cls_012"><span class="cls_012">Saves user consent on using</span></div>
+<div style="position:absolute;left:299.25px;top:644.00px" class="cls_011"><span class="cls_011">1 year for</span></div>
+<div style="position:absolute;left:375.00px;top:644.00px" class="cls_011"><span class="cls_011">If possible,</span></div>
+<div style="position:absolute;left:77.25px;top:657.00px" class="cls_013"><span class="cls_013">twork]__CO</span></div>
+<div style="position:absolute;left:140.25px;top:657.50px" class="cls_012"><span class="cls_012">cookies.</span></div>
+<div style="position:absolute;left:299.25px;top:657.50px" class="cls_011"><span class="cls_011">positive</span></div>
+<div style="position:absolute;left:375.00px;top:657.50px" class="cls_011"><span class="cls_011">cookie will be</span></div>
+<div style="position:absolute;left:77.25px;top:669.75px" class="cls_013"><span class="cls_013">OKIES</span></div>
+<div style="position:absolute;left:299.25px;top:671.00px" class="cls_011"><span class="cls_011">consent, 7</span></div>
+<div style="position:absolute;left:375.00px;top:671.00px" class="cls_011"><span class="cls_011">placed in the</span></div>
+<div style="position:absolute;left:299.25px;top:684.50px" class="cls_011"><span class="cls_011">days for</span></div>
+<div style="position:absolute;left:375.00px;top:684.50px" class="cls_011"><span class="cls_011">next session</span></div>
+<div style="position:absolute;left:299.25px;top:698.00px" class="cls_011"><span class="cls_011">negative</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-306px;top:6416px;width:612px;height:792px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+</div>
+<div style="position:absolute;left:72.00px;top:71.51px" class="cls_010"><span class="cls_010">Third-party cookies</span></div>
+<div style="position:absolute;left:72.00px;top:104.25px" class="cls_014"><span class="cls_014">The cookies from this table can be set by third-party wallets.</span></div>
+<div style="position:absolute;left:77.25px;top:139.25px" class="cls_015"><span class="cls_015">amplitude_i</span></div>
+<div style="position:absolute;left:299.25px;top:139.25px" class="cls_011"><span class="cls_011">10 years</span></div>
+<div style="position:absolute;left:375.00px;top:139.25px" class="cls_011"><span class="cls_011">User activity</span></div>
+<div style="position:absolute;left:143.25px;top:143.00px" class="cls_015"><span class="cls_015">To the best of our knowledge,</span></div>
+<div style="position:absolute;left:77.25px;top:152.75px" class="cls_015"><span class="cls_015">d,</span></div>
+<div style="position:absolute;left:375.00px;top:152.75px" class="cls_011"><span class="cls_011">won’t be tracked</span></div>
+<div style="position:absolute;left:143.25px;top:156.50px" class="cls_015"><span class="cls_015">these cookies are used by</span></div>
+<div style="position:absolute;left:77.25px;top:166.25px" class="cls_015"><span class="cls_015">amplitude_i</span></div>
+<div style="position:absolute;left:143.25px;top:170.00px" class="cls_015"><span class="cls_015">Amplitude for session tracking</span></div>
+<div style="position:absolute;left:77.25px;top:179.75px" class="cls_015"><span class="cls_015">dunidentifie</span></div>
+<div style="position:absolute;left:143.25px;top:183.50px" class="cls_015"><span class="cls_015">for analytics purposes.</span></div>
+<div style="position:absolute;left:77.25px;top:193.25px" class="cls_015"><span class="cls_015">d</span></div>
+<div style="position:absolute;left:77.25px;top:226.25px" class="cls_015"><span class="cls_015">PORTIS_J</span></div>
+<div style="position:absolute;left:299.25px;top:226.25px" class="cls_011"><span class="cls_011">3 days</span></div>
+<div style="position:absolute;left:375.00px;top:226.25px" class="cls_011"><span class="cls_011">User won’t be</span></div>
+<div style="position:absolute;left:143.25px;top:229.25px" class="cls_015"><span class="cls_015">JWT Authentication token set</span></div>
+<div style="position:absolute;left:77.25px;top:239.75px" class="cls_015"><span class="cls_015">WT</span></div>
+<div style="position:absolute;left:375.00px;top:239.75px" class="cls_011"><span class="cls_011">auto-logged in to</span></div>
+<div style="position:absolute;left:143.25px;top:242.75px" class="cls_015"><span class="cls_015">by Portis web wallet.</span></div>
+<div style="position:absolute;left:375.00px;top:253.25px" class="cls_011"><span class="cls_011">Portis web</span></div>
+<div style="position:absolute;left:375.00px;top:266.75px" class="cls_011"><span class="cls_011">wallet.</span></div>
+<div style="position:absolute;left:77.25px;top:305.25px" class="cls_016"><span class="cls_016">mp_&lt;YOUR</span></div>
+<div style="position:absolute;left:299.25px;top:305.00px" class="cls_011"><span class="cls_011">9 months</span></div>
+<div style="position:absolute;left:375.00px;top:305.00px" class="cls_011"><span class="cls_011">User activity</span></div>
+<div style="position:absolute;left:143.25px;top:308.00px" class="cls_015"><span class="cls_015">To the best of our knowledge,</span></div>
+<div style="position:absolute;left:77.25px;top:318.00px" class="cls_016"><span class="cls_016">TOKEN>_mi</span></div>
+<div style="position:absolute;left:375.00px;top:318.50px" class="cls_011"><span class="cls_011">won’t be tracked</span></div>
+<div style="position:absolute;left:143.25px;top:321.50px" class="cls_015"><span class="cls_015">these cookies are used to send</span></div>
+<div style="position:absolute;left:77.25px;top:330.00px" class="cls_016"><span class="cls_016">xpanel</span><span class="cls_017">.</span></div>
+<div style="position:absolute;left:143.25px;top:335.00px" class="cls_015"><span class="cls_015">data to Mixpanel projects.</span></div>
+<div style="position:absolute;left:77.25px;top:383.75px" class="cls_018"><span class="cls_018">ajs_user_id</span></div>
+<div style="position:absolute;left:299.25px;top:383.75px" class="cls_011"><span class="cls_011">1 year</span></div>
+<div style="position:absolute;left:375.00px;top:383.75px" class="cls_011"><span class="cls_011">User activity</span></div>
+<div style="position:absolute;left:143.25px;top:386.75px" class="cls_015"><span class="cls_015">To the best of our knowledge,</span></div>
+<div style="position:absolute;left:375.00px;top:397.25px" class="cls_011"><span class="cls_011">won’t be tracked</span></div>
+<div style="position:absolute;left:143.25px;top:400.25px" class="cls_015"><span class="cls_015">this cookie helps track visitor</span></div>
+<div style="position:absolute;left:143.25px;top:413.75px" class="cls_015"><span class="cls_015">usage, events, target</span></div>
+<div style="position:absolute;left:143.25px;top:427.25px" class="cls_015"><span class="cls_015">marketing, and can also</span></div>
+<div style="position:absolute;left:143.25px;top:440.75px" class="cls_015"><span class="cls_015">measure application</span></div>
+<div style="position:absolute;left:143.25px;top:454.25px" class="cls_015"><span class="cls_015">performance and stability.</span></div>
+<div style="position:absolute;left:77.25px;top:497.00px" class="cls_018"><span class="cls_018">ajs_group_i</span></div>
+<div style="position:absolute;left:299.25px;top:497.00px" class="cls_011"><span class="cls_011">1 year</span></div>
+<div style="position:absolute;left:375.00px;top:497.00px" class="cls_011"><span class="cls_011">User activity</span></div>
+<div style="position:absolute;left:143.25px;top:500.00px" class="cls_015"><span class="cls_015">To the best of our knowledge,</span></div>
+<div style="position:absolute;left:77.25px;top:510.50px" class="cls_018"><span class="cls_018">d</span></div>
+<div style="position:absolute;left:375.00px;top:510.50px" class="cls_011"><span class="cls_011">won’t be tracked</span></div>
+<div style="position:absolute;left:143.25px;top:513.50px" class="cls_015"><span class="cls_015">these cookies track visitor</span></div>
+<div style="position:absolute;left:143.25px;top:527.00px" class="cls_015"><span class="cls_015">usage and events within the</span></div>
+<div style="position:absolute;left:143.25px;top:540.50px" class="cls_015"><span class="cls_015">website</span></div>
+<div style="position:absolute;left:77.25px;top:583.25px" class="cls_018"><span class="cls_018">ajs_anony</span></div>
+<div style="position:absolute;left:299.25px;top:583.25px" class="cls_011"><span class="cls_011">1 year</span></div>
+<div style="position:absolute;left:375.00px;top:583.25px" class="cls_011"><span class="cls_011">User activity</span></div>
+<div style="position:absolute;left:143.25px;top:586.25px" class="cls_015"><span class="cls_015">To the best of our knowledge,</span></div>
+<div style="position:absolute;left:77.25px;top:596.75px" class="cls_018"><span class="cls_018">mous_id</span></div>
+<div style="position:absolute;left:375.00px;top:596.75px" class="cls_011"><span class="cls_011">won’t be tracked</span></div>
+<div style="position:absolute;left:143.25px;top:599.75px" class="cls_015"><span class="cls_015">these cookies are generally</span></div>
+<div style="position:absolute;left:143.25px;top:613.25px" class="cls_015"><span class="cls_015">used for Analytics and help</span></div>
+<div style="position:absolute;left:143.25px;top:626.75px" class="cls_015"><span class="cls_015">count how many people visit a</span></div>
+<div style="position:absolute;left:143.25px;top:640.25px" class="cls_015"><span class="cls_015">certain site by tracking if you</span></div>
+<div style="position:absolute;left:143.25px;top:653.75px" class="cls_015"><span class="cls_015">have visited before</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-306px;top:7218px;width:612px;height:792px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+</div>
+<div style="position:absolute;left:77.25px;top:77.75px" class="cls_011"><span class="cls_011">_ga</span></div>
+<div style="position:absolute;left:140.25px;top:77.75px" class="cls_011"><span class="cls_011">Used to distinguish users.</span></div>
+<div style="position:absolute;left:299.25px;top:77.75px" class="cls_011"><span class="cls_011">2 years from</span></div>
+<div style="position:absolute;left:375.00px;top:77.75px" class="cls_011"><span class="cls_011">User activity</span></div>
+<div style="position:absolute;left:299.25px;top:91.25px" class="cls_011"><span class="cls_011">set/update</span></div>
+<div style="position:absolute;left:375.00px;top:91.25px" class="cls_011"><span class="cls_011">won't be tracked</span></div>
+<div style="position:absolute;left:77.25px;top:156.50px" class="cls_011"><span class="cls_011">_gid</span></div>
+<div style="position:absolute;left:140.25px;top:156.50px" class="cls_011"><span class="cls_011">Used to distinguish users.</span></div>
+<div style="position:absolute;left:299.25px;top:156.50px" class="cls_011"><span class="cls_011">24 hours</span></div>
+<div style="position:absolute;left:375.00px;top:156.50px" class="cls_011"><span class="cls_011">User activity</span></div>
+<div style="position:absolute;left:375.00px;top:170.00px" class="cls_011"><span class="cls_011">won't be tracked</span></div>
+<div style="position:absolute;left:77.25px;top:235.25px" class="cls_011"><span class="cls_011">_gat</span></div>
+<div style="position:absolute;left:140.25px;top:235.25px" class="cls_011"><span class="cls_011">Used to throttle request rate.</span></div>
+<div style="position:absolute;left:299.25px;top:235.25px" class="cls_011"><span class="cls_011">1 minute</span></div>
+<div style="position:absolute;left:375.00px;top:235.25px" class="cls_011"><span class="cls_011">User activity</span></div>
+<div style="position:absolute;left:375.00px;top:248.75px" class="cls_011"><span class="cls_011">won't be tracked</span></div>
+</div>
+
+</body>
+</html>
