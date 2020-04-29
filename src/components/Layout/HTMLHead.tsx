@@ -29,7 +29,7 @@ export default ({ title, description, thumbnail, article }: IHeadProps) => (
     }) => {
       const seo = {
         description: description || defaultDescription,
-        image: thumbnail || `${siteUrl}/images/og-image.png`,
+        image: thumbnail || `${siteUrl}/images/og-image-2.png`,
         url: `${siteUrl}`,
         twitter,
       }
