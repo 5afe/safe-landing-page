@@ -223,7 +223,6 @@ const CookiesBanner = () => {
   )
 
   if (showAnalytics) {
-    console.log('SHOW INTERCOM AND LOAD ANALYTICS')
     loadIntercom()
     loadGoogleAnalytics()
   }

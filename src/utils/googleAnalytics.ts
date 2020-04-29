@@ -15,13 +15,12 @@ export const loadGoogleAnalytics = () => {
     return
   }
   // eslint-disable-next-line no-console
-  console.log('Loading google analytics...')
   const trackingID = getGoogleAnalyticsTrackingID()
   if (!trackingID) {
     console.error(
       '[GoogleAnalytics] - In order to use google analytics you need to add an trackingID'
-    )
-  } else {
+      )
+    } else {
     GoogleAnalytics.initialize(trackingID)
     GoogleAnalytics.set({ anonymizeIp: true })
     analyticsLoaded = true
