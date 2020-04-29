@@ -137,7 +137,7 @@ const Audits = () => (
             href="https://github.com/gnosis/safe-contracts/blob/v1.1.1/docs/alexey_audit.md"
             target="_blank"
           >
-            <Audit date="Jul. 4th, 2018" author="Alexey Akhunov (v0.1.0)" />
+            <Audit date="Jul. 4th, 2018" author="Alexey Akhunov (v0.0.1)" />
           </Link>
           <Link
             href="https://github.com/gnosis/safe-contracts/blob/v1.1.1/docs/Gnosis_Safe_Formal_Verification_Report_1_0_0.pdf"
