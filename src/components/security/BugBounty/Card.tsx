@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const SContainer = styled.div`
   display: flex;
   color: ${(p) => p.theme.palette.navy};
+  padding: 10px 0;
 `
 
 const TitleWrapper = styled.div`

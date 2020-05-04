@@ -92,7 +92,10 @@ const BugBounty = () => (
       <Row>
         <LCol>
           <LHeading>Our biggest bug bounty program ever</LHeading>
-          <ButtonLink url="https://blog.gnosis.pm/announcing-the-gnosis-safe-contract-update-1-1-0-bug-bounty-fd2850204963" colorScheme="white">
+          <ButtonLink
+            url="https://blog.gnosis.pm/announcing-the-gnosis-safe-contract-update-1-1-0-bug-bounty-fd2850204963"
+            colorScheme="white"
+          >
             Start bug hunting
           </ButtonLink>
         </LCol>

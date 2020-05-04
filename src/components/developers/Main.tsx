@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import ContentWrapper from '../Layout/ContentWrapper'
 import Heading from '../ui/Heading'
 import SafeLogo from '../../assets/safe-logo.svg'
+import ButtonLink from '../ui/ButtonLink'
 
 const Container = styled.div`
   height: calc(100vh - 56px);
@@ -39,6 +40,7 @@ const Text = styled.p`
   font-size: 25px;
   line-height: normal;
   letter-spacing: 0.56px;
+  margin-bottom: 30px;
   @media screen and (max-width: 1240px) {
     font-size: 16px;
     letter-spacing: 0.36px;
@@ -156,6 +158,12 @@ const MainSection = () => (
         <Text>
           The tools you need to build world-class applications on Ethereum
         </Text>
+        <ButtonLink
+          url="https://docs.gnosis.io/safe"
+          colorScheme="green"
+        >
+          Dev Portal
+        </ButtonLink>
       </LCol>
       <RCol>
         <Triangle />

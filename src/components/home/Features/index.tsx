@@ -105,7 +105,11 @@ const Features = () => (
           </SFeature>
           <SFeature img={SafeIcon} title="Security-first">
             The Safe Multisig is the only formally verified and audited smart
-            contract wallet. <SLink to="/security">Learn more about how we put security first</SLink>.
+            contract wallet.{' '}
+            <SLink to="/security">
+              Learn more about how we put security first
+            </SLink>
+            .
           </SFeature>
           <SFeature img={GroupIcon} title="Gasless Signatures">
             Enhanced efficiency and user experience with gasless signatures.
