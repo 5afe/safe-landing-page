@@ -20,8 +20,9 @@ const Layout: React.FC<ILayoutProps> = ({ children, title }) => {
     const checkGA = async () => {
       const page = typeof window !== 'undefined' && window.location.pathname
       const search = typeof window !== 'undefined' && window.location.search
-      if (page && search) {
-        await trackPage(page + search)
+      if (page) {
+        let fullPage = search ? page + search : page
+        await trackPage(fullPage)
       }
     }
     checkGA()
