@@ -4,6 +4,7 @@ import Feature from './Feature'
 import GetNotified from './GetNotified'
 import ContentWrapper from '../../Layout/ContentWrapper'
 import ButtonLink from '../../ui/ButtonLink'
+import Link from '../../ui/Link'
 import DocIcon from '../../../assets/icon-doc.svg'
 import GroupIcon from '../../../assets/icon-group.svg'
 import SafeIcon from '../../../assets/icon-safe.svg'
@@ -76,6 +77,11 @@ const SButtonLink = styled(ButtonLink)`
   margin-bottom: 40px;
 `
 
+const SLink = styled(Link)`
+  text-decoration: underline;
+  font-weight: bold;
+`
+
 const Features = () => (
   <Container>
     <ContentWrapper>
@@ -99,7 +105,7 @@ const Features = () => (
           </SFeature>
           <SFeature img={SafeIcon} title="Security-first">
             The Safe Multisig is the only formally verified and audited smart
-            contract wallet. Learn more about how we put security first.
+            contract wallet. <SLink to="/security">Learn more about how we put security first</SLink>.
           </SFeature>
           <SFeature img={GroupIcon} title="Gasless Signatures">
             Enhanced efficiency and user experience with gasless signatures.
