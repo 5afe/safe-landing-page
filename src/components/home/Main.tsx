@@ -312,7 +312,7 @@ const MainSection = () => {
                   onMouseEnter={() => activateFeature(2)}
                   onMouseLeave={deactivateFeature}
                 >
-                  <InnerFeature>Transactions</InnerFeature>
+                  <InnerFeature>Multisig</InnerFeature>
                 </Feature>
                 <Feature
                   active={currentFeature === 3}
