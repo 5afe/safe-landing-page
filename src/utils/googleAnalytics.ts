@@ -19,8 +19,8 @@ export const loadGoogleAnalytics = () => {
   if (!trackingID) {
     console.error(
       '[GoogleAnalytics] - In order to use google analytics you need to add an trackingID'
-      )
-    } else {
+    )
+  } else {
     GoogleAnalytics.initialize(trackingID)
     GoogleAnalytics.set({ anonymizeIp: true })
     analyticsLoaded = true
@@ -28,21 +28,13 @@ export const loadGoogleAnalytics = () => {
 }
 
 export const useAnalytics = () => {
-  const [analyticsAllowed, setAnalyticsAllowed] = useState(false)
-
-  useEffect(() => {
-    async function fetchCookiesFromStorage() {
-      const cookiesState: CookiesProps = await loadFromCookie(COOKIES_KEY)
-      if (cookiesState) {
-        const { acceptedAnalytics } = cookiesState
-        setAnalyticsAllowed(acceptedAnalytics)
-      }
-    }
-    fetchCookiesFromStorage()
-  }, [])
-
-  const trackPage = useCallback((page, options = {}) => {
-    if (!analyticsAllowed || !analyticsLoaded) {
+  const trackPage = async (page: string, options = {}) => {
+    const cookiesState: CookiesProps = await loadFromCookie(COOKIES_KEY)
+    if (
+      !cookiesState ||
+      (cookiesState && !cookiesState.acceptedAnalytics) ||
+      !analyticsLoaded
+    ) {
       return
     }
     GoogleAnalytics.set({
@@ -50,7 +42,7 @@ export const useAnalytics = () => {
       ...options,
     })
     GoogleAnalytics.pageview(page)
-  }, [])
+  }
 
   return { trackPage }
 }

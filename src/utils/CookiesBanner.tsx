@@ -179,8 +179,7 @@ const CookiesBanner = () => {
       <Content>
         <Text>
           We use cookies to give you the best experience and to help improve our
-          website. Please read our{' '}
-          <SLink to="/cookie">Cookie Policy</SLink> for
+          website. Please read our <SLink to="/cookie">Cookie Policy</SLink> for
           more information. By clicking &quot;Accept all&quot;, you agree to the
           storing of cookies on your device to enhance site navigation, analyze
           site usage and provide customer support.

@@ -39,7 +39,7 @@ const Text = styled.div`
   margin-top: 20px;
   font-size: 16px;
   letter-spacing: 0.36px;
-  min-height: ${(p) => p.minHeight ? '67px' : 0};
+  min-height: ${(p) => (p.minHeight ? '67px' : 0)};
   color: ${(p) =>
     p.color === 'green' ? p.theme.palette.primary : p.theme.palette.navy};
   b {
