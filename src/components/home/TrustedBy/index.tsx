@@ -56,7 +56,6 @@ const ImageAnchor = styled.a`
   max-height: 54px;
   @media screen and (max-width: 1240px) {
     max-height: 35px;
-    display: ${(p) => (p.companyName === 'Aragon' ? 'none' : 'block')};
   }
 `
 
