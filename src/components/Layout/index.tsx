@@ -18,11 +18,14 @@ const Layout: React.FC<ILayoutProps> = ({ children, title }) => {
 
   useEffect(() => {
     const checkGA = async () => {
-      const page = location.pathname + location.search
-      await trackPage(page)
+      const page = typeof window !== 'undefined' && window.location.pathname
+      const search = typeof window !== 'undefined' && window.location.search
+      if (page && search) {
+        await trackPage(page + search)
+      }
     }
     checkGA()
-  }, [location.pathname, trackPage])
+  }, [typeof window !== 'undefined' && window.location.pathname, trackPage])
 
   return (
     <>
