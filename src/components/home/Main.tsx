@@ -219,42 +219,42 @@ const MainSection = () => {
     <StaticQuery
       query={graphql`
         query {
-          background: file(relativePath: { eq: "background.png" }) {
+          background: file(relativePath: { eq: "background@2x.png" }) {
             childImageSharp {
               fluid(quality: 100, maxWidth: 600) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
-          balances: file(relativePath: { eq: "balances.png" }) {
+          balances: file(relativePath: { eq: "balances@2x.png" }) {
             childImageSharp {
               fluid(quality: 100, maxWidth: 600) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
-          walletOptions: file(relativePath: { eq: "wallet-options.png" }) {
+          walletOptions: file(relativePath: { eq: "wallet-options@2x.png" }) {
             childImageSharp {
               fluid(quality: 100, maxWidth: 600) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
-          transactions: file(relativePath: { eq: "transaction-timeline.png" }) {
+          transactions: file(relativePath: { eq: "transaction-timeline@2x.png" }) {
             childImageSharp {
               fluid(quality: 100, maxWidth: 600) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
-          addressBook: file(relativePath: { eq: "address-book.png" }) {
+          addressBook: file(relativePath: { eq: "address-book@2x.png" }) {
             childImageSharp {
               fluid(quality: 100, maxWidth: 600) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
-          nft: file(relativePath: { eq: "nft.png" }) {
+          nft: file(relativePath: { eq: "nft@2x.png" }) {
             childImageSharp {
               fluid(quality: 100, maxWidth: 600) {
                 ...GatsbyImageSharpFluid_withWebp
