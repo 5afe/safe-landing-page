@@ -158,10 +158,7 @@ const MainSection = () => (
         <Text>
           The tools you need to build world-class applications on Ethereum
         </Text>
-        <ButtonLink
-          url="https://docs.gnosis.io/safe"
-          colorScheme="green"
-        >
+        <ButtonLink url="https://docs.gnosis.io/safe" colorScheme="green">
           Dev Portal
         </ButtonLink>
       </LCol>
