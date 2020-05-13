@@ -65,7 +65,7 @@ const SButtonLink = styled(ButtonLink)`
 `
 
 interface IDownloadButtons {
-  desktopAppUrl: string
+  desktopAppUrl: string | undefined
 }
 
 const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => (
