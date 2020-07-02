@@ -40,7 +40,7 @@ export default () => (
   <Layout title="Privacy Policy">
     <ContentWrapper>
       <Title>Privacy Policy</Title>
-      <Date>Last updated on April 17, 2020</Date>
+      <Date>Last updated on May 28, 2020</Date>
       <Section>
         <Paragraph>
           We are delighted that you have chosen to use our App or visit our
@@ -542,7 +542,7 @@ export default () => (
           </Link>
         </Paragraph>
         <Paragraph>
-          In particular we use Crashlytics to monitor the performance any male
+          In particular we use Crashlytics to monitor the performance of any male
           function of the app. The Services automatically may collect certain
           information that does not personally identify users who access or use
           mobile applications that use the Crashlytics. This information
@@ -669,8 +669,8 @@ export default () => (
           <Link href="https://getconflux.com/">https://getconflux.com/</Link>
         </Paragraph>
         <Paragraph>
-          We do not collect or store any personal data collected via nolt.io.
-          Nolt’s privacy policy is available at{' '}
+          We do not collect or store any personal data collected via Conflux.
+          Conflux’s privacy policy is available at{' '}
           <Link href="https://getconflux.com/privacy-policy">
             https://getconflux.com/privacy-policy
           </Link>
@@ -733,6 +733,16 @@ export default () => (
           <Link href="https://www.blocknative.com/privacy-policy.">
             https://www.blocknative.com/privacy-policy.
           </Link>
+        </Paragraph>
+
+        <TitleSubSection>4.15 WalletConnect</TitleSubSection>
+        <Paragraph>
+          We are using WalletConnect for connecting desktop Dapps to mobile Wallets
+          using end-to-end encryption by scanning a QR code.
+        </Paragraph>
+        <Paragraph>
+          We do not store any information collected by WalletConnect. WalletConnect
+          does not collect or process any type of personal data.
         </Paragraph>
       </Section>
       <Section>
