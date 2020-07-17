@@ -4,7 +4,6 @@ import ContentWrapper from '../../Layout/ContentWrapper'
 import { TRUSTED_BY_COMPANIES } from './companies'
 
 const Container = styled.section`
-  padding-top: 50px;
   padding-bottom: 315px;
   color: ${(p) => p.theme.palette.navy};
   overflow: hidden;
@@ -14,8 +13,6 @@ const Container = styled.section`
 `
 
 const SWrapper = styled(ContentWrapper)`
-  display: flex;
-  justify-content: space-between;
   height: 100%;
   @media screen and (max-width: 1240px) {
     display: block;
@@ -23,27 +20,24 @@ const SWrapper = styled(ContentWrapper)`
   }
 `
 
-const LCol = styled.div`
-  flex-basis: 16%;
-  flex-direction: column;
-`
-
-const RCol = styled.div`
-  flex-basis: 65%;
+const Grid = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 160px);
-  grid-column-gap: 91px;
-  grid-row-gap: 51px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
   @media screen and (max-width: 1240px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
   }
 `
 
 const SHeading = styled.h3`
-  font-size: 25px;
+  width: 100%;
+  text-align: center;
+  font-size: 44px;
+  padding-bottom: 50px;
   font-weight: 800;
   letter-spacing: 0.56px;
   @media screen and (max-width: 1240px) {
@@ -53,31 +47,37 @@ const SHeading = styled.h3`
 `
 
 const ImageAnchor = styled.a`
-  max-height: 54px;
+
+`
+const ImageWrapper = styled.div`
+  background: ${(p) => p.theme.palette.lightGreyBackground};
+  border-radius: 8px;
+  height: 128px;
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
   @media screen and (max-width: 1240px) {
-    max-height: 35px;
+    height: 104px;
   }
 `
 
 const Image = styled.img`
-  max-width: 160px;
-  max-height: 54px;
+  max-width: 180px;
+  max-height: 60px;
   width: auto;
   height: auto;
   @media screen and (max-width: 1240px) {
-    max-width: 104px;
-    max-height: 35px;
-    padding: 5px;
+    max-height: 64px;
+    max-width: 120px;
   }
 `
 
 const TrustedBy = () => (
   <Container>
     <SWrapper>
-      <LCol>
-        <SHeading>Trusted by</SHeading>
-      </LCol>
-      <RCol>
+      <SHeading>Trusted by</SHeading>
+      <Grid>
         {TRUSTED_BY_COMPANIES.map((company) => (
           <ImageAnchor
             key={company.name}
@@ -86,10 +86,12 @@ const TrustedBy = () => (
             target="_blank"
             companyName={company.name}
           >
-            <Image src={company.imageURL}></Image>
+            <ImageWrapper>
+              <Image src={company.imageURL}></Image>
+            </ImageWrapper>
           </ImageAnchor>
         ))}
-      </RCol>
+      </Grid>
     </SWrapper>
   </Container>
 )

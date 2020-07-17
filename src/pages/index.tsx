@@ -11,8 +11,8 @@ import Social from '../components/home/Social'
 export default () => (
   <Layout title="Overview">
     <MainSection />
-    <Clients />
     <TrustedBy />
+    <Clients />
     <Features />
     <Testimonials />
     <MultisigMobile />
