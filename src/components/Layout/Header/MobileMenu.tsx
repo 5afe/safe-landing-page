@@ -85,11 +85,6 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
               Help
             </NavListLink>
           </NavListItem>
-          <NavListItem>
-            <ButtonLink url="/app/#" target="_self" explicitExternal>
-              Open App
-            </ButtonLink>
-          </NavListItem>
         </NavList>
       </SMobileMenu>
     </Container>
