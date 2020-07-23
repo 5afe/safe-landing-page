@@ -4,7 +4,7 @@ import ContentWrapper from '../../Layout/ContentWrapper'
 import { TRUSTED_BY_COMPANIES } from './companies'
 
 const Container = styled.section`
-  padding-bottom: 315px;
+  padding-bottom: 50px;
   color: ${(p) => p.theme.palette.navy};
   overflow: hidden;
   @media screen and (max-width: 1240px) {

@@ -2,12 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import ContentWrapper from '../../Layout/ContentWrapper'
 import ButtonLink from '../../ui/ButtonLink'
-import GlobeIcon from '../../../assets/download-web-client-globe.svg'
-import ScreenIcon from '../../../assets/download-desktop-client-screen.svg'
-import MobileIcon from '../../../assets/download-mobile-client-mobile.svg'
+import LinkIcon from '../../../assets/link.svg'
+
 
 const Container = styled.div`
-  padding: 95px 0 200px 0;
+  padding: 50px 0 200px 0;
   position: relative;
   color: ${(p) => p.theme.palette.navy};
   overflow: hidden;
@@ -27,41 +26,73 @@ const Row = styled.div`
 `
 
 const Col = styled.div`
-  flex-basis: 345px;
-  letter-spacing: 0.36px;
+  flex-basis: 380px;
   line-height: normal;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
   @media screen and (max-width: 1240px) {
     margin-top: 30px;
   }
 `
 
+const Title = styled.div`
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.13;
+  text-align: center;
+  padding-bottom: 0px;
+`
+
 const Text = styled.div`
   margin-top: 20px;
-  font-size: 16px;
-  letter-spacing: 0.36px;
-  min-height: ${(p) => (p.minHeight ? '67px' : 0)};
+  font-size: 20px;
+  line-height: 1.3;
   color: ${(p) =>
     p.color === 'green' ? p.theme.palette.primary : p.theme.palette.navy};
   b {
     font-weight: 800;
   }
-  a {
-    color: ${(p) =>
-      p.color === 'green' ? p.theme.palette.primary : p.theme.palette.navy};
-  }
 `
 
 const SButtonLink = styled(ButtonLink)`
-  display: flex;
-  position: relative;
-  padding: 0 20px;
-  width: 100%;
-  height: 67px;
-  font-size: 25px;
-  font-weight: 800;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
+  padding: 8px 30px;
+  margin: 0 auto;
+  width: 200px;
+  font-size: 16px;
+  line-height: 1.38;
+  margin-top: 10px;
   margin-bottom: 30px;
+  text-align: center;
+`
+
+const ImageWrapper = styled.div`
+  height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+`
+
+const Img = styled.img`
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+`
+
+const InnerLink = styled.div`
+  display: flex;
+  float: left;
+  align-items: center;
+  color: ${(p) => p.theme.palette.primary };
+  text-decoration: underline;
+`
+
+const SLinkIcon = styled(LinkIcon)`
+  margin-left: 5px;
 `
 
 interface IDownloadButtons {
@@ -73,62 +104,61 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => (
     <ContentWrapper>
       <Row>
         <Col>
-          <SButtonLink url="https://gnosis-safe.io/app/#" colorScheme="green">
-            Web
-            <GlobeIcon />
+          <Title>Web</Title>
+          <ImageWrapper>
+            <Img src="/images/web.png" />
+          </ImageWrapper>
+          <SButtonLink url="https://gnosis-safe.io/app/#">
+            Open web app
           </SButtonLink>
-          <Text minHeight={true} color="green">
+          <Text>
             Access the most recent version of the Safe Multisig directly in your
             browser.
           </Text>
-          <Text color="green">
+          <Text>
             Do you want to do some testing first?
             <br />
-            <b>
-              <a href="https://rinkeby.gnosis-safe.io/app/#">
-                Use the Rinkeby Web App
-              </a>
-            </b>
-            .
+            <a href="https://rinkeby.gnosis-safe.io/app/#">
+              <InnerLink>
+                Use the Rinkeby Web App <SLinkIcon />
+              </InnerLink>
+            </a>
           </Text>
         </Col>
         <Col>
-          <SButtonLink url={desktopAppUrl} colorScheme="navy">
-            Desktop
-            <ScreenIcon />
+          <Title>Desktop</Title>
+          <ImageWrapper>
+            <Img src="/images/desktop.png" />
+          </ImageWrapper>
+          <SButtonLink url={desktopAppUrl}>
+            Download (~200 Mb)
           </SButtonLink>
-          <Text minHeight>
+          <Text>
             Download the Safe Multisig as a static desktop application for
             Windows, MacOS or Linux.
           </Text>
           <Text>
-            <b>
-              <a
-                href="https://github.com/gnosis/safe-react/releases"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                All releases and SHA256 checksums
-              </a>
-            </b>
-            .
+            <a
+              href="https://github.com/gnosis/safe-react/releases"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <InnerLink>
+                All releases and SHA256 checksums <SLinkIcon />
+              </InnerLink>
+            </a>
           </Text>
         </Col>
         <Col>
-          <SButtonLink url="/#mobile" colorScheme="grey">
-            Mobile
-            <MobileIcon />
+          <Title>Mobile</Title>
+          <ImageWrapper>
+            <Img src="/images/phone.png" />
+          </ImageWrapper>
+          <SButtonLink url="/#mobile">
+            Access beta
           </SButtonLink>
-          <Text minHeight>
-            Conveniently manage your digital assets
-            <br />
-            on-the-go.
-          </Text>
           <Text>
-            <b>
-              <a href="/#mobile">Get early access here</a>
-            </b>
-            .
+            Conveniently manage your digital assets on-the-go.
           </Text>
         </Col>
       </Row>
