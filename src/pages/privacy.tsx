@@ -542,10 +542,10 @@ export default () => (
           </Link>
         </Paragraph>
         <Paragraph>
-          In particular we use Crashlytics to monitor the performance of any male
-          function of the app. The Services automatically may collect certain
-          information that does not personally identify users who access or use
-          mobile applications that use the Crashlytics. This information
+          In particular we use Crashlytics to monitor the performance of any
+          male function of the app. The Services automatically may collect
+          certain information that does not personally identify users who access
+          or use mobile applications that use the Crashlytics. This information
           includes, but is not limited to, the user’s Safe wallet address,
           device state information, unique device identifiers, device hardware
           and OS information, information relating to how an application
@@ -737,12 +737,12 @@ export default () => (
 
         <TitleSubSection>4.15 WalletConnect</TitleSubSection>
         <Paragraph>
-          We are using WalletConnect for connecting desktop Dapps to mobile Wallets
-          using end-to-end encryption by scanning a QR code.
+          We are using WalletConnect for connecting desktop Dapps to mobile
+          Wallets using end-to-end encryption by scanning a QR code.
         </Paragraph>
         <Paragraph>
-          We do not store any information collected by WalletConnect. WalletConnect
-          does not collect or process any type of personal data.
+          We do not store any information collected by WalletConnect.
+          WalletConnect does not collect or process any type of personal data.
         </Paragraph>
       </Section>
       <Section>

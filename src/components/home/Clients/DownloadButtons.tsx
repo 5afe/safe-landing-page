@@ -4,7 +4,6 @@ import ContentWrapper from '../../Layout/ContentWrapper'
 import ButtonLink from '../../ui/ButtonLink'
 import LinkIcon from '../../../assets/link.svg'
 
-
 const Container = styled.div`
   padding-bottom: 100px;
   position: relative;
@@ -88,7 +87,7 @@ const InnerLink = styled.div`
   display: flex;
   float: left;
   align-items: center;
-  color: ${(p) => p.theme.palette.primary };
+  color: ${(p) => p.theme.palette.primary};
   text-decoration: underline;
 `
 
@@ -131,9 +130,7 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => (
           <ImageWrapper>
             <Img src="/images/desktop.png" />
           </ImageWrapper>
-          <SButtonLink url={desktopAppUrl}>
-            Download (~200 Mb)
-          </SButtonLink>
+          <SButtonLink url={desktopAppUrl}>Download (~200 Mb)</SButtonLink>
           <Text>
             Download the Safe Multisig as a static desktop application for
             Windows, MacOS or Linux.
@@ -155,12 +152,8 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => (
           <ImageWrapper>
             <Img src="/images/phone.png" />
           </ImageWrapper>
-          <SButtonLink url="/#mobile">
-            Access beta
-          </SButtonLink>
-          <Text>
-            Conveniently manage your digital assets on-the-go.
-          </Text>
+          <SButtonLink url="/#mobile">Access beta</SButtonLink>
+          <Text>Conveniently manage your digital assets on-the-go.</Text>
         </Col>
       </Row>
     </ContentWrapper>

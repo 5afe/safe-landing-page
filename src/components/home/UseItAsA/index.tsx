@@ -11,7 +11,6 @@ const Container = styled.section`
   padding-top: 100px;
   padding-bottom: 100px;
   color: ${(p) => p.theme.palette.navy};
-  background: 
   overflow: hidden;
   @media screen and (max-width: 1240px) {
     padding: 0;
@@ -103,7 +102,10 @@ const UseItAsA = () => (
             </Element>
             <Element>
               <LockIcon />
-              <Text>Secure company crypto assets by requiring multiple signatures and managing team members access</Text>
+              <Text>
+                Secure company crypto assets by requiring multiple signatures
+                and managing team members access
+              </Text>
             </Element>
             <Element>
               <DocIcon />
@@ -120,7 +122,10 @@ const UseItAsA = () => (
             </Element>
             <Element>
               <LockIcon />
-              <Text>Secure private crypto assets by requiring signatures from multiple wallets</Text>
+              <Text>
+                Secure private crypto assets by requiring signatures from
+                multiple wallets
+              </Text>
             </Element>
             <Element>
               <GraphIcon />

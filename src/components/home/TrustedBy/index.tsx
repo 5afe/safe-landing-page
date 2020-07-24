@@ -47,9 +47,7 @@ const SHeading = styled.h3`
   }
 `
 
-const ImageAnchor = styled.a`
-
-`
+const ImageAnchor = styled.a``
 const ImageWrapper = styled.div`
   background: ${(p) => p.theme.palette.lightGreyBackground};
   border-radius: 8px;
