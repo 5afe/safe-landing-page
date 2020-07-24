@@ -16,7 +16,7 @@ const Container = styled.main`
     height: auto;
   }
 `
-  
+
 const SWrapper = styled(ContentWrapper)`
   display: flex;
   align-items: center;
@@ -113,19 +113,23 @@ function useInterval(callback: any, delay: number | undefined) {
 }
 
 const MainSection = () => {
-  const words = ["funds", "companies", "DAOs", "hodlers", "investors", "developers"]
+  const words = [
+    'funds',
+    'companies',
+    'DAOs',
+    'hodlers',
+    'investors',
+    'developers',
+  ]
   const [currentWord, setCurrentWord] = useState(0)
 
-  useInterval(
-    () => {
-      if (currentWord < 5) {
-        setCurrentWord(currentWord + 1)
-      } else {
-        setCurrentWord(0)
-      }
-    },
-    2000
-  )
+  useInterval(() => {
+    if (currentWord < 5) {
+      setCurrentWord(currentWord + 1)
+    } else {
+      setCurrentWord(0)
+    }
+  }, 2000)
 
   return (
     <StaticQuery

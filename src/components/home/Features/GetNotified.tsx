@@ -5,12 +5,11 @@ import Button from '../../ui/Button'
 import Input from '../../ui/Input'
 import LinkIcon from '../../../assets/link.svg'
 
-const SHeading = styled.h3`
+const SHeading = styled.h2`
   width: 100%;
   text-align: center;
   font-size: 44px;
   line-height: 1.18;
-  padding-top: 50px;
   font-weight: 800;
   letter-spacing: 0.56px;
   @media screen and (max-width: 1240px) {
@@ -23,7 +22,7 @@ const LetUsKnow = styled.div`
   font-size: 24px;
   text-align: center;
   line-height: 1.25;
-  padding: 20px 0;
+  padding: 20px 0 50px 0;
 `
 
 const SForm = styled.form`
@@ -108,14 +107,11 @@ const GetNotified = () => {
     <>
       <SHeading>Missing a feature?</SHeading>
       <LetUsKnow>
-        <span>Let us know!{' '}</span>
-        <a
-          href=""
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <span>Let us know! </span>
+        <a href="" target="_blank" rel="noopener noreferrer">
           <InnerLink>
-            Feature idea board<SLinkIcon />
+            Feature idea board
+            <SLinkIcon />
           </InnerLink>
         </a>
       </LetUsKnow>

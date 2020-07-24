@@ -25,7 +25,7 @@ const SWrapper = styled(ContentWrapper)`
   }
 `
 
-const SHeading = styled.h3`
+const SHeading = styled.h2`
   width: 100%;
   text-align: center;
   font-size: 44px;

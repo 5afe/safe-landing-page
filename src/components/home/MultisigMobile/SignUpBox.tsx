@@ -48,7 +48,7 @@ const Col = styled.div`
   justify-content: space-between;
 `
 
-const SHeading = styled.h3`
+const SHeading = styled.h2`
   font-size: 45px;
   font-weight: 800;
   letter-spacing: 1px;

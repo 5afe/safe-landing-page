@@ -21,7 +21,7 @@ const SWrapper = styled(ContentWrapper)`
   }
 `
 
-const SHeading = styled.h3`
+const SHeading = styled.h2`
   width: 100%;
   text-align: center;
   font-size: 44px;
@@ -127,7 +127,9 @@ const Features = () => (
             <Text>
               <Title>Assets</Title>
               <Description>
-                Gnosis Safe Multisig supports ETH,<br/> ERC20 (Tokens) and ERC721<br/>
+                Gnosis Safe Multisig supports ETH,
+                <br /> ERC20 (Tokens) and ERC721
+                <br />
                 (Collectibles). You can also see the fiat values of your assets.
               </Description>
             </Text>

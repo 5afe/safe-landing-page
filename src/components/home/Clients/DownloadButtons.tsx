@@ -5,6 +5,7 @@ import ButtonLink from '../../ui/ButtonLink'
 import LinkIcon from '../../../assets/link.svg'
 
 const Container = styled.div`
+  padding-top: 50px;
   padding-bottom: 100px;
   position: relative;
   color: ${(p) => p.theme.palette.navy};

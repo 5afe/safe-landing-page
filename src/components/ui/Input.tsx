@@ -10,12 +10,12 @@ const SInput = styled.input`
   padding: 16px;
   letter-spacing: 0.36px;
   transition: border-bottom-color 0.3s;
-  
+
   &::placeholder {
     color: ${(p) => p.theme.palette.slateGray};
     font-family: Averta;
   }
-  
+
   &:active,
   &:focus {
     outline: 0;
