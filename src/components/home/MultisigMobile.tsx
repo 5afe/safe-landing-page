@@ -105,7 +105,7 @@ const MultisigMobile = () => (
     `}
   >
     {(data) => (
-      <Container>
+      <Container id="mobile">
         <SWrapper>
           <SHeading>Safe Multisig Mobile (beta)</SHeading>
           <Description>

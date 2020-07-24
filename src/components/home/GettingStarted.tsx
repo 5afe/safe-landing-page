@@ -99,7 +99,7 @@ const SButtonLink = styled(ButtonLink)`
 `
 
 const GettingStarted = () => (
-  <Container>
+  <Container id="getting-started">
     <SWrapper>
       <SHeading>Getting started</SHeading>
       <Row>
@@ -170,10 +170,10 @@ const GettingStarted = () => (
       <TryDemo>
         <SButtonLink
           url="https://gnosis-safe.io/app/#/safes/0xfF501B324DC6d78dC9F983f140B9211c3EdB4dc7/balances"
-          target="_self"
+          target="_blank"
           explicitExternal
         >
-          Open app
+          Try demo
         </SButtonLink>
       </TryDemo>
     </SWrapper>
