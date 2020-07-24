@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import ContentWrapper from '../../Layout/ContentWrapper'
-import ButtonLink from '../../ui/ButtonLink'
-import LinkIcon from '../../../assets/link.svg'
-import BgGraySVG from '../../../assets/bg-gray-half.svg'
+import ContentWrapper from '../Layout/ContentWrapper'
+import ButtonLink from '../ui/ButtonLink'
+import LinkIcon from '../../assets/link.svg'
+import BgGraySVG from '../../assets/bg-gray-half.svg'
 
 const Container = styled.section`
   padding: 70px 0;

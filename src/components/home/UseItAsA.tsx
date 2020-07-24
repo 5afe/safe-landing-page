@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import ContentWrapper from '../../Layout/ContentWrapper'
-import DocIcon from '../../../assets/light-doc.svg'
-import GraphIcon from '../../../assets/light-graph.svg'
-import LockIcon from '../../../assets/light-lock.svg'
-import SafeIcon from '../../../assets/light-safe.svg'
-import WalletIcon from '../../../assets/light-wallet.svg'
+import ContentWrapper from '../Layout/ContentWrapper'
+import DocIcon from '../../assets/light-doc.svg'
+import GraphIcon from '../../assets/light-graph.svg'
+import LockIcon from '../../assets/light-lock.svg'
+import SafeIcon from '../../assets/light-safe.svg'
+import WalletIcon from '../../assets/light-wallet.svg'
 
 const Container = styled.section`
   padding-top: 100px;

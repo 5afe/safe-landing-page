@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { StaticQuery, graphql } from 'gatsby'
-import ContentWrapper from '../../Layout/ContentWrapper'
-import Logo from '../../../assets/logo.svg'
-import RinkebyLogo from '../../../assets/logo-rinkeby.svg'
-import LinkIcon from '../../../assets/link.svg'
+import ContentWrapper from '../Layout/ContentWrapper'
+import Logo from '../../assets/logo.svg'
+import RinkebyLogo from '../../assets/logo-rinkeby.svg'
+import LinkIcon from '../../assets/link.svg'
 
 const Container = styled.section`
   padding: 70px 0;

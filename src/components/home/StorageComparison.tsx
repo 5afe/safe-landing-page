@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import ContentWrapper from '../../Layout/ContentWrapper'
+import ContentWrapper from '../Layout/ContentWrapper'
 
 const Container = styled.section`
   color: ${(p) => p.theme.palette.navy};
