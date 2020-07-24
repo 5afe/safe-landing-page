@@ -27,6 +27,7 @@ const mainTheme = {
     greyGreen: '#b3b5b3',
     lightGrey: '#d4d5d3',
     lightGreyBackground: '#fdfdfd',
+    darkGreyBackground: '#f0efee',
     grey: '#f5f5f5',
     greyPale: '#e8e7e6',
     darkGreenBlue: '#1e594f',

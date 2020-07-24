@@ -6,9 +6,10 @@ import LinkIcon from '../../../assets/link.svg'
 
 
 const Container = styled.div`
-  padding: 50px 0 200px 0;
+  padding-bottom: 100px;
   position: relative;
   color: ${(p) => p.theme.palette.navy};
+  background: ${(p) => p.theme.palette.darkGreyBackground};
   overflow: hidden;
   @media screen and (max-width: 1240px) {
     display: none;

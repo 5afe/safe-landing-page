@@ -186,9 +186,6 @@ const SignUpBox = () => {
               </Row>
             </Form>
           </Container>
-          <ImgContainer>
-            <PhoneImg fixed={data.phone.childImageSharp.fixed} />
-          </ImgContainer>
         </>
       )}
     </StaticQuery>

@@ -6,6 +6,7 @@ import { TRUSTED_BY_COMPANIES } from './companies'
 const Container = styled.section`
   padding-bottom: 50px;
   color: ${(p) => p.theme.palette.navy};
+  background: ${(p) => p.theme.palette.darkGreyBackground};
   overflow: hidden;
   @media screen and (max-width: 1240px) {
     padding: 0;

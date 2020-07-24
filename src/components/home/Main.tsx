@@ -9,18 +9,20 @@ import LinesSVG from '../../assets/lines2.svg'
 
 const Container = styled.main`
   height: calc(100vh - 56px);
+  background: ${(p) => p.theme.palette.darkGreyBackground};
   position: relative;
   overflow: hidden;
   @media screen and (max-width: 1240px) {
     height: auto;
   }
 `
-
+  
 const SWrapper = styled(ContentWrapper)`
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  z-index: 2;
   @media screen and (max-width: 1240px) {
     display: block;
     padding: 30px 10px 40px 10px;
@@ -61,7 +63,7 @@ const SLinesSVG = styled(LinesSVG)`
   left: 0;
   top: 230px;
   stroke: ${(p) => p.theme.palette.primary};
-  z-index: -1;
+  z-index: 1;
   @media screen and (max-width: 1240px) {
     top: 170px;
   }
