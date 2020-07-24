@@ -162,7 +162,7 @@ const Contracts = () => (
                   url="https://github.com/gnosis/safe-cli"
                   colorScheme="white"
                 >
-                  Download Safe-CLI
+                  Use Safe-CLI
                 </SButtonLink>
               </Row>
             </SubRCol>
