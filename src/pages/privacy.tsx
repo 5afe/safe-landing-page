@@ -40,7 +40,7 @@ export default () => (
   <Layout title="Privacy Policy">
     <ContentWrapper>
       <Title>Privacy Policy</Title>
-      <Date>Last updated on May 28, 2020</Date>
+      <Date>Last updated on July 22, 2020</Date>
       <Section>
         <Paragraph>
           We are delighted that you have chosen to use our App or visit our
@@ -734,7 +734,6 @@ export default () => (
             https://www.blocknative.com/privacy-policy.
           </Link>
         </Paragraph>
-
         <TitleSubSection>4.15 WalletConnect</TitleSubSection>
         <Paragraph>
           We are using WalletConnect for connecting desktop Dapps to mobile
@@ -743,6 +742,33 @@ export default () => (
         <Paragraph>
           We do not store any information collected by WalletConnect.
           WalletConnect does not collect or process any type of personal data.
+        </Paragraph>
+        <TitleSubSection>4.16 Discord</TitleSubSection>
+        <Paragraph>
+          In order to provide user support we created a group on Discord{' '}
+          <Link href="https://discord.com/new">(https://discord.com/new)</Link>{' '}
+          to facilitate the resolution of any questions and concerns should
+          these arise.
+        </Paragraph>
+        <Paragraph>
+          By accepting this Privacy Policy, you are deemed to consent to
+          providing the following Personal Data to persons looking to resolve
+          any dispute:
+        </Paragraph>
+        <Ol style={{ listStyleType: 'decimal' }}>
+          <Li>Used wallet address;</Li>
+          <Li>Detailed enquiry description;</Li>
+          <Li>The date and time that the issue arose;</Li>
+          <Li>The outcome sought.</Li>
+        </Ol>
+        <Paragraph>
+          Please note that Discord may use and/or collect your Personal Data.
+          Thus, we recommend to view Discord’s Privacy Policy at the following
+          link:{' '}
+          <Link href="https://discord.com/new/privacy">
+            https://discord.com/new/privacy
+          </Link>
+          , on a periodical basis.
         </Paragraph>
       </Section>
       <Section>
