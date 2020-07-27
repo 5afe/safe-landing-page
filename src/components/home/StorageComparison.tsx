@@ -36,8 +36,7 @@ const SHeading = styled.h2`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-areas:
-    ". . . . . .";
+  grid-template-areas: '. . . . . .';
 `
 
 const GridTitle = styled.div`

@@ -8,7 +8,7 @@ import RinkebyLogo from '../../assets/logo-rinkeby.svg'
 import LinkIcon from '../../assets/link.svg'
 
 const Container = styled.section`
-  padding: 70px 0;
+  padding: 140px 0 70px;
   color: ${(p) => p.theme.palette.navy};
   position: relative;
   @media screen and (max-width: 1240px) {
