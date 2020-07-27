@@ -62,6 +62,10 @@ const Card = styled.div`
   padding: 20px;
   height: 255px;
   position: relative;
+
+  &:hover {
+    background: ${(p) => p.theme.palette.pink};
+  }
 `
 
 const Title = styled.h4`

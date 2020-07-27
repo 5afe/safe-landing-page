@@ -37,7 +37,7 @@ const SLink = styled(Link)`
   color: ${(p) =>
     p.title === 'Security' ? p.theme.palette.navy : p.theme.palette.primary};
   text-decoration: none;
-  &:hover: {
+  &:hover {
     text-decoration: underline;
   }
 `

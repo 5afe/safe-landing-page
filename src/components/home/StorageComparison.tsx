@@ -34,10 +34,41 @@ const SHeading = styled.h2`
   }
 `
 
+const Grid = styled.div`
+  display: grid;
+  grid-template-areas:
+    ". . . . . .";
+`
+
+const GridTitle = styled.div`
+  grid-area: title;
+  font-weight: 800;
+  border: 1px solid red;
+`
+
+const GridContent = styled.div`
+  grid-area: content;
+  font-weight: 800;
+  border: 1px solid blue;
+`
+
 const StorageComparison = () => (
   <Container>
     <SWrapper>
       <SHeading>Compare storage solutions</SHeading>
+      <Grid>
+        <div></div>
+        <div>Gnosis Safe Multisig</div>
+        <div>'Old' Multisig</div>
+        <div>Software wallet ("EOA")</div>
+        <div>Hardware wallet</div>
+        <div>Centralised exchange</div>
+        <div>asdf4</div>
+        <div>asdf5</div>
+        <div>asdf6</div>
+        <div>asdf7</div>
+        <div>asdf8</div>
+      </Grid>
     </SWrapper>
   </Container>
 )
