@@ -74,11 +74,11 @@ const SButtonLink = styled(ButtonLink)`
 const SLinesSVG = styled(LinesSVG)`
   position: absolute;
   left: 0;
-  top: 230px;
+  bottom: 0;
   stroke: ${(p) => p.theme.palette.primary};
   z-index: 1;
   @media screen and (max-width: 1240px) {
-    top: 170px;
+    top: 220px;
   }
 `
 
