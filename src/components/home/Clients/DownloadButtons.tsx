@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import ContentWrapper from '../../Layout/ContentWrapper'
 import ButtonLink from '../../ui/ButtonLink'
 import LinkIcon from '../../../assets/link.svg'
+import ArrowDownload from '../../../assets/arrow-download.svg'
 
 const Container = styled.div`
   padding-top: 50px;
@@ -12,7 +13,7 @@ const Container = styled.div`
   background: ${(p) => p.theme.palette.darkGreyBackground};
   overflow: hidden;
   @media screen and (max-width: 1240px) {
-    display: none;
+    padding: 0 12px 30px;
   }
 `
 
@@ -43,6 +44,10 @@ const Title = styled.div`
   line-height: 1.13;
   text-align: center;
   padding-bottom: 0px;
+  @media screen and (max-width: 1240px) {
+    font-size: 28px;
+    margin-top: 10px;
+  }
 `
 
 const Text = styled.div`
@@ -57,15 +62,21 @@ const Text = styled.div`
 `
 
 const SButtonLink = styled(ButtonLink)`
-  display: block;
-  padding: 8px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
   margin: 0 auto;
-  width: 200px;
+  width: 210px;
   font-size: 16px;
   line-height: 1.38;
   margin-top: 10px;
   margin-bottom: 30px;
   text-align: center;
+  @media screen and (max-width: 1240px) {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
 `
 
 const ImageWrapper = styled.div`
@@ -90,10 +101,15 @@ const InnerLink = styled.div`
   align-items: center;
   color: ${(p) => p.theme.palette.primary};
   text-decoration: underline;
+
+  &:hover {
+    color: ${(p) => p.theme.palette.primaryHover};
+  }
 `
 
 const SLinkIcon = styled(LinkIcon)`
   margin-left: 5px;
+  display: inline;
 `
 
 interface IDownloadButtons {
@@ -109,7 +125,7 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => (
           <ImageWrapper>
             <Img src="/images/web.png" />
           </ImageWrapper>
-          <SButtonLink url="https://gnosis-safe.io/app/#">
+          <SButtonLink url="/app/#" target="_self" explicitExternal>
             Open web app
           </SButtonLink>
           <Text>
@@ -121,7 +137,8 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => (
             <br />
             <a href="https://rinkeby.gnosis-safe.io/app/#">
               <InnerLink>
-                Use the Rinkeby Web App <SLinkIcon />
+                Use the Rinkeby Web App
+                <SLinkIcon />
               </InnerLink>
             </a>
           </Text>
@@ -131,7 +148,9 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => (
           <ImageWrapper>
             <Img src="/images/desktop.png" />
           </ImageWrapper>
-          <SButtonLink url={desktopAppUrl}>Download (~200 Mb)</SButtonLink>
+          <SButtonLink url={desktopAppUrl}>
+            Download (~200 Mb) <ArrowDownload />
+          </SButtonLink>
           <Text>
             Download the Safe Multisig as a static desktop application for
             Windows, MacOS or Linux.

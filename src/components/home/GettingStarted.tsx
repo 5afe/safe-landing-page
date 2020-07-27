@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import ContentWrapper from '../Layout/ContentWrapper'
 import ButtonLink from '../ui/ButtonLink'
 import LinkIcon from '../../assets/link.svg'
-import BgGraySVG from '../../assets/bg-gray-half.svg'
 
 const Container = styled.section`
   padding: 70px 0;
@@ -12,13 +11,6 @@ const Container = styled.section`
   @media screen and (max-width: 1240px) {
     padding: 0;
   }
-`
-
-const SBgSVG = styled(BgGraySVG)`
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -1;
 `
 
 const SWrapper = styled(ContentWrapper)`
@@ -38,8 +30,8 @@ const SHeading = styled.h2`
   font-weight: 800;
   letter-spacing: 0.56px;
   @media screen and (max-width: 1240px) {
-    padding: 30px 0;
-    font-size: 28px;
+    padding: 40px 0;
+    font-size: 36px;
   }
 `
 
@@ -47,6 +39,9 @@ const Row = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  @media screen and (max-width: 1240px) {
+    flex-flow: column;
+  }
 `
 
 const Link = styled.a`
@@ -62,6 +57,10 @@ const Card = styled.div`
   padding: 20px;
   height: 255px;
   position: relative;
+  @media screen and (max-width: 1240px) {
+    height: auto;
+    padding-bottom: 40px;
+  }
 
   &:hover {
     background: ${(p) => p.theme.palette.pink};
@@ -90,6 +89,9 @@ const TryDemo = styled.div`
   margin-top: 60px;
   display: flex;
   justify-content: center;
+  @media screen and (max-width: 1240px) {
+    margin-top: 40px;
+  }
 `
 
 const SButtonLink = styled(ButtonLink)`

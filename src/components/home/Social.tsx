@@ -19,8 +19,13 @@ const Row = styled.div`
   width: 230px;
   margin: 0 auto;
   @media screen and (max-width: 1240px) {
-    display: block;
-    padding: 0 12px;
+    max-width: 230px;
+  }
+
+  & > a {
+    &:hover {
+      opacity: 0.8;
+    }
   }
 `
 

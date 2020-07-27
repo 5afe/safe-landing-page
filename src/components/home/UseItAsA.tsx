@@ -21,7 +21,7 @@ const SWrapper = styled(ContentWrapper)`
   height: 100%;
   @media screen and (max-width: 1240px) {
     display: block;
-    padding: 0px 10px 40px 10px;
+    padding: 0px 10px 20px 10px;
   }
 `
 
@@ -35,24 +35,37 @@ const SHeading = styled.h2`
   letter-spacing: 0.56px;
   @media screen and (max-width: 1240px) {
     padding: 30px 0;
-    font-size: 28px;
+    font-size: 36px;
   }
 `
 
 const UseOptions = styled.div`
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 1240px) {
+    flex-flow: column;
+  }
 `
 
 const Team = styled.div`
   width: 50%;
   padding: 0 20px 0 0;
+  @media screen and (max-width: 1240px) {
+    padding: 0;
+    width: 100%;
+    border: none;
+  }
 `
 
 const Individual = styled.div`
   border-left: 2px solid ${(p) => p.theme.palette.lightGrey};
   width: 50%;
   padding: 0 0 0 20px;
+  @media screen and (max-width: 1240px) {
+    padding: 0;
+    width: 100%;
+    border: none;
+  }
 `
 
 const Title = styled.div`
@@ -63,11 +76,19 @@ const Title = styled.div`
   padding-bottom: 40px;
   font-weight: 800;
   letter-spacing: 0.56px;
+  @media screen and (max-width: 1240px) {
+    font-size: 28px;
+    padding: 20px 0;
+  }
 `
 
 const Content = styled.div`
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 1240px) {
+    flex-flow: column;
+    align-items: center;
+  }
 `
 
 const Element = styled.div`
@@ -75,6 +96,9 @@ const Element = styled.div`
   flex-direction: column;
   align-items: center;
   width: 175px;
+  @media screen and (max-width: 1240px) {
+    width: 100%;
+  }
 
   & > svg {
     height: 70px;
@@ -86,6 +110,9 @@ const Text = styled.div`
   line-height: 1.3;
   text-align: center;
   padding-top: 25px;
+  @media screen and (max-width: 1240px) {
+    padding: 20px 0 30px;
+  }
 `
 
 const UseItAsA = () => (

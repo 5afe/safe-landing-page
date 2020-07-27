@@ -34,7 +34,7 @@ const SHeading = styled.h2`
   letter-spacing: 0.56px;
   @media screen and (max-width: 1240px) {
     padding: 30px 0;
-    font-size: 28px;
+    font-size: 36px;
   }
 `
 
@@ -49,6 +49,11 @@ const Row = styled.div`
   display: flex;
   justify-content: center;
   gap: 60px;
+  @media screen and (max-width: 1240px) {
+    flex-flow: column;
+    align-items: center;
+    gap: 20px;
+  }
 `
 
 const NetworkData = styled.div`
@@ -66,6 +71,7 @@ const Text = styled.div`
 const Title = styled.h5`
   line-height: 1.25;
   margin-bottom: 5px;
+  font-size: 20px;
 `
 
 const Links = styled.div`
@@ -79,6 +85,10 @@ const InnerLink = styled.div`
   align-items: center;
   color: ${(p) => p.theme.palette.primary};
   text-decoration: underline;
+
+  &:hover {
+    color: ${(p) => p.theme.palette.primaryHover};
+  }
 `
 
 const SLinkIcon = styled(LinkIcon)`
@@ -88,6 +98,10 @@ const SLinkIcon = styled(LinkIcon)`
 const SImg = styled(Img)`
   width: 1015px;
   margin: 50px auto;
+  @media screen and (max-width: 1240px) {
+    margin: 20px auto 0;
+    width: 100%;
+  }
 `
 
 const MultisigMobile = () => (

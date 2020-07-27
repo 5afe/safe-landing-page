@@ -107,7 +107,7 @@ const colorsCSS = css`
         return p.theme.palette.slateGray
       }
 
-      return p.theme.palette.darkGreenBlue
+      return p.theme.palette.primaryHover
     }};
   }
 `

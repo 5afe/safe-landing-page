@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import ContentWrapper from '../Layout/ContentWrapper'
 import { ITheme } from '../../styles/theme'
-import BgGraySVG from '../../assets/bg-gray-half.svg'
+import BgGraySVG from '../../assets/background.svg'
 import ArrowLeftSVG from '../../assets/arrow-left.svg'
 import ArrowRightSVG from '../../assets/arrow-right.svg'
 
@@ -16,7 +16,9 @@ const Container = styled.section`
 
 const SBgSVG = styled(BgGraySVG)`
   position: absolute;
-  top: 0;
+  fill: white;
+  bottom: -80px;
+  width: 100%;
   z-index: -1;
 `
 
@@ -26,6 +28,10 @@ const SectionHeading = styled.h2`
   line-height: 1.18;
   text-align: center;
   padding-bottom: 60px;
+  @media screen and (max-width: 1240px) {
+    font-size: 36px;
+    padding-bottom: 30px;
+  }
 `
 
 const TestimonialsContainer = styled.div`
@@ -33,6 +39,11 @@ const TestimonialsContainer = styled.div`
   height: 300px;
   margin: 0 auto;
   position: relative;
+  @media screen and (max-width: 1240px) {
+    width: 100%;
+    padding: 10px;
+    height: auto;
+  }
 `
 
 const LeftArrow = styled.div`
@@ -46,9 +57,17 @@ const LeftArrow = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 100;
+  @media screen and (max-width: 1240px) {
+    width: 24px;
+    height: 24px;
+    left: 10px;
+    border-radius: 12px;
+  }
 
   &:hover {
-    background: #E8E7E6;
+    background: #e8e7e6;
+    opacity: 0.5;
   }
 `
 
@@ -63,9 +82,17 @@ const RightArrow = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 100;
+  @media screen and (max-width: 1240px) {
+    width: 24px;
+    height: 24px;
+    right: 10px;
+    border-radius: 12px;
+  }
 
   &:hover {
-    background: #E8E7E6;
+    background: #e8e7e6;
+    opacity: 0.5;
   }
 `
 
@@ -74,10 +101,14 @@ const Testimonial = styled.div`
   text-align: center;
   position: absolute;
   bottom: 0;
-  left: 0; 
+  left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  @media screen and (max-width: 1240px) {
+    position: relative;
+    width: auto;
+  }
 `
 
 const Img = styled.img`
@@ -86,21 +117,37 @@ const Img = styled.img`
   height: 60px;
   border-radius: 30px;
   margin: 40px auto 26px;
+  @media screen and (max-width: 1240px) {
+    margin: 20px auto;
+  }
 `
 
 const Quote = styled.h4`
   line-height: 30px;
   font-size: 24px;
   font-weight: bold;
+  @media screen and (max-width: 1240px) {
+    font-size: 20px;
+    margin: 0 auto;
+    padding: 0 25px;
+    max-width: 400px;
+  }
 `
 
 const Author = styled.p`
   font-size: 20px;
   line-height: 26px;
+  @media screen and (max-width: 1240px) {
+    font-size: 16px;
+  }
 
   & > a {
     text-decoration: none;
     color: ${(p) => p.theme.palette.primary};
+
+    &:hover {
+      color: ${(p) => p.theme.palette.primaryHover};
+    }
   }
 `
 
@@ -109,6 +156,9 @@ const DotContainer = styled.div`
   width: 55px;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 1240px) {
+    margin: 15px auto 20px;
+  }
 `
 
 interface DotProps {
@@ -163,7 +213,7 @@ const Testimonials = () => {
       <ContentWrapper>
         <SectionHeading>Why our users trust us</SectionHeading>
         <TestimonialsContainer>
-          <LeftArrow  onClick={previousSlide}>
+          <LeftArrow onClick={previousSlide}>
             <ArrowLeftSVG />
           </LeftArrow>
           {slideIndex === 1 && (

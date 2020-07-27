@@ -30,8 +30,8 @@ const SHeading = styled.h2`
   font-weight: 800;
   letter-spacing: 0.56px;
   @media screen and (max-width: 1240px) {
-    padding: 30px 0;
-    font-size: 28px;
+    padding: 0 0 30px;
+    font-size: 36px;
   }
 `
 
@@ -42,28 +42,48 @@ interface BlockProps {
 const Block = styled.div`
   text-align: ${(p: BlockProps) => p.align};
   display: flex;
+  flex-direction: ${(p: BlockProps) =>
+    p.align === 'left' ? 'row' : 'row-reverse'};
   justify-content: space-between;
   margin-bottom: 100px;
+  @media screen and (max-width: 1240px) {
+    flex-flow: column;
+    text-align: left;
+    margin-bottom: 40px;
+  }
 `
 
 const Text = styled.div`
   max-width: 400px;
+  @media screen and (max-width: 1240px) {
+    max-width: 100%;
+  }
 `
 
 const Title = styled.h3`
   font-size: 32px;
   font-weight: 800;
   line-height: 1.13;
-  padding-top: 80px;
+  padding: 80px 0 20px;
+  @media screen and (max-width: 1240px) {
+    font-size: 28px;
+    padding: 0 0 30px;
+  }
 `
 
 const Description = styled.h5`
   font-size: 20px;
   line-height: 1.3;
+  @media screen and (max-width: 1240px) {
+    padding: 0 0 30px;
+  }
 `
 
 const Image = styled.div`
   width: 760px;
+  @media screen and (max-width: 1240px) {
+    width: 100%;
+  }
 `
 
 const Features = () => (
@@ -121,18 +141,16 @@ const Features = () => (
             </Image>
           </Block>
           <Block align="right">
-            <Image>
-              <Img fluid={data.assets.childImageSharp.fluid} />
-            </Image>
             <Text>
               <Title>Assets</Title>
               <Description>
-                Gnosis Safe Multisig supports ETH,
-                <br /> ERC20 (Tokens) and ERC721
-                <br />
+                Gnosis Safe Multisig supports ETH, ERC20 (Tokens) and ERC721
                 (Collectibles). You can also see the fiat values of your assets.
               </Description>
             </Text>
+            <Image>
+              <Img fluid={data.assets.childImageSharp.fluid} />
+            </Image>
           </Block>
           <Block align="left">
             <Text>
@@ -147,9 +165,6 @@ const Features = () => (
             </Image>
           </Block>
           <Block align="right">
-            <Image>
-              <Img fluid={data.apps.childImageSharp.fluid} />
-            </Image>
             <Text>
               <Title>Safe Apps </Title>
               <Description>
@@ -159,6 +174,9 @@ const Features = () => (
                 and more.
               </Description>
             </Text>
+            <Image>
+              <Img fluid={data.apps.childImageSharp.fluid} />
+            </Image>
           </Block>
           <GetNotified />
         </SWrapper>

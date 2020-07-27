@@ -14,7 +14,7 @@ const SHeading = styled.h2`
   letter-spacing: 0.56px;
   @media screen and (max-width: 1240px) {
     padding: 30px 0;
-    font-size: 28px;
+    font-size: 36px;
   }
 `
 
@@ -23,6 +23,9 @@ const LetUsKnow = styled.div`
   text-align: center;
   line-height: 1.25;
   padding: 20px 0 50px 0;
+  @media screen and (max-width: 1240px) {
+    padding: 0;
+  }
 `
 
 const SForm = styled.form`
@@ -31,14 +34,25 @@ const SForm = styled.form`
   justify-content: center;
   @media screen and (max-width: 1240px) {
     display: block;
+    padding: 0;
+    max-width: 420px;
+    position: relative;
+    margin: 0 auto;
   }
 `
 
 const Col = styled.div`
   width: 420px;
+  height: 110px;
   position: relative;
   margin-right: 20px;
+  @media screen and (max-width: 1240px) {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+  }
 `
+
 const SInput = styled(Input)`
   height: 52px;
   width: 100%;
@@ -57,11 +71,10 @@ const SButton = styled(Button)`
   height: 52px;
   font-size: 16px;
   outline: none;
-
   @media screen and (max-width: 1240px) {
-    max-width: 205px;
-    margin: 40px 0;
-    margin-right: 0;
+    width: 170px;
+    display: block;
+    margin: 20px auto 0;
   }
 `
 
@@ -74,6 +87,10 @@ const InnerLink = styled.div`
   align-items: center;
   color: ${(p) => p.theme.palette.primary};
   text-decoration: underline;
+
+  &:hover {
+    color: ${(p) => p.theme.palette.primaryHover};
+  }
 `
 
 const GetNotified = () => {

@@ -33,8 +33,16 @@ const SHeading = styled(Heading)`
   margin-bottom: 50px;
   max-width: 400px;
   @media screen and (max-width: 1240px) {
+    font-size: 36px;
+    margin: 0 auto;
+    max-width: 300px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  @media screen and (max-width: 600px) {
     max-width: 100%;
-    font-size: 28px;
+    width: 100%;
+    text-align: left;
   }
 `
 
@@ -42,9 +50,12 @@ const ButtonsRow = styled.div`
   display: flex;
   justify-content: space-between;
   width: 350px;
+  margin: 0 auto;
   @media screen and (max-width: 1240px) {
-    display: block;
-    width: 180px;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
   }
 `
 
@@ -53,8 +64,10 @@ const SButtonLink = styled(ButtonLink)`
   width: 165px;
   box-shadow: none;
   @media screen and (max-width: 1240px) {
-    padding: 10px 0;
-    margin-bottom: 20px;
+    width: auto;
+  }
+  @media screen and (max-width: 600px) {
+    width: 100%;
   }
 `
 
@@ -151,11 +164,9 @@ const MainSection = () => {
           <SWrapper>
             <LCol>
               <SHeading>
-                The most trusted platform to store digital assets
+                The most trusted <br /> platform to store <br /> digital assets{' '}
                 <br />
-                on Ethereum
-                <br />
-                for <Word>{words[currentWord]}</Word>
+                on Ethereum <br /> for <Word>{words[currentWord]}</Word>
               </SHeading>
               <ButtonsRow>
                 <SButtonLink url="/app/#" target="_self" explicitExternal>

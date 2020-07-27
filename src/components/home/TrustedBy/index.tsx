@@ -9,7 +9,7 @@ const Container = styled.section`
   background: ${(p) => p.theme.palette.darkGreyBackground};
   overflow: hidden;
   @media screen and (max-width: 1240px) {
-    padding: 0;
+    padding: 0 12px;
   }
 `
 
@@ -17,7 +17,7 @@ const SWrapper = styled(ContentWrapper)`
   height: 100%;
   @media screen and (max-width: 1240px) {
     display: block;
-    padding: 0px 10px 40px 10px;
+    padding: 0px 0px 40px 0px;
   }
 `
 
@@ -29,8 +29,8 @@ const Grid = styled.div`
   grid-row-gap: 20px;
   @media screen and (max-width: 1240px) {
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
   }
 `
 
@@ -43,11 +43,12 @@ const SHeading = styled.h2`
   letter-spacing: 0.56px;
   @media screen and (max-width: 1240px) {
     padding: 30px 0;
-    font-size: 28px;
+    font-size: 36px;
   }
 `
 
 const ImageAnchor = styled.a``
+
 const ImageWrapper = styled.div`
   background: ${(p) => p.theme.palette.lightGreyBackground};
   border-radius: 8px;
@@ -57,7 +58,7 @@ const ImageWrapper = styled.div`
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 1240px) {
-    height: 104px;
+    height: 70px;
   }
 `
 
@@ -68,7 +69,7 @@ const Image = styled.img`
   height: auto;
   @media screen and (max-width: 1240px) {
     max-height: 64px;
-    max-width: 120px;
+    max-width: 90px;
   }
 `
 

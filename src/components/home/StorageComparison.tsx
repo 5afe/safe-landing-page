@@ -30,7 +30,7 @@ const SHeading = styled.h2`
   letter-spacing: 0.56px;
   @media screen and (max-width: 1240px) {
     padding: 30px 0;
-    font-size: 28px;
+    font-size: 36px;
   }
 `
 
@@ -56,7 +56,7 @@ const StorageComparison = () => (
     <SWrapper>
       <SHeading>Compare storage solutions</SHeading>
       <Grid>
-        <div></div>
+        {/*<div></div>
         <div>Gnosis Safe Multisig</div>
         <div>'Old' Multisig</div>
         <div>Software wallet ("EOA")</div>
@@ -66,7 +66,13 @@ const StorageComparison = () => (
         <div>asdf5</div>
         <div>asdf6</div>
         <div>asdf7</div>
-        <div>asdf8</div>
+        <div>asdf8</div>*/}
+        TO BE DONE - TO BE DONE - TO BE DONE - TO BE DONE - TO BE DONE - TO BE
+        DONE - TO BE DONE - TO BE DONE - TO BE DONE - TO BE DONE - TO BE DONE -
+        TO BE DONE - TO BE DONE - TO BE DONE - TO BE DONE - TO BE DONE - TO BE
+        DONE - TO BE DONE - TO BE DONE - TO BE DONE - TO BE DONE - TO BE DONE -
+        TO BE DONE - TO BE DONE - TO BE DONE - TO BE DONE - TO BE DONE - TO BE
+        DONE - TO BE DONE - TO BE DONE - TO BE DONE
       </Grid>
     </SWrapper>
   </Container>

@@ -21,6 +21,7 @@ const mainTheme = {
   palette: {
     darkPrimary: '#FF8515',
     primary: '#008c73',
+    primaryHover: '#005546',
     white: '#FFFFFF',
     pink: '#f7f5f5',
     navy: '#001428',
