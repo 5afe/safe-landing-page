@@ -150,21 +150,28 @@ const Features = () => {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
-          }
+          },
           assets: file(relativePath: { eq: "assets.png" }) {
             childImageSharp {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
-          }
+          },
           multisig: file(relativePath: { eq: "multisig.png" }) {
             childImageSharp {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
-          }
+          },
+          multisigForIndividuals: file(relativePath: { eq: "multisig-for-individuals.png" }) {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          },
           wallets: file(relativePath: { eq: "wallets.png" }) {
             childImageSharp {
               fluid(quality: 100) {
@@ -214,7 +221,11 @@ const Features = () => {
                 )}
               </Text>
               <Image>
-                <Img fluid={data.multisig.childImageSharp.fluid} />
+                {selectedTabIndex === 1 ? (
+                  <Img fluid={data.multisig.childImageSharp.fluid} />
+                ) : (
+                  <Img fluid={data.multisigForIndividuals.childImageSharp.fluid} />
+                )}
               </Image>
             </Block>
             <Block align="right">
