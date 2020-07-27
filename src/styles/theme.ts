@@ -2,11 +2,16 @@ export interface ITheme {
   palette: {
     darkPrimary: string
     primary: string
+    primaryHover: string
     white: string
     pink: string
     navy: string
     greyGreen: string
     lightGrey: string
+    lightGreyBackground: string
+    darkGrey: string
+    darkGreyHover: string
+    darkGreyBackground: string
     grey: string
     greyPale: string
     darkGreenBlue: string
