@@ -54,7 +54,6 @@ const ButtonsRow = styled.div`
   @media screen and (max-width: 1240px) {
     width: 100%;
     justify-content: center;
-    gap: 20px;
     margin-bottom: 20px;
   }
 `
@@ -69,6 +68,13 @@ const SButtonLink = styled(ButtonLink)`
   @media screen and (max-width: 600px) {
     width: 100%;
   }
+`
+
+const SButtonLinkLeft = styled(SButtonLink)`
+margin-right: 20px;
+`
+const SButtonLinkRight = styled(SButtonLink)`
+
 `
 
 const SLinesSVG = styled(LinesSVG)`
@@ -169,17 +175,17 @@ const MainSection = () => {
                 on Ethereum <br /> for <Word>{words[currentWord]}</Word>
               </SHeading>
               <ButtonsRow>
-                <SButtonLink url="/app/#" target="_self" explicitExternal>
+                <SButtonLinkLeft url="/app/#" target="_self" explicitExternal>
                   Open app
-                </SButtonLink>
-                <SButtonLink
+                </SButtonLinkLeft>
+                <SButtonLinkRight
                   colorScheme="green"
                   url="/#getting-started"
                   target="_self"
                   explicitExternal
                 >
                   How it works
-                </SButtonLink>
+                </SButtonLinkRight>
               </ButtonsRow>
             </LCol>
             <RCol>

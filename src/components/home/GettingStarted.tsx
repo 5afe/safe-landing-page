@@ -38,7 +38,6 @@ const SHeading = styled.h2`
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
-  gap: 20px;
   @media screen and (max-width: 1240px) {
     flex-flow: column;
   }
@@ -65,6 +64,18 @@ const Card = styled.div`
   &:hover {
     background: ${(p) => p.theme.palette.pink};
   }
+`
+
+const CardItem = styled(Card)`
+  margin-right: 20px;
+  @media screen and (max-width: 1240px) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+`
+
+const CardItemLast = styled(Card)`
+
 `
 
 const Title = styled.h4`
@@ -114,7 +125,7 @@ const GettingStarted = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Card>
+          <CardItem>
             <Title>What is a Multisig Wallet?</Title>
             <Text>
               What exactly is a multisignature wallet and what's the difference
@@ -123,14 +134,14 @@ const GettingStarted = () => (
             <SLinkIcon>
               <LinkIcon />
             </SLinkIcon>
-          </Card>
+          </CardItem>
         </Link>
         <Link
           href="https://help.gnosis-safe.io/en/articles/3876461-create-a-safe-multisig"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Card>
+          <CardItem>
             <Title>Create a Safe Multisig</Title>
             <Text>
               The full process of creating a new multisignature wallet in just
@@ -139,14 +150,14 @@ const GettingStarted = () => (
             <SLinkIcon>
               <LinkIcon />
             </SLinkIcon>
-          </Card>
+          </CardItem>
         </Link>
         <Link
           href="https://help.gnosis-safe.io/en/articles/3952623-migration-from-gnosis-multisig-to-safe-multisig"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Card>
+          <CardItem>
             <Title>Migration: From Gnosis Multisig to Safe Multisig</Title>
             <Text>
               How to migrate from your legacy Gnosis Multisig to the new Safe
@@ -155,14 +166,14 @@ const GettingStarted = () => (
             <SLinkIcon>
               <LinkIcon />
             </SLinkIcon>
-          </Card>
+          </CardItem>
         </Link>
         <Link
           href="https://help.gnosis-safe.io/en/articles/4100712-migrate-from-the-legacy-safe-mobile-app-to-the-safe-multisig"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Card>
+          <CardItemLast>
             <Title>Migrate from the legacy Safe mobile app</Title>
             <Text>
               How to permanently migrate from the Gnosis Safe legacy mobile app
@@ -170,7 +181,7 @@ const GettingStarted = () => (
             <SLinkIcon>
               <LinkIcon />
             </SLinkIcon>
-          </Card>
+          </CardItemLast>
         </Link>
       </Row>
       <TryDemo>

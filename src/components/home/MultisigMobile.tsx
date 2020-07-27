@@ -48,15 +48,22 @@ const Description = styled.div`
 const Row = styled.div`
   display: flex;
   justify-content: center;
-  gap: 60px;
   @media screen and (max-width: 1240px) {
     flex-flow: column;
     align-items: center;
-    gap: 20px;
   }
 `
 
-const NetworkData = styled.div`
+const NetworkDataLeft = styled.div`
+  display: flex;
+  margin-right: 50px;
+  @media screen and (max-width: 1240px) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+`
+
+const NetworkDataRight = styled.div`
   display: flex;
 `
 
@@ -128,7 +135,7 @@ const MultisigMobile = () => (
             Stay informed on-the-go.
           </Description>
           <Row>
-            <NetworkData>
+            <NetworkDataLeft>
               <Logo />
               <Text>
                 <Title>Mainnet</Title>
@@ -155,8 +162,8 @@ const MultisigMobile = () => (
                   </a>
                 </Links>
               </Text>
-            </NetworkData>
-            <NetworkData>
+            </NetworkDataLeft>
+            <NetworkDataRight>
               <RinkebyLogo />
               <Text>
                 <Title>Rinkeby</Title>
@@ -183,7 +190,7 @@ const MultisigMobile = () => (
                   </a>
                 </Links>
               </Text>
-            </NetworkData>
+            </NetworkDataRight>
           </Row>
 
           <SImg fluid={data.mobile.childImageSharp.fluid} />

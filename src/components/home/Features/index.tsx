@@ -56,8 +56,6 @@ const Block = styled.div<BlockProps>`
 
 const Tabs = styled.div`
   display: flex;
-  --border: 1px solid red;
-  gap: 30px;
   @media screen and (max-width: 1240px) {
     justify-content: center;
     margin-bottom: 30px;
@@ -75,7 +73,6 @@ interface TabProps {
 
 const Tab = styled.div<TabProps>`
   text-align: center;
-  --border: 1px solid blue;
   padding: 15px;
   color: ${(p: TabProps) => p.theme.palette.primary};
   opacity: ${(p: TabProps) => !p.active ? 0.5 : 1};
@@ -97,6 +94,14 @@ const Tab = styled.div<TabProps>`
     color: ${(p: TabProps) => !p.active && p.theme.palette.primaryHover};
     opacity: ${(p: TabProps) => !p.active ? 0.5 : 1};
   }
+`
+
+const TabLeft = styled(Tab)`
+  margin-right: 30px;
+`
+
+const TabRight = styled(Tab)`
+
 `
 
 const Text = styled.div`
@@ -189,18 +194,18 @@ const Features = () => {
             <Block align="left">
               <Text>
                 <Tabs>
-                  <Tab
+                  <TabLeft
                     onClick={() => setSelectedTabIndex(1)}
                     active={selectedTabIndex === 1}
                   >
                     For teams
-                  </Tab>
-                  <Tab
+                  </TabLeft>
+                  <TabRight
                     onClick={() => setSelectedTabIndex(2)}
                     active={selectedTabIndex === 2}
                   >
                     For individuals
-                  </Tab>
+                  </TabRight>
                 </Tabs>
                 <Title noPaddingTop>Multi-signature</Title>
                 {selectedTabIndex === 1 ? (
