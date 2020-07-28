@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react'
 import DownloadButtons from './DownloadButtons'
 
 const Clients = () => {
-  const [desktopAppUrl, setDesktopAppUrl] = useState<string | undefined>(undefined)
+  const [desktopAppUrl, setDesktopAppUrl] = useState<string | undefined>(
+    undefined
+  )
 
   // Uncomment when the safe-react files are available:
   useEffect(() => {

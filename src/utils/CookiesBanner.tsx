@@ -65,7 +65,7 @@ const FormItem = styled.div`
 
 const SLink = styled(Link)`
   text-decoration: underline;
-  &:hover: {
+  &:hover {
     text-decoration: none;
   }
 `
@@ -87,7 +87,7 @@ const AcceptPreferences = styled.span`
   @media (min-width: 768px) {
     bottom: -10px;
   }
-  &:hover: {
+  &:hover {
     text-decoration: none;
   }
 `

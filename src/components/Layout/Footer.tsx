@@ -19,6 +19,8 @@ const FooterContainer = styled.div`
   position: absolute;
   bottom: 20px;
   overflow: hidden;
+  padding: 0 10px;
+  line-height: 25px;
 `
 
 const Item = styled.div`
@@ -37,14 +39,18 @@ const SLink = styled(Link)`
   color: ${(p) =>
     p.title === 'Security' ? p.theme.palette.navy : p.theme.palette.primary};
   text-decoration: none;
-  &:hover: {
-    text-decoration: underline;
+  &:hover {
+    color: ${(p) => p.title !== 'Security' && p.theme.palette.primaryHover};
   }
 `
 const Preferences = styled.div`
   color: ${(p) =>
     p.title === 'Security' ? p.theme.palette.navy : p.theme.palette.primary};
   cursor: pointer;
+
+  &:hover {
+    color: ${(p) => p.title !== 'Security' && p.theme.palette.primaryHover};
+  }
 `
 
 interface FooterProps {

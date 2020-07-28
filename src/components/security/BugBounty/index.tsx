@@ -93,7 +93,7 @@ const BugBounty = () => (
         <LCol>
           <LHeading>Our biggest bug bounty program ever</LHeading>
           <ButtonLink
-            url="https://blog.gnosis.pm/announcing-the-gnosis-safe-contract-update-1-1-0-bug-bounty-fd2850204963"
+            url="https://docs.gnosis.io/safe/docs/intro_bug_bounty"
             colorScheme="white"
           >
             Start bug hunting

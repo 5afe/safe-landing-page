@@ -154,6 +154,13 @@ const Audits = () => (
           >
             <Audit date="Nov. 11th, 2019" author="G0 Group (v1.1.0 & v1.1.1)" />
           </Link>
+
+          <Link
+            href="https://github.com/gnosis/safe-contracts/blob/v1.2.0/docs/Gnosis_Safe_Audit_Report_1_2_0.pdf"
+            target="_blank"
+          >
+            <Audit date="May 4th, 2020" author="G0 Group (v1.2.0)" />
+          </Link>
         </RCol>
       </Row>
     </SContentWrapper>
