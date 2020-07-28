@@ -75,7 +75,7 @@ const Tab = styled.div<TabProps>`
   text-align: center;
   padding: 15px;
   color: ${(p: TabProps) => p.theme.palette.primary};
-  opacity: ${(p: TabProps) => !p.active ? 0.5 : 1};
+  opacity: ${(p: TabProps) => (!p.active ? 0.5 : 1)};
   border-bottom: 2px solid ${(p) => p.theme.palette.primary};
   font-size: 24px;
   line-height: 1.25;
@@ -92,7 +92,7 @@ const Tab = styled.div<TabProps>`
 
   &:hover {
     color: ${(p: TabProps) => !p.active && p.theme.palette.primaryHover};
-    opacity: ${(p: TabProps) => !p.active ? 0.5 : 1};
+    opacity: ${(p: TabProps) => (!p.active ? 0.5 : 1)};
   }
 `
 
@@ -100,9 +100,7 @@ const TabLeft = styled(Tab)`
   margin-right: 30px;
 `
 
-const TabRight = styled(Tab)`
-
-`
+const TabRight = styled(Tab)``
 
 const Text = styled.div`
   max-width: 420px;
@@ -155,28 +153,30 @@ const Features = () => {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
-          },
+          }
           assets: file(relativePath: { eq: "assets.png" }) {
             childImageSharp {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
-          },
+          }
           multisig: file(relativePath: { eq: "multisig.png" }) {
             childImageSharp {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
-          },
-          multisigForIndividuals: file(relativePath: { eq: "multisig-for-individuals.png" }) {
+          }
+          multisigForIndividuals: file(
+            relativePath: { eq: "multisig-for-individuals.png" }
+          ) {
             childImageSharp {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
-          },
+          }
           wallets: file(relativePath: { eq: "wallets.png" }) {
             childImageSharp {
               fluid(quality: 100) {
@@ -229,7 +229,9 @@ const Features = () => {
                 {selectedTabIndex === 1 ? (
                   <Img fluid={data.multisig.childImageSharp.fluid} />
                 ) : (
-                  <Img fluid={data.multisigForIndividuals.childImageSharp.fluid} />
+                  <Img
+                    fluid={data.multisigForIndividuals.childImageSharp.fluid}
+                  />
                 )}
               </Image>
             </Block>

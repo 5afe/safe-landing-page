@@ -74,9 +74,7 @@ const CardItem = styled(Card)`
   }
 `
 
-const CardItemLast = styled(Card)`
-
-`
+const CardItemLast = styled(Card)``
 
 const Title = styled.h4`
   font-size: 24px;

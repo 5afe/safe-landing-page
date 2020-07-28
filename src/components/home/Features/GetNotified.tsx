@@ -125,7 +125,11 @@ const GetNotified = () => {
       <SHeading>Missing a feature?</SHeading>
       <LetUsKnow>
         <span>Let us know! </span>
-        <a href="http://safe.cnflx.io/" target="_blank" rel="noopener noreferrer">
+        <a
+          href="http://safe.cnflx.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <InnerLink>
             Feature idea board
             <SLinkIcon />

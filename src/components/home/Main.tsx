@@ -71,11 +71,9 @@ const SButtonLink = styled(ButtonLink)`
 `
 
 const SButtonLinkLeft = styled(SButtonLink)`
-margin-right: 20px;
+  margin-right: 20px;
 `
-const SButtonLinkRight = styled(SButtonLink)`
-
-`
+const SButtonLinkRight = styled(SButtonLink)``
 
 const SLinesSVG = styled(LinesSVG)`
   position: absolute;
