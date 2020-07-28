@@ -225,7 +225,13 @@ const Testimonials = () => {
               <Img src="/images/testimonial-mycrypto.jpg" />
               <Author>
                 Taylor Monahan{' '}
-                <a href="https://twitter.com/tayvano_">@tayvano</a>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://twitter.com/tayvano_"
+                >
+                  @tayvano
+                </a>
                 <br />
                 Founder & CEO, MyCrypto
               </Author>
@@ -240,7 +246,11 @@ const Testimonials = () => {
               <Img src="/images/testimonial-request.jpg" />
               <Author>
                 Christophe Lassuyt{' '}
-                <a href="https://twitter.com/LassuytChristop">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://twitter.com/LassuytChristop"
+                >
                   @LassuytChristop
                 </a>
                 <br />
@@ -258,7 +268,13 @@ const Testimonials = () => {
               <Img src="/images/testimonial-rv.jpg" />
               <Author>
                 Runtime Verification{' '}
-                <a href="https://twitter.com/rv_inc">@rv_inc</a>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://twitter.com/rv_inc"
+                >
+                  @rv_inc
+                </a>
                 <br />
                 <br />
               </Author>
