@@ -88,21 +88,21 @@ export default () => (
           If you are viewing this policy online, you can click on the below
           links to jump to the relevant section:
         </Paragraph>
-        <Ol style={{ listStyleType: 'decimal' }}>
-          <Li>Your information and the Blockchain</Li>
-          <Li>How We Use Personal Data</Li>
-          <Li>Use of Third Party Applications</Li>
-          <Li>Sharing Your Personal Data</Li>
-          <Li>Transferring Your data outside of the EU</Li>
-          <Li>Existence of Automated Decision-making</Li>
-          <Li>Data Security</Li>
-          <Li>Your Rights as a Data Subject</Li>
-          <Li>Storing Personal Data</Li>
-          <Li>Changes to this Privacy Policy</Li>
-          <Li>Our details</Li>
+        <Ol style={{ listStyleType: 'decimal' }} start="2">
+          <Li><Link href="#2">Your information and the Blockchain</Link></Li>
+          <Li><Link href="#3">How We Use Personal Data</Link></Li>
+          <Li><Link href="#4">Use of Third Party Applications</Link></Li>
+          <Li><Link href="#5">Sharing Your Personal Data</Link></Li>
+          <Li><Link href="#6">Transferring Your data outside of the EU</Link></Li>
+          <Li><Link href="#7">Existence of Automated Decision-making</Link></Li>
+          <Li><Link href="#8">Data Security</Link></Li>
+          <Li><Link href="#9">Your Rights as a Data Subject</Link></Li>
+          <Li><Link href="#10">Storing Personal Data</Link></Li>
+          <Li><Link href="#11">Changes to this Privacy Policy</Link></Li>
+          <Li><Link href="#12">Our details</Link></Li>
         </Ol>
       </Section>
-      <Section>
+      <Section id="2">
         <TitleSection>2. Your information and the Blockchain</TitleSection>
         <Paragraph>
           Blockchain technology, also known as distributed ledger technology (or
@@ -152,7 +152,7 @@ export default () => (
           WILL BECOME PUBLICLY AVAILABLE
         </RedMessage>
       </Section>
-      <Section>
+      <Section id="3">
         <TitleSection>3. How We Use Personal Data</TitleSection>
         <TitleSubSection>3.1. When visiting our website</TitleSubSection>
         <Paragraph>
@@ -340,7 +340,7 @@ export default () => (
           interests, namely the protection and assertion of our legal rights.
         </Paragraph>
       </Section>
-      <Section>
+      <Section id="4">
         <TitleSection>4. Use of Third Party Applications</TitleSection>
         <TitleSubSection>4.1. Ethereum Blockchain</TitleSubSection>
         <Paragraph>
@@ -771,7 +771,7 @@ export default () => (
           , on a periodical basis.
         </Paragraph>
       </Section>
-      <Section>
+      <Section id="5">
         <TitleSection>5. Sharing Your Personal Data</TitleSection>
         <Paragraph>
           We may pass your information to our Business Partners, administration
@@ -792,7 +792,7 @@ export default () => (
           to ensure that your privacy rights continue to be protected.
         </Paragraph>
       </Section>
-      <Section>
+      <Section id="6">
         <TitleSection>6. Transferring Your data outside of the EU</TitleSection>
         <Paragraph>
           The data mentioned in section 3.2b) and c) will the stored in our
@@ -820,14 +820,14 @@ export default () => (
           transferred and stored across the globe.
         </RedMessage>
       </Section>
-      <Section>
+      <Section id="7">
         <TitleSection>7. Existence of Automated Decision-making</TitleSection>
         <Paragraph>
           We do not use automatic decision-making or profiling when processing
           Personal Data.
         </Paragraph>
       </Section>
-      <Section>
+      <Section id="8">
         <TitleSection>8. Data Security</TitleSection>
         <Paragraph>
           We have put in place appropriate security measures to prevent your
@@ -844,239 +844,241 @@ export default () => (
           breach where we are legally required to do so.
         </Paragraph>
       </Section>
-      <TitleSection>9. Your Rights as a Data Subject</TitleSection>
-      <Paragraph>
-        You have certain rights under applicable legislation, and in particular
-        under Regulation EU 2016/679 (General Data Protection Regulation or
-        ‘GDPR’). We explain these below. You can find out more about the GDPR
-        and your rights by accessing the{' '}
-        <Link href="https://ec.europa.eu/info/law/law-topic/data-protection_en">
-          European Commission’s website
-        </Link>
-        .
-      </Paragraph>
-      <TitleSubSection>Right Information and access</TitleSubSection>
-      <Paragraph>
-        You have a right to be informed about the processing of your personal
-        data (and if you did not give it to us, information as to the source)
-        and this Privacy Policy intends to provide the information. Of course,
-        if you have any further questions you can contact us on the above
-        details.
-      </Paragraph>
-      <TitleSubSection>Right to rectification</TitleSubSection>
-      <Paragraph>
-        You have the right to have any inaccurate personal information about you
-        rectified and to have any incomplete personal information about you
-        completed. You may also request that we restrict the processing of that
-        information. The accuracy of your information is important to us. If you
-        do not want us to use your Personal Information in the manner set out in
-        this Privacy Policy, or need to advise us of any changes to your
-        personal information, or would like any more information about the way
-        in which we collect and use your Personal Information, please contact us
-        at the above details.
-      </Paragraph>
-      <TitleSubSection>
-        Right to erasure (right to be ‘forgotten’)
-      </TitleSubSection>
-      <Paragraph>
-        You have the general right to request the erasure of your personal
-        information in the following circumstances:
-      </Paragraph>
-      <ol style={{ listStyleType: 'circle' }}>
-        <Li>
-          the personal information is no longer necessary for the purpose for
-          which it was collected;
-        </Li>
-        <Li>
-          you withdraw your consent to consent based processing and no other
-          legal justification for processing applies;
-        </Li>
-        <Li>you object to processing for direct marketing purposes;</Li>
-        <Li>we unlawfully processed your personal information; and</Li>
-        <Li>
-          erasure is required to comply with a legal obligation that applies to
-          us.
-        </Li>
-      </ol>
-      <RedMessage>
-        However, when interacting with the blockchain we may not be able to
-        ensure that your personal data is deleted. This is because the
-        blockchain is a public decentralized network and blockchain technology
-        does not generally allow for data to be deleted and your right to
-        erasure may not be able to be fully enforced. In these circumstances we
-        will only be able to ensure that all personal data that is held by us is
-        permanently deleted.
-      </RedMessage>
-      <Paragraph>
-        We will proceed to comply with an erasure request without delay unless
-        continued retention is necessary for:
-      </Paragraph>
-      <Ol style={{ listStyleType: 'circle' }}>
-        <Li>Exercising the right of freedom of expression and information;</Li>
-        <Li>
-          Complying with a legal obligation under EU or other applicable law;
-        </Li>
-        <Li>The performance of a task carried out in the public interest;</Li>
-        <Li>
-          Archiving purposes in the public interest, scientific or historical
-          research purposes, or statistical purposes, under certain
-          circumstances; and/or
-        </Li>
-        <Li>The establishment, exercise, or defence of legal claims.</Li>
-      </Ol>
-      <TitleSubSection>
-        Right to restrict processing and right to object to processing
-      </TitleSubSection>
-      <Paragraph>
-        You have a right to restrict processing of your personal information,
-        such as where:
-      </Paragraph>
-      <Ol style={{ listStyleType: 'circle' }}>
-        <Li>you contest the accuracy of the personal information;</Li>
-        <Li>
-          where processing is unlawful you may request, instead of requesting
-          erasure, that we restrict the use of the unlawfully processed personal
-          information;
-        </Li>
-        <Li>
-          we no longer need to process your personal information but need to
-          retain your information for the establishment, exercise, or defence of
-          legal claims.
-        </Li>
-      </Ol>
-      <Paragraph>
-        You also have the right to object to processing of your personal
-        information under certain circumstances, such as where the processing is
-        based on your consent and you withdraw that consent. This may impact the
-        services we can provide and we will explain this to you if you decide to
-        exercise this right.
-      </Paragraph>
-      <RedMessage>
-        However, when interacting with the blockchain, as it is a public
-        decentralized network, we will likely not be able to prevent external
-        parties from processing any personal data which has been written onto
-        the blockchain. In these circumstances we will use our reasonable
-        endeavours to ensure that all processing of personal data held by us is
-        restricted, notwithstanding this, your right to restrict to processing
-        may not be able to be fully enforced.
-      </RedMessage>
-      <TitleSubSection>Right to data portability</TitleSubSection>
-      <Paragraph>
-        Where the legal basis for our processing is your consent or the
-        processing is necessary for the performance of a contract to which you
-        are party or in order to take steps at your request prior to entering
-        into a contract, you have a right to receive the personal information
-        you provided to us in a structured, commonly used and machine-readable
-        format, or ask us to send it to another person.
-      </Paragraph>
-      <TitleSubSection>
-        Right to freedom from automated decision-making
-      </TitleSubSection>
-      <Paragraph>
-        As explained above, we do not use automated decision-making, but where
-        any automated decision-making takes place, you have the right in this
-        case to express your point of view and to contest the decision, as well
-        as request that decisions based on automated processing concerning you
-        or significantly affecting you and based on your personal data are made
-        by natural persons, not only by computers.
-      </Paragraph>
-      <TitleSubSection>
-        Right to object to direct marketing (‘opting out’)
-      </TitleSubSection>
-      <Paragraph>
-        You have a choice about whether or not you wish to receive information
-        from us. We will not contact you for marketing purposes unless:
-      </Paragraph>
-      <Ol style={{ listStyleType: 'circle' }}>
-        <Li>
-          you have a business relationship with us, and we rely on our
-          legitimate interests as the lawful basis for processing (as described
-          above)
-        </Li>
-        <Li>
-          you have otherwise given your prior consent (such as when you download
-          one of our guides)
-        </Li>
-      </Ol>
-      <Paragraph>
-        You can change your marketing preferences at any time by contacting us
-        on the above details. On each and every marketing communication, we will
-        always provide the option for you to exercise your right to object to
-        the processing of your personal data for marketing purposes (known as
-        ‘opting-out’) by clicking on the ‘unsubscribe’ button on our marketing
-        emails or choosing a similar opt-out option on any forms we use to
-        collect your data. You may also opt-out at any time by contacting us on
-        the below details.
-      </Paragraph>
-      <Paragraph>
-        Please note that any administrative or service-related communications
-        (to offer our services, or notify you of an update to this Privacy
-        Policy or applicable terms of business, etc.) will solely be directed at
-        our clients or business partners, and such communications generally do
-        not offer an option to unsubscribe as they are necessary to provide the
-        services requested. Therefore, please be aware that your ability to
-        opt-out from receiving marketing and promotional materials does not
-        change our right to contact you regarding your use of our website or as
-        part of a contractual relationship we may have with you.
-      </Paragraph>
-      <TitleSubSection>Right to request access</TitleSubSection>
-      <Paragraph>
-        You also have a right to access information we hold about you. We are
-        happy to provide you with details of your Personal Information that we
-        hold or process. To protect your personal information, we follow set
-        storage and disclosure procedures, which mean that we will require proof
-        of identity from you prior to disclosing such information. You can
-        exercise this right at any time by contacting us on the above details.
-      </Paragraph>
-      <TitleSubSection>Right to withdraw consent</TitleSubSection>
-      <Paragraph>
-        Where the legal basis for processing your personal information is your
-        consent, you have the right to withdraw that consent at any time by
-        contacting us on the above details.
-      </Paragraph>
-      <TitleSubSection>
-        Raising a complaint about how we have handled your personal data
-      </TitleSubSection>
-      <Paragraph>
-        If you wish to raise a complaint on how we have handled your personal
-        data, you can contact us as set out above and we will then investigate
-        the matter.
-      </Paragraph>
-      <TitleSubSection>
-        Right to lodge a complaint with a relevant supervisory authority
-      </TitleSubSection>
-      <Paragraph>
-        If we have not responded to you within a reasonable time or if you feel
-        that your complaint has not been resolved to your satisfaction, you are
-        entitled to make a complaint to the Data Protection Commissioner under
-        the Data Protection Act, which is presently the{' '}
-        <Link href="http://www.gra.gi/">Gibraltar Regulatory Authority</Link>{' '}
-        (GRA). You may contact the GRA on the below details:
-      </Paragraph>
-      <Paragraph>
-        Gibraltar Data Protection Commissioner
-        <br />
-        Gibraltar Regulatory Authority
-        <br />
-        2nd Floor, Eurotowers 4
-        <br />
-        1 Europort Road
-        <br />
-        Gibraltar
-        <br />
-        Email: info@gra.gi
-        <br />
-        Phone:(+350) 200 74636
-        <br />
-        Fax: (+350) 200 72166
-      </Paragraph>
-      <Paragraph>
-        You also have the right to lodge a complaint with the supervisory
-        authority in the country of your habitual residence, place of work, or
-        the place where you allege an infringement of one or more of our rights
-        has taken place, if that is based in the EEA.
-      </Paragraph>
-      <Section>
+      <Section id="9">
+        <TitleSection>9. Your Rights as a Data Subject</TitleSection>
+        <Paragraph>
+          You have certain rights under applicable legislation, and in particular
+          under Regulation EU 2016/679 (General Data Protection Regulation or
+          ‘GDPR’). We explain these below. You can find out more about the GDPR
+          and your rights by accessing the{' '}
+          <Link href="https://ec.europa.eu/info/law/law-topic/data-protection_en">
+            European Commission’s website
+          </Link>
+          .
+        </Paragraph>
+        <TitleSubSection>Right Information and access</TitleSubSection>
+        <Paragraph>
+          You have a right to be informed about the processing of your personal
+          data (and if you did not give it to us, information as to the source)
+          and this Privacy Policy intends to provide the information. Of course,
+          if you have any further questions you can contact us on the above
+          details.
+        </Paragraph>
+        <TitleSubSection>Right to rectification</TitleSubSection>
+        <Paragraph>
+          You have the right to have any inaccurate personal information about you
+          rectified and to have any incomplete personal information about you
+          completed. You may also request that we restrict the processing of that
+          information. The accuracy of your information is important to us. If you
+          do not want us to use your Personal Information in the manner set out in
+          this Privacy Policy, or need to advise us of any changes to your
+          personal information, or would like any more information about the way
+          in which we collect and use your Personal Information, please contact us
+          at the above details.
+        </Paragraph>
+        <TitleSubSection>
+          Right to erasure (right to be ‘forgotten’)
+        </TitleSubSection>
+        <Paragraph>
+          You have the general right to request the erasure of your personal
+          information in the following circumstances:
+        </Paragraph>
+        <ol style={{ listStyleType: 'circle' }}>
+          <Li>
+            the personal information is no longer necessary for the purpose for
+            which it was collected;
+          </Li>
+          <Li>
+            you withdraw your consent to consent based processing and no other
+            legal justification for processing applies;
+          </Li>
+          <Li>you object to processing for direct marketing purposes;</Li>
+          <Li>we unlawfully processed your personal information; and</Li>
+          <Li>
+            erasure is required to comply with a legal obligation that applies to
+            us.
+          </Li>
+        </ol>
+        <RedMessage>
+          However, when interacting with the blockchain we may not be able to
+          ensure that your personal data is deleted. This is because the
+          blockchain is a public decentralized network and blockchain technology
+          does not generally allow for data to be deleted and your right to
+          erasure may not be able to be fully enforced. In these circumstances we
+          will only be able to ensure that all personal data that is held by us is
+          permanently deleted.
+        </RedMessage>
+        <Paragraph>
+          We will proceed to comply with an erasure request without delay unless
+          continued retention is necessary for:
+        </Paragraph>
+        <Ol style={{ listStyleType: 'circle' }}>
+          <Li>Exercising the right of freedom of expression and information;</Li>
+          <Li>
+            Complying with a legal obligation under EU or other applicable law;
+          </Li>
+          <Li>The performance of a task carried out in the public interest;</Li>
+          <Li>
+            Archiving purposes in the public interest, scientific or historical
+            research purposes, or statistical purposes, under certain
+            circumstances; and/or
+          </Li>
+          <Li>The establishment, exercise, or defence of legal claims.</Li>
+        </Ol>
+        <TitleSubSection>
+          Right to restrict processing and right to object to processing
+        </TitleSubSection>
+        <Paragraph>
+          You have a right to restrict processing of your personal information,
+          such as where:
+        </Paragraph>
+        <Ol style={{ listStyleType: 'circle' }}>
+          <Li>you contest the accuracy of the personal information;</Li>
+          <Li>
+            where processing is unlawful you may request, instead of requesting
+            erasure, that we restrict the use of the unlawfully processed personal
+            information;
+          </Li>
+          <Li>
+            we no longer need to process your personal information but need to
+            retain your information for the establishment, exercise, or defence of
+            legal claims.
+          </Li>
+        </Ol>
+        <Paragraph>
+          You also have the right to object to processing of your personal
+          information under certain circumstances, such as where the processing is
+          based on your consent and you withdraw that consent. This may impact the
+          services we can provide and we will explain this to you if you decide to
+          exercise this right.
+        </Paragraph>
+        <RedMessage>
+          However, when interacting with the blockchain, as it is a public
+          decentralized network, we will likely not be able to prevent external
+          parties from processing any personal data which has been written onto
+          the blockchain. In these circumstances we will use our reasonable
+          endeavours to ensure that all processing of personal data held by us is
+          restricted, notwithstanding this, your right to restrict to processing
+          may not be able to be fully enforced.
+        </RedMessage>
+        <TitleSubSection>Right to data portability</TitleSubSection>
+        <Paragraph>
+          Where the legal basis for our processing is your consent or the
+          processing is necessary for the performance of a contract to which you
+          are party or in order to take steps at your request prior to entering
+          into a contract, you have a right to receive the personal information
+          you provided to us in a structured, commonly used and machine-readable
+          format, or ask us to send it to another person.
+        </Paragraph>
+        <TitleSubSection>
+          Right to freedom from automated decision-making
+        </TitleSubSection>
+        <Paragraph>
+          As explained above, we do not use automated decision-making, but where
+          any automated decision-making takes place, you have the right in this
+          case to express your point of view and to contest the decision, as well
+          as request that decisions based on automated processing concerning you
+          or significantly affecting you and based on your personal data are made
+          by natural persons, not only by computers.
+        </Paragraph>
+        <TitleSubSection>
+          Right to object to direct marketing (‘opting out’)
+        </TitleSubSection>
+        <Paragraph>
+          You have a choice about whether or not you wish to receive information
+          from us. We will not contact you for marketing purposes unless:
+        </Paragraph>
+        <Ol style={{ listStyleType: 'circle' }}>
+          <Li>
+            you have a business relationship with us, and we rely on our
+            legitimate interests as the lawful basis for processing (as described
+            above)
+          </Li>
+          <Li>
+            you have otherwise given your prior consent (such as when you download
+            one of our guides)
+          </Li>
+        </Ol>
+        <Paragraph>
+          You can change your marketing preferences at any time by contacting us
+          on the above details. On each and every marketing communication, we will
+          always provide the option for you to exercise your right to object to
+          the processing of your personal data for marketing purposes (known as
+          ‘opting-out’) by clicking on the ‘unsubscribe’ button on our marketing
+          emails or choosing a similar opt-out option on any forms we use to
+          collect your data. You may also opt-out at any time by contacting us on
+          the below details.
+        </Paragraph>
+        <Paragraph>
+          Please note that any administrative or service-related communications
+          (to offer our services, or notify you of an update to this Privacy
+          Policy or applicable terms of business, etc.) will solely be directed at
+          our clients or business partners, and such communications generally do
+          not offer an option to unsubscribe as they are necessary to provide the
+          services requested. Therefore, please be aware that your ability to
+          opt-out from receiving marketing and promotional materials does not
+          change our right to contact you regarding your use of our website or as
+          part of a contractual relationship we may have with you.
+        </Paragraph>
+        <TitleSubSection>Right to request access</TitleSubSection>
+        <Paragraph>
+          You also have a right to access information we hold about you. We are
+          happy to provide you with details of your Personal Information that we
+          hold or process. To protect your personal information, we follow set
+          storage and disclosure procedures, which mean that we will require proof
+          of identity from you prior to disclosing such information. You can
+          exercise this right at any time by contacting us on the above details.
+        </Paragraph>
+        <TitleSubSection>Right to withdraw consent</TitleSubSection>
+        <Paragraph>
+          Where the legal basis for processing your personal information is your
+          consent, you have the right to withdraw that consent at any time by
+          contacting us on the above details.
+        </Paragraph>
+        <TitleSubSection>
+          Raising a complaint about how we have handled your personal data
+        </TitleSubSection>
+        <Paragraph>
+          If you wish to raise a complaint on how we have handled your personal
+          data, you can contact us as set out above and we will then investigate
+          the matter.
+        </Paragraph>
+        <TitleSubSection>
+          Right to lodge a complaint with a relevant supervisory authority
+        </TitleSubSection>
+        <Paragraph>
+          If we have not responded to you within a reasonable time or if you feel
+          that your complaint has not been resolved to your satisfaction, you are
+          entitled to make a complaint to the Data Protection Commissioner under
+          the Data Protection Act, which is presently the{' '}
+          <Link href="http://www.gra.gi/">Gibraltar Regulatory Authority</Link>{' '}
+          (GRA). You may contact the GRA on the below details:
+        </Paragraph>
+        <Paragraph>
+          Gibraltar Data Protection Commissioner
+          <br />
+          Gibraltar Regulatory Authority
+          <br />
+          2nd Floor, Eurotowers 4
+          <br />
+          1 Europort Road
+          <br />
+          Gibraltar
+          <br />
+          Email: info@gra.gi
+          <br />
+          Phone:(+350) 200 74636
+          <br />
+          Fax: (+350) 200 72166
+        </Paragraph>
+        <Paragraph>
+          You also have the right to lodge a complaint with the supervisory
+          authority in the country of your habitual residence, place of work, or
+          the place where you allege an infringement of one or more of our rights
+          has taken place, if that is based in the EEA.
+        </Paragraph>
+      </Section>
+      <Section id="10">
         <TitleSection>10. Storing Personal Data</TitleSection>
         <Paragraph>
           We retain your information only for as long as is necessary for the
@@ -1090,7 +1092,7 @@ export default () => (
           interests or the vital interests of another natural person.
         </Paragraph>
       </Section>
-      <Section>
+      <Section id="11">
         <TitleSection>11. Changes to this Privacy Policy</TitleSection>
         <Paragraph>
           We may make changes to this Policy from time to time. Where we do so,
@@ -1103,7 +1105,7 @@ export default () => (
           this website.
         </Paragraph>
       </Section>
-      <Section>
+      <Section id="12">
         <TitleSection>12. Our details</TitleSection>
         <Paragraph>
           This website is owned and operated by Gnosis Limited.
