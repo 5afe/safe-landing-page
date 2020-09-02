@@ -172,7 +172,7 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => (
           <ImageWrapper>
             <Img src="/images/phone.png" />
           </ImageWrapper>
-          <SButtonLink url="/#mobile">Access beta</SButtonLink>
+          <SButtonLink url="/#mobile">Download</SButtonLink>
           <Text>Conveniently manage your digital assets on-the-go.</Text>
         </Col>
       </Row>
