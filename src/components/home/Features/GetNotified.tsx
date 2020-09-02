@@ -4,6 +4,7 @@ import addToMailchimp from 'gatsby-plugin-mailchimp'
 import Button from '../../ui/Button'
 import Input from '../../ui/Input'
 import LinkIcon from '../../../assets/link.svg'
+import { useAnalytics, OVERVIEW_CATEGORY } from '../../../utils/googleAnalytics'
 
 const SHeading = styled.h2`
   width: 100%;
@@ -96,6 +97,7 @@ const InnerLink = styled.div`
 const GetNotified = () => {
   const [email, setEmail] = React.useState<string>('')
   const [msg, setMsg] = React.useState<string>('')
+  const { trackEvent } = useAnalytics()
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -130,7 +132,7 @@ const GetNotified = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <InnerLink>
+          <InnerLink onClick={() => trackEvent({ category: OVERVIEW_CATEGORY, action: 'Features section', label: 'Open Feature idea board' })}>
             Feature idea board
             <SLinkIcon />
           </InnerLink>

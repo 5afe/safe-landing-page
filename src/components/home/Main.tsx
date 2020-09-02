@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import ContentWrapper from '../Layout/ContentWrapper'
 import Heading from '../ui/Heading'
 import ButtonLink from '../ui/ButtonLink'
+import { useAnalytics, OVERVIEW_CATEGORY } from '../../utils/googleAnalytics'
 import LinesSVG from '../../assets/lines2.svg'
 
 const Container = styled.main`
@@ -48,7 +49,6 @@ const ButtonsRow = styled.div`
   display: flex;
   justify-content: space-between;
   width: 350px;
-  margin: 0 auto;
   @media screen and (max-width: 1240px) {
     width: 100%;
     justify-content: center;
@@ -137,6 +137,7 @@ const MainSection = () => {
     'developers',
   ]
   const [currentWord, setCurrentWord] = useState(0)
+  const { trackEvent } = useAnalytics()
 
   useInterval(() => {
     if (currentWord < 5) {
@@ -171,8 +172,14 @@ const MainSection = () => {
                 on Ethereum <br /> for <Word>{words[currentWord]}</Word>
               </SHeading>
               <ButtonsRow>
-                <SButtonLinkLeft url="/app/#" target="_self" explicitExternal>
-                  Open app
+                <SButtonLinkLeft
+                  url="/app/#"
+                  target="_self"
+                  explicitExternal
+                >
+                  <div onClick={() => trackEvent({ category: OVERVIEW_CATEGORY, action: 'Main section', label: 'Click Open app' })}>
+                    Open app
+                  </div>
                 </SButtonLinkLeft>
                 <SButtonLinkRight
                   colorScheme="green"
@@ -180,7 +187,9 @@ const MainSection = () => {
                   target="_self"
                   explicitExternal
                 >
-                  How it works
+                  <div onClick={() => trackEvent({ category: OVERVIEW_CATEGORY, action: 'Main section', label: 'Click How it works' })}>
+                    How it works
+                  </div>
                 </SButtonLinkRight>
               </ButtonsRow>
             </LCol>

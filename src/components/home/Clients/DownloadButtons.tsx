@@ -4,6 +4,7 @@ import ContentWrapper from '../../Layout/ContentWrapper'
 import ButtonLink from '../../ui/ButtonLink'
 import LinkIcon from '../../../assets/link.svg'
 import ArrowDownload from '../../../assets/arrow-download.svg'
+import { useAnalytics, OVERVIEW_CATEGORY } from '../../../utils/googleAnalytics'
 
 const Container = styled.div`
   padding-top: 50px;
@@ -116,68 +117,89 @@ interface IDownloadButtons {
   desktopAppUrl: string | undefined
 }
 
-const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => (
-  <Container>
-    <ContentWrapper>
-      <Row>
-        <Col>
-          <Title>Web</Title>
-          <ImageWrapper>
-            <Img src="/images/web.png" />
-          </ImageWrapper>
-          <SButtonLink url="/app/#" target="_self" explicitExternal>
-            Open web app
-          </SButtonLink>
-          <Text>
-            Access the most recent version of the Safe Multisig directly in your
-            browser.
-          </Text>
-          <Text>
-            Do you want to do some testing first?
-            <br />
-            <a href="https://rinkeby.gnosis-safe.io/app/#">
-              <InnerLink>
-                Use the Rinkeby Web App
-                <SLinkIcon />
-              </InnerLink>
-            </a>
-          </Text>
-        </Col>
-        <Col>
-          <Title>Desktop</Title>
-          <ImageWrapper>
-            <Img src="/images/desktop.png" />
-          </ImageWrapper>
-          <SButtonLink url={desktopAppUrl}>
-            Download (~200 Mb) <ArrowDownload />
-          </SButtonLink>
-          <Text>
-            Download the Safe Multisig as a static desktop application for
-            Windows, MacOS or Linux.
-          </Text>
-          <Text>
-            <a
-              href="https://github.com/gnosis/safe-react/releases"
-              target="_blank"
-              rel="noopener noreferrer"
+const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
+  const { trackEvent } = useAnalytics()
+
+  return (
+    <Container>
+      <ContentWrapper>
+        <Row>
+          <Col>
+            <Title>Web</Title>
+            <ImageWrapper>
+              <Img src="/images/web.png" />
+            </ImageWrapper>
+            <SButtonLink
+              onClick={() => trackEvent({ category: OVERVIEW_CATEGORY, action: 'Download clients section', label: 'Open web app' })}
+              url="/app/#"
+              target="_self"
+              explicitExternal
             >
-              <InnerLink>
-                All releases and SHA256 checksums <SLinkIcon />
-              </InnerLink>
-            </a>
-          </Text>
-        </Col>
-        <Col>
-          <Title>Mobile</Title>
-          <ImageWrapper>
-            <Img src="/images/phone.png" />
-          </ImageWrapper>
-          <SButtonLink url="/#mobile">Download</SButtonLink>
-          <Text>Conveniently manage your digital assets on-the-go.</Text>
-        </Col>
-      </Row>
-    </ContentWrapper>
-  </Container>
-)
+              Open web app
+            </SButtonLink>
+            <Text>
+              Access the most recent version of the Safe Multisig directly in your
+              browser.
+            </Text>
+            <Text>
+              Do you want to do some testing first?
+              <br />
+              <a
+                href="https://rinkeby.gnosis-safe.io/app/#"
+                target="_blank"
+                onClick={() => trackEvent({ category: OVERVIEW_CATEGORY, action: 'Download clients section', label: 'Open Rinkeby web app' })}
+              >
+                <InnerLink>
+                  Use the Rinkeby Web App
+                  <SLinkIcon />
+                </InnerLink>
+              </a>
+            </Text>
+          </Col>
+          <Col>
+            <Title>Desktop</Title>
+            <ImageWrapper>
+              <Img src="/images/desktop.png" />
+            </ImageWrapper>
+            <SButtonLink url={desktopAppUrl}>
+              <div onClick={() => trackEvent({ category: OVERVIEW_CATEGORY, action: 'Download clients section', label: 'Download desktop app' })}>
+                Download (~200 Mb) <ArrowDownload />
+              </div>
+            </SButtonLink>
+            <Text>
+              Download the Safe Multisig as a static desktop application for
+              Windows, MacOS or Linux.
+            </Text>
+            <Text>
+              <a
+                href="https://github.com/gnosis/safe-react/releases"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <InnerLink onClick={() => trackEvent({ category: OVERVIEW_CATEGORY, action: 'Download clients section', label: 'See releases and checksums' })}>
+                  All releases and SHA256 checksums <SLinkIcon />
+                </InnerLink>
+              </a>
+            </Text>
+          </Col>
+          <Col>
+            <Title>Mobile</Title>
+            <ImageWrapper>
+              <Img src="/images/phone.png" />
+            </ImageWrapper>
+            <SButtonLink
+              url="/#mobile"
+            >
+              <div onClick={() => trackEvent({ category: OVERVIEW_CATEGORY, action: 'Download clients section', label: 'Go to mobile app links' })}>
+                Download
+              </div>
+            </SButtonLink>
+            <Text>Conveniently manage your digital assets on-the-go.</Text>
+          </Col>
+        </Row>
+      </ContentWrapper>
+    </Container>
+  )
+}
 
 export default DownloadButtons
