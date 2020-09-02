@@ -31,11 +31,9 @@ const SWrapper = styled(ContentWrapper)`
 
 const SHeading = styled(Heading)`
   margin-bottom: 50px;
-  max-width: 400px;
   @media screen and (max-width: 1240px) {
     font-size: 36px;
     margin: 0 auto;
-    max-width: 300px;
     margin-bottom: 20px;
     text-align: center;
   }
@@ -87,7 +85,7 @@ const SLinesSVG = styled(LinesSVG)`
 `
 
 const LCol = styled.div`
-  flex-basis: 30%;
+  flex-basis: 35%;
   flex-direction: column;
 `
 
@@ -168,7 +166,7 @@ const MainSection = () => {
           <SWrapper>
             <LCol>
               <SHeading>
-                The most trusted <br /> platform to store <br /> digital assets{' '}
+                The most trusted <br /> platform to manage <br /> digital assets{' '}
                 <br />
                 on Ethereum <br /> for <Word>{words[currentWord]}</Word>
               </SHeading>
