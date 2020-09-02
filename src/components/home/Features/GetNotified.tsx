@@ -132,7 +132,15 @@ const GetNotified = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <InnerLink onClick={() => trackEvent({ category: OVERVIEW_CATEGORY, action: 'Features section', label: 'Open Feature idea board' })}>
+          <InnerLink
+            onClick={() =>
+              trackEvent({
+                category: OVERVIEW_CATEGORY,
+                action: 'Features section',
+                label: 'Open Feature idea board',
+              })
+            }
+          >
             Feature idea board
             <SLinkIcon />
           </InnerLink>

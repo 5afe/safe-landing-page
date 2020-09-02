@@ -89,17 +89,39 @@ export default () => (
           links to jump to the relevant section:
         </Paragraph>
         <Ol style={{ listStyleType: 'decimal' }} start="2">
-          <Li><Link href="#2">Your information and the Blockchain</Link></Li>
-          <Li><Link href="#3">How We Use Personal Data</Link></Li>
-          <Li><Link href="#4">Use of Third Party Applications</Link></Li>
-          <Li><Link href="#5">Sharing Your Personal Data</Link></Li>
-          <Li><Link href="#6">Transferring Your data outside of the EU</Link></Li>
-          <Li><Link href="#7">Existence of Automated Decision-making</Link></Li>
-          <Li><Link href="#8">Data Security</Link></Li>
-          <Li><Link href="#9">Your Rights as a Data Subject</Link></Li>
-          <Li><Link href="#10">Storing Personal Data</Link></Li>
-          <Li><Link href="#11">Changes to this Privacy Policy</Link></Li>
-          <Li><Link href="#12">Our details</Link></Li>
+          <Li>
+            <Link href="#2">Your information and the Blockchain</Link>
+          </Li>
+          <Li>
+            <Link href="#3">How We Use Personal Data</Link>
+          </Li>
+          <Li>
+            <Link href="#4">Use of Third Party Applications</Link>
+          </Li>
+          <Li>
+            <Link href="#5">Sharing Your Personal Data</Link>
+          </Li>
+          <Li>
+            <Link href="#6">Transferring Your data outside of the EU</Link>
+          </Li>
+          <Li>
+            <Link href="#7">Existence of Automated Decision-making</Link>
+          </Li>
+          <Li>
+            <Link href="#8">Data Security</Link>
+          </Li>
+          <Li>
+            <Link href="#9">Your Rights as a Data Subject</Link>
+          </Li>
+          <Li>
+            <Link href="#10">Storing Personal Data</Link>
+          </Li>
+          <Li>
+            <Link href="#11">Changes to this Privacy Policy</Link>
+          </Li>
+          <Li>
+            <Link href="#12">Our details</Link>
+          </Li>
         </Ol>
       </Section>
       <Section id="2">
@@ -847,10 +869,10 @@ export default () => (
       <Section id="9">
         <TitleSection>9. Your Rights as a Data Subject</TitleSection>
         <Paragraph>
-          You have certain rights under applicable legislation, and in particular
-          under Regulation EU 2016/679 (General Data Protection Regulation or
-          ‘GDPR’). We explain these below. You can find out more about the GDPR
-          and your rights by accessing the{' '}
+          You have certain rights under applicable legislation, and in
+          particular under Regulation EU 2016/679 (General Data Protection
+          Regulation or ‘GDPR’). We explain these below. You can find out more
+          about the GDPR and your rights by accessing the{' '}
           <Link href="https://ec.europa.eu/info/law/law-topic/data-protection_en">
             European Commission’s website
           </Link>
@@ -866,15 +888,15 @@ export default () => (
         </Paragraph>
         <TitleSubSection>Right to rectification</TitleSubSection>
         <Paragraph>
-          You have the right to have any inaccurate personal information about you
-          rectified and to have any incomplete personal information about you
-          completed. You may also request that we restrict the processing of that
-          information. The accuracy of your information is important to us. If you
-          do not want us to use your Personal Information in the manner set out in
-          this Privacy Policy, or need to advise us of any changes to your
-          personal information, or would like any more information about the way
-          in which we collect and use your Personal Information, please contact us
-          at the above details.
+          You have the right to have any inaccurate personal information about
+          you rectified and to have any incomplete personal information about
+          you completed. You may also request that we restrict the processing of
+          that information. The accuracy of your information is important to us.
+          If you do not want us to use your Personal Information in the manner
+          set out in this Privacy Policy, or need to advise us of any changes to
+          your personal information, or would like any more information about
+          the way in which we collect and use your Personal Information, please
+          contact us at the above details.
         </Paragraph>
         <TitleSubSection>
           Right to erasure (right to be ‘forgotten’)
@@ -895,8 +917,8 @@ export default () => (
           <Li>you object to processing for direct marketing purposes;</Li>
           <Li>we unlawfully processed your personal information; and</Li>
           <Li>
-            erasure is required to comply with a legal obligation that applies to
-            us.
+            erasure is required to comply with a legal obligation that applies
+            to us.
           </Li>
         </ol>
         <RedMessage>
@@ -904,16 +926,18 @@ export default () => (
           ensure that your personal data is deleted. This is because the
           blockchain is a public decentralized network and blockchain technology
           does not generally allow for data to be deleted and your right to
-          erasure may not be able to be fully enforced. In these circumstances we
-          will only be able to ensure that all personal data that is held by us is
-          permanently deleted.
+          erasure may not be able to be fully enforced. In these circumstances
+          we will only be able to ensure that all personal data that is held by
+          us is permanently deleted.
         </RedMessage>
         <Paragraph>
           We will proceed to comply with an erasure request without delay unless
           continued retention is necessary for:
         </Paragraph>
         <Ol style={{ listStyleType: 'circle' }}>
-          <Li>Exercising the right of freedom of expression and information;</Li>
+          <Li>
+            Exercising the right of freedom of expression and information;
+          </Li>
           <Li>
             Complying with a legal obligation under EU or other applicable law;
           </Li>
@@ -936,30 +960,30 @@ export default () => (
           <Li>you contest the accuracy of the personal information;</Li>
           <Li>
             where processing is unlawful you may request, instead of requesting
-            erasure, that we restrict the use of the unlawfully processed personal
-            information;
+            erasure, that we restrict the use of the unlawfully processed
+            personal information;
           </Li>
           <Li>
             we no longer need to process your personal information but need to
-            retain your information for the establishment, exercise, or defence of
-            legal claims.
+            retain your information for the establishment, exercise, or defence
+            of legal claims.
           </Li>
         </Ol>
         <Paragraph>
           You also have the right to object to processing of your personal
-          information under certain circumstances, such as where the processing is
-          based on your consent and you withdraw that consent. This may impact the
-          services we can provide and we will explain this to you if you decide to
-          exercise this right.
+          information under certain circumstances, such as where the processing
+          is based on your consent and you withdraw that consent. This may
+          impact the services we can provide and we will explain this to you if
+          you decide to exercise this right.
         </Paragraph>
         <RedMessage>
           However, when interacting with the blockchain, as it is a public
           decentralized network, we will likely not be able to prevent external
           parties from processing any personal data which has been written onto
           the blockchain. In these circumstances we will use our reasonable
-          endeavours to ensure that all processing of personal data held by us is
-          restricted, notwithstanding this, your right to restrict to processing
-          may not be able to be fully enforced.
+          endeavours to ensure that all processing of personal data held by us
+          is restricted, notwithstanding this, your right to restrict to
+          processing may not be able to be fully enforced.
         </RedMessage>
         <TitleSubSection>Right to data portability</TitleSubSection>
         <Paragraph>
@@ -976,10 +1000,10 @@ export default () => (
         <Paragraph>
           As explained above, we do not use automated decision-making, but where
           any automated decision-making takes place, you have the right in this
-          case to express your point of view and to contest the decision, as well
-          as request that decisions based on automated processing concerning you
-          or significantly affecting you and based on your personal data are made
-          by natural persons, not only by computers.
+          case to express your point of view and to contest the decision, as
+          well as request that decisions based on automated processing
+          concerning you or significantly affecting you and based on your
+          personal data are made by natural persons, not only by computers.
         </Paragraph>
         <TitleSubSection>
           Right to object to direct marketing (‘opting out’)
@@ -991,43 +1015,44 @@ export default () => (
         <Ol style={{ listStyleType: 'circle' }}>
           <Li>
             you have a business relationship with us, and we rely on our
-            legitimate interests as the lawful basis for processing (as described
-            above)
+            legitimate interests as the lawful basis for processing (as
+            described above)
           </Li>
           <Li>
-            you have otherwise given your prior consent (such as when you download
-            one of our guides)
+            you have otherwise given your prior consent (such as when you
+            download one of our guides)
           </Li>
         </Ol>
         <Paragraph>
           You can change your marketing preferences at any time by contacting us
-          on the above details. On each and every marketing communication, we will
-          always provide the option for you to exercise your right to object to
-          the processing of your personal data for marketing purposes (known as
-          ‘opting-out’) by clicking on the ‘unsubscribe’ button on our marketing
-          emails or choosing a similar opt-out option on any forms we use to
-          collect your data. You may also opt-out at any time by contacting us on
-          the below details.
+          on the above details. On each and every marketing communication, we
+          will always provide the option for you to exercise your right to
+          object to the processing of your personal data for marketing purposes
+          (known as ‘opting-out’) by clicking on the ‘unsubscribe’ button on our
+          marketing emails or choosing a similar opt-out option on any forms we
+          use to collect your data. You may also opt-out at any time by
+          contacting us on the below details.
         </Paragraph>
         <Paragraph>
           Please note that any administrative or service-related communications
           (to offer our services, or notify you of an update to this Privacy
-          Policy or applicable terms of business, etc.) will solely be directed at
-          our clients or business partners, and such communications generally do
-          not offer an option to unsubscribe as they are necessary to provide the
-          services requested. Therefore, please be aware that your ability to
-          opt-out from receiving marketing and promotional materials does not
-          change our right to contact you regarding your use of our website or as
-          part of a contractual relationship we may have with you.
+          Policy or applicable terms of business, etc.) will solely be directed
+          at our clients or business partners, and such communications generally
+          do not offer an option to unsubscribe as they are necessary to provide
+          the services requested. Therefore, please be aware that your ability
+          to opt-out from receiving marketing and promotional materials does not
+          change our right to contact you regarding your use of our website or
+          as part of a contractual relationship we may have with you.
         </Paragraph>
         <TitleSubSection>Right to request access</TitleSubSection>
         <Paragraph>
           You also have a right to access information we hold about you. We are
           happy to provide you with details of your Personal Information that we
           hold or process. To protect your personal information, we follow set
-          storage and disclosure procedures, which mean that we will require proof
-          of identity from you prior to disclosing such information. You can
-          exercise this right at any time by contacting us on the above details.
+          storage and disclosure procedures, which mean that we will require
+          proof of identity from you prior to disclosing such information. You
+          can exercise this right at any time by contacting us on the above
+          details.
         </Paragraph>
         <TitleSubSection>Right to withdraw consent</TitleSubSection>
         <Paragraph>
@@ -1047,10 +1072,10 @@ export default () => (
           Right to lodge a complaint with a relevant supervisory authority
         </TitleSubSection>
         <Paragraph>
-          If we have not responded to you within a reasonable time or if you feel
-          that your complaint has not been resolved to your satisfaction, you are
-          entitled to make a complaint to the Data Protection Commissioner under
-          the Data Protection Act, which is presently the{' '}
+          If we have not responded to you within a reasonable time or if you
+          feel that your complaint has not been resolved to your satisfaction,
+          you are entitled to make a complaint to the Data Protection
+          Commissioner under the Data Protection Act, which is presently the{' '}
           <Link href="http://www.gra.gi/">Gibraltar Regulatory Authority</Link>{' '}
           (GRA). You may contact the GRA on the below details:
         </Paragraph>
@@ -1074,8 +1099,8 @@ export default () => (
         <Paragraph>
           You also have the right to lodge a complaint with the supervisory
           authority in the country of your habitual residence, place of work, or
-          the place where you allege an infringement of one or more of our rights
-          has taken place, if that is based in the EEA.
+          the place where you allege an infringement of one or more of our
+          rights has taken place, if that is based in the EEA.
         </Paragraph>
       </Section>
       <Section id="10">

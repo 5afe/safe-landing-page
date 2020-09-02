@@ -172,12 +172,16 @@ const MainSection = () => {
                 on Ethereum <br /> for <Word>{words[currentWord]}</Word>
               </SHeading>
               <ButtonsRow>
-                <SButtonLinkLeft
-                  url="/app/#"
-                  target="_self"
-                  explicitExternal
-                >
-                  <div onClick={() => trackEvent({ category: OVERVIEW_CATEGORY, action: 'Main section', label: 'Click Open app' })}>
+                <SButtonLinkLeft url="/app/#" target="_self" explicitExternal>
+                  <div
+                    onClick={() =>
+                      trackEvent({
+                        category: OVERVIEW_CATEGORY,
+                        action: 'Main section',
+                        label: 'Click Open app',
+                      })
+                    }
+                  >
                     Open app
                   </div>
                 </SButtonLinkLeft>
@@ -187,7 +191,15 @@ const MainSection = () => {
                   target="_self"
                   explicitExternal
                 >
-                  <div onClick={() => trackEvent({ category: OVERVIEW_CATEGORY, action: 'Main section', label: 'Click How it works' })}>
+                  <div
+                    onClick={() =>
+                      trackEvent({
+                        category: OVERVIEW_CATEGORY,
+                        action: 'Main section',
+                        label: 'Click How it works',
+                      })
+                    }
+                  >
                     How it works
                   </div>
                 </SButtonLinkRight>

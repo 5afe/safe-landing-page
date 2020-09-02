@@ -148,9 +148,14 @@ const MultisigMobile = () => {
                       href="https://testflight.apple.com/join/c6k0CIUk"
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={() => trackEvent({ category: OVERVIEW_CATEGORY, action: 'Safe Multisig Mobile section', label: 'Download iOS Mainnet' })}
                     >
-                      <InnerLink>
+                      <InnerLink onClick={() =>
+                        trackEvent({
+                          category: OVERVIEW_CATEGORY,
+                          action: 'Safe Multisig Mobile section',
+                          label: 'Download iOS Mainnet',
+                        })
+                      }>
                         iOS
                         <SLinkIcon />
                       </InnerLink>
@@ -159,9 +164,14 @@ const MultisigMobile = () => {
                       href="https://appdistribution.firebase.dev/i/401cf2ea8afd6ed8"
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={() => trackEvent({ category: OVERVIEW_CATEGORY, action: 'Safe Multisig Mobile section', label: 'Download Android Mainnet' })}
                     >
-                      <InnerLink>
+                      <InnerLink onClick={() =>
+                        trackEvent({
+                          category: OVERVIEW_CATEGORY,
+                          action: 'Safe Multisig Mobile section',
+                          label: 'Download Android Mainnet',
+                        })
+                      }>
                         Android
                         <SLinkIcon />
                       </InnerLink>
@@ -179,7 +189,15 @@ const MultisigMobile = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <InnerLink onClick={() => trackEvent({ category: OVERVIEW_CATEGORY, action: 'Safe Multisig Mobile section', label: 'Download iOS Rinkeby' })}>
+                      <InnerLink
+                        onClick={() =>
+                          trackEvent({
+                            category: OVERVIEW_CATEGORY,
+                            action: 'Safe Multisig Mobile section',
+                            label: 'Download iOS Rinkeby',
+                          })
+                        }
+                      >
                         iOS
                         <SLinkIcon />
                       </InnerLink>
@@ -189,7 +207,15 @@ const MultisigMobile = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <InnerLink onClick={() => trackEvent({ category: OVERVIEW_CATEGORY, action: 'Safe Multisig Mobile section', label: 'Download Android Rinkeby' })}>
+                      <InnerLink
+                        onClick={() =>
+                          trackEvent({
+                            category: OVERVIEW_CATEGORY,
+                            action: 'Safe Multisig Mobile section',
+                            label: 'Download Android Rinkeby',
+                          })
+                        }
+                      >
                         Android
                         <SLinkIcon />
                       </InnerLink>

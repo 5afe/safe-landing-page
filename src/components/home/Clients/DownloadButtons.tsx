@@ -130,16 +130,23 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
               <Img src="/images/web.png" />
             </ImageWrapper>
             <SButtonLink
-              onClick={() => trackEvent({ category: OVERVIEW_CATEGORY, action: 'Download clients section', label: 'Open web app' })}
               url="/app/#"
               target="_self"
               explicitExternal
             >
-              Open web app
+              <div onClick={() =>
+                trackEvent({
+                  category: OVERVIEW_CATEGORY,
+                  action: 'Download clients section',
+                  label: 'Open web app',
+                })
+              }>
+                Open web app
+              </div>
             </SButtonLink>
             <Text>
-              Access the most recent version of the Safe Multisig directly in your
-              browser.
+              Access the most recent version of the Safe Multisig directly in
+              your browser.
             </Text>
             <Text>
               Do you want to do some testing first?
@@ -147,9 +154,14 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
               <a
                 href="https://rinkeby.gnosis-safe.io/app/#"
                 target="_blank"
-                onClick={() => trackEvent({ category: OVERVIEW_CATEGORY, action: 'Download clients section', label: 'Open Rinkeby web app' })}
               >
-                <InnerLink>
+                <InnerLink onClick={() =>
+                  trackEvent({
+                    category: OVERVIEW_CATEGORY,
+                    action: 'Download clients section',
+                    label: 'Open Rinkeby web app',
+                  })
+                }>
                   Use the Rinkeby Web App
                   <SLinkIcon />
                 </InnerLink>
@@ -162,7 +174,15 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
               <Img src="/images/desktop.png" />
             </ImageWrapper>
             <SButtonLink url={desktopAppUrl}>
-              <div onClick={() => trackEvent({ category: OVERVIEW_CATEGORY, action: 'Download clients section', label: 'Download desktop app' })}>
+              <div
+                onClick={() =>
+                  trackEvent({
+                    category: OVERVIEW_CATEGORY,
+                    action: 'Download clients section',
+                    label: 'Download desktop app',
+                  })
+                }
+              >
                 Download (~200 Mb) <ArrowDownload />
               </div>
             </SButtonLink>
@@ -176,7 +196,15 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <InnerLink onClick={() => trackEvent({ category: OVERVIEW_CATEGORY, action: 'Download clients section', label: 'See releases and checksums' })}>
+                <InnerLink
+                  onClick={() =>
+                    trackEvent({
+                      category: OVERVIEW_CATEGORY,
+                      action: 'Download clients section',
+                      label: 'See releases and checksums',
+                    })
+                  }
+                >
                   All releases and SHA256 checksums <SLinkIcon />
                 </InnerLink>
               </a>
@@ -187,10 +215,16 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
             <ImageWrapper>
               <Img src="/images/phone.png" />
             </ImageWrapper>
-            <SButtonLink
-              url="/#mobile"
-            >
-              <div onClick={() => trackEvent({ category: OVERVIEW_CATEGORY, action: 'Download clients section', label: 'Go to mobile app links' })}>
+            <SButtonLink url="/#mobile">
+              <div
+                onClick={() =>
+                  trackEvent({
+                    category: OVERVIEW_CATEGORY,
+                    action: 'Download clients section',
+                    label: 'Go to mobile app links',
+                  })
+                }
+              >
                 Download
               </div>
             </SButtonLink>

@@ -130,8 +130,8 @@ const GettingStarted = () => {
             <CardItem>
               <Title>What is a Multisig Wallet?</Title>
               <Text>
-                What exactly is a multisignature wallet and what's the difference
-                to other wallets?
+                What exactly is a multisignature wallet and what's the
+                difference to other wallets?
               </Text>
               <SLinkIcon>
                 <LinkIcon />
@@ -178,7 +178,8 @@ const GettingStarted = () => {
             <CardItemLast>
               <Title>Migrate from the legacy Safe mobile app</Title>
               <Text>
-                How to permanently migrate from the Gnosis Safe legacy mobile app
+                How to permanently migrate from the Gnosis Safe legacy mobile
+                app
               </Text>
               <SLinkIcon>
                 <LinkIcon />
@@ -188,12 +189,19 @@ const GettingStarted = () => {
         </Row>
         <TryDemo>
           <SButtonLink
-            
             url="https://gnosis-safe.io/app/#/safes/0xfF501B324DC6d78dC9F983f140B9211c3EdB4dc7/balances"
             target="_blank"
             explicitExternal
           >
-            <div onClick={() => trackEvent({ category: OVERVIEW_CATEGORY, action: 'Getting started section', label: 'Try demo' })}>
+            <div
+              onClick={() =>
+                trackEvent({
+                  category: OVERVIEW_CATEGORY,
+                  action: 'Getting started section',
+                  label: 'Try demo',
+                })
+              }
+            >
               Try demo
             </div>
           </SButtonLink>
