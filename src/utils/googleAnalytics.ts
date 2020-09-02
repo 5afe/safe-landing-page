@@ -1,6 +1,7 @@
-import { useCallback, useEffect, useState } from 'react'
-import GoogleAnalytics from 'react-ga'
+import GoogleAnalytics, { EventArgs } from 'react-ga'
 import { CookiesProps, loadFromCookie, COOKIES_KEY } from './cookies'
+
+export const OVERVIEW_CATEGORY = 'OVERVIEW'
 
 const getGoogleAnalyticsTrackingID = () => {
   return typeof window !== 'undefined' &&
@@ -27,7 +28,12 @@ export const loadGoogleAnalytics = () => {
   }
 }
 
-export const useAnalytics = () => {
+type UseAnalyticsResponse = {
+  trackPage: (path: string) => void
+  trackEvent: (event: EventArgs) => void
+}
+
+export const useAnalytics = (): UseAnalyticsResponse => {
   const trackPage = async (page: string, options = {}) => {
     const cookiesState: CookiesProps = await loadFromCookie(COOKIES_KEY)
     if (
@@ -44,5 +50,18 @@ export const useAnalytics = () => {
     GoogleAnalytics.pageview(page)
   }
 
-  return { trackPage }
+  const trackEvent = async (event: EventArgs) => {
+    const cookiesState: CookiesProps = await loadFromCookie(COOKIES_KEY)
+    if (
+      !cookiesState ||
+      (cookiesState && !cookiesState.acceptedAnalytics) ||
+      !analyticsLoaded
+    ) {
+      return
+    }
+    GoogleAnalytics.event(event)
+    console.log(event)
+  }
+
+  return { trackPage, trackEvent }
 }

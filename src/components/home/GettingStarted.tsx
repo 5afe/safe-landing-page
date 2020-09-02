@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import ContentWrapper from '../Layout/ContentWrapper'
 import ButtonLink from '../ui/ButtonLink'
 import LinkIcon from '../../assets/link.svg'
+import { useAnalytics, OVERVIEW_CATEGORY } from '../../utils/googleAnalytics'
 
 const Container = styled.section`
   padding: 70px 0;
@@ -113,86 +114,101 @@ const SButtonLink = styled(ButtonLink)`
   }
 `
 
-const GettingStarted = () => (
-  <Container id="getting-started">
-    <SWrapper>
-      <SHeading>Getting started</SHeading>
-      <Row>
-        <Link
-          href="https://help.gnosis-safe.io/en/articles/3876456-what-is-a-multisig-wallet"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <CardItem>
-            <Title>What is a Multisig Wallet?</Title>
-            <Text>
-              What exactly is a multisignature wallet and what's the difference
-              to other wallets?
-            </Text>
-            <SLinkIcon>
-              <LinkIcon />
-            </SLinkIcon>
-          </CardItem>
-        </Link>
-        <Link
-          href="https://help.gnosis-safe.io/en/articles/3876461-create-a-safe-multisig"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <CardItem>
-            <Title>Create a Safe Multisig</Title>
-            <Text>
-              The full process of creating a new multisignature wallet in just
-              60 seconds
-            </Text>
-            <SLinkIcon>
-              <LinkIcon />
-            </SLinkIcon>
-          </CardItem>
-        </Link>
-        <Link
-          href="https://help.gnosis-safe.io/en/articles/3952623-migration-from-gnosis-multisig-to-safe-multisig"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <CardItem>
-            <Title>Migration: From Gnosis Multisig to Safe Multisig</Title>
-            <Text>
-              How to migrate from your legacy Gnosis Multisig to the new Safe
-              Multisig
-            </Text>
-            <SLinkIcon>
-              <LinkIcon />
-            </SLinkIcon>
-          </CardItem>
-        </Link>
-        <Link
-          href="https://help.gnosis-safe.io/en/articles/4100712-migrate-from-the-legacy-safe-mobile-app-to-the-safe-multisig"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <CardItemLast>
-            <Title>Migrate from the legacy Safe mobile app</Title>
-            <Text>
-              How to permanently migrate from the Gnosis Safe legacy mobile app
-            </Text>
-            <SLinkIcon>
-              <LinkIcon />
-            </SLinkIcon>
-          </CardItemLast>
-        </Link>
-      </Row>
-      <TryDemo>
-        <SButtonLink
-          url="https://gnosis-safe.io/app/#/safes/0xfF501B324DC6d78dC9F983f140B9211c3EdB4dc7/balances"
-          target="_blank"
-          explicitExternal
-        >
-          Try demo
-        </SButtonLink>
-      </TryDemo>
-    </SWrapper>
-  </Container>
-)
+const GettingStarted = () => {
+  const { trackEvent } = useAnalytics()
+
+  return (
+    <Container id="getting-started">
+      <SWrapper>
+        <SHeading>Getting started</SHeading>
+        <Row>
+          <Link
+            href="https://help.gnosis-safe.io/en/articles/3876456-what-is-a-multisig-wallet"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <CardItem>
+              <Title>What is a Multisig Wallet?</Title>
+              <Text>
+                What exactly is a multisignature wallet and what's the
+                difference to other wallets?
+              </Text>
+              <SLinkIcon>
+                <LinkIcon />
+              </SLinkIcon>
+            </CardItem>
+          </Link>
+          <Link
+            href="https://help.gnosis-safe.io/en/articles/3876461-create-a-safe-multisig"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <CardItem>
+              <Title>Create a Safe Multisig</Title>
+              <Text>
+                The full process of creating a new multisignature wallet in just
+                60 seconds
+              </Text>
+              <SLinkIcon>
+                <LinkIcon />
+              </SLinkIcon>
+            </CardItem>
+          </Link>
+          <Link
+            href="https://help.gnosis-safe.io/en/articles/3952623-migration-from-gnosis-multisig-to-safe-multisig"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <CardItem>
+              <Title>Migration: From Gnosis Multisig to Safe Multisig</Title>
+              <Text>
+                How to migrate from your legacy Gnosis Multisig to the new Safe
+                Multisig
+              </Text>
+              <SLinkIcon>
+                <LinkIcon />
+              </SLinkIcon>
+            </CardItem>
+          </Link>
+          <Link
+            href="https://help.gnosis-safe.io/en/articles/4100712-migrate-from-the-legacy-safe-mobile-app-to-the-safe-multisig"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <CardItemLast>
+              <Title>Migrate from the legacy Safe mobile app</Title>
+              <Text>
+                How to permanently migrate from the Gnosis Safe legacy mobile
+                app
+              </Text>
+              <SLinkIcon>
+                <LinkIcon />
+              </SLinkIcon>
+            </CardItemLast>
+          </Link>
+        </Row>
+        <TryDemo>
+          <SButtonLink
+            url="https://gnosis-safe.io/app/#/safes/0xfF501B324DC6d78dC9F983f140B9211c3EdB4dc7/balances"
+            target="_blank"
+            explicitExternal
+          >
+            <div
+              onClick={() =>
+                trackEvent({
+                  category: OVERVIEW_CATEGORY,
+                  action: 'Getting started section',
+                  label: 'Try demo',
+                })
+              }
+            >
+              Try demo
+            </div>
+          </SButtonLink>
+        </TryDemo>
+      </SWrapper>
+    </Container>
+  )
+}
 
 export default GettingStarted
