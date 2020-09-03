@@ -1,6 +1,6 @@
 {
   "name": "gnosis-safe-landing",
-  "version": "2.2.3",
+  "version": "2.3.0",
   "description": "Gnosis Safe Multisig Landing Page",
   "private": true,
   "scripts": {
