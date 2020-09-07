@@ -42,11 +42,7 @@ const ButtonLink: React.FC<BtnLinkProps> = ({
   const LinkComponent = internalLink && !explicitExternal ? Link : ExternalLink
 
   return (
-    <LinkComponent
-      to={url}
-      target={target}
-      className={className}
-    >
+    <LinkComponent to={url} target={target} className={className}>
       {children}
     </LinkComponent>
   )

@@ -129,18 +129,16 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
             <ImageWrapper>
               <Img src="/images/web.png" />
             </ImageWrapper>
-            <SButtonLink
-              url="/app/#"
-              target="_self"
-              explicitExternal
-            >
-              <div onClick={() =>
-                trackEvent({
-                  category: OVERVIEW_CATEGORY,
-                  action: 'Download clients section',
-                  label: 'Open web app',
-                })
-              }>
+            <SButtonLink url="/app/#" target="_self" explicitExternal>
+              <div
+                onClick={() =>
+                  trackEvent({
+                    category: OVERVIEW_CATEGORY,
+                    action: 'Download clients section',
+                    label: 'Open web app',
+                  })
+                }
+              >
                 Open web app
               </div>
             </SButtonLink>
@@ -151,17 +149,16 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
             <Text>
               Do you want to do some testing first?
               <br />
-              <a
-                href="https://rinkeby.gnosis-safe.io/app/#"
-                target="_blank"
-              >
-                <InnerLink onClick={() =>
-                  trackEvent({
-                    category: OVERVIEW_CATEGORY,
-                    action: 'Download clients section',
-                    label: 'Open Rinkeby web app',
-                  })
-                }>
+              <a href="https://rinkeby.gnosis-safe.io/app/#" target="_blank">
+                <InnerLink
+                  onClick={() =>
+                    trackEvent({
+                      category: OVERVIEW_CATEGORY,
+                      action: 'Download clients section',
+                      label: 'Open Rinkeby web app',
+                    })
+                  }
+                >
                   Use the Rinkeby Web App
                   <SLinkIcon />
                 </InnerLink>

@@ -129,13 +129,15 @@ const MultisigMobile = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <InnerLink onClick={() =>
-                    trackEvent({
-                      category: OVERVIEW_CATEGORY,
-                      action: 'Safe Multisig Mobile section',
-                      label: 'Download iOS Mainnet',
-                    })
-                  }>
+                  <InnerLink
+                    onClick={() =>
+                      trackEvent({
+                        category: OVERVIEW_CATEGORY,
+                        action: 'Safe Multisig Mobile section',
+                        label: 'Download iOS Mainnet',
+                      })
+                    }
+                  >
                     <StoreBadge src="../../images/app-store-badge.png" />
                   </InnerLink>
                 </a>
@@ -144,13 +146,15 @@ const MultisigMobile = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <InnerLink onClick={() =>
-                    trackEvent({
-                      category: OVERVIEW_CATEGORY,
-                      action: 'Safe Multisig Mobile section',
-                      label: 'Download Android Mainnet',
-                    })
-                  }>
+                  <InnerLink
+                    onClick={() =>
+                      trackEvent({
+                        category: OVERVIEW_CATEGORY,
+                        action: 'Safe Multisig Mobile section',
+                        label: 'Download Android Mainnet',
+                      })
+                    }
+                  >
                     <StoreBadge src="../../images/google-play-badge.png" />
                   </InnerLink>
                 </a>
