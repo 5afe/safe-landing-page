@@ -3,8 +3,6 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { StaticQuery, graphql } from 'gatsby'
 import ContentWrapper from '../Layout/ContentWrapper'
-import Logo from '../../assets/logo.svg'
-import RinkebyLogo from '../../assets/logo-rinkeby.svg'
 import LinkIcon from '../../assets/link.svg'
 import { useAnalytics, OVERVIEW_CATEGORY } from '../../utils/googleAnalytics'
 
@@ -43,7 +41,6 @@ const Description = styled.div`
   text-align: center;
   font-size: 24px;
   line-height: 1.25;
-  margin-bottom: 40px;
 `
 
 const Row = styled.div`
@@ -55,37 +52,25 @@ const Row = styled.div`
   }
 `
 
-const NetworkDataLeft = styled.div`
-  display: flex;
-  margin-right: 50px;
-  @media screen and (max-width: 1240px) {
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-`
-
-const NetworkDataRight = styled.div`
-  display: flex;
-`
-
-const Text = styled.div`
+const AppsLine = styled.div`
   font-size: 20px;
-  margin-left: 15px;
   display: flex;
-  flex-flow: column;
   justify-content: center;
-`
-
-const Title = styled.h5`
-  line-height: 1.25;
-  margin-bottom: 5px;
-  font-size: 20px;
-`
-
-const Links = styled.div`
-  display: flex;
   justify-content: space-between;
-  width: 165px;
+  width: 410px;
+  margin: 25px 0;
+`
+
+const RinkebyAppsLine = styled.div`
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  width: 250px;
+`
+
+const StoreBadge = styled.img`
+  height: 60px;
 `
 
 const InnerLink = styled.div`
@@ -93,7 +78,6 @@ const InnerLink = styled.div`
   align-items: center;
   color: ${(p) => p.theme.palette.primary};
   text-decoration: underline;
-
   &:hover {
     color: ${(p) => p.theme.palette.primaryHover};
   }
@@ -105,7 +89,7 @@ const SLinkIcon = styled(LinkIcon)`
 
 const SImg = styled(Img)`
   width: 1015px;
-  margin: 50px auto;
+  margin: 30px auto;
   @media screen and (max-width: 1240px) {
     margin: 20px auto 0;
     width: 100%;
@@ -132,99 +116,87 @@ const MultisigMobile = () => {
       {(data) => (
         <Container id="mobile">
           <SWrapper>
-            <SHeading>Safe Multisig Mobile (beta)</SHeading>
+            <SHeading>Safe Multisig Mobile</SHeading>
             <Description>
-              Track your assets and transactions on mobile.
+              Track your assets and transactions on
               <br />
-              Stay informed on-the-go.
+              mobile. Stay informed on-the-go.
             </Description>
             <Row>
-              <NetworkDataLeft>
-                <Logo />
-                <Text>
-                  <Title>Mainnet</Title>
-                  <Links>
-                    <a
-                      href="https://testflight.apple.com/join/c6k0CIUk"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <InnerLink onClick={() =>
-                        trackEvent({
-                          category: OVERVIEW_CATEGORY,
-                          action: 'Safe Multisig Mobile section',
-                          label: 'Download iOS Mainnet',
-                        })
-                      }>
-                        iOS
-                        <SLinkIcon />
-                      </InnerLink>
-                    </a>{' '}
-                    <a
-                      href="https://appdistribution.firebase.dev/i/401cf2ea8afd6ed8"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <InnerLink onClick={() =>
-                        trackEvent({
-                          category: OVERVIEW_CATEGORY,
-                          action: 'Safe Multisig Mobile section',
-                          label: 'Download Android Mainnet',
-                        })
-                      }>
-                        Android
-                        <SLinkIcon />
-                      </InnerLink>
-                    </a>
-                  </Links>
-                </Text>
-              </NetworkDataLeft>
-              <NetworkDataRight>
-                <RinkebyLogo />
-                <Text>
-                  <Title>Rinkeby</Title>
-                  <Links>
-                    <a
-                      href="https://testflight.apple.com/join/U8NviSFl"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <InnerLink
-                        onClick={() =>
-                          trackEvent({
-                            category: OVERVIEW_CATEGORY,
-                            action: 'Safe Multisig Mobile section',
-                            label: 'Download iOS Rinkeby',
-                          })
-                        }
-                      >
-                        iOS
-                        <SLinkIcon />
-                      </InnerLink>
-                    </a>{' '}
-                    <a
-                      href="https://appdistribution.firebase.dev/i/8ecc0367c2001086"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <InnerLink
-                        onClick={() =>
-                          trackEvent({
-                            category: OVERVIEW_CATEGORY,
-                            action: 'Safe Multisig Mobile section',
-                            label: 'Download Android Rinkeby',
-                          })
-                        }
-                      >
-                        Android
-                        <SLinkIcon />
-                      </InnerLink>
-                    </a>
-                  </Links>
-                </Text>
-              </NetworkDataRight>
+              <AppsLine>
+                <a
+                  href="https://apps.apple.com/app/id1515759131"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <InnerLink onClick={() =>
+                    trackEvent({
+                      category: OVERVIEW_CATEGORY,
+                      action: 'Safe Multisig Mobile section',
+                      label: 'Download iOS Mainnet',
+                    })
+                  }>
+                    <StoreBadge src="../../images/app-store-badge.png" />
+                  </InnerLink>
+                </a>
+                <a
+                  href="https://play.google.com/store/apps/details?id=io.gnosis.safe"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <InnerLink onClick={() =>
+                    trackEvent({
+                      category: OVERVIEW_CATEGORY,
+                      action: 'Safe Multisig Mobile section',
+                      label: 'Download Android Mainnet',
+                    })
+                  }>
+                    <StoreBadge src="../../images/google-play-badge.png" />
+                  </InnerLink>
+                </a>
+              </AppsLine>
             </Row>
-
+            <Row>
+              <RinkebyAppsLine>
+                Rinkeby:
+                <a
+                  href="https://testflight.apple.com/join/U8NviSFl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <InnerLink
+                    onClick={() =>
+                      trackEvent({
+                        category: OVERVIEW_CATEGORY,
+                        action: 'Safe Multisig Mobile section',
+                        label: 'Download iOS Rinkeby',
+                      })
+                    }
+                  >
+                    iOS
+                    <SLinkIcon />
+                  </InnerLink>
+                </a>{' '}
+                <a
+                  href="https://appdistribution.firebase.dev/i/8ecc0367c2001086"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <InnerLink
+                    onClick={() =>
+                      trackEvent({
+                        category: OVERVIEW_CATEGORY,
+                        action: 'Safe Multisig Mobile section',
+                        label: 'Download Android Rinkeby',
+                      })
+                    }
+                  >
+                    Android
+                    <SLinkIcon />
+                  </InnerLink>
+                </a>
+              </RinkebyAppsLine>
+            </Row>
             <SImg fluid={data.mobile.childImageSharp.fluid} />
           </SWrapper>
         </Container>
