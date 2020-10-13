@@ -18,11 +18,11 @@ export default () => (
   <Layout title="Terms and Conditions">
     <ContentWrapper>
       <Title>Terms and Conditions</Title>
-      <Date>Last updated on April, 2020</Date>
+      <Date>Last updated on October, 2020</Date>
       <RedMessage>
-        THESE TERMS CREATE A BINDING LEGAL CONTRACT BETWEEN YOU AND GNOSIS
-        LIMITED. BY USING OUR SERVICES (DEFINED BELOW), YOU AGREE TO BE BOUND BY
-        THESE TERMS. IF YOU DO NOT ACCEPT THE TERMS, YOU MUST NOT AND ARE NOT
+        THESE TERMS CREATE A BINDING CONTRACT BETWEEN YOU AND GNOSIS LIMITED. BY
+        USING OUR SERVICES (DEFINED BELOW), YOU AGREE TO BE BOUND BY THESE
+        TERMS. IF YOU DO NOT ACCEPT THE TERMS, YOU MUST NOT AND ARE NOT
         AUTHORIZED TO USE ANY OF OUR SERVICES.
       </RedMessage>
       <RedMessage>
@@ -96,8 +96,8 @@ export default () => (
         <Ol style={{ listStyleType: 'decimal' }}>
           <Li>
             “Ethereum Blockchain” means a mathematically secured, chronological,
-            and decentralized consensus ledger maintained on the public Ethereum
-            Virtual Machine.
+            and decentralized consensus ledger maintained on an Ethereum Virtual
+            Machine.
           </Li>
           <Li>
             “Transaction” means a change to the data set through a new entry in
@@ -171,6 +171,11 @@ export default () => (
             decentralized applications and protocols on the Ethereum Blockchain
             (together “Apps”) to integrate custom plugins into the Interface and
             Safe Mobile Apps.
+          </Li>
+          <Li>
+            a script that facilitates interactions between a Gnosis Safe and a
+            decentralized trading protocol (“Gnosis Protocol”) enabling users to
+            set up by themselves customized asset management strategies (“CMM”).
           </Li>
         </Ol>
       </Section>
