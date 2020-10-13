@@ -40,7 +40,7 @@ export default () => (
   <Layout title="Privacy Policy">
     <ContentWrapper>
       <Title>Privacy Policy</Title>
-      <Date>Last updated on July 22, 2020</Date>
+      <Date>Last updated on October 06, 2020</Date>
       <Section>
         <Paragraph>
           We are delighted that you have chosen to use our App or visit our
@@ -318,7 +318,7 @@ export default () => (
         </Ol>
         <Paragraph>
           This data is collected and processed for the purpose of sending you
-          XXXX.
+          product updates and announcements related to the Gnosis Safe.
         </Paragraph>
         <Paragraph>
           The legal basis for this processing is your consent as provided in the
@@ -331,7 +331,7 @@ export default () => (
         </TitleSubSection>
         <Paragraph>
           If you have subscribed to our email notification service, each time
-          you receive a email notification from us, we may collect and process
+          you receive an email notification from us, we may collect and process
           Personal Data. This data may include:
         </Paragraph>
         <Ol style={{ listStyleType: 'lower-roman' }}>
@@ -791,6 +791,18 @@ export default () => (
             https://discord.com/new/privacy
           </Link>
           , on a periodical basis.
+        </Paragraph>
+        <TitleSubSection>
+          4.17 Custom Market Maker (CMM) Safe App
+        </TitleSubSection>
+        <Paragraph>
+          The CMM app allows users to set multiple orders at custom price
+          brackets and passively provide liquidity on Gnosis Protocol through an
+          integration on the Gnosis Safe Wallet.
+        </Paragraph>
+        <Paragraph>
+          We do not store any information collected or processed by the CMM App.
+          The CMM App does not collect, process or save any personal data.
         </Paragraph>
       </Section>
       <Section id="5">
