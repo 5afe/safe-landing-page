@@ -40,7 +40,7 @@ export default () => (
   <Layout title="Privacy Policy">
     <ContentWrapper>
       <Title>Privacy Policy</Title>
-      <Date>Last updated on October 06, 2020</Date>
+      <Date>Last updated on October 14, 2020</Date>
       <Section>
         <Paragraph>
           We are delighted that you have chosen to use our App or visit our
@@ -151,16 +151,14 @@ export default () => (
         <Paragraph>
           In certain circumstances, in order to comply with our contractual
           obligations to you (such as delivery of tokens) it will be necessary
-          to write certain personal data, such as your Ethereum or other
-          cryptocurrency wallet address, onto the blockchain; this is done
-          through a smart contract and requires you to execute such transactions
-          using your wallet’s private key.
+          to write certain personal data, such as your wallet address, onto the
+          blockchain; this is done through a smart contract and requires you to
+          execute such transactions using your wallet’s private key.
         </Paragraph>
         <Paragraph>
           In most cases ultimate decisions to (i) transact on the blockchain
-          using your Ethereum or other cryptocurrency wallet address, as well as
-          (ii) share the public key relating to your Ethereum or other
-          cryptocurrency wallet address with anyone (including us) rests with
+          using your wallet address, as well as (ii) share the public key
+          relating to your wallet address with anyone (including us) rests with
           you.
         </Paragraph>
       </Section>
@@ -211,7 +209,6 @@ export default () => (
           protection of our business against risks and your consent when
           agreeing to accept cookies
         </Paragraph>
-
         <TitleSubSection>
           3.2. When using the Safe App, the Safe for teams edition or the
           browser extension
@@ -221,11 +218,10 @@ export default () => (
           we may collect and process personal data. The data will be stored in
           different instances.
         </Paragraph>
-
         <Ol style={{ listStyleType: 'lower-latin' }}>
           <Li>
             <Paragraph>
-              On the Ethereum blockchain following data will be stored:
+              On the Blockchain the following data will be stored:
             </Paragraph>
             <Ol style={{ listStyleType: 'lower-roman' }}>
               <Li>your smart contract address of the Safe;</Li>
@@ -244,13 +240,12 @@ export default () => (
               fulfil a contract with you.
             </Paragraph>
             <RedMessage>
-              The data will be stored on the Ethereum Blockchain. Given the
-              technological design of the blockchain, as explained in section 2,
-              this data will become public and it will not likely be possible to
-              delete or change the data at any given time.
+              The data will be stored on the Blockchain. Given the technological
+              design of the blockchain, as explained in section 2, this data
+              will become public and it will not likely be possible to delete or
+              change the data at any given time.
             </RedMessage>
           </Li>
-
           <Li>
             <Paragraph>
               In our Amazon Webserver we will store the following data:
@@ -364,12 +359,12 @@ export default () => (
       </Section>
       <Section id="4">
         <TitleSection>4. Use of Third Party Applications</TitleSection>
-        <TitleSubSection>4.1. Ethereum Blockchain</TitleSubSection>
+        <TitleSubSection>4.1. Blockchain</TitleSubSection>
         <Paragraph>
           When using the Gnosis Safe your smart contract address, the
           transactions made with the Safe, addresses of externally owned
           accounts and ETH balances and token balances will be stored on the
-          Ethereum blockchain. See section 2 of this Policy
+          Blockchain. See section 2 of this Policy
         </Paragraph>
         <RedMessage>
           The information will be displayed permanently and public, this is part
