@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import ContentWrapper from '../Layout/ContentWrapper'
-import Heading from '../ui/Heading'
-import ButtonLink from '../ui/ButtonLink'
 import LinesSVG from '../../assets/bg-lines-03.svg'
+import ContentWrapper from '../Layout/ContentWrapper'
+import ButtonLink from '../ui/ButtonLink'
+import Heading from '../ui/Heading'
 
 const Container = styled.main`
   height: calc(100vh - 56px);
@@ -92,7 +92,7 @@ const MainSection = () => (
           </SButtonLink>
           <SButtonLink
             colorScheme="green"
-            url="https://calendly.com/anna-george/30min"
+            url="https://calendly.com/c/GDFSZXFSETPU6LQH"
             target="_blank"
             explicitExternal
           >
