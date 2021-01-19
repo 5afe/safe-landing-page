@@ -1,10 +1,10 @@
+import { graphql, StaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 import React from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
-import { StaticQuery, graphql } from 'gatsby'
-import ContentWrapper from '../Layout/ContentWrapper'
 import LinkIcon from '../../assets/link.svg'
-import { useAnalytics, OVERVIEW_CATEGORY } from '../../utils/googleAnalytics'
+import { OVERVIEW_CATEGORY, useAnalytics } from '../../utils/googleAnalytics'
+import ContentWrapper from '../Layout/ContentWrapper'
 
 const Container = styled.section`
   padding: 140px 0 70px;

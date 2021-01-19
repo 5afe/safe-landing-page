@@ -63,7 +63,8 @@ const Text = styled.div`
 `
 
 const NetworkItem = styled.div`
-  display: inline-block;
+  float: left;
+  margin-right: 7px;
 `
 
 const SButtonLink = styled(ButtonLink)`
@@ -151,8 +152,7 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
               your browser.
             </Text>
             <Text>
-              Safe Multisig supports:
-              <br />
+              <div>Safe Multisig supports:</div>
               <NetworkItem>
                 <a href="https://rinkeby.gnosis-safe.io/app/#" target="_blank">
                   <InnerLink
@@ -167,8 +167,7 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
                     Rinkeby
                     <SLinkIcon />
                   </InnerLink>
-                </a>
-                {', '}
+                </a>,
               </NetworkItem>
               <NetworkItem>
                 <a href="https://xdai.gnosis-safe.io/app/#" target="_blank">
@@ -184,8 +183,7 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
                     xDai
                     <SLinkIcon />
                   </InnerLink>
-                </a>
-                {', '}
+                </a>,
               </NetworkItem>
               <NetworkItem>
                 <a href="https://ewc.gnosis-safe.io/app/#" target="_blank">
@@ -201,8 +199,7 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
                     EWC
                     <SLinkIcon />
                   </InnerLink>
-                </a>
-                {',   '}
+                </a>,
               </NetworkItem>
               <NetworkItem>
                 <a href="https://volta.gnosis-safe.io/app/#" target="_blank">
@@ -219,7 +216,6 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
                     <SLinkIcon />
                   </InnerLink>
                 </a>
-                {' ,'}
               </NetworkItem>
             </Text>
           </Col>
