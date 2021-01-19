@@ -1,12 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
-import { StaticQuery, graphql } from 'gatsby'
+import LinesMainSVG from '../../assets/linesMain.svg'
+import PlayIcon from '../../assets/play.svg'
+import { OVERVIEW_CATEGORY, useAnalytics } from '../../utils/googleAnalytics'
 import ContentWrapper from '../Layout/ContentWrapper'
-import Heading from '../ui/Heading'
 import ButtonLink from '../ui/ButtonLink'
-import { useAnalytics, OVERVIEW_CATEGORY } from '../../utils/googleAnalytics'
-import LinesSVG from '../../assets/lines2.svg'
+import Heading from '../ui/Heading'
 
 const Container = styled.main`
   height: calc(100vh - 56px);
@@ -31,7 +30,7 @@ const SWrapper = styled(ContentWrapper)`
 `
 
 const SHeading = styled(Heading)`
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   @media screen and (max-width: 1240px) {
     font-size: 36px;
     margin: 0 auto;
@@ -73,7 +72,7 @@ const SButtonLinkLeft = styled(SButtonLink)`
 `
 const SButtonLinkRight = styled(SButtonLink)``
 
-const SLinesSVG = styled(LinesSVG)`
+const SLinesMainSVG = styled(LinesMainSVG)`
   position: absolute;
   left: 0;
   bottom: 0;
@@ -99,119 +98,111 @@ const RCol = styled.div`
   }
 `
 
-const SImg = styled(Img)`
-  border-radius: 8px;
-  padding: 0;
+const VideoWrapper = styled.div`
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 4px 4pxc 30px 0 rgba(40, 54, 61, 0.18)
+  width: 750px;
+  position: relative;
+  svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  svg:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  video {
+    display: block;
+  }
 `
-
-const Word = styled.span`
-  color: ${(p) => p.theme.palette.primary};
-`
-
-function useInterval(callback: any, delay: number | undefined) {
-  const savedCallback = useRef()
-
-  useEffect(() => {
-    savedCallback.current = callback
-  })
-
-  useEffect(() => {
-    function tick() {
-      savedCallback.current()
-    }
-
-    if (delay) {
-      const id = setInterval(tick, delay)
-      return () => clearInterval(id)
-    }
-  }, [delay])
-}
 
 const MainSection = () => {
-  const words = [
-    'funds',
-    'companies',
-    'DAOs',
-    'hodlers',
-    'investors',
-    'developers',
-  ]
-  const [currentWord, setCurrentWord] = useState(0)
   const { trackEvent } = useAnalytics()
+  const videoRef = useRef<any>()
 
-  useInterval(() => {
-    if (currentWord < 5) {
-      setCurrentWord(currentWord + 1)
-    } else {
-      setCurrentWord(0)
+  useEffect(() => {
+    if (!videoRef) return
+    const video = videoRef.current
+    video.addEventListener('fullscreenchange', () => {
+      video.muted = !video.muted
+    })
+  }, [videoRef])
+
+  const playVideo = () => {
+    if (!videoRef) return
+    const video = videoRef.current
+    video.currentTime = 0
+    if (video.requestFullscreen) {
+      video.requestFullscreen()
+    } else if (video.webkitRequestFullscreen) {
+      /* Safari */
+      video.webkitRequestFullscreen()
+    } else if (video.msRequestFullscreen) {
+      /* IE11 */
+      video.msRequestFullscreen()
     }
-  }, 2000)
+  }
 
   return (
-    <StaticQuery
-      query={graphql`
-        query {
-          background: file(relativePath: { eq: "background.png" }) {
-            childImageSharp {
-              fluid(quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-        }
-      `}
-    >
-      {(data) => (
-        <Container>
-          <SLinesSVG />
-          <SWrapper>
-            <LCol>
-              <SHeading>
-                The most trusted <br /> platform to manage <br /> digital assets{' '}
-                <br />
-                on Ethereum <br /> for <Word>{words[currentWord]}</Word>
-              </SHeading>
-              <ButtonsRow>
-                <SButtonLinkLeft url="/app/#" target="_self" explicitExternal>
-                  <div
-                    onClick={() =>
-                      trackEvent({
-                        category: OVERVIEW_CATEGORY,
-                        action: 'Main section',
-                        label: 'Click Open app',
-                      })
-                    }
-                  >
-                    Open app
-                  </div>
-                </SButtonLinkLeft>
-                <SButtonLinkRight
-                  colorScheme="green"
-                  url="/#getting-started"
-                  target="_self"
-                  explicitExternal
-                >
-                  <div
-                    onClick={() =>
-                      trackEvent({
-                        category: OVERVIEW_CATEGORY,
-                        action: 'Main section',
-                        label: 'Click How it works',
-                      })
-                    }
-                  >
-                    How it works
-                  </div>
-                </SButtonLinkRight>
-              </ButtonsRow>
-            </LCol>
-            <RCol>
-              <SImg fluid={data.background.childImageSharp.fluid} />
-            </RCol>
-          </SWrapper>
-        </Container>
-      )}
-    </StaticQuery>
+    <Container>
+      <SLinesMainSVG />
+      <SWrapper>
+        <LCol>
+          <SHeading>
+            The most trusted <br /> platform to manage <br /> digital assets{' '}
+            <br />
+            on Ethereum
+          </SHeading>
+          <ButtonsRow>
+            <SButtonLinkLeft url="/app/#" target="_self" explicitExternal>
+              <div
+                onClick={() =>
+                  trackEvent({
+                    category: OVERVIEW_CATEGORY,
+                    action: 'Main section',
+                    label: 'Click Open app',
+                  })
+                }
+              >
+                Open app
+              </div>
+            </SButtonLinkLeft>
+            <SButtonLinkRight
+              colorScheme="green"
+              url="/#getting-started"
+              target="_self"
+              explicitExternal
+            >
+              <div
+                onClick={() =>
+                  trackEvent({
+                    category: OVERVIEW_CATEGORY,
+                    action: 'Main section',
+                    label: 'Click How it works',
+                  })
+                }
+              >
+                How it works
+              </div>
+            </SButtonLinkRight>
+          </ButtonsRow>
+        </LCol>
+        <RCol>
+          <VideoWrapper>
+            <video width="100%" autoPlay muted ref={videoRef}>
+              <source
+                type="video/mp4"
+                src="https://gnosis-safe.io/gnosis-safe-final.mp4"
+              />
+            </video>
+            <PlayIcon onClick={playVideo} />
+          </VideoWrapper>
+        </RCol>
+      </SWrapper>
+    </Container>
   )
 }
 
