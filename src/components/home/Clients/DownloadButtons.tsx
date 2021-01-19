@@ -167,7 +167,8 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
                     Rinkeby
                     <SLinkIcon />
                   </InnerLink>
-                </a>,
+                </a>
+                ,
               </NetworkItem>
               <NetworkItem>
                 <a href="https://xdai.gnosis-safe.io/app/#" target="_blank">
@@ -183,7 +184,8 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
                     xDai
                     <SLinkIcon />
                   </InnerLink>
-                </a>,
+                </a>
+                ,
               </NetworkItem>
               <NetworkItem>
                 <a href="https://ewc.gnosis-safe.io/app/#" target="_blank">
@@ -199,7 +201,8 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
                     EWC
                     <SLinkIcon />
                   </InnerLink>
-                </a>,
+                </a>
+                ,
               </NetworkItem>
               <NetworkItem>
                 <a href="https://volta.gnosis-safe.io/app/#" target="_blank">

@@ -2,25 +2,18 @@ import * as React from 'react'
 import styled from 'styled-components'
 import Layout from '../components/Layout'
 import {
-  B, ContentWrapper,
-
+  B,
+  ContentWrapper,
   Date,
-
-
-
-
-
-
-
-  Li, Link,
-
-
-  Ol, Paragraph,
-  RedMessage, Section, Title,
-
-
+  Li,
+  Link,
+  Ol,
+  Paragraph,
+  RedMessage,
+  Section,
+  Title,
   TitleSection,
-  TitleSubSection
+  TitleSubSection,
 } from '../styles/legalPagesStyles'
 
 const Tr = styled.span`
@@ -806,14 +799,19 @@ export default () => (
           We do not store any information collected or processed by the CMM App.
           The CMM App does not collect, process or save any personal data.
         </Paragraph>
-        <TitleSubSection>
-          4.18 Sentry
-        </TitleSubSection>
+        <TitleSubSection>4.18 Sentry</TitleSubSection>
         <Paragraph>
-          Sentry provides real-time error tracking for web and mobile apps. This gives us as developers, the insight needed to reproduce and fix crashes. 
+          Sentry provides real-time error tracking for web and mobile apps. This
+          gives us as developers, the insight needed to reproduce and fix
+          crashes.
         </Paragraph>
         <Paragraph>
-          We do not store any data collected by them. Sentry’s privacy policy is available at <Link href="https://sentry.io/privacy/">https://sentry.io/privacy/</Link>.
+          We do not store any data collected by them. Sentry’s privacy policy is
+          available at{' '}
+          <Link href="https://sentry.io/privacy/">
+            https://sentry.io/privacy/
+          </Link>
+          .
         </Paragraph>
       </Section>
       <Section id="5">

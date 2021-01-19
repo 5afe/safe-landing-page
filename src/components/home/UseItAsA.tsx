@@ -53,7 +53,7 @@ const Team = styled.div`
     border: none;
   }
 `
-  
+
 const Individual = styled.div`
   border-left: 2px solid ${(p) => p.theme.palette.lightGrey};
   width: 50%;

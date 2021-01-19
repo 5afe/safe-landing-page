@@ -132,7 +132,10 @@ const MainSection = () => (
           {'USD worth of digital assets securely stored in Gnosis Safes '}
         </UsdWorthNotes>
         <UsdWorthDate>
-          <a target="_blank" href="https://explore.duneanalytics.com/dashboard/gnosis-safe_2">
+          <a
+            target="_blank"
+            href="https://explore.duneanalytics.com/dashboard/gnosis-safe_2"
+          >
             {process.env.GATSBY_USD_WORTH_DATE}
           </a>
         </UsdWorthDate>
