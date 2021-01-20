@@ -11,13 +11,16 @@ const Link = styled.a`
 const Container = styled.div`
   padding: 277px 0 136px 0;
   position: relative;
+  
   color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 980px) {
     padding: 30px 0 0 0;
   }
 `
 
-const SContentWrapper = styled(ContentWrapper)``
+const SContentWrapper = styled(ContentWrapper)`
+  padding: 0 20px;
+`
 
 const Row = styled.div`
   display: flex;

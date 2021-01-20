@@ -7,6 +7,7 @@ import ButtonLink from '../ui/ButtonLink'
 
 const SContentWrapper = styled(ContentWrapper)`
   color: ${(p) => p.theme.palette.navy};
+  padding: 0 20px;
 `
 
 const SRuntimeLogo = styled.div`

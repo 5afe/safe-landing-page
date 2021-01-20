@@ -5,7 +5,7 @@ import ContentWrapper from '../Layout/ContentWrapper'
 import ButtonLink from '../ui/ButtonLink'
 
 const Container = styled.div`
-  padding: 175px 0 328px 0;
+  padding: 175px 20px 328px 20px;
   position: relative;
   color: ${(p) => p.theme.palette.navy};
   overflow: hidden;

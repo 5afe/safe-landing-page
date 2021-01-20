@@ -8,6 +8,7 @@ const Container = styled.div`
   position: relative;
   color: ${(p) => p.theme.palette.navy};
   overflow: hidden;
+  padding: 0 20px;
   @media screen and (max-width: 980px) {
     height: auto;
   }

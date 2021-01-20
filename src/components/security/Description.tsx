@@ -24,6 +24,7 @@ const SGnosisSafeOutline = styled(GnosisSafeOutline)`
 `
 
 const Container = styled.div`
+  padding: 0 20px;
   padding-top: 50px;
   padding-bottom: 241px;
   color: ${(p) => p.theme.palette.navy};

@@ -10,7 +10,7 @@ import Heading from '../../ui/Heading'
 import Card from './Card'
 
 const Container = styled.div`
-  padding: 112px 0 170px;
+  padding: 112px 20px 170px 20px;
   background-color: rgba(0, 140, 115, 0.88);
   color: ${(p) => p.theme.palette.navy};
   position: relative;
