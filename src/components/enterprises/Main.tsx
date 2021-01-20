@@ -8,6 +8,7 @@ import Heading from '../ui/Heading'
 const Container = styled.main`
   height: calc(100vh - 56px);
   position: relative;
+  padding: 0 20px;
   background-color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 980px) {
     height: auto;
@@ -28,7 +29,6 @@ const SWrapper = styled(ContentWrapper)`
 
 const SHeading = styled(Heading)`
   margin-bottom: 50px;
-  max-width: 500px;
   color: ${(p) => p.theme.palette.grey};
   @media screen and (max-width: 980px) {
     max-width: 100%;
@@ -49,7 +49,7 @@ const SLinesSVG = styled(LinesSVG)`
 `
 
 const LCol = styled.div`
-  flex-basis: 48%;
+  flex-basis: 50%;
   flex-direction: column;
 `
 

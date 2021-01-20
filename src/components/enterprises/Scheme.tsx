@@ -3,8 +3,7 @@ import styled from 'styled-components'
 import ContentWrapper from '../Layout/ContentWrapper'
 
 const Container = styled.div`
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 20px;
   position: relative;
   color: ${(p) => p.theme.palette.white};
   background-color: ${(p) => p.theme.palette.navy};

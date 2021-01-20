@@ -5,7 +5,7 @@ import ContentWrapper from '../../Layout/ContentWrapper'
 import Card from './Card'
 
 const Container = styled.section`
-  padding: 112px 0;
+  padding: 112px 20px;
   position: relative;
   overflow: hidden;
   color: ${(p) => p.theme.palette.navy};
@@ -40,11 +40,14 @@ const RCol = styled.div`
 `
 
 const SubRow = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
   @media screen and (max-width: 980px) {
-    display: block;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
   }
 `
 

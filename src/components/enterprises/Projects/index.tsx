@@ -4,8 +4,7 @@ import ContentWrapper from '../../Layout/ContentWrapper'
 import { PROJECTS } from './projects'
 
 const Container = styled.section`
-  padding-top: 50px;
-  padding-bottom: 150px;
+  padding: 50px 20px 150px;
   color: ${(p) => p.theme.palette.grey};
   background-color: ${(p) => p.theme.palette.navy};
   overflow: hidden;

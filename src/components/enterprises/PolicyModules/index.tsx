@@ -5,7 +5,7 @@ import ContentWrapper from '../../Layout/ContentWrapper'
 import Card from './Card'
 
 const Container = styled.section`
-  padding: 112px 0;
+  padding: 112px 20px;
   position: relative;
   z-index: 1;
   color: ${(p) => p.theme.palette.white};
