@@ -21,7 +21,7 @@ const colorsCSS = css`
     }
 
     if (colorScheme === 'emptyWhite') {
-      return p.theme.palette.pink
+      return 'white'
     }
 
     return p.theme.palette.primary
@@ -60,7 +60,16 @@ const colorsCSS = css`
     const { colorScheme } = p
 
     if (colorScheme === 'emptyWhite') {
-      return '2px solid black'
+      return `2px solid ${p.theme.palette.navy}`
+    }
+
+    return 'none'
+  }};
+  padding: ${(p: BtnProps) => {
+    const { colorScheme } = p
+
+    if (colorScheme === 'emptyWhite') {
+      return '8px 18px'
     }
 
     return 'none'
@@ -78,7 +87,7 @@ const colorsCSS = css`
       }
 
       if (colorScheme === 'emptyWhite') {
-        return 'none'
+        return p.theme.palette.pink
       }
 
       return p.theme.palette.darkGreenBlue
@@ -87,8 +96,7 @@ const colorsCSS = css`
 `
 
 const SButton = styled.button<BtnProps>`
-  ${colorsCSS}
-
+  box-sizing: border-box;
   padding: 10px 20px;
   border-radius: 8px;
   font-size: 16px;
@@ -97,6 +105,9 @@ const SButton = styled.button<BtnProps>`
   cursor: pointer;
   border: none;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  outline: 0;
+
+  ${colorsCSS}
 `
 
 export default SButton

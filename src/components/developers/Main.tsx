@@ -1,9 +1,10 @@
+//import { ButtonLink } from '@gnosis.pm/safe-react-components'
 import React from 'react'
 import styled from 'styled-components'
-import ContentWrapper from '../Layout/ContentWrapper'
-import Heading from '../ui/Heading'
 import SafeLogo from '../../assets/safe-logo.svg'
+import ContentWrapper from '../Layout/ContentWrapper'
 import ButtonLink from '../ui/ButtonLink'
+import Heading from '../ui/Heading'
 
 const Container = styled.div`
   height: calc(100vh - 56px);
