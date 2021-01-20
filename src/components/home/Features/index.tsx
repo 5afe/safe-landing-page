@@ -46,12 +46,14 @@ const Block = styled.div<BlockProps>`
   flex-direction: ${(p: BlockProps) =>
     p.align === 'left' ? 'row' : 'row-reverse'};
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 100px;
   @media screen and (max-width: 980px) {
     flex-flow: column;
     text-align: left;
     margin-bottom: 40px;
   }
+  border: 1px solid red;
 `
 
 const Tabs = styled.div`
@@ -107,6 +109,7 @@ const Text = styled.div`
   @media screen and (max-width: 980px) {
     max-width: 100%;
   }
+  border: 1px solid red;
 `
 
 interface TitleProps {
@@ -118,11 +121,12 @@ const Title = styled.h3`
   font-weight: 800;
   line-height: 1.13;
   padding: ${(p: TitleProps) =>
-    p.noPaddingTop ? '20px 0 20px' : '80px 0 20px'};
+    p.noPaddingTop ? '20px 0 20px' : '0 0 20px'};
   @media screen and (max-width: 980px) {
     font-size: 28px;
     padding: 0 0 30px;
   }
+  border: 1px solid red;
 `
 
 const Description = styled.h5`
@@ -131,6 +135,7 @@ const Description = styled.h5`
   @media screen and (max-width: 980px) {
     padding: 0 0 30px;
   }
+  border: 1px solid red;
 `
 
 const Image = styled.div`

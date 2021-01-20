@@ -30,6 +30,7 @@ const Row = styled.div`
 
 const LCol = styled.div`
   flex-basis: 25%;
+  padding-right: 20px;
 `
 
 const RCol = styled.div`

@@ -32,14 +32,14 @@ const RCol = styled.div`
   flex-basis: 72.5%;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 160px);
-  grid-column-gap: 91px;
+  grid-template-columns: repeat(4, auto);
   grid-row-gap: 51px;
   @media screen and (max-width: 980px) {
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
   }
+  border: 1px solid blue;
 `
 
 const SHeading = styled.h3`
@@ -47,17 +47,21 @@ const SHeading = styled.h3`
   font-weight: 800;
   letter-spacing: 0.56px;
   line-height: normal;
+  min-width: 300px;
   @media screen and (max-width: 980px) {
     padding: 30px 0;
     font-size: 28px;
   }
+  border: 1px solid red;
 `
 
 const ImageAnchor = styled.a`
   max-height: 54px;
+  border: 1px solid red;
 `
 
 const Image = styled.img`
+border: 1px solid red;
   max-width: 160px;
   max-height: 54px;
   width: auto;

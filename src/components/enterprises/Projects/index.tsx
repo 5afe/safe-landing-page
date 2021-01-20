@@ -26,6 +26,7 @@ const SWrapper = styled(ContentWrapper)`
 
 const LCol = styled.div`
   flex-basis: 25%;
+  min-width: 200px;
   flex-direction: column;
 `
 

@@ -60,10 +60,12 @@ const ImageWrapper = styled.div`
   @media screen and (max-width: 980px) {
     height: 70px;
   }
+  border: 1px solid red;
 `
 
 const Image = styled.img`
-  max-width: 180px;
+border: 1px solid blue;
+  max-width: 100%;
   max-height: 60px;
   width: auto;
   height: auto;

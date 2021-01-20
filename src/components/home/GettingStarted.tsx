@@ -55,7 +55,7 @@ const Card = styled.div`
   border-radius: 8px;
   box-shadow: 1px 2px 10px 0 rgba(40, 54, 61, 0.18);
   padding: 20px;
-  height: 255px;
+  height: 270px;
   position: relative;
   @media screen and (max-width: 980px) {
     height: auto;
