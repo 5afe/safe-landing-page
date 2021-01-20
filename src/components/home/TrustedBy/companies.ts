@@ -45,6 +45,26 @@ const TRUSTED_BY_COMPANIES: TrustedByEntry[] = [
     imageURL: '/images/rv.png',
     websiteURL: 'https://runtimeverification.com/',
   },
+  {
+    name: 'Yearn.finance',
+    imageURL: '/images/yearnfinance.png',
+    websiteURL: 'https://yearn.finance/',
+  },
+  {
+    name: 'Sushiswap',
+    imageURL: '/images/sushiswap.png',
+    websiteURL: 'https://sushiswap.fi/',
+  },
+  {
+    name: 'Aave',
+    imageURL: '/images/aave.svg',
+    websiteURL: 'https://aave.com/',
+  },
+  {
+    name: '1inch',
+    imageURL: '/images/1inch.png',
+    websiteURL: 'https://1inch.exchange/#/',
+  },
 ]
 
 export { TRUSTED_BY_COMPANIES }

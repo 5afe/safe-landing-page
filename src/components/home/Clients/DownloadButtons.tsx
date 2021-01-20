@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import ArrowDownload from '../../../assets/arrow-download.svg'
+import LinkIcon from '../../../assets/link.svg'
+import { OVERVIEW_CATEGORY, useAnalytics } from '../../../utils/googleAnalytics'
 import ContentWrapper from '../../Layout/ContentWrapper'
 import ButtonLink from '../../ui/ButtonLink'
-import LinkIcon from '../../../assets/link.svg'
-import ArrowDownload from '../../../assets/arrow-download.svg'
-import { useAnalytics, OVERVIEW_CATEGORY } from '../../../utils/googleAnalytics'
 
 const Container = styled.div`
   padding-top: 50px;
@@ -60,6 +60,11 @@ const Text = styled.div`
   b {
     font-weight: 800;
   }
+`
+
+const NetworkItem = styled.div`
+  float: left;
+  margin-right: 7px;
 `
 
 const SButtonLink = styled(ButtonLink)`
@@ -147,22 +152,74 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
               your browser.
             </Text>
             <Text>
-              Do you want to do some testing first?
-              <br />
-              <a href="https://rinkeby.gnosis-safe.io/app/#" target="_blank">
-                <InnerLink
-                  onClick={() =>
-                    trackEvent({
-                      category: OVERVIEW_CATEGORY,
-                      action: 'Download clients section',
-                      label: 'Open Rinkeby web app',
-                    })
-                  }
-                >
-                  Use the Rinkeby Web App
-                  <SLinkIcon />
-                </InnerLink>
-              </a>
+              <div>Safe Multisig supports:</div>
+              <NetworkItem>
+                <a href="https://rinkeby.gnosis-safe.io/app/#" target="_blank">
+                  <InnerLink
+                    onClick={() =>
+                      trackEvent({
+                        category: OVERVIEW_CATEGORY,
+                        action: 'Download clients section',
+                        label: 'Open Rinkeby web app',
+                      })
+                    }
+                  >
+                    Rinkeby
+                    <SLinkIcon />
+                  </InnerLink>
+                </a>
+                ,
+              </NetworkItem>
+              <NetworkItem>
+                <a href="https://xdai.gnosis-safe.io/app/#" target="_blank">
+                  <InnerLink
+                    onClick={() =>
+                      trackEvent({
+                        category: OVERVIEW_CATEGORY,
+                        action: 'Download clients section',
+                        label: 'Open xDai web app',
+                      })
+                    }
+                  >
+                    xDai
+                    <SLinkIcon />
+                  </InnerLink>
+                </a>
+                ,
+              </NetworkItem>
+              <NetworkItem>
+                <a href="https://ewc.gnosis-safe.io/app/#" target="_blank">
+                  <InnerLink
+                    onClick={() =>
+                      trackEvent({
+                        category: OVERVIEW_CATEGORY,
+                        action: 'Download clients section',
+                        label: 'Open EWC web app',
+                      })
+                    }
+                  >
+                    EWC
+                    <SLinkIcon />
+                  </InnerLink>
+                </a>
+                ,
+              </NetworkItem>
+              <NetworkItem>
+                <a href="https://volta.gnosis-safe.io/app/#" target="_blank">
+                  <InnerLink
+                    onClick={() =>
+                      trackEvent({
+                        category: OVERVIEW_CATEGORY,
+                        action: 'Download clients section',
+                        label: 'Open Volta web app',
+                      })
+                    }
+                  >
+                    Volta
+                    <SLinkIcon />
+                  </InnerLink>
+                </a>
+              </NetworkItem>
             </Text>
           </Col>
           <Col>

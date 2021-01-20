@@ -105,6 +105,10 @@ const UsdWorthDate = styled.p`
   height: 19px;
   font-size: 15px;
   letter-spacing: -0.15px;
+  a {
+    text-decoration: none;
+    color: ${(p) => p.theme.palette.primary};
+  }
   @media screen and (max-width: 1240px) {
     display: inline;
     font-size: 16px;
@@ -127,7 +131,14 @@ const MainSection = () => (
         <UsdWorthNotes>
           {'USD worth of digital assets securely stored in Gnosis Safes '}
         </UsdWorthNotes>
-        <UsdWorthDate>{process.env.GATSBY_USD_WORTH_DATE}</UsdWorthDate>
+        <UsdWorthDate>
+          <a
+            target="_blank"
+            href="https://explore.duneanalytics.com/dashboard/gnosis-safe_2"
+          >
+            {process.env.GATSBY_USD_WORTH_DATE}
+          </a>
+        </UsdWorthDate>
       </RCol>
     </SWrapper>
   </Container>
