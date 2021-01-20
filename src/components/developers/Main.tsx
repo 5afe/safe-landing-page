@@ -11,7 +11,7 @@ const Container = styled.div`
   position: relative;
   color: ${(p) => p.theme.palette.navy};
   overflow: hidden;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     height: auto;
   }
 `
@@ -21,15 +21,16 @@ const SWrapper = styled(ContentWrapper)`
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0 12px;
     align-items: flex-start;
+    justify-content: flex-start;
   }
 `
 
 const SHeading = styled(Heading)`
   margin-bottom: 30px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     margin-bottom: 0;
     font-size: 28px;
     max-width: 180px;
@@ -42,7 +43,7 @@ const Text = styled.p`
   line-height: normal;
   letter-spacing: 0.56px;
   margin-bottom: 30px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     font-size: 16px;
     letter-spacing: 0.36px;
     max-width: 230px;
@@ -52,20 +53,24 @@ const Text = styled.p`
 const LCol = styled.div`
   flex-basis: 29%;
   flex-direction: column;
-  height: 300px;
-  @media screen and (max-width: 1240px) {
+  height: 320px;
+  min-width: 350px;
+  @media screen and (max-width: 980px) {
     height: auto;
-    flex-basis: 70%;
+    flex-basis: 60%;
+    min-width: 0;
   }
 `
 
 const RCol = styled.div`
   flex-basis: 55%;
   position: relative;
-  height: 300px;
+  height: 320px;
   color: ${(p) => p.theme.palette.primary};
-  @media screen and (max-width: 1240px) {
-    flex-basis: 30%;
+  @media screen and (max-width: 980px) {
+    flex-basis: 60%;
+    max-width: 120px;
+    margin-top: 10px;
     height: 130px;
   }
 `
@@ -80,7 +85,7 @@ const Triangle = styled.span`
   position: absolute;
   left: 0;
   top: -40px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     width: 50px;
     height: 50px;
     top: 20px;
@@ -97,7 +102,7 @@ const SmallRectangle = styled.span`
   position: absolute;
   left: 70px;
   bottom: 0;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     height: 14px;
     width: 44px;
     left: 10px;
@@ -112,9 +117,9 @@ const BigRectangle = styled.span`
   box-shadow: 3px 4px 14px 0 rgba(0, 0, 0, 0.12);
   background-color: ${(p) => p.theme.palette.greyGreen};
   position: absolute;
-  right: 0;
+  right: 30px;
   top: -50px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: none;
   }
 `
@@ -129,7 +134,7 @@ const Circle = styled.span`
   position: absolute;
   right: 100px;
   bottom: 50px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: none;
   }
 `
@@ -141,8 +146,8 @@ const SSafeLogo = styled(SafeLogo)`
   border-radius: 50%;
   position: absolute;
   top: 0;
-  left: 260px;
-  @media screen and (max-width: 1240px) {
+  left: 34%;
+  @media screen and (max-width: 980px) {
     width: 52px;
     height: 52px;
     right: 0;

@@ -9,7 +9,7 @@ const Container = styled.main`
   height: calc(100vh - 56px);
   position: relative;
   background-color: ${(p) => p.theme.palette.navy};
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     height: auto;
   }
 `
@@ -20,7 +20,7 @@ const SWrapper = styled(ContentWrapper)`
   justify-content: space-between;
   height: 100%;
   z-index: 10;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: block;
     padding: 30px 10px 40px 10px;
   }
@@ -30,7 +30,7 @@ const SHeading = styled(Heading)`
   margin-bottom: 50px;
   max-width: 500px;
   color: ${(p) => p.theme.palette.grey};
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     max-width: 100%;
     font-size: 28px;
   }
@@ -43,7 +43,7 @@ const SLinesSVG = styled(LinesSVG)`
   stroke: #d8d8d8;
   opacity: 0.27;
   z-index: 1;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     bottom: -50px;
   }
 `
@@ -57,7 +57,7 @@ const ButtonsRow = styled.div`
   display: flex;
   justify-content: space-between;
   width: 410px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: block;
     width: 180px;
   }
@@ -67,7 +67,7 @@ const SButtonLink = styled(ButtonLink)`
   text-align: center;
   width: 185px;
   box-shadow: none;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 10px 0;
     margin-bottom: 20px;
   }

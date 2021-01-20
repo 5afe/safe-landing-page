@@ -12,7 +12,7 @@ const Container = styled.main`
   background: ${(p) => p.theme.palette.darkGreyBackground};
   position: relative;
   overflow: hidden;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     height: auto;
   }
 `
@@ -20,10 +20,10 @@ const Container = styled.main`
 const SWrapper = styled(ContentWrapper)`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: stretch;
   height: 100%;
   z-index: 2;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: block;
     padding: 30px 10px 40px 10px;
   }
@@ -31,7 +31,7 @@ const SWrapper = styled(ContentWrapper)`
 
 const SHeading = styled(Heading)`
   margin-bottom: 30px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     font-size: 36px;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -48,7 +48,7 @@ const ButtonsRow = styled.div`
   display: flex;
   justify-content: space-between;
   width: 350px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     width: 100%;
     justify-content: center;
     margin-bottom: 20px;
@@ -59,7 +59,7 @@ const SButtonLink = styled(ButtonLink)`
   text-align: center;
   width: 165px;
   box-shadow: none;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     width: auto;
   }
   @media screen and (max-width: 600px) {
@@ -78,31 +78,30 @@ const SLinesMainSVG = styled(LinesMainSVG)`
   bottom: 0;
   stroke: ${(p) => p.theme.palette.primary};
   z-index: 1;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     top: 220px;
   }
 `
 
 const LCol = styled.div`
-  flex-basis: 35%;
   flex-direction: column;
+  min-width: 450px;
+  @media screen and (max-width: 980px) {
+    padding: 0px;
+    min-width: 0;
+  }
 `
 
 const RCol = styled.div`
-  width: 750px;
+  display: flex;
   position: relative;
-  @media screen and (max-width: 1240px) {
-    max-width: 700px;
-    width: auto;
-    margin: 0 auto;
-  }
+  flex-grow: 1;
 `
 
 const VideoWrapper = styled.div`
   overflow: hidden;
   border-radius: 20px;
   box-shadow: 4px 4pxc 30px 0 rgba(40, 54, 61, 0.18)
-  width: 750px;
   position: relative;
   svg {
     position: absolute;

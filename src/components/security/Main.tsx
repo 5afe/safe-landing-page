@@ -8,7 +8,7 @@ const Container = styled.div`
   position: relative;
   color: ${(p) => p.theme.palette.navy};
   overflow: hidden;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     height: auto;
   }
 `
@@ -16,9 +16,9 @@ const Container = styled.div`
 const SWrapper = styled(ContentWrapper)`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: stretch;
   height: 100%;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: block;
     padding: 0 12px;
   }
@@ -26,7 +26,7 @@ const SWrapper = styled(ContentWrapper)`
 
 const SHeading = styled(Heading)`
   margin-bottom: 30px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     font-size: 28px;
     margin-top: 30px;
   }
@@ -36,27 +36,31 @@ const Text = styled.p`
   font-size: 25px;
   line-height: normal;
   letter-spacing: 0.56px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     font-size: 16px;
   }
 `
 
 const LCol = styled.div`
-  flex-basis: 32%;
   flex-direction: column;
-  height: 300px;
-  @media screen and (max-width: 1240px) {
+  height: 350px;
+  width: 420px;
+  min-width: 420px;
+  padding-right: 40px;
+  @media screen and (max-width: 980px) {
     height: auto;
+    width: auto;
+    min-width: 0;
     margin-bottom: 30px;
   }
 `
 
 const RCol = styled.div`
-  flex-basis: 55%;
+  flex-grow: 1;
   position: relative;
-  height: 300px;
+  height: 350px;
   color: ${(p) => p.theme.palette.primary};
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     height: auto;
     margin-bottom: 30px;
   }
@@ -70,19 +74,22 @@ const UsdWorthValueContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding-bottom: 10px;
   }
 `
 
 const UsdWorthValue = styled.h1`
-  font-size: 115px;
+  --font-size: 115px;
+  font-size: 7.8vw;
   font-weight: 800;
   letter-spacing: 2.56px;
   white-space: nowrap;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     font-size: 50px;
+  }
+  @media screen and (min-width: 1450px) {
+    font-size: 114px;
   }
 `
 
@@ -92,7 +99,7 @@ const UsdWorthNotes = styled.p`
   letter-spacing: -0.24px;
   height: auto;
   margin-bottom: 10px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     margin-bottom: 0;
     display: inline;
     font-size: 16px;
@@ -109,7 +116,7 @@ const UsdWorthDate = styled.p`
     text-decoration: none;
     color: ${(p) => p.theme.palette.primary};
   }
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: inline;
     font-size: 16px;
     line-height: normal;
