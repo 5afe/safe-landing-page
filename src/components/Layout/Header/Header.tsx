@@ -1,16 +1,15 @@
 import React from 'react'
 import Headroom from 'react-headroom'
 import styled, { css } from 'styled-components'
-import ButtonLink from '../../ui/ButtonLink'
+import Logo from '../../../assets/multisig-logo.svg'
+import Link from '../../ui/Link'
 import Divider from './Divider'
 import Spacer from './Spacer'
-import Link from '../../ui/Link'
-import Logo from '../../../assets/multisig-logo.svg'
 
 const HeaderItemPadding = css`
   padding-left: 16px;
   padding-right: 16px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -37,7 +36,7 @@ const Container = styled.header`
 const NavContainer = styled.nav`
   font-weight: 800;
   color: ${(p) => p.theme.palette.navy};
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: none;
   }
 `
@@ -46,7 +45,7 @@ const MobileNavContainer = styled.nav`
   display: none;
   width: 60px;
   height: 100%;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,7 +89,7 @@ const SLogo = styled(Logo)`
 `
 
 const LogoDivider = styled(Divider)`
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: none;
   }
 `

@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import LinesSVG from '../../assets/lines.svg'
 import ContentWrapper from '../Layout/ContentWrapper'
 import Heading from '../ui/Heading'
-import LinesSVG from '../../assets/lines.svg'
 
 const SHeading = styled(Heading)`
   letter-spacing: 1px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     font-size: 16px;
     padding: 0 12px;
   }
@@ -17,7 +17,7 @@ const Container = styled.div`
   padding-top: 107px;
   padding-bottom: 122px;
   color: ${(p) => p.theme.palette.navy};
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 30px 0;
   }
 `

@@ -1,7 +1,7 @@
+import { graphql, StaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 import React from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
-import { StaticQuery, graphql } from 'gatsby'
 import ContentWrapper from '../Layout/ContentWrapper'
 import ButtonLink from '../ui/ButtonLink'
 
@@ -13,7 +13,7 @@ const SRuntimeLogo = styled.div`
   display: flex;
   justify-content: flex-end;
   margin-bottom: 34px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: none;
   }
 `
@@ -27,7 +27,7 @@ const SImg = styled(Img)`
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: block;
   }
 `
@@ -38,14 +38,14 @@ const SecondRow = styled(Row)`
 
 const LCol = styled.div`
   flex-basis: 25%;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0 12px;
   }
 `
 
 const RCol = styled.div`
   flex-basis: 72.5%;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0 12px;
   }
 `
@@ -55,7 +55,7 @@ const Text = styled.p`
   letter-spacing: 0.36px;
   font-size: 16px;
   line-height: normal;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     margin-top: 30px;
   }
 `
@@ -64,7 +64,7 @@ const SHeading1 = styled.h3`
   font-size: 25px;
   font-weight: 800;
   letter-spacing: 0.56px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     font-size: 28px;
     margin-bottom: 30px;
   }
@@ -74,7 +74,7 @@ const SHeading2 = styled.h3`
   font-size: 25px;
   font-weight: 800;
   letter-spacing: 0.56px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     font-size: 16px;
   }
 `

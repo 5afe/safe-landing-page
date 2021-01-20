@@ -1,22 +1,22 @@
+import { graphql, StaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
-import { StaticQuery, graphql } from 'gatsby'
+import { ITheme } from '../../../styles/theme'
 import ContentWrapper from '../../Layout/ContentWrapper'
 import GetNotified from './GetNotified'
-import { ITheme } from '../../../styles/theme'
 
 const Container = styled.section`
   overflow: hidden;
   color: ${(p) => p.theme.palette.navy};
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0 12px;
   }
 `
 
 const SWrapper = styled(ContentWrapper)`
   height: 100%;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: block;
     padding: 0px 10px 40px 10px;
   }
@@ -30,7 +30,7 @@ const SHeading = styled.h2`
   padding-bottom: 50px;
   font-weight: 800;
   letter-spacing: 0.56px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0 0 30px;
     font-size: 36px;
   }
@@ -47,7 +47,7 @@ const Block = styled.div<BlockProps>`
     p.align === 'left' ? 'row' : 'row-reverse'};
   justify-content: space-between;
   margin-bottom: 100px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     flex-flow: column;
     text-align: left;
     margin-bottom: 40px;
@@ -56,7 +56,7 @@ const Block = styled.div<BlockProps>`
 
 const Tabs = styled.div`
   display: flex;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     justify-content: center;
     margin-bottom: 30px;
   }
@@ -82,7 +82,7 @@ const Tab = styled.div<TabProps>`
   font-weight: 800;
   min-width: 180px;
   cursor: pointer;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     justify-content: center;
   }
   @media screen and (max-width: 600px) {
@@ -104,7 +104,7 @@ const TabRight = styled(Tab)``
 
 const Text = styled.div`
   max-width: 420px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     max-width: 100%;
   }
 `
@@ -119,7 +119,7 @@ const Title = styled.h3`
   line-height: 1.13;
   padding: ${(p: TitleProps) =>
     p.noPaddingTop ? '20px 0 20px' : '80px 0 20px'};
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     font-size: 28px;
     padding: 0 0 30px;
   }
@@ -128,14 +128,14 @@ const Title = styled.h3`
 const Description = styled.h5`
   font-size: 20px;
   line-height: 1.3;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0 0 30px;
   }
 `
 
 const Image = styled.div`
   width: 760px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     width: 100%;
   }
 `

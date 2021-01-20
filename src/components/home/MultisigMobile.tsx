@@ -10,14 +10,14 @@ const Container = styled.section`
   padding: 140px 0 70px;
   color: ${(p) => p.theme.palette.navy};
   position: relative;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0;
   }
 `
 
 const SWrapper = styled(ContentWrapper)`
   height: 100%;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: block;
     padding: 0px 10px 40px 10px;
   }
@@ -31,7 +31,7 @@ const SHeading = styled.h2`
   padding-bottom: 25px;
   font-weight: 800;
   letter-spacing: 0.56px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 30px 0;
     font-size: 36px;
   }
@@ -46,7 +46,7 @@ const Description = styled.div`
 const Row = styled.div`
   display: flex;
   justify-content: center;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     flex-flow: column;
     align-items: center;
   }
@@ -90,7 +90,7 @@ const SLinkIcon = styled(LinkIcon)`
 const SImg = styled(Img)`
   width: 1015px;
   margin: 30px auto;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     margin: 20px auto 0;
     width: 100%;
   }

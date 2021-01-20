@@ -8,14 +8,14 @@ const Container = styled.section`
   color: ${(p) => p.theme.palette.navy};
   background: ${(p) => p.theme.palette.darkGreyBackground};
   overflow: hidden;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0 12px;
   }
 `
 
 const SWrapper = styled(ContentWrapper)`
   height: 100%;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: block;
     padding: 0px 0px 40px 0px;
   }
@@ -27,7 +27,7 @@ const Grid = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
@@ -41,7 +41,7 @@ const SHeading = styled.h2`
   padding-bottom: 50px;
   font-weight: 800;
   letter-spacing: 0.56px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 30px 0;
     font-size: 36px;
   }
@@ -57,7 +57,7 @@ const ImageWrapper = styled.div`
   padding: 30px;
   justify-content: center;
   align-items: center;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     height: 70px;
   }
 `
@@ -67,7 +67,7 @@ const Image = styled.img`
   max-height: 60px;
   width: auto;
   height: auto;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     max-height: 64px;
     max-width: 90px;
   }

@@ -16,7 +16,7 @@ const CardContainer = styled.div`
   background-color: ${(p) => p.theme.palette.greyPale};
   margin-bottom: 16px;
   margin-right: 19px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     margin-right: 0;
   }
 `

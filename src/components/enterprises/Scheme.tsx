@@ -8,7 +8,7 @@ const Container = styled.div`
   position: relative;
   color: ${(p) => p.theme.palette.white};
   background-color: ${(p) => p.theme.palette.navy};
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0 0 30px 0;
   }
   overflow: hidden;
@@ -17,7 +17,7 @@ const Container = styled.div`
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: block;
   }
 `
@@ -32,7 +32,7 @@ const LCol = styled.div`
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0 12px;
   }
 `
@@ -42,7 +42,7 @@ const RCol = styled.div`
   font-size: 21.8px;
   font-weight: 800;
   line-height: normal;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0 12px 30px 12px;
   }
 `
@@ -52,7 +52,7 @@ const SHeading = styled.h3`
   font-weight: 800;
   letter-spacing: 0.11px;
   color: ${(p) => p.theme.palette.grey};
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 30px 0;
     font-size: 28px;
   }
@@ -65,7 +65,7 @@ const Level = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 25px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     margin-bottom: 10px;
     height: 30px;
     font-size: 12px;
@@ -74,7 +74,7 @@ const Level = styled.div`
 
 const Level1 = styled(Level)`
   border: 2px solid #fefefe;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     border: 1px solid #fefefe;
   }
 `
@@ -88,11 +88,11 @@ const Level2 = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     height: 30px;
     font-size: 12px;
   }
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     border: 1px solid ${(p) => p.theme.palette.slateGray};
   }
 `
@@ -105,7 +105,7 @@ const Level3 = styled(Level)`
 const Level4 = styled(Level)`
   border: 2px solid ${(p) => p.theme.palette.slateGray};
   color: ${(p) => p.theme.palette.slateGray};
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     border: 1px solid ${(p) => p.theme.palette.slateGray};
   }
 `
@@ -114,7 +114,7 @@ const Level5 = styled(Level)`
   border: 2px solid ${(p) => p.theme.palette.slateGray};
   color: ${(p) => p.theme.palette.slateGray};
   flex-basis: 46.5%;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     border: 1px solid ${(p) => p.theme.palette.slateGray};
   }
 `
@@ -128,7 +128,7 @@ const LevelArrow = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     height: 30px;
     font-size: 12px;
   }
@@ -140,7 +140,7 @@ const ArrowUp = styled.div`
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   border-bottom: 8px solid ${(p) => p.theme.palette.grey};
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
     border-bottom: 4px solid ${(p) => p.theme.palette.grey};
@@ -149,7 +149,7 @@ const ArrowUp = styled.div`
 const ArrowLine = styled.div`
   border-left: 2px solid ${(p) => p.theme.palette.grey};
   height: 21px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     height: 10px;
     border-left: 1px solid ${(p) => p.theme.palette.grey};
   }
@@ -161,7 +161,7 @@ const ArrowDown = styled.div`
   border-top: 8px solid ${(p) => p.theme.palette.grey};
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     border-top: 4px solid ${(p) => p.theme.palette.grey};
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
@@ -175,13 +175,13 @@ const LegendContainer = styled.div`
   justify-content: space-between;
   margin-bottom: 20px;
   color: ${(p) => p.theme.palette.pink};
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     height: 80px;
   }
 `
 
 const RowLegend = styled(RowLevel)`
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     justify-content: flex-start;
   }
 `
@@ -190,7 +190,7 @@ const LegendBox = styled.div`
   height: 44px;
   width: 44px;
   border-radius: 4px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     height: 32px;
     width: 32px;
     justify-content: flex-start;
@@ -212,7 +212,7 @@ const LegendText = styled.p`
   width: 240px;
   align-self: center;
   padding-left: 20px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     font-size: 12px;
     max-width: 150px;
   }

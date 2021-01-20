@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
+import LinesSVG from '../../assets/lines.svg'
 import ContentWrapper from '../Layout/ContentWrapper'
 import ButtonLink from '../ui/ButtonLink'
-import LinesSVG from '../../assets/lines.svg'
 
 const Container = styled.div`
   margin-top: 200px;
   margin-bottom: 211px;
   position: relative;
   color: ${(p) => p.theme.palette.navy};
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     margin: 0;
   }
 `
@@ -17,28 +17,28 @@ const Container = styled.div`
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: block;
   }
 `
 
 const LRow = styled.div`
   margin-top: 65px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     margin: 0 0 40px 0;
   }
 `
 
 const LCol = styled.div`
   flex-basis: 25%;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0 12px;
   }
 `
 
 const RCol = styled.div`
   flex-basis: 72.5%;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0 12px 30px 12px;
   }
 `
@@ -55,7 +55,7 @@ const SHeading = styled.h3`
   font-size: 25px;
   font-weight: 800;
   letter-spacing: 0.56px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 30px 0;
     font-size: 28px;
   }
@@ -65,7 +65,7 @@ const SSubHeading = styled.h3`
   font-size: 25px;
   font-weight: 800;
   letter-spacing: 0.56px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     font-size: 16px;
   }
 `
@@ -77,7 +77,7 @@ const SLinesSVG = styled(LinesSVG)`
   stroke: ${(p) => p.theme.palette.primary};
   opacity: 0.4;
   z-index: -1;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     bottom: 0;
     opacity: 0.5;
   }

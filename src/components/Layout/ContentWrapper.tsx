@@ -5,7 +5,7 @@ const SWrapper = styled.div`
   max-width: 1200px;
   position: relative;
 
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     width: 100%;
     max-width: 100%;
   }

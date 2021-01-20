@@ -9,7 +9,7 @@ const Container = styled.section`
   color: ${(p) => p.theme.palette.grey};
   background-color: ${(p) => p.theme.palette.navy};
   overflow: hidden;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0;
   }
 `
@@ -18,7 +18,7 @@ const SWrapper = styled(ContentWrapper)`
   display: flex;
   justify-content: space-between;
   height: 100%;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: block;
     padding: 0px 10px 40px 10px;
   }
@@ -36,7 +36,7 @@ const RCol = styled.div`
   grid-template-columns: repeat(4, 160px);
   grid-column-gap: 91px;
   grid-row-gap: 51px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
@@ -48,7 +48,7 @@ const SHeading = styled.h3`
   font-weight: 800;
   letter-spacing: 0.56px;
   line-height: normal;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 30px 0;
     font-size: 28px;
   }
@@ -60,7 +60,7 @@ const ImageAnchor = styled.a`
   flex-flow: column;
   justify-content: center;
   z-index: 1;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     height: 35px;
   }
 `
@@ -70,7 +70,7 @@ const Image = styled.img`
   max-height: 54px;
   width: auto;
   height: auto;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     max-width: 104px;
     max-height: 35px;
   }

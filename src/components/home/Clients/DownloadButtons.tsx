@@ -13,7 +13,7 @@ const Container = styled.div`
   color: ${(p) => p.theme.palette.navy};
   background: ${(p) => p.theme.palette.darkGreyBackground};
   overflow: hidden;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0 12px 30px;
   }
 `
@@ -22,7 +22,7 @@ const Row = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: block;
     padding: 0 12px;
   }
@@ -34,7 +34,7 @@ const Col = styled.div`
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     margin-top: 30px;
   }
 `
@@ -45,7 +45,7 @@ const Title = styled.div`
   line-height: 1.13;
   text-align: center;
   padding-bottom: 0px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     font-size: 28px;
     margin-top: 10px;
   }
@@ -79,7 +79,7 @@ const SButtonLink = styled(ButtonLink)`
   margin-top: 10px;
   margin-bottom: 30px;
   text-align: center;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     margin-top: 0;
     margin-bottom: 10px;
   }

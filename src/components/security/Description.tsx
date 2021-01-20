@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import GnosisSafeOutline from '../../assets/gnosis-safe-outline.svg'
 import ContentWrapper from '../Layout/ContentWrapper'
 import Heading from '../ui/Heading'
-import GnosisSafeOutline from '../../assets/gnosis-safe-outline.svg'
 
 const SHeading = styled(Heading)`
   letter-spacing: -0.26px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     font-size: 16px;
     padding: 0 12px;
   }
@@ -18,7 +18,7 @@ const SGnosisSafeOutline = styled(GnosisSafeOutline)`
   bottom: -85px;
   height: 382px;
   z-index: -1;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: none;
   }
 `
@@ -28,7 +28,7 @@ const Container = styled.div`
   padding-bottom: 241px;
   color: ${(p) => p.theme.palette.navy};
   overflow: hidden;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     font-size: 16px;
     padding: 0;
   }
@@ -39,7 +39,7 @@ const SWrapper = styled(ContentWrapper)`
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: block;
     margin-top: 0;
     margin-bottom: 30px;
@@ -55,7 +55,7 @@ const Col = styled.p`
   flex-basis: 35%;
   line-height: normal;
   letter-spacing: -0.09px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     margin-top: 30px;
   }
 `

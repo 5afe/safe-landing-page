@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import ContentWrapper from '../Layout/ContentWrapper'
-import { ITheme } from '../../styles/theme'
-import BgGraySVG from '../../assets/background.svg'
 import ArrowLeftSVG from '../../assets/arrow-left.svg'
 import ArrowRightSVG from '../../assets/arrow-right.svg'
+import BgGraySVG from '../../assets/background.svg'
+import { ITheme } from '../../styles/theme'
+import ContentWrapper from '../Layout/ContentWrapper'
 
 const Container = styled.section`
   padding: 50px 0 0;
   position: relative;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0;
   }
 `
@@ -28,7 +28,7 @@ const SectionHeading = styled.h2`
   line-height: 1.18;
   text-align: center;
   padding-bottom: 60px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     font-size: 36px;
     padding-bottom: 30px;
   }
@@ -39,7 +39,7 @@ const TestimonialsContainer = styled.div`
   height: 300px;
   margin: 0 auto;
   position: relative;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     width: 100%;
     padding: 10px;
     height: auto;
@@ -58,7 +58,7 @@ const LeftArrow = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 100;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     width: 24px;
     height: 24px;
     left: 10px;
@@ -83,7 +83,7 @@ const RightArrow = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 100;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     width: 24px;
     height: 24px;
     right: 10px;
@@ -105,7 +105,7 @@ const Testimonial = styled.div`
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     position: relative;
     width: auto;
   }
@@ -117,7 +117,7 @@ const Img = styled.img`
   height: 60px;
   border-radius: 30px;
   margin: 40px auto 26px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     margin: 20px auto;
   }
 `
@@ -126,7 +126,7 @@ const Quote = styled.h4`
   line-height: 30px;
   font-size: 24px;
   font-weight: bold;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     font-size: 20px;
     margin: 0 auto;
     padding: 0 25px;
@@ -137,7 +137,7 @@ const Quote = styled.h4`
 const Author = styled.p`
   font-size: 20px;
   line-height: 26px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     font-size: 16px;
   }
 
@@ -156,7 +156,7 @@ const DotContainer = styled.div`
   width: 55px;
   display: flex;
   justify-content: space-between;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     margin: 15px auto 20px;
   }
 `

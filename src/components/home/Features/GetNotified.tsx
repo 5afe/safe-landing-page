@@ -1,10 +1,10 @@
+import addToMailchimp from 'gatsby-plugin-mailchimp'
 import React from 'react'
 import styled from 'styled-components'
-import addToMailchimp from 'gatsby-plugin-mailchimp'
+import LinkIcon from '../../../assets/link.svg'
+import { OVERVIEW_CATEGORY, useAnalytics } from '../../../utils/googleAnalytics'
 import Button from '../../ui/Button'
 import Input from '../../ui/Input'
-import LinkIcon from '../../../assets/link.svg'
-import { useAnalytics, OVERVIEW_CATEGORY } from '../../../utils/googleAnalytics'
 
 const SHeading = styled.h2`
   width: 100%;
@@ -13,7 +13,7 @@ const SHeading = styled.h2`
   line-height: 1.18;
   font-weight: 800;
   letter-spacing: 0.56px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 30px 0;
     font-size: 36px;
   }
@@ -24,7 +24,7 @@ const LetUsKnow = styled.div`
   text-align: center;
   line-height: 1.25;
   padding: 20px 0 50px 0;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0;
   }
 `
@@ -33,7 +33,7 @@ const SForm = styled.form`
   display: flex;
   padding: 45px 0 100px 0;
   justify-content: center;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: block;
     padding: 0;
     max-width: 420px;
@@ -47,7 +47,7 @@ const Col = styled.div`
   height: 110px;
   position: relative;
   margin-right: 20px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     margin: 0 auto;
     width: 100%;
     height: auto;
@@ -57,7 +57,7 @@ const Col = styled.div`
 const SInput = styled(Input)`
   height: 52px;
   width: 100%;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     max-width: 440px;
     margin-right: 0;
   }
@@ -72,7 +72,7 @@ const SButton = styled(Button)`
   height: 52px;
   font-size: 16px;
   outline: none;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     width: 170px;
     display: block;
     margin: 20px auto 0;

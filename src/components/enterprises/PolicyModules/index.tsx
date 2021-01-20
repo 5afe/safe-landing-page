@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import Card from './Card'
-import ContentWrapper from '../../Layout/ContentWrapper'
 import BgGray from '../../../assets/bg-gray.svg'
+import ContentWrapper from '../../Layout/ContentWrapper'
+import Card from './Card'
 
 const Container = styled.section`
   padding: 112px 0;
@@ -10,7 +10,7 @@ const Container = styled.section`
   z-index: 1;
   color: ${(p) => p.theme.palette.white};
   background-color: ${(p) => p.theme.palette.navy};
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0 12px 10px 12px;
   }
 `
@@ -20,7 +20,7 @@ const Row = styled.div`
   justify-content: space-between;
   height: 100%;
   padding-bottom: 80px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: block;
     padding-bottom: 0px;
     height: auto;
@@ -37,7 +37,7 @@ const RCol = styled.div`
   flex-basis: 72.5%;
   display: flex;
   justify-content: space-between;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: block;
   }
 `
@@ -52,7 +52,7 @@ const SHeading = styled.h3`
   letter-spacing: 0.56px;
   padding-bottom: 29px;
   color: ${(p) => p.theme.palette.grey};
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 30px 0;
     font-size: 28px;
   }
@@ -62,7 +62,7 @@ const Text = styled.p`
   letter-spacing: 0.36px;
   line-height: normal;
   color: ${(p) => p.theme.palette.grey};
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     letter-spacing: normal;
     font-size: 16px;
     padding-bottom: 10px;
@@ -73,7 +73,7 @@ const SBgGray = styled(BgGray)`
   position: absolute;
   bottom: 100px;
   z-index: -2;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     top: 0;
     display: none;
   }

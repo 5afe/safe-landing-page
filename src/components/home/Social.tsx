@@ -1,12 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import ContentWrapper from '../Layout/ContentWrapper'
-import Heading from '../ui/Heading'
-import GithubIcon from '../../assets/github.svg'
 import DiscordIcon from '../../assets/discord.svg'
+import GithubIcon from '../../assets/github.svg'
 import MailIcon from '../../assets/mail.svg'
 import MediumIcon from '../../assets/medium.svg'
 import TwitterIcon from '../../assets/twitter.svg'
+import ContentWrapper from '../Layout/ContentWrapper'
 
 const SectionContainer = styled.div`
   padding-bottom: 80px;
@@ -18,7 +17,7 @@ const Row = styled.div`
   align-items: center;
   width: 230px;
   margin: 0 auto;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     max-width: 230px;
   }
 

@@ -1,23 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
-import ContentWrapper from '../Layout/ContentWrapper'
-import GreenTick from '../../assets/tick-green.svg'
-import GreyTick from '../../assets/tick-grey.svg'
 import RedCross from '../../assets/cross-red.svg'
 import QuestionIcon from '../../assets/question-icon.svg'
+import GreenTick from '../../assets/tick-green.svg'
+import GreyTick from '../../assets/tick-grey.svg'
+import ContentWrapper from '../Layout/ContentWrapper'
 
 const Container = styled.section`
   color: ${(p) => p.theme.palette.navy};
   background: ${(p) => p.theme.palette.white};
   padding: 70px 0;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 20px 0;
   }
 `
 
 const SWrapper = styled(ContentWrapper)`
   height: 100%;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: block;
     padding: 0px 10px 40px 10px;
   }
@@ -31,7 +31,7 @@ const SHeading = styled.h2`
   padding-bottom: 50px;
   font-weight: 800;
   letter-spacing: 0.56px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 40px 0 30px;
     font-size: 36px;
   }
@@ -60,7 +60,7 @@ const Grid = styled.div`
     align-items: center;
   }
 
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0 10px;
     grid-template-areas:
       '. .'
@@ -80,7 +80,7 @@ const Grid = styled.div`
 
 const Column = styled.div`
   --border: 1px solid blue;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     margin-top: 50px;
 
     & > div:first-child {
@@ -91,7 +91,7 @@ const Column = styled.div`
 
 const ColumnFirst = styled.div`
   --border: 1px solid red;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     margin-bottom: 40px;
   }
 `
@@ -99,7 +99,7 @@ const ColumnFirst = styled.div`
 const ColumnHidden = styled.div`
   display: none;
   --border: 1px solid blue;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: block;
     margin-bottom: 40px;
   }
@@ -110,7 +110,7 @@ const GridTitle = styled.div`
   align-items: center;
   font-weight: 800;
   padding: 0 5px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0;
   }
 `
@@ -125,7 +125,7 @@ const GridFeature = styled.div`
 const GridContent = styled.div`
   --border: 1px solid red;
   justify-content: center;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     justify-content: flex-end;
   }
 `

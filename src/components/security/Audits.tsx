@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import ContentWrapper from '../Layout/ContentWrapper'
 import BgGray from '../../assets/bg-gray.svg'
+import ContentWrapper from '../Layout/ContentWrapper'
 
 const Link = styled.a`
   text-decoration: none;
@@ -12,7 +12,7 @@ const Container = styled.div`
   padding: 277px 0 136px 0;
   position: relative;
   color: ${(p) => p.theme.palette.navy};
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 30px 0 0 0;
   }
 `
@@ -22,7 +22,7 @@ const SContentWrapper = styled(ContentWrapper)``
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: block;
     padding: 0 12px;
   }
@@ -43,7 +43,7 @@ const Description = styled.p`
   line-height: normal;
   letter-spacing: 0.36px;
   margin-top: 37px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     width: auto;
     margin-bottom: 10px;
   }
@@ -73,7 +73,7 @@ const AuditDate = styled.p`
   font-size: 25px;
   line-height: normal;
   flex-basis: 30%;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     font-size: 16px;
   }
 `
@@ -83,7 +83,7 @@ const AuditAuthor = styled.p`
   font-size: 25px;
   line-height: normal;
   flex-basis: 60%;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     font-size: 16px;
   }
 `
@@ -92,7 +92,7 @@ const SBgGray = styled(BgGray)`
   position: absolute;
   bottom: 0;
   z-index: -2;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     top: 0;
   }
   fill: #e9e9e9;
@@ -101,7 +101,7 @@ const SBgGray = styled(BgGray)`
 const Arrow = styled.span`
   font-size: 45px;
   font-weight: bold;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: none;
   }
 `

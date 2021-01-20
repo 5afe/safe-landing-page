@@ -17,7 +17,7 @@ const STitle = styled.h6`
   font-weight: 800;
   line-height: normal;
   letter-spacing: 0.56px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     font-size: 16px;
   }
 `

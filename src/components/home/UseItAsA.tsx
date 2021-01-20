@@ -9,14 +9,14 @@ const Container = styled.section`
   padding-bottom: 100px;
   color: ${(p) => p.theme.palette.navy};
   overflow: hidden;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0;
   }
 `
 
 const SWrapper = styled(ContentWrapper)`
   height: 100%;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: block;
     padding: 0px 10px 20px 10px;
   }
@@ -30,7 +30,7 @@ const SHeading = styled.h2`
   padding-bottom: 50px;
   font-weight: 800;
   letter-spacing: 0.56px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 30px 0;
     font-size: 36px;
   }
@@ -39,7 +39,7 @@ const SHeading = styled.h2`
 const UseOptions = styled.div`
   display: flex;
   justify-content: space-between;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     flex-flow: column;
   }
 `
@@ -47,7 +47,7 @@ const UseOptions = styled.div`
 const Team = styled.div`
   width: 50%;
   padding: 0 0 0 100px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0;
     width: 100%;
     border: none;
@@ -58,7 +58,7 @@ const Individual = styled.div`
   border-left: 2px solid ${(p) => p.theme.palette.lightGrey};
   width: 50%;
   padding: 0 100px 0 0;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0;
     width: 100%;
     border: none;
@@ -73,7 +73,7 @@ const Title = styled.div`
   padding-bottom: 40px;
   font-weight: 800;
   letter-spacing: 0.56px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     font-size: 28px;
     padding: 20px 0;
   }
@@ -82,7 +82,7 @@ const Title = styled.div`
 const Content = styled.div`
   display: flex;
   justify-content: center;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     flex-flow: column;
     align-items: center;
   }
@@ -93,7 +93,7 @@ const Element = styled.div`
   flex-direction: column;
   align-items: center;
   width: 250px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     width: 100%;
   }
   & > svg {
@@ -106,7 +106,7 @@ const Text = styled.div`
   line-height: 1.3;
   text-align: center;
   padding-top: 25px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 20px 0 30px;
   }
 `

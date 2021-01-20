@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import MoneyIcon from '../../../assets/icon-money.svg'
+import MoneyBagIcon from '../../../assets/icon-moneybag.svg'
+import TimeIcon from '../../../assets/icon-time.svg'
+import LinesSVG from '../../../assets/lines.svg'
 import ContentWrapper from '../../Layout/ContentWrapper'
 import ButtonLink from '../../ui/ButtonLink'
 import Heading from '../../ui/Heading'
 import Card from './Card'
-import TimeIcon from '../../../assets/icon-time.svg'
-import MoneyIcon from '../../../assets/icon-money.svg'
-import MoneyBagIcon from '../../../assets/icon-moneybag.svg'
-import LinesSVG from '../../../assets/lines.svg'
 
 const Container = styled.div`
   padding: 112px 0 170px;
@@ -15,7 +15,7 @@ const Container = styled.div`
   color: ${(p) => p.theme.palette.navy};
   position: relative;
   overflow: hidden;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 0;
   }
 `
@@ -25,7 +25,7 @@ const Row = styled.div`
   justify-content: space-between;
   height: 100%;
   margin-bottom: 80px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: block;
     margin-bottom: 40px;
     padding: 0 12px;
@@ -41,7 +41,7 @@ const RCol = styled.div`
   display: flex;
   flex-direction: column;
   flex-basis: 50%;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     margin-top: 40px;
   }
 `
@@ -49,7 +49,7 @@ const RCol = styled.div`
 const LHeading = styled(Heading)`
   margin-bottom: 43px;
   max-width: 330px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     margin-bottom: 30px;
     font-size: 25px;
     padding-top: 30px;
@@ -60,7 +60,7 @@ const LHeading = styled(Heading)`
 const SHeading = styled(Heading)`
   margin-top: 166px;
   margin-bottom: 100px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     margin-top: 0;
     padding: 0 12px;
     margin-bottom: 70px;
@@ -75,7 +75,7 @@ const SLinesSVG = styled(LinesSVG)`
   transform: translateY(-20%);
   opacity: 0.27;
   stroke: #d8d8d8;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: none;
   }
 `

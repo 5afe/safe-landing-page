@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
+import LinesSVG from '../../assets/bg-lines-03.svg'
 import ContentWrapper from '../Layout/ContentWrapper'
 import ButtonLink from '../ui/ButtonLink'
-import LinesSVG from '../../assets/bg-lines-03.svg'
 
 const Container = styled.div`
   padding: 175px 0 328px 0;
   position: relative;
   color: ${(p) => p.theme.palette.navy};
   overflow: hidden;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     padding: 90px 0 40px 0;
   }
 `
@@ -17,7 +17,7 @@ const Container = styled.div`
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     display: block;
     padding: 0 12px;
   }
@@ -25,7 +25,7 @@ const Row = styled.div`
 
 const LRow = styled.div`
   margin-top: 50px;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     margin-top: 30px;
   }
 `
@@ -39,7 +39,7 @@ const CCol = styled.div`
   padding-right: 30px;
   letter-spacing: 0.36px;
   line-height: normal;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     margin-top: 30px;
   }
 `
@@ -49,7 +49,7 @@ const RCol = styled.div`
   font-size: 16px;
   letter-spacing: 0.36px;
   line-height: normal;
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 980px) {
     margin-top: 30px;
   }
 `
