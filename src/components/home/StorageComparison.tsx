@@ -79,7 +79,6 @@ const Grid = styled.div`
 `
 
 const Column = styled.div`
-  --border: 1px solid blue;
   @media screen and (max-width: 980px) {
     margin-top: 50px;
 
@@ -90,7 +89,6 @@ const Column = styled.div`
 `
 
 const ColumnFirst = styled.div`
-  --border: 1px solid red;
   @media screen and (max-width: 980px) {
     margin-bottom: 40px;
   }
@@ -98,7 +96,6 @@ const ColumnFirst = styled.div`
 
 const ColumnHidden = styled.div`
   display: none;
-  --border: 1px solid blue;
   @media screen and (max-width: 980px) {
     display: block;
     margin-bottom: 40px;
@@ -123,7 +120,6 @@ const GridFeature = styled.div`
 `
 
 const GridContent = styled.div`
-  --border: 1px solid red;
   justify-content: center;
   @media screen and (max-width: 980px) {
     justify-content: flex-end;

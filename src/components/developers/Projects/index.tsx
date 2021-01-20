@@ -39,7 +39,6 @@ const RCol = styled.div`
     grid-column-gap: 20px;
     grid-row-gap: 20px;
   }
-  border: 1px solid blue;
 `
 
 const SHeading = styled.h3`
@@ -52,16 +51,13 @@ const SHeading = styled.h3`
     padding: 30px 0;
     font-size: 28px;
   }
-  border: 1px solid red;
 `
 
 const ImageAnchor = styled.a`
   max-height: 54px;
-  border: 1px solid red;
 `
 
 const Image = styled.img`
-border: 1px solid red;
   max-width: 160px;
   max-height: 54px;
   width: auto;
