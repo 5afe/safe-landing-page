@@ -8,6 +8,7 @@ import GetNotified from './GetNotified'
 
 const Container = styled.section`
   overflow: hidden;
+  padding: 0 20px;
   color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 980px) {
     padding: 0 12px;
@@ -53,7 +54,6 @@ const Block = styled.div<BlockProps>`
     text-align: left;
     margin-bottom: 40px;
   }
-  border: 1px solid red;
 `
 
 const Tabs = styled.div`
@@ -109,7 +109,6 @@ const Text = styled.div`
   @media screen and (max-width: 980px) {
     max-width: 100%;
   }
-  border: 1px solid red;
 `
 
 interface TitleProps {
@@ -126,7 +125,6 @@ const Title = styled.h3`
     font-size: 28px;
     padding: 0 0 30px;
   }
-  border: 1px solid red;
 `
 
 const Description = styled.h5`
@@ -135,7 +133,6 @@ const Description = styled.h5`
   @media screen and (max-width: 980px) {
     padding: 0 0 30px;
   }
-  border: 1px solid red;
 `
 
 const Image = styled.div`

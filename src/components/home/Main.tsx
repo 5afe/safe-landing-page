@@ -12,6 +12,7 @@ const Container = styled.main`
   background: ${(p) => p.theme.palette.darkGreyBackground};
   position: relative;
   overflow: hidden;
+  padding: 0 20px;
   @media screen and (max-width: 980px) {
     height: auto;
   }

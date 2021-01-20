@@ -6,7 +6,7 @@ import ContentWrapper from '../Layout/ContentWrapper'
 import ButtonLink from '../ui/ButtonLink'
 
 const Container = styled.section`
-  padding: 70px 0;
+  padding: 70px 20px;
   color: ${(p) => p.theme.palette.navy};
   position: relative;
   @media screen and (max-width: 980px) {
@@ -55,13 +55,16 @@ const Card = styled.div`
   border-radius: 8px;
   box-shadow: 1px 2px 10px 0 rgba(40, 54, 61, 0.18);
   padding: 20px;
-  height: 270px;
+  height: auto;
+  min-height: 260px;
   position: relative;
+  @media screen and (min-width: 981px) and (max-width: 1050px) {
+    min-height: 320px;
+  }
   @media screen and (max-width: 980px) {
     height: auto;
     padding-bottom: 40px;
   }
-
   &:hover {
     background: ${(p) => p.theme.palette.pink};
   }

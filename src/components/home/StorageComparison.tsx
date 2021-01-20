@@ -9,7 +9,7 @@ import ContentWrapper from '../Layout/ContentWrapper'
 const Container = styled.section`
   color: ${(p) => p.theme.palette.navy};
   background: ${(p) => p.theme.palette.white};
-  padding: 70px 0;
+  padding: 70px 20px;
   @media screen and (max-width: 980px) {
     padding: 20px 0;
   }

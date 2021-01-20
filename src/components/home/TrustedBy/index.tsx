@@ -4,6 +4,7 @@ import ContentWrapper from '../../Layout/ContentWrapper'
 import { TRUSTED_BY_COMPANIES } from './companies'
 
 const Container = styled.section`
+  padding: 0 20px;
   padding-bottom: 50px;
   color: ${(p) => p.theme.palette.navy};
   background: ${(p) => p.theme.palette.darkGreyBackground};

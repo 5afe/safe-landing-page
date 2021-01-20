@@ -7,8 +7,7 @@ import ContentWrapper from '../../Layout/ContentWrapper'
 import ButtonLink from '../../ui/ButtonLink'
 
 const Container = styled.div`
-  padding-top: 50px;
-  padding-bottom: 100px;
+  padding: 50px 20px 100px;
   position: relative;
   color: ${(p) => p.theme.palette.navy};
   background: ${(p) => p.theme.palette.darkGreyBackground};
@@ -34,6 +33,7 @@ const Col = styled.div`
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
+  margin: 0 15px;
   @media screen and (max-width: 980px) {
     margin-top: 30px;
   }
@@ -52,7 +52,7 @@ const Title = styled.div`
 `
 
 const Text = styled.div`
-  margin-top: 20px;
+  margin: 20px 0 0;
   font-size: 20px;
   line-height: 1.3;
   color: ${(p) =>
