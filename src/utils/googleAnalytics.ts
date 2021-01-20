@@ -1,5 +1,5 @@
 import GoogleAnalytics, { EventArgs } from 'react-ga'
-import { CookiesProps, loadFromCookie, COOKIES_KEY } from './cookies'
+import { CookiesProps, COOKIES_KEY, loadFromCookie } from './cookies'
 
 export const OVERVIEW_CATEGORY = 'OVERVIEW'
 
@@ -36,11 +36,7 @@ type UseAnalyticsResponse = {
 export const useAnalytics = (): UseAnalyticsResponse => {
   const trackPage = async (page: string, options = {}) => {
     const cookiesState: CookiesProps = await loadFromCookie(COOKIES_KEY)
-    if (
-      !cookiesState ||
-      (cookiesState && !cookiesState.acceptedAnalytics) ||
-      !analyticsLoaded
-    ) {
+    if (!cookiesState || !cookiesState.acceptedAnalytics || !analyticsLoaded) {
       return
     }
     GoogleAnalytics.set({
@@ -52,15 +48,10 @@ export const useAnalytics = (): UseAnalyticsResponse => {
 
   const trackEvent = async (event: EventArgs) => {
     const cookiesState: CookiesProps = await loadFromCookie(COOKIES_KEY)
-    if (
-      !cookiesState ||
-      (cookiesState && !cookiesState.acceptedAnalytics) ||
-      !analyticsLoaded
-    ) {
+    if (!cookiesState || !cookiesState.acceptedAnalytics || !analyticsLoaded) {
       return
     }
     GoogleAnalytics.event(event)
-    console.log(event)
   }
 
   return { trackPage, trackEvent }

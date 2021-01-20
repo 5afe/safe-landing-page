@@ -1,3 +1,7 @@
+let intercomLoaded = false
+
+export const isIntercomLoaded = () => intercomLoaded
+
 // eslint-disable-next-line consistent-return
 export const loadIntercom = () => {
   const APP_ID = process.env.GATSBY_INTERCOM_ID
@@ -22,5 +26,11 @@ export const loadIntercom = () => {
         app_id: APP_ID,
         consent: true,
       })
+    intercomLoaded = true
   }
+}
+
+export const closeIntercom = () => {
+  window.Intercom('shutdown')
+  intercomLoaded = false
 }

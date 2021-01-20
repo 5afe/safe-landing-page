@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
 import { ThemeProvider } from 'styled-components'
-import HTMLHead from './HTMLHead'
-import Header from './Header'
-import Footer from './Footer'
-import theme from '../../styles/theme'
 import GlobalStyles from '../../styles/globalStyles'
+import theme from '../../styles/theme'
 import CookiesBanner from '../../utils/CookiesBanner'
 import { useAnalytics } from '../../utils/googleAnalytics'
+import Footer from './Footer'
+import Header from './Header'
+import HTMLHead from './HTMLHead'
 
 interface ILayoutProps {
   children: any

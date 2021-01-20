@@ -1,11 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import IndividualIcon from '../../assets/individual.svg'
+import TeamIcon from '../../assets/team.svg'
 import ContentWrapper from '../Layout/ContentWrapper'
-import DocIcon from '../../assets/light-doc.svg'
-import GraphIcon from '../../assets/light-graph.svg'
-import LockIcon from '../../assets/light-lock.svg'
-import SafeIcon from '../../assets/light-safe.svg'
-import WalletIcon from '../../assets/light-wallet.svg'
 
 const Container = styled.section`
   padding-top: 100px;
@@ -49,7 +46,7 @@ const UseOptions = styled.div`
 
 const Team = styled.div`
   width: 50%;
-  padding: 0 20px 0 0;
+  padding: 0 0 0 100px;
   @media screen and (max-width: 1240px) {
     padding: 0;
     width: 100%;
@@ -60,7 +57,7 @@ const Team = styled.div`
 const Individual = styled.div`
   border-left: 2px solid ${(p) => p.theme.palette.lightGrey};
   width: 50%;
-  padding: 0 0 0 20px;
+  padding: 0 100px 0 0;
   @media screen and (max-width: 1240px) {
     padding: 0;
     width: 100%;
@@ -84,7 +81,7 @@ const Title = styled.div`
 
 const Content = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   @media screen and (max-width: 1240px) {
     flex-flow: column;
     align-items: center;
@@ -95,11 +92,10 @@ const Element = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 175px;
+  width: 250px;
   @media screen and (max-width: 1240px) {
     width: 100%;
   }
-
   & > svg {
     height: 70px;
   }
@@ -124,19 +120,8 @@ const UseItAsA = () => (
           <Title>Team</Title>
           <Content>
             <Element>
-              <SafeIcon />
-              <Text>Store, receive and send company crypto assets</Text>
-            </Element>
-            <Element>
-              <LockIcon />
-              <Text>
-                Secure company crypto assets by requiring multiple signatures
-                and managing team members access
-              </Text>
-            </Element>
-            <Element>
-              <DocIcon />
-              <Text>Interact with smart contracts</Text>
+              <TeamIcon />
+              <Text>For company crypto assets</Text>
             </Element>
           </Content>
         </Team>
@@ -144,19 +129,8 @@ const UseItAsA = () => (
           <Title>Individual</Title>
           <Content>
             <Element>
-              <WalletIcon />
-              <Text>Store, receive and send private crypto assets</Text>
-            </Element>
-            <Element>
-              <LockIcon />
-              <Text>
-                Secure private crypto assets by requiring signatures from
-                multiple wallets
-              </Text>
-            </Element>
-            <Element>
-              <GraphIcon />
-              <Text>Interact with Dapps and invest in DeFi</Text>
+              <IndividualIcon />
+              <Text>For private crypto assets</Text>
             </Element>
           </Content>
         </Individual>
