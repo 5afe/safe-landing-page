@@ -6,6 +6,7 @@ import Heading from '../ui/Heading'
 
 const SHeading = styled(Heading)`
   letter-spacing: 1px;
+  padding: 0 20px;
   @media screen and (max-width: 980px) {
     font-size: 16px;
     padding: 0 12px;

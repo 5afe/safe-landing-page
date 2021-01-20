@@ -9,6 +9,7 @@ import Heading from '../ui/Heading'
 const Container = styled.div`
   height: calc(100vh - 56px);
   position: relative;
+  padding: 0 20px;
   color: ${(p) => p.theme.palette.navy};
   overflow: hidden;
   @media screen and (max-width: 980px) {

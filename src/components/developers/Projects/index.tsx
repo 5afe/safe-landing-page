@@ -4,8 +4,7 @@ import ContentWrapper from '../../Layout/ContentWrapper'
 import { PROJECTS } from './projects'
 
 const Container = styled.section`
-  padding-top: 150px;
-  padding-bottom: 230px;
+  padding: 150px 20px 230px;
   color: ${(p) => p.theme.palette.navy};
   overflow: hidden;
   @media screen and (max-width: 980px) {

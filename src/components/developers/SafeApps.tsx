@@ -5,8 +5,7 @@ import ContentWrapper from '../Layout/ContentWrapper'
 import ButtonLink from '../ui/ButtonLink'
 
 const Container = styled.div`
-  margin-top: 200px;
-  margin-bottom: 211px;
+  padding: 200px 20px 211px;
   position: relative;
   color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 980px) {
