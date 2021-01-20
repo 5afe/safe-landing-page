@@ -29,7 +29,7 @@ const IntercomAlert = styled.div`
 `
 
 const IntercomImage = styled.img`
-  position: absolute;
+  position: fixed;
   cursor: pointer;
   height: 80px;
   width: 80px;
@@ -260,7 +260,7 @@ const CookiesBanner = () => {
             </FormItem>
             <FormItem>
               <SButton
-                color="white"
+                colorScheme="emptyWhite"
                 component={Link}
                 onClick={() => closeCookiesBannerHandler()}
                 variant="outlined"
@@ -270,10 +270,8 @@ const CookiesBanner = () => {
             </FormItem>
             <FormItem>
               <SButton
-                color="primary"
                 component={Link}
                 onClick={() => acceptCookiesHandler()}
-                variant="outlined"
               >
                 Accept all
               </SButton>
