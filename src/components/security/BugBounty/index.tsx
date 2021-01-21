@@ -16,7 +16,7 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   @media screen and (max-width: 980px) {
-    padding: 0;
+    padding: 0 12px 30px;
   }
 `
 
@@ -28,7 +28,6 @@ const Row = styled.div`
   @media screen and (max-width: 980px) {
     display: block;
     margin-bottom: 40px;
-    padding: 0 12px;
   }
 `
 
@@ -62,7 +61,6 @@ const SHeading = styled(Heading)`
   margin-bottom: 100px;
   @media screen and (max-width: 980px) {
     margin-top: 0;
-    padding: 0 12px;
     margin-bottom: 70px;
     font-size: 25px;
   }

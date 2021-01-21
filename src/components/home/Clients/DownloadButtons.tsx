@@ -23,7 +23,6 @@ const Row = styled.div`
   margin-bottom: 20px;
   @media screen and (max-width: 980px) {
     display: block;
-    padding: 0 12px;
   }
 `
 
@@ -35,7 +34,7 @@ const Col = styled.div`
   justify-content: flex-start;
   margin: 0 15px;
   @media screen and (max-width: 980px) {
-    margin-top: 30px;
+    margin: 30px 0 0 0;
   }
 `
 

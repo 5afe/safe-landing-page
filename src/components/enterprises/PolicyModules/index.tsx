@@ -5,7 +5,7 @@ import ContentWrapper from '../../Layout/ContentWrapper'
 import Card from './Card'
 
 const Container = styled.section`
-  padding: 112px 20px;
+  padding: 112px 0;
   position: relative;
   z-index: 1;
   color: ${(p) => p.theme.palette.white};
@@ -15,20 +15,33 @@ const Container = styled.section`
   }
 `
 
+const Block = styled.div`
+  padding: 0 20px;
+  @media screen and (max-width: 980px) {
+    padding: 0;
+  }
+`
+
+const SContentWrapper = styled(ContentWrapper)`
+  width: 100%;
+  padding: 0;
+`
+
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
   height: 100%;
+  padding: 0 0px;
   padding-bottom: 80px;
   @media screen and (max-width: 980px) {
     display: block;
-    padding-bottom: 0px;
+    padding: 0;
     height: auto;
   }
 `
 
 const LCol = styled.div`
-  flex-basis: 25%;
+  flex-basis: 26%;
   padding-right: 60px;
   flex-direction: column;
 `
@@ -83,55 +96,57 @@ const SBgGray = styled(BgGray)`
 const PolicyModules = () => (
   <Container>
     <SBgGray />
-    <ContentWrapper>
-      <Row>
-        <LCol>
-          <SHeading>Policy modules</SHeading>
-          <Text>
-            While the core contract has been formally verified, every change to
-            the smart contract goes through a careful audit by external security
-            experts.
-          </Text>
-        </LCol>
-        <RCol>
-          <Col>
-            <SHeading>Moderation</SHeading>
-            <Card title="Velocity limits">
-              set fund caps for single-handed transaction authorizations
-            </Card>
-            <Card title="Time-bound limits">
-              define fund access for specific operating hours
-            </Card>
-            <Card title="Token allowance">
-              set specific token budgets for individuals or groups
-            </Card>
-            <Card title="Scheduling">
-              pre-confirm transactions and schedule recurring transactions
-            </Card>
-          </Col>
-          <Col>
-            <SHeading>Consensus</SHeading>
-            <Card title="Thresholds">
-              define required signatures per transaction category
-            </Card>
-            <Card title="Roles">
-              define user hierarchies for role-based access control
-            </Card>
-            <Card title="Sequences">define process requirements</Card>
-          </Col>
-          <Col>
-            <SHeading>Risk mitigation</SHeading>
-            <Card title="Whitelisting">approve trusted counterparties</Card>
-            <Card title="Emergency rules">
-              pre-authorized actions in cases of suspicious activities
-            </Card>
-            <Card title="Capital efficiency">
-              automatic rebalancing across interest-bearing fund deployments
-            </Card>
-          </Col>
-        </RCol>
-      </Row>
-    </ContentWrapper>
+    <Block>
+      <SContentWrapper>
+        <Row>
+          <LCol>
+            <SHeading>Policy modules</SHeading>
+            <Text>
+              While the core contract has been formally verified, every change to
+              the smart contract goes through a careful audit by external security
+              experts.
+            </Text>
+          </LCol>
+          <RCol>
+            <Col>
+              <SHeading>Moderation</SHeading>
+              <Card title="Velocity limits">
+                set fund caps for single-handed transaction authorizations
+              </Card>
+              <Card title="Time-bound limits">
+                define fund access for specific operating hours
+              </Card>
+              <Card title="Token allowance">
+                set specific token budgets for individuals or groups
+              </Card>
+              <Card title="Scheduling">
+                pre-confirm transactions and schedule recurring transactions
+              </Card>
+            </Col>
+            <Col>
+              <SHeading>Consensus</SHeading>
+              <Card title="Thresholds">
+                define required signatures per transaction category
+              </Card>
+              <Card title="Roles">
+                define user hierarchies for role-based access control
+              </Card>
+              <Card title="Sequences">define process requirements</Card>
+            </Col>
+            <Col>
+              <SHeading>Risk mitigation</SHeading>
+              <Card title="Whitelisting">approve trusted counterparties</Card>
+              <Card title="Emergency rules">
+                pre-authorized actions in cases of suspicious activities
+              </Card>
+              <Card title="Capital efficiency">
+                automatic rebalancing across interest-bearing fund deployments
+              </Card>
+            </Col>
+          </RCol>
+        </Row>
+      </SContentWrapper>
+    </Block>
   </Container>
 )
 

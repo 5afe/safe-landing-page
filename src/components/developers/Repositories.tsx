@@ -7,11 +7,11 @@ import Heading from '../ui/Heading'
 
 const Container = styled.div`
   position: relative;
-  padding-top: 107px;
-  padding-bottom: 20px;
+  padding: 107px 20px 20px;
   color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 1080px) {
     padding: 0;
+    margin-bottom: 50px;
   }
 `
 
@@ -84,7 +84,7 @@ const SubCol = styled.div`
   @media screen and (max-width: 1080px) {
     flex-basis: 50%;
     text-align: center;
-    padding: 0 10px;
+    padding: 0 12px;
   }
 `
 

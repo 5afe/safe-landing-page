@@ -7,10 +7,10 @@ const Container = styled.div`
   position: relative;
   color: ${(p) => p.theme.palette.white};
   background-color: ${(p) => p.theme.palette.navy};
-  @media screen and (max-width: 980px) {
-    padding: 0 0 30px 0;
-  }
   overflow: hidden;
+  @media screen and (max-width: 980px) {
+    padding: 0 12px 30px 12px;
+  }
 `
 
 const Row = styled.div`
@@ -18,6 +18,7 @@ const Row = styled.div`
   justify-content: space-between;
   @media screen and (max-width: 980px) {
     display: block;
+    margin-bottom: 60px;
   }
 `
 
@@ -31,9 +32,6 @@ const LCol = styled.div`
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  @media screen and (max-width: 980px) {
-    padding: 0 12px;
-  }
 `
 
 const RCol = styled.div`
@@ -41,9 +39,6 @@ const RCol = styled.div`
   font-size: 21.8px;
   font-weight: 800;
   line-height: normal;
-  @media screen and (max-width: 980px) {
-    padding: 0 12px 30px 12px;
-  }
 `
 
 const SHeading = styled.h3`

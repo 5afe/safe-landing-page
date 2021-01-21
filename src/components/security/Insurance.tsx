@@ -10,7 +10,7 @@ const Container = styled.div`
   color: ${(p) => p.theme.palette.navy};
   overflow: hidden;
   @media screen and (max-width: 980px) {
-    padding: 90px 0 40px 0;
+    padding: 40px 12px;
   }
 `
 
@@ -19,7 +19,6 @@ const Row = styled.div`
   justify-content: space-between;
   @media screen and (max-width: 980px) {
     display: block;
-    padding: 0 12px;
   }
 `
 

@@ -3,23 +3,20 @@ import styled from 'styled-components'
 import ContentWrapper from '../Layout/ContentWrapper'
 import Heading from '../ui/Heading'
 
-const SHeading = styled(Heading)`
-  letter-spacing: 1px;
-  padding: 0 20px;
-  color: ${(p) => p.theme.palette.white};
+const Container = styled.div`
+  position: relative;
+  padding: 107px 20px 122px;
+  background-color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 980px) {
-    font-size: 16px;
-    padding: 0 12px;
+    padding: 30px 12px 20px 12px;
   }
 `
 
-const Container = styled.div`
-  position: relative;
-  padding-top: 107px;
-  padding-bottom: 122px;
-  background-color: ${(p) => p.theme.palette.navy};
+const SHeading = styled(Heading)`
+  letter-spacing: 1px;
+  color: ${(p) => p.theme.palette.white};
   @media screen and (max-width: 980px) {
-    padding: 30px 0 20px 0;
+    font-size: 16px;
   }
 `
 

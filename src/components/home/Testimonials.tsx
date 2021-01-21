@@ -10,7 +10,7 @@ const Container = styled.section`
   padding: 50px 0 0;
   position: relative;
   @media screen and (max-width: 980px) {
-    padding: 0;
+    padding: 0px;
   }
 `
 

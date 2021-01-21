@@ -11,15 +11,20 @@ const Link = styled.a`
 const Container = styled.div`
   padding: 277px 0 136px 0;
   position: relative;
-  
   color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 980px) {
     padding: 30px 0 0 0;
   }
 `
 
-const SContentWrapper = styled(ContentWrapper)`
+const Block = styled.div`
   padding: 0 20px;
+  @media screen and (max-width: 980px) {
+    padding: 0 12px;
+  }
+`
+
+const SContentWrapper = styled(ContentWrapper)`
 `
 
 const Row = styled.div`
@@ -27,7 +32,6 @@ const Row = styled.div`
   justify-content: space-between;
   @media screen and (max-width: 980px) {
     display: block;
-    padding: 0 12px;
   }
 `
 
@@ -60,7 +64,7 @@ const SHeading = styled.h3`
 `
 
 const SAudit = styled.div`
-  max-width: 776px;
+  --max-width: 776px;
   border-radius: 8px;
   box-shadow: 1px 2px 10px 0 rgba(40, 54, 61, 0.18);
   background-color: ${(p) => p.theme.palette.pink};
@@ -126,48 +130,50 @@ const Audit: React.FC<AuditProps> = ({ date, author }) => (
 const Audits = () => (
   <Container>
     <SBgGray />
-    <SContentWrapper>
-      <Row>
-        <LCol>
-          <SHeading>Audits</SHeading>
-          <Description>
-            While the core smart contract has been formally verified, any and
-            every update to the smart contracts goes through a careful audit by
-            external security experts.
-          </Description>
-        </LCol>
-        <RCol>
-          <Link
-            href="https://github.com/gnosis/safe-contracts/blob/v1.1.1/docs/alexey_audit.md"
-            target="_blank"
-          >
-            <Audit date="Jul. 4th, 2018" author="Alexey Akhunov (v0.0.1)" />
-          </Link>
-          <Link
-            href="https://github.com/gnosis/safe-contracts/blob/v1.1.1/docs/Gnosis_Safe_Formal_Verification_Report_1_0_0.pdf"
-            target="_blank"
-          >
-            <Audit
-              date="Feb. 27th, 2019"
-              author="Runtime Verification (v1.0.0)"
-            />
-          </Link>
-          <Link
-            href="https://github.com/gnosis/safe-contracts/blob/v1.1.1/docs/audit_1_1_1.md"
-            target="_blank"
-          >
-            <Audit date="Nov. 11th, 2019" author="G0 Group (v1.1.0 & v1.1.1)" />
-          </Link>
+    <Block>
+      <SContentWrapper>
+        <Row>
+          <LCol>
+            <SHeading>Audits</SHeading>
+            <Description>
+              While the core smart contract has been formally verified, any and
+              every update to the smart contracts goes through a careful audit by
+              external security experts.
+            </Description>
+          </LCol>
+          <RCol>
+            <Link
+              href="https://github.com/gnosis/safe-contracts/blob/v1.1.1/docs/alexey_audit.md"
+              target="_blank"
+            >
+              <Audit date="Jul. 4th, 2018" author="Alexey Akhunov (v0.0.1)" />
+            </Link>
+            <Link
+              href="https://github.com/gnosis/safe-contracts/blob/v1.1.1/docs/Gnosis_Safe_Formal_Verification_Report_1_0_0.pdf"
+              target="_blank"
+            >
+              <Audit
+                date="Feb. 27th, 2019"
+                author="Runtime Verification (v1.0.0)"
+              />
+            </Link>
+            <Link
+              href="https://github.com/gnosis/safe-contracts/blob/v1.1.1/docs/audit_1_1_1.md"
+              target="_blank"
+            >
+              <Audit date="Nov. 11th, 2019" author="G0 Group (v1.1.0 & v1.1.1)" />
+            </Link>
 
-          <Link
-            href="https://github.com/gnosis/safe-contracts/blob/v1.2.0/docs/Gnosis_Safe_Audit_Report_1_2_0.pdf"
-            target="_blank"
-          >
-            <Audit date="May 4th, 2020" author="G0 Group (v1.2.0)" />
-          </Link>
-        </RCol>
-      </Row>
-    </SContentWrapper>
+            <Link
+              href="https://github.com/gnosis/safe-contracts/blob/v1.2.0/docs/Gnosis_Safe_Audit_Report_1_2_0.pdf"
+              target="_blank"
+            >
+              <Audit date="May 4th, 2020" author="G0 Group (v1.2.0)" />
+            </Link>
+          </RCol>
+        </Row>
+      </SContentWrapper>
+    </Block>
   </Container>
 )
 

@@ -14,6 +14,7 @@ const Container = styled.div`
   overflow: hidden;
   @media screen and (max-width: 980px) {
     height: auto;
+    padding: 0 12px;
   }
 `
 
@@ -23,7 +24,6 @@ const SWrapper = styled(ContentWrapper)`
   justify-content: space-between;
   height: 100%;
   @media screen and (max-width: 980px) {
-    padding: 0 12px;
     align-items: flex-start;
     justify-content: flex-start;
   }

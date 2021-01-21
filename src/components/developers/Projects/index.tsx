@@ -8,7 +8,7 @@ const Container = styled.section`
   color: ${(p) => p.theme.palette.navy};
   overflow: hidden;
   @media screen and (max-width: 980px) {
-    padding: 0;
+    padding: 0 12px;
   }
 `
 
@@ -18,7 +18,7 @@ const SWrapper = styled(ContentWrapper)`
   height: 100%;
   @media screen and (max-width: 980px) {
     display: block;
-    padding: 0px 10px 40px 10px;
+    padding: 0 0 40px 0;
   }
 `
 

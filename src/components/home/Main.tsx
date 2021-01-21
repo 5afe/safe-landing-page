@@ -15,6 +15,7 @@ const Container = styled.main`
   padding: 0 20px;
   @media screen and (max-width: 980px) {
     height: auto;
+    padding: 0 12px;
   }
 `
 
@@ -26,7 +27,7 @@ const SWrapper = styled(ContentWrapper)`
   z-index: 2;
   @media screen and (max-width: 980px) {
     display: block;
-    padding: 30px 10px 40px 10px;
+    padding: 30px 0 40px 0;
   }
 `
 
@@ -61,7 +62,7 @@ const SButtonLink = styled(ButtonLink)`
   width: 165px;
   box-shadow: none;
   @media screen and (max-width: 980px) {
-    width: auto;
+    margin-bottom: 30px;
   }
   @media screen and (max-width: 600px) {
     width: 100%;
@@ -163,9 +164,7 @@ const MainSection = () => {
       <SWrapper>
         <LCol>
           <SHeading>
-            The most trusted <br /> platform to manage <br /> digital assets{' '}
-            <br />
-            on Ethereum
+            The most trusted  platform to manage digital assets on Ethereum
           </SHeading>
           <ButtonsRow>
             <SButtonLinkLeft url="/app/#" target="_self" explicitExternal>

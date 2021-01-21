@@ -9,7 +9,7 @@ const Container = styled.div`
   color: ${(p) => p.theme.palette.white};
   background-color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 980px) {
-    padding: 0;
+    padding: 0 12px;
   }
 `
 
@@ -23,15 +23,12 @@ const Row = styled.div`
 
 const LCol = styled.div`
   flex-basis: 25%;
-  @media screen and (max-width: 980px) {
-    padding: 0 12px;
-  }
 `
 
 const RCol = styled.div`
   flex-basis: 72.5%;
   @media screen and (max-width: 980px) {
-    padding: 0 12px 30px 12px;
+    padding: 0 0 30px 0;
   }
 `
 

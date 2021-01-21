@@ -11,6 +11,7 @@ const Container = styled.div`
   padding: 0 20px;
   @media screen and (max-width: 980px) {
     height: auto;
+    padding: 0 12px;
   }
 `
 
@@ -21,7 +22,6 @@ const SWrapper = styled(ContentWrapper)`
   height: 100%;
   @media screen and (max-width: 980px) {
     display: block;
-    padding: 0 12px;
   }
 `
 
@@ -82,7 +82,7 @@ const UsdWorthValueContainer = styled.div`
 
 const UsdWorthValue = styled.h1`
   --font-size: 115px;
-  font-size: 7.8vw;
+  font-size: 7.3vw;
   font-weight: 800;
   letter-spacing: 2.56px;
   white-space: nowrap;

@@ -12,6 +12,7 @@ const Container = styled.main`
   background-color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 980px) {
     height: auto;
+    padding: 0 12px;
   }
 `
 
@@ -23,7 +24,7 @@ const SWrapper = styled(ContentWrapper)`
   z-index: 10;
   @media screen and (max-width: 980px) {
     display: block;
-    padding: 30px 10px 40px 10px;
+    padding: 30px 0 40px 0;
   }
 `
 

@@ -65,6 +65,9 @@ const SHeading = styled.h3`
 
 const SHeadingServices = styled(SHeading)`
   margin-top: 120px;
+  @media screen and (max-width: 980px) {
+    margin-top: 50px;
+  }
 `
 
 const Text = styled.p`

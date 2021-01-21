@@ -19,7 +19,7 @@ const SWrapper = styled(ContentWrapper)`
   height: 100%;
   @media screen and (max-width: 980px) {
     display: block;
-    padding: 0px 10px 40px 10px;
+    padding: 0px 0 40px 0;
   }
 `
 
@@ -91,7 +91,6 @@ const Tab = styled.div<TabProps>`
     width: 100%;
     min-width: auto;
   }
-
   &:hover {
     color: ${(p: TabProps) => !p.active && p.theme.palette.primaryHover};
     opacity: ${(p: TabProps) => (!p.active ? 0.5 : 1)};
@@ -264,7 +263,7 @@ const Features = () => {
             </Block>
             <Block align="right">
               <Text>
-                <Title>Safe Apps </Title>
+                <Title>Safe Apps</Title>
                 <Description>
                   Bringing multisig security to DeFi, you can now put your funds
                   to work directly from the Gnosis Safe Multisig interface. Use
