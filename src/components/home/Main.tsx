@@ -128,23 +128,27 @@ const MainSection = () => {
     if (!videoRef) return
     const video = videoRef.current
     video.addEventListener('fullscreenchange', () => {
-      video.muted = !video.muted
-      trackEvent({
-        category: OVERVIEW_CATEGORY,
-        action: 'Main section',
-        label: 'Close video',
-        value: video.currentTime,
-      })
+      if (document.fullscreenElement) {
+        video.muted = false
+        trackEvent({
+          category: OVERVIEW_CATEGORY,
+          action: 'Main section',
+          label: 'Open video',
+        })
+      } else {
+        video.muted = true
+        trackEvent({
+          category: OVERVIEW_CATEGORY,
+          action: 'Main section',
+          label: 'Close video',
+          value: video.currentTime,
+        })
+      }
     })
   }, [videoRef])
 
   const playVideo = () => {
     if (!videoRef) return
-    trackEvent({
-      category: OVERVIEW_CATEGORY,
-      action: 'Main section',
-      label: 'Open video',
-    })
     const video = videoRef.current
     video.currentTime = 0
     if (video.requestFullscreen) {
