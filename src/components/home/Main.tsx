@@ -87,9 +87,11 @@ const SLinesMainSVG = styled(LinesMainSVG)`
 
 const LCol = styled.div`
   flex-direction: column;
+  width: 450px;
   min-width: 450px;
   @media screen and (max-width: 980px) {
     padding: 0px;
+    width: auto;
     min-width: 0;
   }
 `
@@ -124,40 +126,59 @@ const MainSection = () => {
   const { trackEvent } = useAnalytics()
   const videoRef = useRef<any>()
 
+  const listener = (video: HTMLVideoElement, eventName: string) => {
+    if (
+      document.fullscreenElement ||
+      (document as any).webkitFullscreenElement ||
+      (document as any).mozFullScreenElement ||
+      (document as any).msFullscreenElement
+    ) {
+      //console.log(`opened by ${eventName}`)
+      video.controls = true
+      video.muted = false
+      video.currentTime = 0
+      trackEvent({
+        category: OVERVIEW_CATEGORY,
+        action: 'Main section',
+        label: 'Open video',
+      })
+    } else {
+      //alert(`closed by ${eventName} at ${video.currentTime}`)
+      video.controls = false
+      video.muted = true
+      trackEvent({
+        category: OVERVIEW_CATEGORY,
+        action: 'Main section',
+        label: 'Close video',
+        value: video.currentTime,
+      })
+      console.log(video.currentTime)
+    }
+  }
+  
   useEffect(() => {
     if (!videoRef) return
     const video = videoRef.current
-    video.addEventListener('fullscreenchange', () => {
-      if (document.fullscreenElement) {
-        video.muted = false
-        trackEvent({
-          category: OVERVIEW_CATEGORY,
-          action: 'Main section',
-          label: 'Open video',
-        })
-      } else {
-        video.muted = true
-        trackEvent({
-          category: OVERVIEW_CATEGORY,
-          action: 'Main section',
-          label: 'Close video',
-          value: video.currentTime,
-        })
-      }
-    })
+
+    document.addEventListener('webkitfullscreenchange', () => listener(video, 'webkitfullscreenchange'))
+    document.addEventListener('mozfullscreenchange', () => listener(video, 'mozfullscreenchange'))
+    document.addEventListener('fullscreenchange', () => listener(video, 'fullscreenchange'))
+    // ----------------------------------------------------------------
+    document.addEventListener('webkitendfullscreen', () => listener(video, 'webkitendfullscreen'))
+    document.addEventListener('webkitbeginfullscreen', () => listener(video, 'webkitbeginfullscreen'))
   }, [videoRef])
 
   const playVideo = () => {
     if (!videoRef) return
     const video = videoRef.current
-    video.currentTime = 0
-    if (video.requestFullscreen) {
+
+    if (video.webkitEnterFullscreen) {
+      video.webkitEnterFullscreen()
+    } else if (video.requestFullscreen) {
       video.requestFullscreen()
     } else if (video.webkitRequestFullscreen) {
-      /* Safari */
       video.webkitRequestFullscreen()
     } else if (video.msRequestFullscreen) {
-      /* IE11 */
       video.msRequestFullscreen()
     }
   }
@@ -168,7 +189,7 @@ const MainSection = () => {
       <SWrapper>
         <LCol>
           <SHeading>
-            The most trusted  platform to manage digital assets on Ethereum
+            The most trusted platform to manage digital assets on Ethereum
           </SHeading>
           <ButtonsRow>
             <SButtonLinkLeft url="/app/#" target="_self" explicitExternal>
@@ -206,7 +227,12 @@ const MainSection = () => {
         </LCol>
         <RCol>
           <VideoWrapper>
-            <video width="100%" autoPlay muted ref={videoRef}>
+            <video
+              width="100%"
+              autoPlay
+              muted
+              ref={videoRef}
+            >
               <source
                 type="video/mp4"
                 src="https://gnosis-safe.io/gnosis-safe-final.mp4"
