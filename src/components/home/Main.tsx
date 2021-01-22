@@ -150,9 +150,9 @@ const MainSection = () => {
         category: OVERVIEW_CATEGORY,
         action: 'Main section',
         label: 'Close video',
-        value: video.currentTime,
+        value: Math.round(video.currentTime),
       })
-      console.log(video.currentTime)
+      console.log(Math.round(video.currentTime))
     }
   }
   
