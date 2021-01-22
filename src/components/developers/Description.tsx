@@ -4,7 +4,6 @@ import LinesSVG from '../../assets/lines.svg'
 import ContentWrapper from '../Layout/ContentWrapper'
 import Heading from '../ui/Heading'
 
-
 const Container = styled.div`
   position: relative;
   padding-top: 107px;

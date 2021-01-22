@@ -11,7 +11,7 @@ import {
   CookiesProps,
   COOKIES_KEY,
   loadFromCookie,
-  saveCookie
+  saveCookie,
 } from './cookies'
 import { loadGoogleAnalytics } from './googleAnalytics'
 import { closeIntercom, isIntercomLoaded, loadIntercom } from './intercom'
@@ -106,9 +106,8 @@ const SCheckbox = withStyles({
       color: '#008c73',
     },
   },
-  checked: {}
+  checked: {},
 })((props: CheckboxProps) => <Checkbox color="default" {...props} />)
-
 
 interface CookiesBannerFormProps {
   alertMessage: boolean
@@ -225,8 +224,8 @@ const CookiesBanner = () => {
             <br />
             Please read our <SLink to="/cookie">Cookie Policy</SLink> for more
             information. By clicking "Accept all", you agree to the storing of
-            cookies on your device to enhance site navigation, analyze site usage
-            and provide customer support.
+            cookies on your device to enhance site navigation, analyze site
+            usage and provide customer support.
           </Text>
           <Form>
             <FormItem>
@@ -269,10 +268,7 @@ const CookiesBanner = () => {
               </SButton>
             </FormItem>
             <FormItem>
-              <SButton
-                component={Link}
-                onClick={() => acceptCookiesHandler()}
-              >
+              <SButton component={Link} onClick={() => acceptCookiesHandler()}>
                 Accept all
               </SButton>
             </FormItem>

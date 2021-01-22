@@ -118,8 +118,7 @@ const Title = styled.h3`
   font-size: 32px;
   font-weight: 800;
   line-height: 1.13;
-  padding: ${(p: TitleProps) =>
-    p.noPaddingTop ? '20px 0 20px' : '0 0 20px'};
+  padding: ${(p: TitleProps) => (p.noPaddingTop ? '20px 0 20px' : '0 0 20px')};
   @media screen and (max-width: 980px) {
     font-size: 28px;
     padding: 0 0 30px;

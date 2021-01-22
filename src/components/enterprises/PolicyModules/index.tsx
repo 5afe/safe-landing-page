@@ -102,9 +102,9 @@ const PolicyModules = () => (
           <LCol>
             <SHeading>Policy modules</SHeading>
             <Text>
-              While the core contract has been formally verified, every change to
-              the smart contract goes through a careful audit by external security
-              experts.
+              While the core contract has been formally verified, every change
+              to the smart contract goes through a careful audit by external
+              security experts.
             </Text>
           </LCol>
           <RCol>
