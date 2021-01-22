@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import styled from 'styled-components'
 import LinesMainSVG from '../../assets/linesMain.svg'
 import PlayIcon from '../../assets/play.svg'
@@ -126,7 +126,18 @@ const MainSection = () => {
   const { trackEvent } = useAnalytics()
   const videoRef = useRef<any>()
 
-  const listener = (video: HTMLVideoElement, eventName: string) => {
+
+  const webkitfullscreenchange = () => listener('webkitfullscreenchange')
+  const mozfullscreenchange = () => listener('mozfullscreenchange')
+  const fullscreenchange = () => listener('fullscreenchange')
+  const webkitendfullscreen = () => listener('webkitendfullscreen')
+  const webkitbeginfullscreen = () => listener('webkitbeginfullscreen')
+
+  
+  const listener = (eventName: string) => {
+    if (!videoRef) return
+    const video = videoRef.current
+
     if (
       document.fullscreenElement ||
       (document as any).webkitFullscreenElement ||
@@ -153,24 +164,24 @@ const MainSection = () => {
         value: Math.round(video.currentTime),
       })
       console.log(Math.round(video.currentTime))
+
+      document.removeEventListener('webkitfullscreenchange', webkitfullscreenchange)
+      document.removeEventListener('mozfullscreenchange', mozfullscreenchange)
+      document.removeEventListener('fullscreenchange', fullscreenchange)
+      document.removeEventListener('webkitendfullscreen', webkitendfullscreen)
+      document.removeEventListener('webkitbeginfullscreen', webkitbeginfullscreen)
     }
   }
-  
-  useEffect(() => {
-    if (!videoRef) return
-    const video = videoRef.current
-
-    document.addEventListener('webkitfullscreenchange', () => listener(video, 'webkitfullscreenchange'))
-    document.addEventListener('mozfullscreenchange', () => listener(video, 'mozfullscreenchange'))
-    document.addEventListener('fullscreenchange', () => listener(video, 'fullscreenchange'))
-    // ----------------------------------------------------------------
-    document.addEventListener('webkitendfullscreen', () => listener(video, 'webkitendfullscreen'))
-    document.addEventListener('webkitbeginfullscreen', () => listener(video, 'webkitbeginfullscreen'))
-  }, [videoRef])
 
   const playVideo = () => {
     if (!videoRef) return
     const video = videoRef.current
+
+    document.addEventListener('webkitfullscreenchange', webkitfullscreenchange)
+    document.addEventListener('mozfullscreenchange', mozfullscreenchange)
+    document.addEventListener('fullscreenchange', fullscreenchange)
+    document.addEventListener('webkitendfullscreen', webkitendfullscreen)
+    document.addEventListener('webkitbeginfullscreen', webkitbeginfullscreen)
 
     if (video.webkitEnterFullscreen) {
       video.webkitEnterFullscreen()
