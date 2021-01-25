@@ -126,14 +126,12 @@ const MainSection = () => {
   const { trackEvent } = useAnalytics()
   const videoRef = useRef<any>()
 
-
   const webkitfullscreenchange = () => listener('webkitfullscreenchange')
   const mozfullscreenchange = () => listener('mozfullscreenchange')
   const fullscreenchange = () => listener('fullscreenchange')
   const webkitendfullscreen = () => listener('webkitendfullscreen')
   const webkitbeginfullscreen = () => listener('webkitbeginfullscreen')
 
-  
   const listener = (eventName: string) => {
     if (!videoRef) return
     const video = videoRef.current
@@ -160,10 +158,9 @@ const MainSection = () => {
       trackEvent({
         category: OVERVIEW_CATEGORY,
         action: 'Main section',
-        label: 'Close video',
+        label: `Close video at ${Math.round(video.currentTime).toString()}`,
         value: Math.round(video.currentTime),
       })
-      console.log(Math.round(video.currentTime))
 
       document.removeEventListener('webkitfullscreenchange', webkitfullscreenchange)
       document.removeEventListener('mozfullscreenchange', mozfullscreenchange)
