@@ -7,7 +7,7 @@ import {
   Paragraph,
   Section,
   Title,
-  TitleSection
+  TitleSection,
 } from '../styles/legalPagesStyles'
 
 const Tr = styled.span`
@@ -49,11 +49,8 @@ export default () => (
           materials, feedback, information or other works of authorship that you
           submit or have submitted, in any form and in any manner, to Gnosis in
           respect of any of the Projects (collectively “Contributions”). If you
-          have any questions respecting this Agreement, please contact {' '}
-          <Link href="mailto:legal@gnosis.io">
-          legal@gnosis.io
-          </Link>
-          .
+          have any questions respecting this Agreement, please contact{' '}
+          <Link href="mailto:legal@gnosis.io">legal@gnosis.io</Link>.
         </Paragraph>
       </Section>
       <Section>

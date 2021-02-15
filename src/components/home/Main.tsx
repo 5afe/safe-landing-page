@@ -162,11 +162,17 @@ const MainSection = () => {
         value: Math.round(video.currentTime),
       })
 
-      document.removeEventListener('webkitfullscreenchange', webkitfullscreenchange)
+      document.removeEventListener(
+        'webkitfullscreenchange',
+        webkitfullscreenchange
+      )
       document.removeEventListener('mozfullscreenchange', mozfullscreenchange)
       document.removeEventListener('fullscreenchange', fullscreenchange)
       document.removeEventListener('webkitendfullscreen', webkitendfullscreen)
-      document.removeEventListener('webkitbeginfullscreen', webkitbeginfullscreen)
+      document.removeEventListener(
+        'webkitbeginfullscreen',
+        webkitbeginfullscreen
+      )
     }
   }
 
@@ -235,12 +241,7 @@ const MainSection = () => {
         </LCol>
         <RCol>
           <VideoWrapper>
-            <video
-              width="100%"
-              autoPlay
-              muted
-              ref={videoRef}
-            >
+            <video width="100%" autoPlay muted ref={videoRef}>
               <source
                 type="video/mp4"
                 src="https://gnosis-safe.io/gnosis-safe-final.mp4"
