@@ -1,7 +1,7 @@
 import React from 'react'
 import Headroom from 'react-headroom'
 import styled, { css } from 'styled-components'
-import Logo from '../../../assets/multisig-logo.svg'
+import Logo from '../../../assets/multisig-logo-centered.svg'
 import Link from '../../ui/Link'
 import Divider from './Divider'
 import Spacer from './Spacer'
