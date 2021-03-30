@@ -1,7 +1,7 @@
 import React from 'react'
 import Headroom from 'react-headroom'
 import styled, { css } from 'styled-components'
-import Logo from '../../../assets/multisig-logo.svg' // import Logo from '../../../assets/multisig-logo-centered.svg'
+import Logo from '../../../assets/multisig-logo-centered.svg'
 import Link from '../../ui/Link'
 import Divider from './Divider'
 import Spacer from './Spacer'
@@ -85,13 +85,8 @@ const NavLink = styled(Link)`
 const SLogo = styled(Logo)`
   height: 32px;
   ${HeaderItemPadding}
-  margin-right: 2px;
-`
-
-const LogoDivider = styled(Divider)`
-  @media screen and (max-width: 980px) {
-    display: none;
-  }
+  width: 172px;
+  margin-top: 2px;
 `
 
 interface HeaderProps {
@@ -108,7 +103,6 @@ const Header: React.FC<HeaderProps> = ({
       <Link to="/">
         <SLogo />
       </Link>
-      <LogoDivider />
       <Spacer />
       <MobileNavContainer onClick={() => toggleMobileMenu()}>
         <BurgerLine />
