@@ -87,6 +87,15 @@ const Footer = ({ title }: FooterProps) => {
       </SLink>
       <Sep title={title}>|</Sep>
       <SLink
+        to="https://www.notion.so/Gnosis-Safe-Media-Kit-9b1fca2a566e40b8ac86396d788635b4"
+        target="_blank"
+        rel="noopener noreferrer"
+        title={title}
+      >
+        Press Kit
+      </SLink>
+      <Sep title={title}>|</Sep>
+      <SLink
         to="/licenses"
         target="_blank"
         rel="noopener noreferrer"
