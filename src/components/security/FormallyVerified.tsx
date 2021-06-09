@@ -129,7 +129,7 @@ const FormallyVerified = () => (
                   verification, over a six-month period.
                 </Text>
                 <Text>
-                  The Gnosis Safe Multisig is the only formally verified smart
+                  Gnosis Safe is the only formally verified smart
                   contract-based wallet solution.
                 </Text>
               </Row>

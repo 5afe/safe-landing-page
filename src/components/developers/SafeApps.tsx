@@ -110,7 +110,7 @@ const SafeApps = () => (
             </SubCol>
             <SubCol>
               Turn your Dapp into an HTML iframe component that can be accessed
-              through the Safe Multisig.
+              through Gnosis Safe.
             </SubCol>
           </Row>
         </RCol>
