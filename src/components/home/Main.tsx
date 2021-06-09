@@ -206,17 +206,17 @@ const MainSection = () => {
             The most trusted platform to manage digital assets on Ethereum
           </SHeading>
           <ButtonsRow>
-            <SButtonLinkLeft url="/app/#" target="_self" explicitExternal>
+            <SButtonLinkLeft url="" target="_self" explicitExternal>
               <div
-                onClick={() =>
+                /*onClick={() =>
                   trackEvent({
                     category: OVERVIEW_CATEGORY,
                     action: 'Main section',
                     label: 'Click Open app',
                   })
-                }
+                }*/
               >
-                Open app
+                Get in touch
               </div>
             </SButtonLinkLeft>
             <SButtonLinkRight
