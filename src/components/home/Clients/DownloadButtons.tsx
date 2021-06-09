@@ -147,11 +147,11 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
               </div>
             </SButtonLink>
             <Text>
-              Access the most recent version of the Safe Multisig directly in
+              Access the most recent version of the Gnosis Safe directly in
               your browser.
             </Text>
             <Text>
-              <div>Safe Multisig supports:</div>
+              <div>Gnosis Safe supports:</div>
               <NetworkItem>
                 <a href="https://rinkeby.gnosis-safe.io/app/#" target="_blank">
                   <InnerLink
@@ -240,7 +240,7 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
               </div>
             </SButtonLink>
             <Text>
-              Download the Safe Multisig as a static desktop application for
+              Download the Gnosis Safe as a static desktop application for
               Windows, MacOS or Linux.
             </Text>
             <Text>

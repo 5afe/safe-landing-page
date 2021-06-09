@@ -254,13 +254,13 @@ const StorageComparison = () => (
       <Grid>
         <ColumnFirst>
           <GridTitle>
-            <h4>Gnosis Safe Multisig</h4>
+            <h4>Gnosis Safe</h4>
           </GridTitle>
           <Features />
         </ColumnFirst>
         <Column>
           <GridTitle>
-            <h4>Gnosis Safe Multisig</h4>
+            <h4>Gnosis Safe</h4>
           </GridTitle>
           <GridContent>
             <GreenTick />
