@@ -3,6 +3,7 @@ import Img from 'gatsby-image'
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { ITheme } from '../../../styles/theme'
+import LinkIcon from '../../../assets/link.svg'
 import ContentWrapper from '../../Layout/ContentWrapper'
 import GetNotified from './GetNotified'
 
@@ -141,6 +142,23 @@ const Image = styled.div`
   }
 `
 
+const InnerLink = styled.div`
+  display: inline-flex;
+  align-items: center;
+  color: ${(p) => p.theme.palette.primary};
+  text-decoration: underline;
+  font-size: 20px;
+  margin-top: 20px;
+  &:hover {
+    color: ${(p) => p.theme.palette.primaryHover};
+  }
+`
+
+const SLinkIcon = styled(LinkIcon)`
+  margin-left: 5px;
+  display: inline;
+`
+
 const Features = () => {
   const [selectedTabIndex, setSelectedTabIndex] = useState(1)
 
@@ -269,6 +287,21 @@ const Features = () => {
                   to work directly from the Gnosis Safe interface. Use
                   your digital assets to invest, earn, borrow, invoice, do
                   payroll and more.
+                  <br />
+                  <a href="https://help.gnosis-safe.io/en/articles/4022022-what-are-safe-apps" target="_blank">
+                  <InnerLink
+                    /*onClick={() =>
+                      trackEvent({
+                        category: OVERVIEW_CATEGORY,
+                        action: 'Download clients section',
+                        label: 'Open Rinkeby web app',
+                      })
+                    }*/
+                  >
+                    Learn more about Safe Apps
+                    <SLinkIcon />
+                  </InnerLink>
+                </a>
                 </Description>
               </Text>
               <Image>
