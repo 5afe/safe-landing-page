@@ -29,10 +29,11 @@ const SHeading = styled.h2`
   font-size: 44px;
   line-height: 1.18;
   padding-bottom: 50px;
+  padding-top: 100px;
   font-weight: 800;
   letter-spacing: 0.56px;
   @media screen and (max-width: 980px) {
-    padding: 0 0 30px;
+    padding: 50px 0 30px;
     font-size: 36px;
   }
 `

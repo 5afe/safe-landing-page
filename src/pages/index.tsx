@@ -2,7 +2,6 @@ import * as React from 'react'
 import Layout from '../components/Layout'
 import MainSection from '../components/home/Main'
 import Clients from '../components/home/Clients'
-import UseItAsA from '../components/home/UseItAsA'
 import TrustedBy from '../components/home/TrustedBy'
 import Features from '../components/home/Features'
 import StorageComparison from '../components/home/StorageComparison'
@@ -16,7 +15,6 @@ export default () => (
     <MainSection />
     <TrustedBy />
     <Clients />
-    <UseItAsA />
     <Features />
     <StorageComparison />
     <GettingStarted />
