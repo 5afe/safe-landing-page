@@ -219,7 +219,7 @@ const Testimonials = () => {
           {slideIndex === 1 && (
             <Testimonial>
               <Quote>
-                "The Gnosis Safe Multisig is the clear leader when it comes to a
+                "The Gnosis Safe is the clear leader when it comes to a
                 product that balances usability, security, and self-custody."
               </Quote>
               <Img src="/images/testimonial-mycrypto.jpg" />

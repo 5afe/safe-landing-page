@@ -76,7 +76,7 @@ const ProvenSecurity = () => (
             <SSubHeading>
               Our wallet solution has proven itself in the industry with
               hundreds of deployed instances. Learn more about the proven
-              security of the Gnosis Safe Multisig.
+              security of the Gnosis Safe.
             </SSubHeading>
           </Row>
           <Row>

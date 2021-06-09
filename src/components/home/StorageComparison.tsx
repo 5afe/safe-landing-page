@@ -228,7 +228,7 @@ const Features = () => (
       <TooltipWrapper>
         <SQuestionIcon />
         <Tooltip>
-          All components of the Gnosis Safe Multisig (frontend, backend,
+          All components of the Gnosis Safe (frontend, backend,
           contracts) have been open sourced.
         </Tooltip>
       </TooltipWrapper>
@@ -238,7 +238,7 @@ const Features = () => (
       <TooltipWrapper>
         <SQuestionIcon />
         <Tooltip>
-          The core contracts of the Gnosis Safe Multisig have been formally
+          The core contracts of the Gnosis Safe have been formally
           verified, which is the highest security standard for Ethereum-based
           protocols.
         </Tooltip>
@@ -291,7 +291,7 @@ const StorageComparison = () => (
             <TooltipWrapper>
               <SQuestionIcon />
               <Tooltip>
-                Legacy multi-signature wallet by Gnosis. Gnosis Safe Multisig is
+                Legacy multi-signature wallet by Gnosis. Gnosis Safe is
                 the successor to the Gnosis Multisig.
               </Tooltip>
             </TooltipWrapper>
@@ -304,7 +304,7 @@ const StorageComparison = () => (
             <TooltipWrapper>
               <SQuestionIcon />
               <Tooltip>
-                Legacy multi-signature wallet by Gnosis. Gnosis Safe Multisig is
+                Legacy multi-signature wallet by Gnosis. Gnosis Safe is
                 the successor to the Gnosis Multisig.
               </Tooltip>
             </TooltipWrapper>

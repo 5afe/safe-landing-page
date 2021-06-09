@@ -103,7 +103,7 @@ const PolicyModules = () => (
         <LCol>
           <SHeading>Customization</SHeading>
           <Text>
-            The Gnosis Safe Multisig prioritizes extensive customization for
+            The Gnosis Safe prioritizes extensive customization for
             enterprise-ready solutions. In order to ensure enterprises’
             individual needs are met, Gnosis offers customized development of
             new features and services.
@@ -113,7 +113,7 @@ const PolicyModules = () => (
           <SHeading>Solutions</SHeading>
           <SubRow>
             <Card title="Integration">
-              Integrate the Gnosis Safe Multisig into existing software.
+              Integrate the Gnosis Safe into existing software.
             </Card>
             <Card title="Whitelabel">
               Tailor the interface to your corporate identity or integrate it
@@ -135,7 +135,7 @@ const PolicyModules = () => (
           <SHeadingServices>Services</SHeadingServices>
           <SubRow>
             <Card title="Set-up assistance">
-              We help enterprises get started with the Gnosis Safe Multisig,
+              We help enterprises get started with the Gnosis Safe,
               from deployment to integration into existing services and
               processes.
             </Card>

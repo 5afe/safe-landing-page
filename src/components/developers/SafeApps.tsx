@@ -98,7 +98,7 @@ const SafeApps = () => (
         <RCol>
           <Row>
             <SSubHeading>
-              With over $1B worth of digital assets held in Gnosis Multisigs
+              With over $1B worth of digital assets held in Gnosis Safes
               alone, it’s essential for the dapp ecosystem to access this
               untapped market.
             </SSubHeading>
@@ -106,7 +106,7 @@ const SafeApps = () => (
           <Row>
             <SubCol>
               Safe Apps introduce a completely new way for developers to build
-              their dapps right into a Multisig interface.
+              their dapps right into the Gnosis Safe interface.
             </SubCol>
             <SubCol>
               Turn your Dapp into an HTML iframe component that can be accessed
