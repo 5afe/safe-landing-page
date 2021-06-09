@@ -1,3 +1,4 @@
+import ButtonLink from '../ui/ButtonLink'
 import React from 'react'
 import styled from 'styled-components'
 import ContentWrapper from '../Layout/ContentWrapper'
@@ -125,6 +126,17 @@ const UsdWorthDate = styled.p`
   }
 `
 
+const SButtonLink = styled(ButtonLink)`
+  display: block;
+  text-align: center;
+  width: 165px;
+  margin-top: 30px;
+  box-shadow: none;
+  @media screen and (max-width: 980px) {
+    margin-bottom: 30px;
+  }
+`
+
 const MainSection = () => (
   <Container>
     <SWrapper>
@@ -147,6 +159,19 @@ const MainSection = () => (
             {process.env.GATSBY_USD_WORTH_DATE}
           </a>
         </UsdWorthDate>
+        <SButtonLink url="https://explore.duneanalytics.com/dashboard/gnosis-safe_2" target="_blank" explicitExternal>
+          <div
+            /*onClick={() =>
+              trackEvent({
+                category: OVERVIEW_CATEGORY,
+                action: 'Download clients section',
+                label: 'Open web app',
+              })
+            }*/
+          >
+            Statistics
+          </div>
+        </SButtonLink>
       </RCol>
     </SWrapper>
   </Container>
