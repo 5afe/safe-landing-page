@@ -53,6 +53,7 @@ const Grid = styled.div`
   line-height: 1.25;
   padding: 0 5px;
   grid-auto-flow: row;
+  grid-auto-columns: 1fr;
 
   & > div > div {
     height: 80px;
@@ -79,6 +80,7 @@ const Grid = styled.div`
 `
 
 const Column = styled.div`
+  --border: 1px solid red;
   @media screen and (max-width: 980px) {
     margin-top: 50px;
 
@@ -89,7 +91,13 @@ const Column = styled.div`
 `
 
 const ColumnFirst = styled.div`
+  & > div:first-child > h4 {
+    display: none;
+  }
   @media screen and (max-width: 980px) {
+    & > div:first-child > h4 {
+      display: block;
+    }
     margin-bottom: 40px;
   }
 `
@@ -105,9 +113,11 @@ const ColumnHidden = styled.div`
 const GridTitle = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   font-weight: 800;
   padding: 0 5px;
   @media screen and (max-width: 980px) {
+    justify-content: left;
     padding: 0;
   }
 `
@@ -300,7 +310,7 @@ const StorageComparison = () => (
         </ColumnHidden>
         <Column>
           <GridTitle>
-            <h4>'Old' Multisig</h4>
+            <h4>'Old'<br/>Multisig</h4>
             <TooltipWrapper>
               <SQuestionIcon />
               <Tooltip>
