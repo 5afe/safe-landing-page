@@ -206,7 +206,7 @@ const MainSection = () => {
             The most trusted platform to manage digital assets on Ethereum
           </SHeading>
           <ButtonsRow>
-            <SButtonLinkLeft url="" target="_self" explicitExternal>
+            <SButtonLinkLeft url="https://gnosis1.typeform.com/to/DOxbpZP3" target="_self" explicitExternal>
               <div
                 /*onClick={() =>
                   trackEvent({

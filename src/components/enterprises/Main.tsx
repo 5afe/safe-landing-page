@@ -93,7 +93,7 @@ const MainSection = () => (
           </SButtonLink>
           <SButtonLink
             colorScheme="green"
-            url="https://calendly.com/c/GDFSZXFSETPU6LQH" //TO-DO: Replace with typeform link
+            url="https://gnosis1.typeform.com/to/DOxbpZP3"
             target="_blank"
             explicitExternal
           >
