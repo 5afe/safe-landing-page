@@ -2,7 +2,7 @@ import ButtonLink from '../../ui/ButtonLink'
 import React from 'react'
 import Headroom from 'react-headroom'
 import styled, { css } from 'styled-components'
-import { OVERVIEW_CATEGORY, useAnalytics } from '../../../utils/googleAnalytics'
+import { HEADER_CATEGORY, useAnalytics } from '../../../utils/googleAnalytics'
 import Logo from '../../../assets/multisig-logo-centered.svg'
 import Link from '../../ui/Link'
 import Divider from './Divider'
@@ -94,6 +94,14 @@ const SLogo = styled(Logo)`
   margin-top: 2px;
 `
 
+const SButtonLink = styled(ButtonLink)`
+  box-shadow: none;
+  padding: 0;
+  & > div {
+    padding: 10px 20px;
+  }
+`
+
 interface HeaderProps {
   toggleMobileMenu: Function
   mobileMenuOpened: boolean
@@ -151,19 +159,19 @@ const Header: React.FC<HeaderProps> = ({
             </NavListItem>
             <Divider />
             <NavListItem>
-              <ButtonLink url="/app/#" target="_self" explicitExternal>
+              <SButtonLink url="/app/#" target="_self" explicitExternal>
                 <div
-                /*onClick={() =>
+                  onClick={() =>
                     trackEvent({
-                      category: OVERVIEW_CATEGORY,
-                      action: 'Main section',
+                      category: HEADER_CATEGORY,
+                      action: 'Header section',
                       label: 'Click Open app',
                     })
-                  }*/
+                  }
                 >
                   Open app
                 </div>
-              </ButtonLink>
+              </SButtonLink>
             </NavListItem>
           </NavList>
         </NavContainer>

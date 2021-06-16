@@ -1,6 +1,7 @@
 import GoogleAnalytics, { EventArgs } from 'react-ga'
 import { CookiesProps, COOKIES_KEY, loadFromCookie } from './cookies'
 
+export const HEADER_CATEGORY = 'HEADER_CATEGORY'
 export const OVERVIEW_CATEGORY = 'OVERVIEW'
 export const SECURITY_CATEGORY = 'SECURITY'
 export const ENTERPRISES_CATEGORY = 'ENTERPRISES'
