@@ -16,9 +16,9 @@ const PROJECTS: Project[] = [
     websiteURL: 'https://www.energyweb.org',
   },
   {
-    name: 'Gelato',
-    imageURL: '/images/gelato.jpeg',
-    websiteURL: 'https://play.gelato.finance',
+    name: 'Multisafe',
+    imageURL: '/images/multisafe.jpeg',
+    websiteURL: 'https://multisafe.finance',
   },
   {
     name: 'Groundhog',
@@ -36,9 +36,9 @@ const PROJECTS: Project[] = [
     websiteURL: 'https://metamask.io',
   },
   {
-    name: 'Pepo',
-    imageURL: '/images/peposq.png',
-    websiteURL: 'https://pepo.com',
+    name: 'Parcel',
+    imageURL: '/images/parcel.jpeg',
+    websiteURL: 'https://parcel.money',
   },
   {
     name: 'Protofire',
@@ -61,9 +61,9 @@ const PROJECTS: Project[] = [
     websiteURL: 'https://tasit.io',
   },
   {
-    name: 'UniLogin',
-    imageURL: '/images/universallogin.png',
-    websiteURL: 'https://unilogin.io',
+    name: 'SmartDeFi',
+    imageURL: '/images/smartdefi.jpeg',
+    websiteURL: 'https://trysmartdefi.com',
   },
 ]
 
