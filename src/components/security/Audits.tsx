@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import BgGray from '../../assets/bg-gray.svg'
 import ContentWrapper from '../Layout/ContentWrapper'
+import { SECURITY_CATEGORY, useAnalytics } from '../../utils/googleAnalytics'
 
 const Link = styled.a`
   text-decoration: none;
@@ -126,57 +127,100 @@ const Audit: React.FC<AuditProps> = ({ date, author }) => (
   </SAudit>
 )
 
-const Audits = () => (
-  <Container>
-    <SBgGray />
-    <Block>
-      <SContentWrapper>
-        <Row>
-          <LCol>
-            <SHeading>Audits</SHeading>
-            <Description>
-              While the core smart contract has been formally verified, any and
-              every update to the smart contracts goes through a careful audit
-              by external security experts.
-            </Description>
-          </LCol>
-          <RCol>
-            <Link
-              href="https://github.com/gnosis/safe-contracts/blob/v1.1.1/docs/alexey_audit.md"
-              target="_blank"
-            >
-              <Audit date="Jul. 4th, 2018" author="Alexey Akhunov (v0.0.1)" />
-            </Link>
-            <Link
-              href="https://github.com/gnosis/safe-contracts/blob/v1.1.1/docs/Gnosis_Safe_Formal_Verification_Report_1_0_0.pdf"
-              target="_blank"
-            >
-              <Audit
-                date="Feb. 27th, 2019"
-                author="Runtime Verification (v1.0.0)"
-              />
-            </Link>
-            <Link
-              href="https://github.com/gnosis/safe-contracts/blob/v1.1.1/docs/audit_1_1_1.md"
-              target="_blank"
-            >
-              <Audit
-                date="Nov. 11th, 2019"
-                author="G0 Group (v1.1.0 & v1.1.1)"
-              />
-            </Link>
+const Audits = () => {
+  const { trackEvent } = useAnalytics()
 
-            <Link
-              href="https://github.com/gnosis/safe-contracts/blob/v1.2.0/docs/Gnosis_Safe_Audit_Report_1_2_0.pdf"
-              target="_blank"
-            >
-              <Audit date="May 4th, 2020" author="G0 Group (v1.2.0)" />
-            </Link>
-          </RCol>
-        </Row>
-      </SContentWrapper>
-    </Block>
-  </Container>
-)
+  return (
+    <Container>
+      <SBgGray />
+      <Block>
+        <SContentWrapper>
+          <Row>
+            <LCol>
+              <SHeading>Audits</SHeading>
+              <Description>
+                While the core smart contract has been formally verified, any and
+                every update to the smart contracts goes through a careful audit
+                by external security experts.
+              </Description>
+            </LCol>
+            <RCol>
+              <div
+                onClick={() =>
+                  trackEvent({
+                    category: SECURITY_CATEGORY,
+                    action: 'Audits section',
+                    label: 'Open audit: Alexey Akhunov (v0.0.1)',
+                  })
+                }
+              >
+                <Link
+                  href="https://github.com/gnosis/safe-contracts/blob/v1.1.1/docs/alexey_audit.md"
+                  target="_blank"
+                >
+                  <Audit date="Jul. 4th, 2018" author="Alexey Akhunov (v0.0.1)" />
+                </Link>
+              </div>
+              <div
+                onClick={() =>
+                  trackEvent({
+                    category: SECURITY_CATEGORY,
+                    action: 'Audits section',
+                    label: 'Open audit: Runtime Verification (v1.0.0)',
+                  })
+                }
+              >
+                <Link
+                  href="https://github.com/gnosis/safe-contracts/blob/v1.1.1/docs/Gnosis_Safe_Formal_Verification_Report_1_0_0.pdf"
+                  target="_blank"
+                >
+                  <Audit
+                    date="Feb. 27th, 2019"
+                    author="Runtime Verification (v1.0.0)"
+                  />
+                </Link>
+              </div>
+              <div
+                onClick={() =>
+                  trackEvent({
+                    category: SECURITY_CATEGORY,
+                    action: 'Audits section',
+                    label: 'Open audit: G0 Group (v1.1.0 & v1.1.1)',
+                  })
+                }
+              >
+                <Link
+                  href="https://github.com/gnosis/safe-contracts/blob/v1.1.1/docs/audit_1_1_1.md"
+                  target="_blank"
+                >
+                  <Audit
+                    date="Nov. 11th, 2019"
+                    author="G0 Group (v1.1.0 & v1.1.1)"
+                  />
+                </Link>
+              </div>
+              <div
+                onClick={() =>
+                  trackEvent({
+                    category: SECURITY_CATEGORY,
+                    action: 'Audits section',
+                    label: 'Open audit: G0 Group (v1.2.0)',
+                  })
+                }
+              >
+                <Link
+                  href="https://github.com/gnosis/safe-contracts/blob/v1.2.0/docs/Gnosis_Safe_Audit_Report_1_2_0.pdf"
+                  target="_blank"
+                >
+                  <Audit date="May 4th, 2020" author="G0 Group (v1.2.0)" />
+                </Link>
+              </div>
+            </RCol>
+          </Row>
+        </SContentWrapper>
+      </Block>
+    </Container>
+  )
+}
 
 export default Audits

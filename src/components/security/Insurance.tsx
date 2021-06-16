@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import LinesSVG from '../../assets/bg-lines-03.svg'
 import ContentWrapper from '../Layout/ContentWrapper'
 import ButtonLink from '../ui/ButtonLink'
+import { SECURITY_CATEGORY, useAnalytics } from '../../utils/googleAnalytics'
 
 const Container = styled.div`
   padding: 175px 20px 328px 20px;
@@ -74,37 +75,67 @@ const SLinesSVG = styled(LinesSVG)`
   opacity: 0.31;
 `
 
-const Insurance = () => (
-  <Container>
-    <SLinesSVG />
-    <ContentWrapper>
-      <Row>
-        <LCol>
-          <SHeading>
-            Insurance
-            <br />
-            by Nexus Mutual
-          </SHeading>
-        </LCol>
-        <CCol>
-          <Text>
-            <b>Still have doubts about the smart contracts’ security?</b> You
-            can insure funds stored in the Gnosis Safe against potential smart
-            contract attacks, through Nexus Mutual services.
-          </Text>
-        </CCol>
-        <RCol>
-          Click below and use the smart contract address
-          gnosissafe.nexusmutual.eth to get cover!
-          <LRow>
-            <ButtonLink url="https://nexusmutual.io/" colorScheme="navy">
-              Get a quote
-            </ButtonLink>
-          </LRow>
-        </RCol>
-      </Row>
-    </ContentWrapper>
-  </Container>
-)
+const SButtonLink = styled(ButtonLink)`
+  display: block;
+  text-align: center;
+  width: 165px;
+  padding: 0;
+  margin-top: 30px;
+  box-shadow: none;
+  & > div {
+    width: 165px;
+    padding: 10px 20px;
+  }
+  @media screen and (max-width: 980px) {
+    margin-bottom: 30px;
+  }
+`
+
+const Insurance = () => {
+  const { trackEvent } = useAnalytics()
+
+  return (
+    <Container>
+      <SLinesSVG />
+      <ContentWrapper>
+        <Row>
+          <LCol>
+            <SHeading>
+              Insurance
+              <br />
+              by Nexus Mutual
+            </SHeading>
+          </LCol>
+          <CCol>
+            <Text>
+              <b>Still have doubts about the smart contracts’ security?</b> You
+              can insure funds stored in the Gnosis Safe against potential smart
+              contract attacks, through Nexus Mutual services.
+            </Text>
+          </CCol>
+          <RCol>
+            Click below and use the smart contract address
+            gnosissafe.nexusmutual.eth to get cover!
+            <LRow>
+              <SButtonLink url="https://nexusmutual.io/" colorScheme="navy">
+                <div
+                  onClick={() =>
+                    trackEvent({
+                      category: SECURITY_CATEGORY,
+                      action: 'insurance section',
+                      label: 'Click Get a quote',
+                    })
+                  }
+                >
+                  Get a quote
+                </div>
+              </SButtonLink>
+            </LRow>
+          </RCol>
+        </Row>
+      </ContentWrapper>
+    </Container>
+  )
+}
 
 export default Insurance
