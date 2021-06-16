@@ -154,7 +154,17 @@ const Header: React.FC<HeaderProps> = ({
             <Divider />
             <NavListItem>
               <NavListLink href="https://help.gnosis-safe.io" target="_blank">
-                Help
+                <div
+                  onClick={() =>
+                    trackEvent({
+                      category: HEADER_CATEGORY,
+                      action: 'Header section',
+                      label: 'Click Help',
+                    })
+                  }
+                >
+                  Help
+                </div>
               </NavListLink>
             </NavListItem>
             <Divider />

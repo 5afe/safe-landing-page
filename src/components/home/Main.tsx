@@ -61,6 +61,10 @@ const SButtonLink = styled(ButtonLink)`
   text-align: center;
   width: 165px;
   box-shadow: none;
+  padding: 0;
+  & > div {
+    padding: 10px 20px;
+  }
   @media screen and (max-width: 980px) {
     margin-bottom: 30px;
   }
@@ -206,41 +210,41 @@ const MainSection = () => {
             The most trusted platform to manage digital assets on Ethereum
           </SHeading>
           <ButtonsRow>
-            <div
-              onClick={() =>
-                trackEvent({
-                  category: OVERVIEW_CATEGORY,
-                  action: 'Main section',
-                  label: 'Click Get in touch',
-                })
-              }
+            <SButtonLinkLeft
+              url="https://gnosis1.typeform.com/to/DOxbpZP3"
+              target="_self"
+              explicitExternal
             >
-              <SButtonLinkLeft
-                url="https://gnosis1.typeform.com/to/DOxbpZP3"
-                target="_self"
-                explicitExternal
+              <div
+                onClick={() =>
+                  trackEvent({
+                    category: OVERVIEW_CATEGORY,
+                    action: 'Main section',
+                    label: 'Click Get in touch',
+                  })
+                }
               >
                 Get in touch
-              </SButtonLinkLeft>
-            </div>
-            <div
-              onClick={() =>
-                trackEvent({
-                  category: OVERVIEW_CATEGORY,
-                  action: 'Main section',
-                  label: 'Click How it works',
-                })
-              }
+              </div>
+            </SButtonLinkLeft>
+            <SButtonLinkRight
+              colorScheme="green"
+              url="/#getting-started"
+              target="_self"
+              explicitExternal
             >
-              <SButtonLinkRight
-                colorScheme="green"
-                url="/#getting-started"
-                target="_self"
-                explicitExternal
+              <div
+                onClick={() =>
+                  trackEvent({
+                    category: OVERVIEW_CATEGORY,
+                    action: 'Main section',
+                    label: 'Click How it works',
+                  })
+                }
               >
                 How it works
-              </SButtonLinkRight>
-            </div>
+              </div>
+            </SButtonLinkRight>
           </ButtonsRow>
         </LCol>
         <RCol>

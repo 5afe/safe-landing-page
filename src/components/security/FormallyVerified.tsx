@@ -119,22 +119,22 @@ const FormallyVerified = () => {
             </Row>
             <SecondRow>
               <LCol>
-                <div
-                  onClick={() =>
-                    trackEvent({
-                      category: SECURITY_CATEGORY,
-                      action: 'Formally verified section',
-                      label: 'Open formal verification report',
-                    })
-                  }
+                <ButtonLink
+                  url="https://github.com/gnosis/safe-contracts/blob/78494bcdbc61b3db52308a25f0556c42cf656ab1/docs/Gnosis_Safe_Formal_Verification_Report_1_0_0.pdf"
+                  colorScheme="navy"
                 >
-                  <ButtonLink
-                    url="https://github.com/gnosis/safe-contracts/blob/78494bcdbc61b3db52308a25f0556c42cf656ab1/docs/Gnosis_Safe_Formal_Verification_Report_1_0_0.pdf"
-                    colorScheme="navy"
+                  <div
+                    onClick={() =>
+                      trackEvent({
+                        category: SECURITY_CATEGORY,
+                        action: 'Formally verified section',
+                        label: 'Open formal verification report',
+                      })
+                    }
                   >
                     Formal verification report
-                  </ButtonLink>
-                </div>
+                  </div>
+                </ButtonLink>
               </LCol>
               <RCol>
                 <Row>

@@ -88,23 +88,23 @@ const Projects = () => {
         <RCol>
           {PROJECTS.map((project) => (
             <ImgContainer>
-            <div
-              key={project.name}
-              onClick={() =>
-                trackEvent({
-                  category: DEVELOPERS_CATEGORY,
-                  action: 'Projects section',
-                  label: `Click ${project.name}`,
-                })
-              }
-            >
-              <ImageAnchor
-                title={project.name}
-                href={project.websiteURL}
-                target="_blank"
+              <div
+                key={project.name}
+                onClick={() =>
+                  trackEvent({
+                    category: DEVELOPERS_CATEGORY,
+                    action: 'Projects section',
+                    label: `Click ${project.name}`,
+                  })
+                }
               >
-                <Image src={project.imageURL} />
-              </ImageAnchor>
+                <ImageAnchor
+                  title={project.name}
+                  href={project.websiteURL}
+                  target="_blank"
+                >
+                  <Image src={project.imageURL} />
+                </ImageAnchor>
               </div>
             </ImgContainer>
           ))}

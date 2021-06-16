@@ -18,8 +18,7 @@ export const Date = styled.div`
   padding: 40px 0;
 `
 
-export const Section = styled.div`
-`
+export const Section = styled.div``
 
 export const TitleSection = styled.p`
   font-size: 25px;
