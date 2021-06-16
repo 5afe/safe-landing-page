@@ -66,7 +66,6 @@ const SButtonLink = styled(ButtonLink)`
   padding: 0;
   & > div {
     padding: 10px 20px;
-    border: 1px solid red;
   }
 `
 

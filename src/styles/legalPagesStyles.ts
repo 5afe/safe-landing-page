@@ -19,7 +19,6 @@ export const Date = styled.div`
 `
 
 export const Section = styled.div`
-  --border: 1px solid red;
 `
 
 export const TitleSection = styled.p`

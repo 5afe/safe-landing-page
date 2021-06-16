@@ -96,7 +96,6 @@ const SButtonLink = styled(ButtonLink)`
   padding: 0;
   & > div {
     padding: 10px 20px;
-    border: 1px solid red;
   }
   @media screen and (max-width: 1080px) {
     margin: 0;

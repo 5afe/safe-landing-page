@@ -80,7 +80,6 @@ const Grid = styled.div`
 `
 
 const Column = styled.div`
-  --border: 1px solid red;
   @media screen and (max-width: 980px) {
     margin-top: 50px;
 
