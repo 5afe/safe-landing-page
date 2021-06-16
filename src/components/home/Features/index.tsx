@@ -6,6 +6,7 @@ import { ITheme } from '../../../styles/theme'
 import LinkIcon from '../../../assets/link.svg'
 import ContentWrapper from '../../Layout/ContentWrapper'
 import GetNotified from './GetNotified'
+import { OVERVIEW_CATEGORY, useAnalytics } from '../../../utils/googleAnalytics'
 
 const Container = styled.section`
   overflow: hidden;
@@ -160,6 +161,7 @@ const SLinkIcon = styled(LinkIcon)`
 `
 
 const Features = () => {
+  const { trackEvent } = useAnalytics()
   const [selectedTabIndex, setSelectedTabIndex] = useState(1)
 
   return (
@@ -290,13 +292,13 @@ const Features = () => {
                   <br />
                   <a href="https://help.gnosis-safe.io/en/articles/4022022-what-are-safe-apps" target="_blank">
                   <InnerLink
-                    /*onClick={() =>
+                    onClick={() =>
                       trackEvent({
                         category: OVERVIEW_CATEGORY,
-                        action: 'Download clients section',
-                        label: 'Open Rinkeby web app',
+                        action: 'Features section',
+                        label: 'Click Learn more about Safe Apps',
                       })
-                    }*/
+                    }
                   >
                     Learn more about Safe Apps
                     <SLinkIcon />

@@ -206,37 +206,37 @@ const MainSection = () => {
             The most trusted platform to manage digital assets on Ethereum
           </SHeading>
           <ButtonsRow>
-            <SButtonLinkLeft url="https://gnosis1.typeform.com/to/DOxbpZP3" target="_self" explicitExternal>
-              <div
-                /*onClick={() =>
-                  trackEvent({
-                    category: OVERVIEW_CATEGORY,
-                    action: 'Main section',
-                    label: 'Click Open app',
-                  })
-                }*/
-              >
-                Get in touch
-              </div>
-            </SButtonLinkLeft>
-            <SButtonLinkRight
-              colorScheme="green"
-              url="/#getting-started"
-              target="_self"
-              explicitExternal
+            <div
+              onClick={() =>
+                trackEvent({
+                  category: OVERVIEW_CATEGORY,
+                  action: 'Main section',
+                  label: 'Click Get in touch',
+                })
+              }
             >
-              <div
-                onClick={() =>
-                  trackEvent({
-                    category: OVERVIEW_CATEGORY,
-                    action: 'Main section',
-                    label: 'Click How it works',
-                  })
-                }
+              <SButtonLinkLeft url="https://gnosis1.typeform.com/to/DOxbpZP3" target="_self" explicitExternal>
+                  Get in touch
+              </SButtonLinkLeft>
+            </div>
+            <div
+              onClick={() =>
+                trackEvent({
+                  category: OVERVIEW_CATEGORY,
+                  action: 'Main section',
+                  label: 'Click How it works',
+                })
+              }
+            >
+              <SButtonLinkRight
+                colorScheme="green"
+                url="/#getting-started"
+                target="_self"
+                explicitExternal
               >
                 How it works
-              </div>
-            </SButtonLinkRight>
+              </SButtonLinkRight>
+            </div>
           </ButtonsRow>
         </LCol>
         <RCol>
