@@ -139,9 +139,9 @@ const Audits = () => {
             <LCol>
               <SHeading>Audits</SHeading>
               <Description>
-                While the core smart contract has been formally verified, any and
-                every update to the smart contracts goes through a careful audit
-                by external security experts.
+                While the core smart contract has been formally verified, any
+                and every update to the smart contracts goes through a careful
+                audit by external security experts.
               </Description>
             </LCol>
             <RCol>
@@ -158,7 +158,10 @@ const Audits = () => {
                   href="https://github.com/gnosis/safe-contracts/blob/v1.1.1/docs/alexey_audit.md"
                   target="_blank"
                 >
-                  <Audit date="Jul. 4th, 2018" author="Alexey Akhunov (v0.0.1)" />
+                  <Audit
+                    date="Jul. 4th, 2018"
+                    author="Alexey Akhunov (v0.0.1)"
+                  />
                 </Link>
               </div>
               <div

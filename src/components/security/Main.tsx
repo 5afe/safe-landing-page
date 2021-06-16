@@ -131,9 +131,9 @@ const SButtonLink = styled(ButtonLink)`
   display: block;
   text-align: center;
   width: 165px;
-  padding: 0;
   margin-top: 30px;
   box-shadow: none;
+  padding: 0;
   & > div {
     width: 165px;
     padding: 10px 20px;
@@ -168,7 +168,11 @@ const MainSection = () => {
               {process.env.GATSBY_USD_WORTH_DATE}
             </a>
           </UsdWorthDate>
-          <SButtonLink url="https://explore.duneanalytics.com/dashboard/gnosis-safe_2" target="_blank" explicitExternal>
+          <SButtonLink
+            url="https://explore.duneanalytics.com/dashboard/gnosis-safe_2"
+            target="_blank"
+            explicitExternal
+          >
             <div
               onClick={() =>
                 trackEvent({

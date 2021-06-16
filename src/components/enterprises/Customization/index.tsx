@@ -135,9 +135,8 @@ const PolicyModules = () => (
           <SHeadingServices>Services</SHeadingServices>
           <SubRow>
             <Card title="Set-up assistance">
-              We help enterprises get started with the Gnosis Safe,
-              from deployment to integration into existing services and
-              processes.
+              We help enterprises get started with the Gnosis Safe, from
+              deployment to integration into existing services and processes.
             </Card>
             <Card title="Customer support">
               Depending on customer needs we can offer continuous (technical)

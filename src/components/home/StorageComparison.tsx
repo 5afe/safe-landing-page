@@ -238,8 +238,8 @@ const Features = () => (
       <TooltipWrapper>
         <SQuestionIcon />
         <Tooltip>
-          All components of the Gnosis Safe (frontend, backend,
-          contracts) have been open sourced.
+          All components of the Gnosis Safe (frontend, backend, contracts) have
+          been open sourced.
         </Tooltip>
       </TooltipWrapper>
     </GridFeature>
@@ -248,9 +248,8 @@ const Features = () => (
       <TooltipWrapper>
         <SQuestionIcon />
         <Tooltip>
-          The core contracts of the Gnosis Safe have been formally
-          verified, which is the highest security standard for Ethereum-based
-          protocols.
+          The core contracts of the Gnosis Safe have been formally verified,
+          which is the highest security standard for Ethereum-based protocols.
         </Tooltip>
       </TooltipWrapper>
     </GridFeature>
@@ -301,8 +300,8 @@ const StorageComparison = () => (
             <TooltipWrapper>
               <SQuestionIcon />
               <Tooltip>
-                Legacy multi-signature wallet by Gnosis. Gnosis Safe is
-                the successor to the Gnosis Multisig.
+                Legacy multi-signature wallet by Gnosis. Gnosis Safe is the
+                successor to the Gnosis Multisig.
               </Tooltip>
             </TooltipWrapper>
           </GridTitle>
@@ -310,12 +309,16 @@ const StorageComparison = () => (
         </ColumnHidden>
         <Column>
           <GridTitle>
-            <h4>'Old'<br/>Multisig</h4>
+            <h4>
+              'Old'
+              <br />
+              Multisig
+            </h4>
             <TooltipWrapper>
               <SQuestionIcon />
               <Tooltip>
-                Legacy multi-signature wallet by Gnosis. Gnosis Safe is
-                the successor to the Gnosis Multisig.
+                Legacy multi-signature wallet by Gnosis. Gnosis Safe is the
+                successor to the Gnosis Multisig.
               </Tooltip>
             </TooltipWrapper>
           </GridTitle>

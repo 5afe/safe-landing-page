@@ -72,7 +72,7 @@ const SButtonLink = styled(ButtonLink)`
   align-items: center;
   padding: 0;
   margin: 0 auto;
-  
+
   font-size: 16px;
   line-height: 1.38;
   margin-top: 10px;
@@ -151,8 +151,8 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
               </div>
             </SButtonLink>
             <Text>
-              Access the most recent version of the Gnosis Safe directly in
-              your browser.
+              Access the most recent version of the Gnosis Safe directly in your
+              browser.
             </Text>
             <Text>
               <div>Gnosis Safe supports:</div>

@@ -2,6 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import ContentWrapper from '../../Layout/ContentWrapper'
 import { PROJECTS } from './projects'
+import {
+  DEVELOPERS_CATEGORY,
+  useAnalytics,
+} from '../../../utils/googleAnalytics'
 
 const Container = styled.section`
   padding: 150px 20px 230px;
@@ -64,26 +68,40 @@ const Image = styled.img`
   border-radius: 50%;
 `
 
-const Projects = () => (
-  <Container>
-    <SWrapper>
-      <LCol>
-        <SHeading>Projects building on Gnosis Safe</SHeading>
-      </LCol>
-      <RCol>
-        {PROJECTS.map((project) => (
-          <ImageAnchor
-            key={project.name}
-            title={project.name}
-            href={project.websiteURL}
-            target="_blank"
-          >
-            <Image src={project.imageURL}></Image>
-          </ImageAnchor>
-        ))}
-      </RCol>
-    </SWrapper>
-  </Container>
-)
+const Projects = () => {
+  const { trackEvent } = useAnalytics()
+
+  return (
+    <Container>
+      <SWrapper>
+        <LCol>
+          <SHeading>Projects building on Gnosis Safe</SHeading>
+        </LCol>
+        <RCol>
+          {PROJECTS.map((project) => (
+            <div
+              key={project.name}
+              onClick={() =>
+                trackEvent({
+                  category: DEVELOPERS_CATEGORY,
+                  action: 'Projects section',
+                  label: `Click ${project.name}`,
+                })
+              }
+            >
+              <ImageAnchor
+                title={project.name}
+                href={project.websiteURL}
+                target="_blank"
+              >
+                <Image src={project.imageURL}></Image>
+              </ImageAnchor>
+            </div>
+          ))}
+        </RCol>
+      </SWrapper>
+    </Container>
+  )
+}
 
 export default Projects

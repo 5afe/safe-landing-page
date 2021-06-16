@@ -112,7 +112,8 @@ const FormallyVerified = () => {
               <RCol>
                 <SHeading2>
                   The Gnosis Safe core smart contracts have passed the highest
-                  possible security standard in the industry: Formal Verification.
+                  possible security standard in the industry: Formal
+                  Verification.
                 </SHeading2>
               </RCol>
             </Row>
@@ -138,9 +139,9 @@ const FormallyVerified = () => {
               <RCol>
                 <Row>
                   <Text>
-                    This in-depth review and testing of the codebase was conducted
-                    by Runtime Verification, a trusted pioneer of formal
-                    verification, over a six-month period.
+                    This in-depth review and testing of the codebase was
+                    conducted by Runtime Verification, a trusted pioneer of
+                    formal verification, over a six-month period.
                   </Text>
                   <Text>
                     Gnosis Safe is the only formally verified smart

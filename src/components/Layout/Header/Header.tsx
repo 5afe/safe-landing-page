@@ -153,7 +153,7 @@ const Header: React.FC<HeaderProps> = ({
             <NavListItem>
               <ButtonLink url="/app/#" target="_self" explicitExternal>
                 <div
-                  /*onClick={() =>
+                /*onClick={() =>
                     trackEvent({
                       category: OVERVIEW_CATEGORY,
                       action: 'Main section',

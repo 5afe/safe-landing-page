@@ -4,6 +4,7 @@ import LinesSVG from '../../assets/bg-lines-03.svg'
 import ContentWrapper from '../Layout/ContentWrapper'
 import ButtonLink from '../ui/ButtonLink'
 import Heading from '../ui/Heading'
+import { ENTERPRISES_CATEGORY, useAnalytics } from '../../utils/googleAnalytics'
 
 const Container = styled.main`
   height: calc(100vh - 56px);
@@ -68,41 +69,69 @@ const SButtonLink = styled(ButtonLink)`
   text-align: center;
   width: 185px;
   box-shadow: none;
+  padding: 0;
+  & > div {
+    width: 185px;
+    padding: 10px 20px;
+  }
   @media screen and (max-width: 980px) {
-    padding: 10px 0;
     margin-bottom: 20px;
   }
 `
 
-const MainSection = () => (
-  <Container>
-    <SLinesSVG />
-    <SWrapper>
-      <LCol>
-        <SHeading>
-          The digital asset management solution for enterprises
-        </SHeading>
-        <ButtonsRow>
-          <SButtonLink
-            colorScheme="white"
-            url="https://drive.google.com/file/d/1n1b6bV9zrruFwZnayNDvwCbXE2FluABK/view"
-            target="_blank"
-            explicitExternal
-          >
-            Download brochure
-          </SButtonLink>
-          <SButtonLink
-            colorScheme="green"
-            url="https://gnosis1.typeform.com/to/DOxbpZP3"
-            target="_blank"
-            explicitExternal
-          >
-            Get in touch
-          </SButtonLink>
-        </ButtonsRow>
-      </LCol>
-    </SWrapper>
-  </Container>
-)
+const MainSection = () => {
+  const { trackEvent } = useAnalytics()
+
+  return (
+    <Container>
+      <SLinesSVG />
+      <SWrapper>
+        <LCol>
+          <SHeading>
+            The digital asset management solution for enterprises
+          </SHeading>
+          <ButtonsRow>
+            <SButtonLink
+              colorScheme="white"
+              url="https://drive.google.com/file/d/1n1b6bV9zrruFwZnayNDvwCbXE2FluABK/view"
+              target="_blank"
+              explicitExternal
+            >
+              <div
+                onClick={() =>
+                  trackEvent({
+                    category: ENTERPRISES_CATEGORY,
+                    action: 'Main section',
+                    label: 'Click Download brochure',
+                  })
+                }
+              >
+                Download brochure
+              </div>
+            </SButtonLink>
+            <SButtonLink
+              colorScheme="green"
+              url="https://gnosis1.typeform.com/to/DOxbpZP3"
+              target="_blank"
+              explicitExternal
+            >
+              <div
+                onClick={() =>
+                  trackEvent({
+                    category: ENTERPRISES_CATEGORY,
+                    action: 'Main section',
+                    label: 'Click Get in touch',
+                  })
+                }
+              >
+                Get in touch
+              </div>
+            </SButtonLink>
+          </ButtonsRow>
+        </LCol>
+      </SWrapper>
+    </Container>
+  )
+}
 
 export default MainSection

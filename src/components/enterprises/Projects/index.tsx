@@ -2,6 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import ContentWrapper from '../../Layout/ContentWrapper'
 import { PROJECTS } from './projects'
+import {
+  ENTERPRISES_CATEGORY,
+  useAnalytics,
+} from '../../../utils/googleAnalytics'
 
 const Container = styled.section`
   padding: 50px 20px 150px;
@@ -32,6 +36,7 @@ const LCol = styled.div`
 const RCol = styled.div`
   flex-basis: 72.5%;
   width: 100%;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(4, 160px);
   grid-column-gap: 91px;
@@ -59,7 +64,6 @@ const ImageAnchor = styled.a`
   display: flex;
   flex-flow: column;
   justify-content: center;
-  z-index: 1;
   @media screen and (max-width: 980px) {
     height: 35px;
   }
@@ -76,26 +80,40 @@ const Image = styled.img`
   }
 `
 
-const Projects = () => (
-  <Container>
-    <SWrapper>
-      <LCol>
-        <SHeading>Used by</SHeading>
-      </LCol>
-      <RCol>
-        {PROJECTS.map((project) => (
-          <ImageAnchor
-            key={project.name}
-            title={project.name}
-            href={project.websiteURL}
-            target="_blank"
-          >
-            <Image src={project.imageURL}></Image>
-          </ImageAnchor>
-        ))}
-      </RCol>
-    </SWrapper>
-  </Container>
-)
+const Projects = () => {
+  const { trackEvent } = useAnalytics()
+
+  return (
+    <Container>
+      <SWrapper>
+        <LCol>
+          <SHeading>Used by</SHeading>
+        </LCol>
+        <RCol>
+          {PROJECTS.map((project) => (
+            <div
+              key={project.name}
+              onClick={() =>
+                trackEvent({
+                  category: ENTERPRISES_CATEGORY,
+                  action: 'Projects section',
+                  label: `Click ${project.name}`,
+                })
+              }
+            >
+              <ImageAnchor
+                title={project.name}
+                href={project.websiteURL}
+                target="_blank"
+              >
+                <Image src={project.imageURL} />
+              </ImageAnchor>
+            </div>
+          ))}
+        </RCol>
+      </SWrapper>
+    </Container>
+  )
+}
 
 export default Projects

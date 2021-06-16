@@ -142,7 +142,8 @@ const GettingStarted = () => {
               <CardItem>
                 <Title>What is Gnosis Safe?</Title>
                 <Text>
-                  Read about the basics of Gnosis Safe and how it compares to other solutions
+                  Read about the basics of Gnosis Safe and how it compares to
+                  other solutions
                 </Text>
                 <SLinkIcon>
                   <LinkIcon />
@@ -167,7 +168,8 @@ const GettingStarted = () => {
               <CardItem>
                 <Title>Create a Gnosis Safe account</Title>
                 <Text>
-                  The full process of creating a new Gnosis Safe account in just 60 seconds
+                  The full process of creating a new Gnosis Safe account in just
+                  60 seconds
                 </Text>
                 <SLinkIcon>
                   <LinkIcon />
@@ -192,7 +194,8 @@ const GettingStarted = () => {
               <CardItem>
                 <Title>What Gnosis Safe setup should I use?</Title>
                 <Text>
-                  This article provides some information on what to consider when setting up a Gnosis Safe
+                  This article provides some information on what to consider
+                  when setting up a Gnosis Safe
                 </Text>
                 <SLinkIcon>
                   <LinkIcon />
@@ -210,14 +213,16 @@ const GettingStarted = () => {
                 trackEvent({
                   category: OVERVIEW_CATEGORY,
                   action: 'Getting started section',
-                  label: 'Open article: Costs of creating a Gnosis Safe account',
+                  label:
+                    'Open article: Costs of creating a Gnosis Safe account',
                 })
               }
             >
               <CardItemLast>
                 <Title>Costs of creating a Gnosis Safe account</Title>
                 <Text>
-                  This article provides an overview on how much gas it costs approximately to create a Safe
+                  This article provides an overview on how much gas it costs
+                  approximately to create a Safe
                 </Text>
                 <SLinkIcon>
                   <LinkIcon />

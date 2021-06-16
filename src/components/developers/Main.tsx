@@ -1,10 +1,10 @@
-//import { ButtonLink } from '@gnosis.pm/safe-react-components'
 import React from 'react'
 import styled from 'styled-components'
 import SafeLogo from '../../assets/safe-logo.svg'
 import ContentWrapper from '../Layout/ContentWrapper'
 import ButtonLink from '../ui/ButtonLink'
 import Heading from '../ui/Heading'
+import { DEVELOPERS_CATEGORY, useAnalytics } from '../../utils/googleAnalytics'
 
 const Container = styled.div`
   height: calc(100vh - 56px);
@@ -157,27 +157,57 @@ const SSafeLogo = styled(SafeLogo)`
   }
 `
 
-const MainSection = () => (
-  <Container>
-    <SWrapper>
-      <LCol>
-        <SHeading>Build with Gnosis Safe</SHeading>
-        <Text>
-          The tools you need to build world-class applications on Ethereum
-        </Text>
-        <ButtonLink url="https://docs.gnosis.io/safe" colorScheme="green">
-          Dev Portal
-        </ButtonLink>
-      </LCol>
-      <RCol>
-        <Triangle />
-        <BigRectangle />
-        <SSafeLogo />
-        <SmallRectangle />
-        <Circle />
-      </RCol>
-    </SWrapper>
-  </Container>
-)
+const SButtonLink = styled(ButtonLink)`
+  display: block;
+  text-align: center;
+  width: 165px;
+  padding: 0;
+  margin-top: 30px;
+  box-shadow: none;
+  & > div {
+    width: 165px;
+    padding: 10px 20px;
+  }
+  @media screen and (max-width: 980px) {
+    margin-bottom: 30px;
+  }
+`
+
+const MainSection = () => {
+  const { trackEvent } = useAnalytics()
+
+  return (
+    <Container>
+      <SWrapper>
+        <LCol>
+          <SHeading>Build with Gnosis Safe</SHeading>
+          <Text>
+            The tools you need to build world-class applications on Ethereum
+          </Text>
+          <SButtonLink url="https://docs.gnosis.io/safe" colorScheme="green">
+            <div
+              onClick={() =>
+                trackEvent({
+                  category: DEVELOPERS_CATEGORY,
+                  action: 'Main section',
+                  label: 'Open Dev Portal',
+                })
+              }
+            >
+              Dev Portal
+            </div>
+          </SButtonLink>
+        </LCol>
+        <RCol>
+          <Triangle />
+          <BigRectangle />
+          <SSafeLogo />
+          <SmallRectangle />
+          <Circle />
+        </RCol>
+      </SWrapper>
+    </Container>
+  )
+}
 
 export default MainSection

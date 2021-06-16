@@ -286,24 +286,27 @@ const Features = () => {
                 <Title>Safe Apps</Title>
                 <Description>
                   Bringing multisig security to DeFi, you can now put your funds
-                  to work directly from the Gnosis Safe interface. Use
-                  your digital assets to invest, earn, borrow, invoice, do
-                  payroll and more.
+                  to work directly from the Gnosis Safe interface. Use your
+                  digital assets to invest, earn, borrow, invoice, do payroll
+                  and more.
                   <br />
-                  <a href="https://help.gnosis-safe.io/en/articles/4022022-what-are-safe-apps" target="_blank">
-                  <InnerLink
-                    onClick={() =>
-                      trackEvent({
-                        category: OVERVIEW_CATEGORY,
-                        action: 'Features section',
-                        label: 'Click Learn more about Safe Apps',
-                      })
-                    }
+                  <a
+                    href="https://help.gnosis-safe.io/en/articles/4022022-what-are-safe-apps"
+                    target="_blank"
                   >
-                    Learn more about Safe Apps
-                    <SLinkIcon />
-                  </InnerLink>
-                </a>
+                    <InnerLink
+                      onClick={() =>
+                        trackEvent({
+                          category: OVERVIEW_CATEGORY,
+                          action: 'Features section',
+                          label: 'Click Learn more about Safe Apps',
+                        })
+                      }
+                    >
+                      Learn more about Safe Apps
+                      <SLinkIcon />
+                    </InnerLink>
+                  </a>
                 </Description>
               </Text>
               <Image>

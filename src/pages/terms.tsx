@@ -95,8 +95,9 @@ export default () => (
         </TitleSection>
         <Ol style={{ listStyleType: 'decimal' }}>
           <Li>
-            “Ethereum Blockchain” means a mathematically secured consensus ledger maintained on the Ethereum Virtual
-            Machine or an Ethereum Virtual Machine compatible validation mechanism.
+            “Ethereum Blockchain” means a mathematically secured consensus
+            ledger maintained on the Ethereum Virtual Machine or an Ethereum
+            Virtual Machine compatible validation mechanism.
           </Li>
           <Li>
             “Transaction” means a change to the data set through a new entry in
