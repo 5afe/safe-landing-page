@@ -56,6 +56,14 @@ const SHeading = styled.h3`
   }
 `
 
+const ImgContainer = styled.div`
+  display: flex;
+  justify-content: left;
+  & > div {
+    display: flex;
+  }
+`
+
 const ImageAnchor = styled.a`
   max-height: 54px;
 `
@@ -79,6 +87,7 @@ const Projects = () => {
         </LCol>
         <RCol>
           {PROJECTS.map((project) => (
+            <ImgContainer>
             <div
               key={project.name}
               onClick={() =>
@@ -94,9 +103,10 @@ const Projects = () => {
                 href={project.websiteURL}
                 target="_blank"
               >
-                <Image src={project.imageURL}></Image>
+                <Image src={project.imageURL} />
               </ImageAnchor>
-            </div>
+              </div>
+            </ImgContainer>
           ))}
         </RCol>
       </SWrapper>

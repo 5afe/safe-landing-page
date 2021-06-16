@@ -6,6 +6,7 @@ export const OVERVIEW_CATEGORY = 'OVERVIEW'
 export const SECURITY_CATEGORY = 'SECURITY'
 export const ENTERPRISES_CATEGORY = 'ENTERPRISES'
 export const DEVELOPERS_CATEGORY = 'DEVELOPERS'
+export const FOOTER_CATEGORY = 'FOOTER_CATEGORY'
 
 const getGoogleAnalyticsTrackingID = () => {
   return typeof window !== 'undefined' &&
