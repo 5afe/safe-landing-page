@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import ContentWrapper from '../Layout/ContentWrapper'
 import ButtonLink from '../ui/ButtonLink'
+import { ENTERPRISES_CATEGORY, useAnalytics } from '../../utils/googleAnalytics'
 
 const Container = styled.div`
   padding: 100px 20px;
@@ -62,34 +63,52 @@ const SSubHeading = styled.h3`
 
 const SButtonLink = styled(ButtonLink)`
   box-shadow: none;
+  padding: 0;
+  & > div {
+    padding: 10px 20px;
+  }
 `
 
-const ProvenSecurity = () => (
-  <Container>
-    <ContentWrapper>
-      <Row>
-        <LCol>
-          <SHeading>Proven security</SHeading>
-        </LCol>
-        <RCol>
-          <Row>
-            <SSubHeading>
-              Our wallet solution has proven itself in the industry with
-              hundreds of deployed instances. Learn more about the proven
-              security of the Gnosis Safe Multisig.
-            </SSubHeading>
-          </Row>
-          <Row>
-            <SubCol>
-              <SButtonLink url="/security" colorScheme="green">
-                See security properties
-              </SButtonLink>
-            </SubCol>
-          </Row>
-        </RCol>
-      </Row>
-    </ContentWrapper>
-  </Container>
-)
+const ProvenSecurity = () => {
+  const { trackEvent } = useAnalytics()
+
+  return (
+    <Container>
+      <ContentWrapper>
+        <Row>
+          <LCol>
+            <SHeading>Proven security</SHeading>
+          </LCol>
+          <RCol>
+            <Row>
+              <SSubHeading>
+                Our wallet solution has proven itself in the industry with
+                hundreds of deployed instances. Learn more about the proven
+                security of the Gnosis Safe.
+              </SSubHeading>
+            </Row>
+            <Row>
+              <SubCol>
+                <SButtonLink url="/security" colorScheme="green">
+                  <div
+                    onClick={() =>
+                      trackEvent({
+                        category: ENTERPRISES_CATEGORY,
+                        action: 'Proven Security section',
+                        label: 'Click See security properties',
+                      })
+                    }
+                  >
+                    See security properties
+                  </div>
+                </SButtonLink>
+              </SubCol>
+            </Row>
+          </RCol>
+        </Row>
+      </ContentWrapper>
+    </Container>
+  )
+}
 
 export default ProvenSecurity

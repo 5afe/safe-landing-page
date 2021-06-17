@@ -79,8 +79,8 @@ const Description = () => (
         than $1B equivalent in digital assets.
       </Col>
       <Col>
-        Our most advanced wallet solution, the Gnosis Safe Multisig, sets the
-        industry-wide, highest security standards.
+        Our most advanced wallet solution, Gnosis Safe, sets the industry-wide,
+        highest security standards.
       </Col>
     </SWrapper>
   </Container>

@@ -53,6 +53,7 @@ const Grid = styled.div`
   line-height: 1.25;
   padding: 0 5px;
   grid-auto-flow: row;
+  grid-auto-columns: 1fr;
 
   & > div > div {
     height: 80px;
@@ -89,7 +90,13 @@ const Column = styled.div`
 `
 
 const ColumnFirst = styled.div`
+  & > div:first-child > h4 {
+    display: none;
+  }
   @media screen and (max-width: 980px) {
+    & > div:first-child > h4 {
+      display: block;
+    }
     margin-bottom: 40px;
   }
 `
@@ -105,9 +112,11 @@ const ColumnHidden = styled.div`
 const GridTitle = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   font-weight: 800;
   padding: 0 5px;
   @media screen and (max-width: 980px) {
+    justify-content: left;
     padding: 0;
   }
 `
@@ -228,8 +237,8 @@ const Features = () => (
       <TooltipWrapper>
         <SQuestionIcon />
         <Tooltip>
-          All components of the Gnosis Safe Multisig (frontend, backend,
-          contracts) have been open sourced.
+          All components of the Gnosis Safe (frontend, backend, contracts) have
+          been open sourced.
         </Tooltip>
       </TooltipWrapper>
     </GridFeature>
@@ -238,9 +247,8 @@ const Features = () => (
       <TooltipWrapper>
         <SQuestionIcon />
         <Tooltip>
-          The core contracts of the Gnosis Safe Multisig have been formally
-          verified, which is the highest security standard for Ethereum-based
-          protocols.
+          The core contracts of the Gnosis Safe have been formally verified,
+          which is the highest security standard for Ethereum-based protocols.
         </Tooltip>
       </TooltipWrapper>
     </GridFeature>
@@ -254,13 +262,13 @@ const StorageComparison = () => (
       <Grid>
         <ColumnFirst>
           <GridTitle>
-            <h4>Gnosis Safe Multisig</h4>
+            <h4>Gnosis Safe</h4>
           </GridTitle>
           <Features />
         </ColumnFirst>
         <Column>
           <GridTitle>
-            <h4>Gnosis Safe Multisig</h4>
+            <h4>Gnosis Safe</h4>
           </GridTitle>
           <GridContent>
             <GreenTick />
@@ -291,8 +299,8 @@ const StorageComparison = () => (
             <TooltipWrapper>
               <SQuestionIcon />
               <Tooltip>
-                Legacy multi-signature wallet by Gnosis. Gnosis Safe Multisig is
-                the successor to the Gnosis Multisig.
+                Legacy multi-signature wallet by Gnosis. Gnosis Safe is the
+                successor to the Gnosis Multisig.
               </Tooltip>
             </TooltipWrapper>
           </GridTitle>
@@ -300,12 +308,16 @@ const StorageComparison = () => (
         </ColumnHidden>
         <Column>
           <GridTitle>
-            <h4>'Old' Multisig</h4>
+            <h4>
+              'Old'
+              <br />
+              Multisig
+            </h4>
             <TooltipWrapper>
               <SQuestionIcon />
               <Tooltip>
-                Legacy multi-signature wallet by Gnosis. Gnosis Safe Multisig is
-                the successor to the Gnosis Multisig.
+                Legacy multi-signature wallet by Gnosis. Gnosis Safe is the
+                successor to the Gnosis Multisig.
               </Tooltip>
             </TooltipWrapper>
           </GridTitle>

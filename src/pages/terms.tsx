@@ -18,7 +18,7 @@ export default () => (
   <Layout title="Terms and Conditions">
     <ContentWrapper>
       <Title>Terms and Conditions</Title>
-      <Date>Last updated on October, 2020</Date>
+      <Date>Last updated on June, 2021</Date>
       <RedMessage>
         THESE TERMS CREATE A BINDING CONTRACT BETWEEN YOU AND GNOSIS LIMITED. BY
         USING OUR SERVICES (DEFINED BELOW), YOU AGREE TO BE BOUND BY THESE
@@ -32,7 +32,7 @@ export default () => (
         UNDER OR IN CONNECTION WITH THIS AGREEMENT MUST BE SETTLED IN BINDING
         ARBITRATION PER CLAUSE 28.4. ENTERING INTO THIS AGREEMENT CONSTITUTES A
         WAIVER OF YOUR RIGHT, IF ANY, TO PARTICIPATE IN A CLASS ACTION LAWSUIT
-        OR A JURY TRIAL. TERMS
+        OR A JURY TRIAL.
       </RedMessage>
       <Section>
         <TitleSection>1. What is the scope of the Terms?</TitleSection>
@@ -95,9 +95,9 @@ export default () => (
         </TitleSection>
         <Ol style={{ listStyleType: 'decimal' }}>
           <Li>
-            “Ethereum Blockchain” means a mathematically secured, chronological,
-            and decentralized consensus ledger maintained on an Ethereum Virtual
-            Machine.
+            “Ethereum Blockchain” means a mathematically secured consensus
+            ledger maintained on the Ethereum Virtual Machine or an Ethereum
+            Virtual Machine compatible validation mechanism.
           </Li>
           <Li>
             “Transaction” means a change to the data set through a new entry in

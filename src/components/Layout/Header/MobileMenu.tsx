@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Link from '../../ui/Link'
 import ButtonLink from '../../ui/ButtonLink'
 import Header from './Header'
+import { HEADER_CATEGORY, useAnalytics } from '../../../utils/googleAnalytics'
 
 const Container = styled.div`
   width: 100%;
@@ -43,6 +44,14 @@ const NavLink = styled(Link)`
     color: ${(p) => p.theme.palette.primary};
   }
 `
+
+const SButtonLink = styled(ButtonLink)`
+  padding: 0;
+  & > div {
+    padding: 10px 20px;
+  }
+`
+
 interface MobileMenuProps {
   toggleMobileMenu: Function
   mobileMenuOpened: boolean
@@ -52,6 +61,8 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
   toggleMobileMenu,
   mobileMenuOpened,
 }) => {
+  const { trackEvent } = useAnalytics()
+
   return (
     <Container>
       <Header
@@ -82,8 +93,33 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
           </NavListItem>
           <NavListItem>
             <NavListLink href="https://help.gnosis-safe.io" target="_blank">
-              Help
+              <div
+                onClick={() =>
+                  trackEvent({
+                    category: HEADER_CATEGORY,
+                    action: 'Header section',
+                    label: 'Click Help',
+                  })
+                }
+              >
+                Help
+              </div>
             </NavListLink>
+          </NavListItem>
+          <NavListItem>
+            <SButtonLink url="/app/#" target="_self" explicitExternal>
+              <div
+                onClick={() =>
+                  trackEvent({
+                    category: HEADER_CATEGORY,
+                    action: 'Header section',
+                    label: 'Click Open app',
+                  })
+                }
+              >
+                Open app
+              </div>
+            </SButtonLink>
           </NavListItem>
         </NavList>
       </SMobileMenu>

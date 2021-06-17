@@ -70,14 +70,18 @@ const SButtonLink = styled(ButtonLink)`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px 20px;
+  padding: 0;
   margin: 0 auto;
-  width: 210px;
+
   font-size: 16px;
   line-height: 1.38;
   margin-top: 10px;
   margin-bottom: 30px;
   text-align: center;
+  & > div {
+    padding: 8px 20px;
+    width: 210px;
+  }
   @media screen and (max-width: 980px) {
     margin-top: 0;
     margin-bottom: 10px;
@@ -147,11 +151,11 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
               </div>
             </SButtonLink>
             <Text>
-              Access the most recent version of the Safe Multisig directly in
-              your browser.
+              Access the most recent version of the Gnosis Safe directly in your
+              browser.
             </Text>
             <Text>
-              <div>Safe Multisig supports:</div>
+              <div>Gnosis Safe supports:</div>
               <NetworkItem>
                 <a href="https://rinkeby.gnosis-safe.io/app/#" target="_blank">
                   <InnerLink
@@ -226,7 +230,7 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
             <ImageWrapper>
               <Img src="/images/desktop.png" />
             </ImageWrapper>
-            <SButtonLink url={desktopAppUrl}>
+            <SButtonLink url={desktopAppUrl || '/app/#'}>
               <div
                 onClick={() =>
                   trackEvent({
@@ -240,7 +244,7 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
               </div>
             </SButtonLink>
             <Text>
-              Download the Safe Multisig as a static desktop application for
+              Download the Gnosis Safe as a static desktop application for
               Windows, MacOS or Linux.
             </Text>
             <Text>

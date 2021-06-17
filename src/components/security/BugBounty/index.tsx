@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import MoneyIcon from '../../../assets/icon-money.svg'
-import MoneyBagIcon from '../../../assets/icon-moneybag.svg'
 import TimeIcon from '../../../assets/icon-time.svg'
 import LinesSVG from '../../../assets/lines.svg'
 import ContentWrapper from '../../Layout/ContentWrapper'
 import ButtonLink from '../../ui/ButtonLink'
 import Heading from '../../ui/Heading'
 import Card from './Card'
+import { SECURITY_CATEGORY, useAnalytics } from '../../../utils/googleAnalytics'
 
 const Container = styled.div`
   padding: 112px 20px 170px 20px;
@@ -83,32 +83,61 @@ const SContentWrapper = styled(ContentWrapper)`
   z-index: 100;
 `
 
-const BugBounty = () => (
-  <Container>
-    <SLinesSVG />
-    <SContentWrapper>
-      <Row>
-        <LCol>
-          <LHeading>Our biggest bug bounty program ever</LHeading>
-          <ButtonLink
-            url="https://docs.gnosis.io/safe/docs/intro_bug_bounty"
-            colorScheme="white"
-          >
-            Start bug hunting
-          </ButtonLink>
-        </LCol>
-        <RCol>
-          <Card img={TimeIcon} title="Running since July 2018" />
-          <Card img={MoneyIcon} title="Up to $100,000 per bug" />
-          <Card img={MoneyBagIcon} title="$7,500,000 honeypot" />
-        </RCol>
-      </Row>
-      <SHeading>
-        To this day, no major or critical issues have been found in the
-        codebase!
-      </SHeading>
-    </SContentWrapper>
-  </Container>
-)
+const SButtonLink = styled(ButtonLink)`
+  display: block;
+  text-align: center;
+  width: 165px;
+  padding: 0;
+  margin-top: 30px;
+  box-shadow: none;
+  & > div {
+    width: 165px;
+    padding: 10px 20px;
+  }
+  @media screen and (max-width: 980px) {
+    margin-bottom: 30px;
+  }
+`
+
+const BugBounty = () => {
+  const { trackEvent } = useAnalytics()
+
+  return (
+    <Container>
+      <SLinesSVG />
+      <SContentWrapper>
+        <Row>
+          <LCol>
+            <LHeading>Our biggest bug bounty program ever</LHeading>
+            <SButtonLink
+              url="https://docs.gnosis.io/safe/docs/intro_bug_bounty"
+              colorScheme="white"
+            >
+              <div
+                onClick={() =>
+                  trackEvent({
+                    category: SECURITY_CATEGORY,
+                    action: 'Bug Bounty section',
+                    label: 'Click Start bug hunting',
+                  })
+                }
+              >
+                Start bug hunting
+              </div>
+            </SButtonLink>
+          </LCol>
+          <RCol>
+            <Card img={TimeIcon} title="Running since July 2018" />
+            <Card img={MoneyIcon} title="Up to $1,000,000 per bug" />
+          </RCol>
+        </Row>
+        <SHeading>
+          To this day, no major or critical issues have been found in the
+          codebase!
+        </SHeading>
+      </SContentWrapper>
+    </Container>
+  )
+}
 
 export default BugBounty

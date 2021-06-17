@@ -4,6 +4,7 @@ import LinesSVG from '../../assets/bg-lines-03.svg'
 import ContentWrapper from '../Layout/ContentWrapper'
 import ButtonLink from '../ui/ButtonLink'
 import Heading from '../ui/Heading'
+import { DEVELOPERS_CATEGORY, useAnalytics } from '../../utils/googleAnalytics'
 
 const Container = styled.div`
   position: relative;
@@ -92,6 +93,10 @@ const SButtonLink = styled(ButtonLink)`
   width: 180px;
   text-align: center;
   margin-left: 20px;
+  padding: 0;
+  & > div {
+    padding: 10px 20px;
+  }
   @media screen and (max-width: 1080px) {
     margin: 0;
   }
@@ -114,126 +119,210 @@ const LoveMessage = styled.h3`
   }
 `
 
-const Repositories = () => (
-  <Container>
-    <SLinesSVG />
-    <ContentWrapper>
-      <SHeading>
-        We believe in open source.
-        <br />
-        Get inspired by our repositories!
-      </SHeading>
-      <Row>
-        <Col>
-          <RCol>
-            <Row>
-              <SubCol>
+const Repositories = () => {
+  const { trackEvent } = useAnalytics()
+
+  return (
+    <Container>
+      <SLinesSVG />
+      <ContentWrapper>
+        <SHeading>
+          We believe in open source.
+          <br />
+          Get inspired by our Repositories!
+        </SHeading>
+        <Row>
+          <Col>
+            <RCol>
+              <Row>
+                <SubCol>
+                  <SubRow>
+                    <SSmallHeading>Contracts</SSmallHeading>
+                  </SubRow>
+                </SubCol>
                 <SubRow>
-                  <SSmallHeading>Contracts</SSmallHeading>
+                  <SubCol>
+                    <SButtonLink
+                      url="https://github.com/gnosis/safe-contracts/blob/main/contracts/GnosisSafe.sol"
+                      colorScheme="navy"
+                    >
+                      <div
+                        onClick={() =>
+                          trackEvent({
+                            category: DEVELOPERS_CATEGORY,
+                            action: 'Repositories section',
+                            label: 'Open github: Core Contracts',
+                          })
+                        }
+                      >
+                        Core
+                      </div>
+                    </SButtonLink>
+                  </SubCol>
+                  <SubCol>
+                    <SButtonLink
+                      url="https://github.com/gnosis/safe-modules"
+                      colorScheme="navy"
+                    >
+                      <div
+                        onClick={() =>
+                          trackEvent({
+                            category: DEVELOPERS_CATEGORY,
+                            action: 'Repositories section',
+                            label: 'Open github: Modules',
+                          })
+                        }
+                      >
+                        Modules
+                      </div>
+                    </SButtonLink>
+                  </SubCol>
                 </SubRow>
-              </SubCol>
-              <SubRow>
+              </Row>
+              <Row>
                 <SubCol>
-                  <SButtonLink
-                    url="https://github.com/gnosis/safe-contracts/blob/development/contracts/GnosisSafe.sol"
-                    colorScheme="navy"
-                  >
-                    Core
-                  </SButtonLink>
+                  <SubRow>
+                    <SSmallHeading>Services</SSmallHeading>
+                  </SubRow>
                 </SubCol>
-                <SubCol>
-                  <SButtonLink
-                    url="https://github.com/gnosis/safe-contracts/tree/development/contracts/modules"
-                    colorScheme="navy"
-                  >
-                    Modules
-                  </SButtonLink>
-                </SubCol>
-              </SubRow>
-            </Row>
-            <Row>
-              <SubCol>
                 <SubRow>
-                  <SSmallHeading>Services</SSmallHeading>
+                  <SubCol>
+                    <SButtonLink
+                      url="https://github.com/gnosis/safe-transaction-service"
+                      colorScheme="navy"
+                    >
+                      <div
+                        onClick={() =>
+                          trackEvent({
+                            category: DEVELOPERS_CATEGORY,
+                            action: 'Repositories section',
+                            label: 'Open github: Transaction indexer',
+                          })
+                        }
+                      >
+                        Transaction indexer
+                      </div>
+                    </SButtonLink>
+                  </SubCol>
+                  <SubCol>
+                    <SButtonLink
+                      url="https://github.com/gnosis/safe-relay-service"
+                      colorScheme="navy"
+                    >
+                      <div
+                        onClick={() =>
+                          trackEvent({
+                            category: DEVELOPERS_CATEGORY,
+                            action: 'Repositories section',
+                            label: 'Open github: Relay',
+                          })
+                        }
+                      >
+                        Relay
+                      </div>
+                    </SButtonLink>
+                  </SubCol>
                 </SubRow>
-              </SubCol>
-              <SubRow>
+              </Row>
+            </RCol>
+          </Col>
+          <Col>
+            <RCol>
+              <Row>
                 <SubCol>
-                  <SButtonLink
-                    url="https://github.com/gnosis/safe-transaction-service"
-                    colorScheme="navy"
-                  >
-                    Transaction indexer
-                  </SButtonLink>
+                  <SubRow>
+                    <SRightSmallHeading>Clients</SRightSmallHeading>
+                  </SubRow>
                 </SubCol>
-                <SubCol>
-                  <SButtonLink
-                    url="https://github.com/gnosis/safe-relay-service"
-                    colorScheme="navy"
-                  >
-                    Relay
-                  </SButtonLink>
-                </SubCol>
-              </SubRow>
-            </Row>
-          </RCol>
-        </Col>
-        <Col>
-          <RCol>
-            <Row>
-              <SubCol>
                 <SubRow>
-                  <SRightSmallHeading>Clients</SRightSmallHeading>
+                  <SubCol>
+                    <SButtonLink
+                      url="https://github.com/gnosis/safe-react"
+                      colorScheme="green"
+                    >
+                      <div
+                        onClick={() =>
+                          trackEvent({
+                            category: DEVELOPERS_CATEGORY,
+                            action: 'Repositories section',
+                            label: 'Open github: Web interface',
+                          })
+                        }
+                      >
+                        Web interface
+                      </div>
+                    </SButtonLink>
+                  </SubCol>
+                  <SubCol>
+                    <SButtonLink
+                      url="https://github.com/gnosis/contract-proxy-kit"
+                      colorScheme="green"
+                    >
+                      <div
+                        onClick={() =>
+                          trackEvent({
+                            category: DEVELOPERS_CATEGORY,
+                            action: 'Repositories section',
+                            label: 'Open github: Proxy Kit',
+                          })
+                        }
+                      >
+                        Proxy kit
+                      </div>
+                    </SButtonLink>
+                  </SubCol>
                 </SubRow>
-              </SubCol>
-              <SubRow>
+              </Row>
+              <Row>
                 <SubCol>
-                  <SButtonLink
-                    url="https://github.com/gnosis/safe-react"
-                    colorScheme="green"
-                  >
-                    Web interface
-                  </SButtonLink>
+                  <SubRow></SubRow>
                 </SubCol>
-                <SubCol>
-                  <SButtonLink
-                    url="https://github.com/gnosis/contract-proxy-kit"
-                    colorScheme="green"
-                  >
-                    Proxy kit
-                  </SButtonLink>
-                </SubCol>
-              </SubRow>
-            </Row>
-            <Row>
-              <SubCol>
-                <SubRow></SubRow>
-              </SubCol>
-              <SubRow>
-                <SubCol>
-                  <SButtonLink
-                    url="https://github.com/gnosis/safe-android"
-                    colorScheme="green"
-                  >
-                    Android app
-                  </SButtonLink>
-                </SubCol>
-                <SubCol>
-                  <SButtonLink
-                    url="https://github.com/gnosis/safe-ios"
-                    colorScheme="green"
-                  >
-                    iOS app
-                  </SButtonLink>
-                </SubCol>
-              </SubRow>
-            </Row>
-          </RCol>
-        </Col>
-      </Row>
-      <LoveMessage>Gnosis &hearts; Developers</LoveMessage>
-    </ContentWrapper>
-  </Container>
-)
+                <SubRow>
+                  <SubCol>
+                    <SButtonLink
+                      url="https://github.com/gnosis/safe-android"
+                      colorScheme="green"
+                    >
+                      <div
+                        onClick={() =>
+                          trackEvent({
+                            category: DEVELOPERS_CATEGORY,
+                            action: 'Repositories section',
+                            label: 'Open github: Android App',
+                          })
+                        }
+                      >
+                        Android app
+                      </div>
+                    </SButtonLink>
+                  </SubCol>
+                  <SubCol>
+                    <SButtonLink
+                      url="https://github.com/gnosis/safe-ios"
+                      colorScheme="green"
+                    >
+                      <div
+                        onClick={() =>
+                          trackEvent({
+                            category: DEVELOPERS_CATEGORY,
+                            action: 'Repositories section',
+                            label: 'Open github: iOS App',
+                          })
+                        }
+                      >
+                        iOS app
+                      </div>
+                    </SButtonLink>
+                  </SubCol>
+                </SubRow>
+              </Row>
+            </RCol>
+          </Col>
+        </Row>
+        <LoveMessage>Gnosis &hearts; Developers</LoveMessage>
+      </ContentWrapper>
+    </Container>
+  )
+}
 
 export default Repositories

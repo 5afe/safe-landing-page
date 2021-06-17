@@ -4,6 +4,7 @@ import React from 'react'
 import styled from 'styled-components'
 import ContentWrapper from '../Layout/ContentWrapper'
 import ButtonLink from '../ui/ButtonLink'
+import { SECURITY_CATEGORY, useAnalytics } from '../../utils/googleAnalytics'
 
 const Block = styled.div`
   padding: 0 20px;
@@ -81,64 +82,79 @@ const SHeading2 = styled.h3`
   }
 `
 
-const FormallyVerified = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        rv: file(relativePath: { eq: "runtime-verification-logo.png" }) {
-          childImageSharp {
-            fixed(width: 170) {
-              ...GatsbyImageSharpFixed_withWebp
+const FormallyVerified = () => {
+  const { trackEvent } = useAnalytics()
+
+  return (
+    <StaticQuery
+      query={graphql`
+        query {
+          rv: file(relativePath: { eq: "runtime-verification-logo.png" }) {
+            childImageSharp {
+              fixed(width: 170) {
+                ...GatsbyImageSharpFixed_withWebp
+              }
             }
           }
         }
-      }
-    `}
-  >
-    {(data) => (
-      <Block>
-        <SContentWrapper>
-          <SRuntimeLogo>
-            <SImg fixed={data.rv.childImageSharp.fixed} />
-          </SRuntimeLogo>
-          <Row>
-            <LCol>
-              <SHeading1>Formally verified</SHeading1>
-            </LCol>
-            <RCol>
-              <SHeading2>
-                The Gnosis Safe core smart contracts have passed the highest
-                possible security standard in the industry: Formal Verification.
-              </SHeading2>
-            </RCol>
-          </Row>
-          <SecondRow>
-            <LCol>
-              <ButtonLink
-                url="https://github.com/gnosis/safe-contracts/blob/78494bcdbc61b3db52308a25f0556c42cf656ab1/docs/Gnosis_Safe_Formal_Verification_Report_1_0_0.pdf"
-                colorScheme="navy"
-              >
-                Formal verification report
-              </ButtonLink>
-            </LCol>
-            <RCol>
-              <Row>
-                <Text>
-                  This in-depth review and testing of the codebase was conducted
-                  by Runtime Verification, a trusted pioneer of formal
-                  verification, over a six-month period.
-                </Text>
-                <Text>
-                  The Gnosis Safe Multisig is the only formally verified smart
-                  contract-based wallet solution.
-                </Text>
-              </Row>
-            </RCol>
-          </SecondRow>
-        </SContentWrapper>
-      </Block>
-    )}
-  </StaticQuery>
-)
+      `}
+    >
+      {(data) => (
+        <Block>
+          <SContentWrapper>
+            <SRuntimeLogo>
+              <SImg fixed={data.rv.childImageSharp.fixed} />
+            </SRuntimeLogo>
+            <Row>
+              <LCol>
+                <SHeading1>Formally verified</SHeading1>
+              </LCol>
+              <RCol>
+                <SHeading2>
+                  The Gnosis Safe core smart contracts have passed the highest
+                  possible security standard in the industry: Formal
+                  Verification.
+                </SHeading2>
+              </RCol>
+            </Row>
+            <SecondRow>
+              <LCol>
+                <ButtonLink
+                  url="https://github.com/gnosis/safe-contracts/blob/78494bcdbc61b3db52308a25f0556c42cf656ab1/docs/Gnosis_Safe_Formal_Verification_Report_1_0_0.pdf"
+                  colorScheme="navy"
+                >
+                  <div
+                    onClick={() =>
+                      trackEvent({
+                        category: SECURITY_CATEGORY,
+                        action: 'Formally verified section',
+                        label: 'Open formal verification report',
+                      })
+                    }
+                  >
+                    Formal verification report
+                  </div>
+                </ButtonLink>
+              </LCol>
+              <RCol>
+                <Row>
+                  <Text>
+                    This in-depth review and testing of the codebase was
+                    conducted by Runtime Verification, a trusted pioneer of
+                    formal verification, over a six-month period.
+                  </Text>
+                  <Text>
+                    Gnosis Safe is the only formally verified smart
+                    contract-based wallet solution.
+                  </Text>
+                </Row>
+              </RCol>
+            </SecondRow>
+          </SContentWrapper>
+        </Block>
+      )}
+    </StaticQuery>
+  )
+}
 
 export default FormallyVerified

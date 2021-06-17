@@ -1,6 +1,8 @@
+import ButtonLink from '../../ui/ButtonLink'
 import React from 'react'
 import Headroom from 'react-headroom'
 import styled, { css } from 'styled-components'
+import { HEADER_CATEGORY, useAnalytics } from '../../../utils/googleAnalytics'
 import Logo from '../../../assets/multisig-logo-centered.svg'
 import Link from '../../ui/Link'
 import Divider from './Divider'
@@ -20,7 +22,10 @@ const SHeadroom = styled(Headroom)`
   z-index: 1000;
 `
 
-const Container = styled.header`
+interface ContainerProps {
+  mobileMenuOpened: boolean
+}
+const Container = styled.header<ContainerProps>`
   display: flex;
   align-items: center;
   width: 100%;
@@ -89,6 +94,14 @@ const SLogo = styled(Logo)`
   margin-top: 2px;
 `
 
+const SButtonLink = styled(ButtonLink)`
+  box-shadow: none;
+  padding: 0;
+  & > div {
+    padding: 10px 20px;
+  }
+`
+
 interface HeaderProps {
   toggleMobileMenu: Function
   mobileMenuOpened: boolean
@@ -97,54 +110,84 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({
   toggleMobileMenu,
   mobileMenuOpened,
-}) => (
-  <SHeadroom>
-    <Container mobileMenuOpened={mobileMenuOpened}>
-      <Link to="/">
-        <SLogo />
-      </Link>
-      <Spacer />
-      <MobileNavContainer onClick={() => toggleMobileMenu()}>
-        <BurgerLine />
-        <BurgerLine />
-        <BurgerLine />
-      </MobileNavContainer>
-      <NavContainer>
-        <NavList>
-          <Divider />
-          <NavListItem>
-            <NavLink activeClassName="active" to="/">
-              Overview
-            </NavLink>
-          </NavListItem>
-          <Divider />
-          <NavListItem>
-            <NavLink activeClassName="active" to="/security">
-              Security
-            </NavLink>
-          </NavListItem>
-          <Divider />
-          <NavListItem>
-            <NavLink activeClassName="active" to="/enterprises">
-              Enterprises
-            </NavLink>
-          </NavListItem>
-          <Divider />
-          <NavListItem>
-            <NavLink activeClassName="active" to="/developers">
-              Developers
-            </NavLink>
-          </NavListItem>
-          <Divider />
-          <NavListItem>
-            <NavListLink href="https://help.gnosis-safe.io" target="_blank">
-              Help
-            </NavListLink>
-          </NavListItem>
-        </NavList>
-      </NavContainer>
-    </Container>
-  </SHeadroom>
-)
+}) => {
+  const { trackEvent } = useAnalytics()
+
+  return (
+    <SHeadroom>
+      <Container mobileMenuOpened={mobileMenuOpened}>
+        <Link to="/">
+          <SLogo />
+        </Link>
+        <Spacer />
+        <MobileNavContainer onClick={() => toggleMobileMenu()}>
+          <BurgerLine />
+          <BurgerLine />
+          <BurgerLine />
+        </MobileNavContainer>
+        <NavContainer>
+          <NavList>
+            <Divider />
+            <NavListItem>
+              <NavLink activeClassName="active" to="/">
+                Overview
+              </NavLink>
+            </NavListItem>
+            <Divider />
+            <NavListItem>
+              <NavLink activeClassName="active" to="/security">
+                Security
+              </NavLink>
+            </NavListItem>
+            <Divider />
+            <NavListItem>
+              <NavLink activeClassName="active" to="/enterprises">
+                Enterprises
+              </NavLink>
+            </NavListItem>
+            <Divider />
+            <NavListItem>
+              <NavLink activeClassName="active" to="/developers">
+                Developers
+              </NavLink>
+            </NavListItem>
+            <Divider />
+            <NavListItem>
+              <NavListLink href="https://help.gnosis-safe.io" target="_blank">
+                <div
+                  onClick={() =>
+                    trackEvent({
+                      category: HEADER_CATEGORY,
+                      action: 'Header section',
+                      label: 'Click Help',
+                    })
+                  }
+                >
+                  Help
+                </div>
+              </NavListLink>
+            </NavListItem>
+            <Divider />
+            <NavListItem>
+              <SButtonLink url="/app/#" target="_self" explicitExternal>
+                <div
+                  onClick={() =>
+                    trackEvent({
+                      category: HEADER_CATEGORY,
+                      action: 'Header section',
+                      label: 'Click Open app',
+                    })
+                  }
+                >
+                  Open app
+                </div>
+              </SButtonLink>
+            </NavListItem>
+          </NavList>
+        </NavContainer>
+      </Container>
+    </SHeadroom>
+  )
+}
 
 export default Header

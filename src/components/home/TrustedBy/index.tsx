@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { OVERVIEW_CATEGORY, useAnalytics } from '../../../utils/googleAnalytics'
 import ContentWrapper from '../../Layout/ContentWrapper'
 import { TRUSTED_BY_COMPANIES } from './companies'
 
@@ -74,27 +75,40 @@ const Image = styled.img`
   }
 `
 
-const TrustedBy = () => (
-  <Container>
-    <SWrapper>
-      <SHeading>Trusted by</SHeading>
-      <Grid>
-        {TRUSTED_BY_COMPANIES.map((company) => (
-          <ImageAnchor
-            key={company.name}
-            title={company.name}
-            href={company.websiteURL}
-            target="_blank"
-            companyName={company.name}
-          >
-            <ImageWrapper>
-              <Image src={company.imageURL}></Image>
-            </ImageWrapper>
-          </ImageAnchor>
-        ))}
-      </Grid>
-    </SWrapper>
-  </Container>
-)
+const TrustedBy = () => {
+  const { trackEvent } = useAnalytics()
+
+  return (
+    <Container>
+      <SWrapper>
+        <SHeading>Trusted by</SHeading>
+        <Grid>
+          {TRUSTED_BY_COMPANIES.map((company) => (
+            <div
+              key={company.name}
+              onClick={() =>
+                trackEvent({
+                  category: OVERVIEW_CATEGORY,
+                  action: 'Trusted By section',
+                  label: `Click ${company.name}`,
+                })
+              }
+            >
+              <ImageAnchor
+                title={company.name}
+                href={company.websiteURL}
+                target="_blank"
+              >
+                <ImageWrapper>
+                  <Image src={company.imageURL} />
+                </ImageWrapper>
+              </ImageAnchor>
+            </div>
+          ))}
+        </Grid>
+      </SWrapper>
+    </Container>
+  )
+}
 
 export default TrustedBy

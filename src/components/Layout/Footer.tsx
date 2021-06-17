@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { FOOTER_CATEGORY, useAnalytics } from '../../utils/googleAnalytics'
 import Link from '../ui/Link'
 
 const FooterContainer = styled.div`
@@ -58,6 +59,7 @@ interface FooterProps {
 }
 
 const Footer = ({ title }: FooterProps) => {
+  const { trackEvent } = useAnalytics()
   const date = new Date()
 
   const openCookiesHandler = () => {
@@ -84,6 +86,25 @@ const Footer = ({ title }: FooterProps) => {
         title={title}
       >
         Privacy
+      </SLink>
+      <Sep title={title}>|</Sep>
+      <SLink
+        to="https://www.notion.so/Gnosis-Safe-Media-Kit-9b1fca2a566e40b8ac86396d788635b4"
+        target="_blank"
+        rel="noopener noreferrer"
+        title={title}
+      >
+        <div
+          onClick={() =>
+            trackEvent({
+              category: FOOTER_CATEGORY,
+              action: 'Footer section',
+              label: 'Click Press kit',
+            })
+          }
+        >
+          Press Kit
+        </div>
       </SLink>
       <Sep title={title}>|</Sep>
       <SLink

@@ -1,7 +1,9 @@
+import ButtonLink from '../ui/ButtonLink'
 import React from 'react'
 import styled from 'styled-components'
 import ContentWrapper from '../Layout/ContentWrapper'
 import Heading from '../ui/Heading'
+import { SECURITY_CATEGORY, useAnalytics } from '../../utils/googleAnalytics'
 
 const Container = styled.div`
   height: calc(100vh - 56px);
@@ -125,31 +127,68 @@ const UsdWorthDate = styled.p`
   }
 `
 
-const MainSection = () => (
-  <Container>
-    <SWrapper>
-      <LCol>
-        <SHeading>A new standard for smart contract security</SHeading>
-        <Text>How we make sure your funds are safe</Text>
-      </LCol>
-      <RCol>
-        <UsdWorthValueContainer>
-          <UsdWorthValue>{process.env.GATSBY_USD_WORTH_VALUE}</UsdWorthValue>
-        </UsdWorthValueContainer>
-        <UsdWorthNotes>
-          {'USD worth of digital assets securely stored in Gnosis Safes '}
-        </UsdWorthNotes>
-        <UsdWorthDate>
-          <a
+const SButtonLink = styled(ButtonLink)`
+  display: block;
+  text-align: center;
+  width: 165px;
+  margin-top: 30px;
+  box-shadow: none;
+  padding: 0;
+  & > div {
+    width: 165px;
+    padding: 10px 20px;
+  }
+  @media screen and (max-width: 980px) {
+    margin-bottom: 30px;
+  }
+`
+
+const MainSection = () => {
+  const { trackEvent } = useAnalytics()
+
+  return (
+    <Container>
+      <SWrapper>
+        <LCol>
+          <SHeading>A new standard for smart contract security</SHeading>
+          <Text>How we make sure your funds are safe</Text>
+        </LCol>
+        <RCol>
+          <UsdWorthValueContainer>
+            <UsdWorthValue>{process.env.GATSBY_USD_WORTH_VALUE}</UsdWorthValue>
+          </UsdWorthValueContainer>
+          <UsdWorthNotes>
+            {'USD worth of digital assets securely stored in Gnosis Safes '}
+          </UsdWorthNotes>
+          <UsdWorthDate>
+            <a
+              target="_blank"
+              href="https://explore.duneanalytics.com/dashboard/gnosis-safe_2"
+            >
+              {process.env.GATSBY_USD_WORTH_DATE}
+            </a>
+          </UsdWorthDate>
+          <SButtonLink
+            url="https://explore.duneanalytics.com/dashboard/gnosis-safe_2"
             target="_blank"
-            href="https://explore.duneanalytics.com/dashboard/gnosis-safe_2"
+            explicitExternal
           >
-            {process.env.GATSBY_USD_WORTH_DATE}
-          </a>
-        </UsdWorthDate>
-      </RCol>
-    </SWrapper>
-  </Container>
-)
+            <div
+              onClick={() =>
+                trackEvent({
+                  category: SECURITY_CATEGORY,
+                  action: 'Main section',
+                  label: 'Open statistics',
+                })
+              }
+            >
+              Statistics
+            </div>
+          </SButtonLink>
+        </RCol>
+      </SWrapper>
+    </Container>
+  )
+}
 
 export default MainSection

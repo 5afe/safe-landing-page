@@ -126,68 +126,109 @@ const GettingStarted = () => {
         <SHeading>Getting started</SHeading>
         <Row>
           <Link
-            href="https://help.gnosis-safe.io/en/articles/3876456-what-is-a-multisig-wallet"
+            href="https://help.gnosis-safe.io/en/articles/3876456-what-is-gnosis-safe"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <CardItem>
-              <Title>What is a Multisig Wallet?</Title>
-              <Text>
-                What exactly is a multisignature wallet and what's the
-                difference to other wallets?
-              </Text>
-              <SLinkIcon>
-                <LinkIcon />
-              </SLinkIcon>
-            </CardItem>
+            <div
+              onClick={() =>
+                trackEvent({
+                  category: OVERVIEW_CATEGORY,
+                  action: 'Getting started section',
+                  label: 'Open article: What is Gnosis Safe?',
+                })
+              }
+            >
+              <CardItem>
+                <Title>What is Gnosis Safe?</Title>
+                <Text>
+                  Read about the basics of Gnosis Safe and how it compares to
+                  other solutions
+                </Text>
+                <SLinkIcon>
+                  <LinkIcon />
+                </SLinkIcon>
+              </CardItem>
+            </div>
           </Link>
           <Link
-            href="https://help.gnosis-safe.io/en/articles/3876461-create-a-safe-multisig"
+            href="https://help.gnosis-safe.io/en/articles/3876461-create-a-gnosis-safe-account"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <CardItem>
-              <Title>Create a Safe Multisig</Title>
-              <Text>
-                The full process of creating a new multisignature wallet in just
-                60 seconds
-              </Text>
-              <SLinkIcon>
-                <LinkIcon />
-              </SLinkIcon>
-            </CardItem>
+            <div
+              onClick={() =>
+                trackEvent({
+                  category: OVERVIEW_CATEGORY,
+                  action: 'Getting started section',
+                  label: 'Open article: Create a Gnosis Safe account',
+                })
+              }
+            >
+              <CardItem>
+                <Title>Create a Gnosis Safe account</Title>
+                <Text>
+                  The full process of creating a new Gnosis Safe account in just
+                  60 seconds
+                </Text>
+                <SLinkIcon>
+                  <LinkIcon />
+                </SLinkIcon>
+              </CardItem>
+            </div>
           </Link>
           <Link
-            href="https://help.gnosis-safe.io/en/articles/3952623-migration-from-gnosis-multisig-to-safe-multisig"
+            href="https://help.gnosis-safe.io/en/articles/4772567-what-gnosis-safe-setup-should-i-use"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <CardItem>
-              <Title>Migration: From Gnosis Multisig to Safe Multisig</Title>
-              <Text>
-                How to migrate from your legacy Gnosis Multisig to the new Safe
-                Multisig
-              </Text>
-              <SLinkIcon>
-                <LinkIcon />
-              </SLinkIcon>
-            </CardItem>
+            <div
+              onClick={() =>
+                trackEvent({
+                  category: OVERVIEW_CATEGORY,
+                  action: 'Getting started section',
+                  label: 'Open article: What Gnosis Safe setup should I use?',
+                })
+              }
+            >
+              <CardItem>
+                <Title>What Gnosis Safe setup should I use?</Title>
+                <Text>
+                  This article provides some information on what to consider
+                  when setting up a Gnosis Safe
+                </Text>
+                <SLinkIcon>
+                  <LinkIcon />
+                </SLinkIcon>
+              </CardItem>
+            </div>
           </Link>
           <Link
-            href="https://help.gnosis-safe.io/en/articles/4100712-migrate-from-the-legacy-safe-mobile-app-to-the-safe-multisig"
+            href="https://help.gnosis-safe.io/en/articles/4290276-costs-of-creating-a-gnosis-safe-account"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <CardItemLast>
-              <Title>Migrate from the legacy Safe mobile app</Title>
-              <Text>
-                How to permanently migrate from the Gnosis Safe legacy mobile
-                app
-              </Text>
-              <SLinkIcon>
-                <LinkIcon />
-              </SLinkIcon>
-            </CardItemLast>
+            <div
+              onClick={() =>
+                trackEvent({
+                  category: OVERVIEW_CATEGORY,
+                  action: 'Getting started section',
+                  label:
+                    'Open article: Costs of creating a Gnosis Safe account',
+                })
+              }
+            >
+              <CardItemLast>
+                <Title>Costs of creating a Gnosis Safe account</Title>
+                <Text>
+                  This article provides an overview on how much gas it costs
+                  approximately to create a Safe
+                </Text>
+                <SLinkIcon>
+                  <LinkIcon />
+                </SLinkIcon>
+              </CardItemLast>
+            </div>
           </Link>
         </Row>
         <TryDemo>

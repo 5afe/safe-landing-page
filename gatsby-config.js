@@ -4,7 +4,7 @@ require('dotenv').config()
 module.exports = {
   siteMetadata: {
     site: `Gnosis-safe`,
-    description: `Gnosis Safe Multisig is the most trusted platform to manage digital assets on Ethereum`,
+    description: `Gnosis Safe is the most trusted platform to manage digital assets on Ethereum`,
     siteUrl: `https://gnosis-safe.io`,
     language: `en`,
     color: `#003580`,
@@ -29,7 +29,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
-        // Gnosis Safe Multisig Audience
+        // Gnosis Safe Audience
         endpoint:
           'https://gnosis.us13.list-manage.com/subscribe/post?u=1a123436baa68728b8cfa3402&amp;id=4a4457c2ce',
       },
