@@ -218,6 +218,22 @@ const Audits = () => {
                   <Audit date="May 4th, 2020" author="G0 Group (v1.2.0)" />
                 </Link>
               </div>
+              <div
+                onClick={() =>
+                  trackEvent({
+                    category: SECURITY_CATEGORY,
+                    action: 'Audits section',
+                    label: 'Open audit: G0 Group (v1.3.0)',
+                  })
+                }
+              >
+                <Link
+                  href="https://github.com/gnosis/safe-contracts/blob/186a21a74b327f17fc41217a927dea7064f74604/docs/audit_1_3_0.md"
+                  target="_blank"
+                >
+                  <Audit date="May 5th, 2021" author="G0 Group (v1.3.0)" />
+                </Link>
+              </div>
             </RCol>
           </Row>
         </SContentWrapper>
