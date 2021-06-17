@@ -212,7 +212,7 @@ const MainSection = () => {
           <ButtonsRow>
             <SButtonLinkLeft
               url="https://gnosis1.typeform.com/to/DOxbpZP3"
-              target="_self"
+              target="_blank"
               explicitExternal
             >
               <div
