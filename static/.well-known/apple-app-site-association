@@ -12,8 +12,8 @@
                 ],
                 "components": [
                     {
-                        "/": "/walletconnect/*",
-                        "comment": "Matches any URL whose path starts with /walletconnect/"
+                        "/": "*",
+                        "comment": "Matches all universal links"
                     }
                 ]
             }
