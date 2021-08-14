@@ -7,11 +7,12 @@ import Card from './Card'
 const Container = styled.section`
   padding: 112px 0;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   color: ${(p) => p.theme.palette.white};
   background-color: ${(p) => p.theme.palette.navy};
   @media screen and (max-width: 980px) {
     padding: 0 12px 10px 12px;
+    padding-bottom: 70px;
   }
 `
 
@@ -85,7 +86,7 @@ const Text = styled.p`
 const SBgGray = styled(BgGray)`
   position: absolute;
   bottom: 100px;
-  z-index: -2;
+  z-index: -1;
   @media screen and (max-width: 980px) {
     top: 0;
     display: none;
@@ -102,9 +103,8 @@ const PolicyModules = () => (
           <LCol>
             <SHeading>Policy modules</SHeading>
             <Text>
-              While the core contract has been formally verified, every change
-              to the smart contract goes through a careful audit by external
-              security experts.
+              Work with our partners to define policy modules that directly
+              facilitate your company’s access control and opsec requirements.
             </Text>
           </LCol>
           <RCol>
