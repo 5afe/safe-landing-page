@@ -92,26 +92,8 @@ const MainSection = () => {
           </SHeading>
           <ButtonsRow>
             <SButtonLink
-              colorScheme="white"
-              url="https://drive.google.com/file/d/1n1b6bV9zrruFwZnayNDvwCbXE2FluABK/view"
-              target="_blank"
-              explicitExternal
-            >
-              <div
-                onClick={() =>
-                  trackEvent({
-                    category: ENTERPRISES_CATEGORY,
-                    action: 'Main section',
-                    label: 'Click Download brochure',
-                  })
-                }
-              >
-                Download brochure
-              </div>
-            </SButtonLink>
-            <SButtonLink
               colorScheme="green"
-              url="https://gnosis1.typeform.com/to/DOxbpZP3"
+              url="https://gnosis1.typeform.com/to/Zt71a4yB"
               target="_blank"
               explicitExternal
             >
