@@ -927,10 +927,6 @@ export default () => (
             </Link>
           </Li>
           <Li>
-            Telegram:{' '}
-            <Link href="https://t.me/GnosisSafe">https://t.me/GnosisSafe</Link>
-          </Li>
-          <Li>
             Github:{' '}
             <Link href="https://github.com/gnosis/">
               https://github.com/gnosis/
