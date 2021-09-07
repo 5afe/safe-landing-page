@@ -15,6 +15,7 @@ import {
 } from './cookies'
 import { loadGoogleAnalytics } from './googleAnalytics'
 import { closeIntercom, isIntercomLoaded, loadIntercom } from './intercom'
+import { CookieAttributes } from 'js-cookie'
 
 const Container = styled.div``
 
@@ -146,6 +147,12 @@ const CookiesBanner = () => {
   }
 
   useEffect(() => {
+    if (showIntercom) {
+      loadIntercom()
+    }
+  }, [showIntercom])
+
+  useEffect(() => {
     const fetchCookiesFromStorage = async () => {
       const cookiesState: CookiesProps = await loadFromCookie(COOKIES_KEY)
       if (cookiesState) {
@@ -175,7 +182,10 @@ const CookiesBanner = () => {
       acceptedAnalytics: true,
       acceptedIntercom: true,
     }
-    await saveCookie(COOKIES_KEY, newState, 365)
+    const cookieConfig: CookieAttributes = {
+      expires: 365,
+    }
+    await saveCookie(COOKIES_KEY, newState, cookieConfig)
     setShowAnalytics(true)
     setShowIntercom(true)
     openCookieBanner(false)
@@ -188,8 +198,10 @@ const CookiesBanner = () => {
       acceptedAnalytics: localAnalytics,
       acceptedIntercom: localIntercom,
     }
-    const expDays = localAnalytics ? 365 : 7
-    await saveCookie(COOKIES_KEY, newState, expDays)
+    const cookieConfig: CookieAttributes = {
+      expires: localAnalytics ? 365 : 7,
+    }
+    await saveCookie(COOKIES_KEY, newState, cookieConfig)
     setShowAnalytics(localAnalytics)
     setShowIntercom(localIntercom)
     if (!localIntercom && isIntercomLoaded()) {
@@ -200,10 +212,6 @@ const CookiesBanner = () => {
 
   if (showAnalytics) {
     loadGoogleAnalytics()
-  }
-
-  if (showIntercom) {
-    loadIntercom()
   }
 
   const CookiesBannerForm = (props: CookiesBannerFormProps) => {

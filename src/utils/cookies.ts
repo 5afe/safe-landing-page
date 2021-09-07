@@ -1,6 +1,7 @@
-import Cookies from 'js-cookie'
+import Cookies, { CookieAttributes } from 'js-cookie'
 
 export const COOKIES_KEY = 'COOKIES'
+export const COOKIES_KEY_INTERCOM = `${COOKIES_KEY}_INTERCOM`
 
 export type CookiesProps = {
   acceptedNecessary: boolean
@@ -9,18 +10,13 @@ export type CookiesProps = {
   cookieBannerOpen: boolean
 }
 
-export const getNetwork = () => {
-  return typeof window !== 'undefined' &&
-    window.location.hostname.split('.')[0] === 'gnosis-safe'
-    ? 'MAINNET'
-    : 'RINKEBY'
-}
+const VERSION_PREFIX = 'v1_'
+const PREFIX = `${VERSION_PREFIX}MAINNET__`
 
-const PREFIX = `v1_${getNetwork()}`
-
-export const loadFromCookie = async (key: string): Promise<any> => {
+export const loadFromCookie = async (key: string, withoutPrefix = false): Promise<any> => {
+  const prefix = withoutPrefix ? '' : PREFIX
   try {
-    const stringifiedValue = await Cookies.get(`${PREFIX}__${key}`)
+    const stringifiedValue = await Cookies.get(`${prefix}${key}`)
     if (stringifiedValue === null || stringifiedValue === undefined) {
       return undefined
     }
@@ -35,12 +31,13 @@ export const loadFromCookie = async (key: string): Promise<any> => {
 export const saveCookie = async (
   key: string,
   value: any,
-  expirationDays: number
-): Promise<any> => {
+  options: CookieAttributes,
+  withoutPrefix = false,
+): Promise<void> => {
+  const prefix = withoutPrefix ? '' : PREFIX
   try {
     const stringifiedValue = JSON.stringify(value)
-    const expiration = expirationDays ? { expires: expirationDays } : undefined
-    await Cookies.set(`${PREFIX}__${key}`, stringifiedValue, expiration)
+    await Cookies.set(`${prefix}${key}`, stringifiedValue, options)
   } catch (err) {
     console.error(`Failed to save ${key} in cookies:`, err)
   }
