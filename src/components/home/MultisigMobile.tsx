@@ -160,47 +160,6 @@ const MultisigMobile = () => {
                 </a>
               </AppsLine>
             </Row>
-            <Row>
-              <RinkebyAppsLine>
-                Rinkeby:
-                <a
-                  href="https://testflight.apple.com/join/U8NviSFl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <InnerLink
-                    onClick={() =>
-                      trackEvent({
-                        category: OVERVIEW_CATEGORY,
-                        action: 'Safe Multisig Mobile section',
-                        label: 'Download iOS Rinkeby',
-                      })
-                    }
-                  >
-                    iOS
-                    <SLinkIcon />
-                  </InnerLink>
-                </a>{' '}
-                <a
-                  href="https://appdistribution.firebase.dev/i/8ecc0367c2001086"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <InnerLink
-                    onClick={() =>
-                      trackEvent({
-                        category: OVERVIEW_CATEGORY,
-                        action: 'Safe Multisig Mobile section',
-                        label: 'Download Android Rinkeby',
-                      })
-                    }
-                  >
-                    Android
-                    <SLinkIcon />
-                  </InnerLink>
-                </a>
-              </RinkebyAppsLine>
-            </Row>
             <SImg fluid={data.mobile.childImageSharp.fluid} />
           </SWrapper>
         </Container>

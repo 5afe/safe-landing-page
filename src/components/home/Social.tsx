@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import DiscordIcon from '../../assets/discord.svg'
 import GithubIcon from '../../assets/github.svg'
-import MailIcon from '../../assets/mail.svg'
 import MediumIcon from '../../assets/medium.svg'
 import TwitterIcon from '../../assets/twitter.svg'
 import ContentWrapper from '../Layout/ContentWrapper'
@@ -38,13 +37,6 @@ const Social: React.FC = () => (
           rel="noopener noreferrer"
         >
           <TwitterIcon />
-        </a>
-        <a
-          href="mailto:safe@gnosis.io"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <MailIcon />
         </a>
         <a
           href="https://blog.gnosis.pm/tagged/safe"
