@@ -39,7 +39,7 @@ const Social: React.FC = () => (
           <TwitterIcon />
         </a>
         <a
-          href="https://blog.gnosis.pm/tagged/safe"
+          href="https://blog.gnosis.pm/tagged/gnosis%20safe"
           target="_blank"
           rel="noopener noreferrer"
         >
