@@ -1,9 +1,9 @@
-import ButtonLink from '../../ui/ButtonLink'
 import React from 'react'
 import Headroom from 'react-headroom'
 import styled, { css } from 'styled-components'
-import { HEADER_CATEGORY, useAnalytics } from '../../../utils/googleAnalytics'
 import Logo from '../../../assets/multisig-logo-centered.svg'
+import { HEADER_CATEGORY, useAnalytics } from '../../../utils/googleAnalytics'
+import ButtonLink from '../../ui/ButtonLink'
 import Link from '../../ui/Link'
 import Divider from './Divider'
 import Spacer from './Spacer'
@@ -147,11 +147,20 @@ const Header: React.FC<HeaderProps> = ({
             </NavListItem>
             <Divider />
             <NavListItem>
-              <NavLink activeClassName="active" to="/developers">
-                Developers
-              </NavLink>
+              <NavListLink href="https://docs.gnosis-safe.io" target="_blank">
+                <div
+                  onClick={() =>
+                    trackEvent({
+                      category: HEADER_CATEGORY,
+                      action: 'Header section',
+                      label: 'Click Developers',
+                    })
+                  }
+                >
+                  Developers
+                </div>
+              </NavListLink>
             </NavListItem>
-            <Divider />
             <NavListItem>
               <NavListLink href="https://help.gnosis-safe.io" target="_blank">
                 <div

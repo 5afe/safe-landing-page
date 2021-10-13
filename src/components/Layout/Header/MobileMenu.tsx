@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from '../../ui/Link'
-import ButtonLink from '../../ui/ButtonLink'
-import Header from './Header'
 import { HEADER_CATEGORY, useAnalytics } from '../../../utils/googleAnalytics'
+import ButtonLink from '../../ui/ButtonLink'
+import Link from '../../ui/Link'
+import Header from './Header'
 
 const Container = styled.div`
   width: 100%;
@@ -87,10 +87,21 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
             </NavLink>
           </NavListItem>
           <NavListItem>
-            <NavLink activeClassName="active" to="/developers">
-              Developers
-            </NavLink>
+            <NavListLink href="https://docs.gnosis-safe.io" target="_blank">
+              <div
+                onClick={() =>
+                  trackEvent({
+                    category: HEADER_CATEGORY,
+                    action: 'Header section',
+                    label: 'Click Developers',
+                  })
+                }
+              >
+                Developers
+              </div>
+            </NavListLink>
           </NavListItem>
+
           <NavListItem>
             <NavListLink href="https://help.gnosis-safe.io" target="_blank">
               <div
