@@ -50,13 +50,13 @@ deploy dev rinkeby:
   only:
     - develop
 
-deploy staging mainnet:
+deploy staging:
   stage: deploy-development-staging
   tags:
     - python
   environment:
-    name: staging-mainnet
-    url: http://safe-team-mainnet.staging.gnosisdev.com
+    name: staging
+    url: http://safe-team.staging.gnosisdev.com
   before_script:
     - pip install awscli # Install the SDK
   script:
