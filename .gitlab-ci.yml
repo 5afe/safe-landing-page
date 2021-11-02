@@ -50,24 +50,6 @@ deploy dev rinkeby:
   only:
     - develop
 
-deploy staging rinkeby:
-  stage: deploy-development-staging
-  tags:
-    - python
-  environment:
-    name: staging-rinkeby
-    url: http://safe-team-rinkeby.staging.gnosisdev.com
-  before_script:
-    - pip install awscli # Install the SDK
-  script:
-    - aws s3 sync public/ s3://${STAGING_BUCKET_RINKEBY_NAME}/current --exclude "*.html" --exclude "page-data/*" --cache-control max-age=31536000,public
-    - aws s3 sync public/ s3://${STAGING_BUCKET_RINKEBY_NAME}/current --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
-    - aws s3 sync public/ s3://${STAGING_BUCKET_RINKEBY_NAME}/current --exclude "*" --include "page-data/*" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
-    # Special case - .well-known/apple-app-site-association must have "Content-type: application/json"
-    - aws s3 sync public/ s3://${STAGING_BUCKET_RINKEBY_NAME}/current --exclude "*" --include "apple-app-site-association" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
-  only:
-    - master
-
 deploy staging mainnet:
   stage: deploy-development-staging
   tags:
@@ -78,11 +60,11 @@ deploy staging mainnet:
   before_script:
     - pip install awscli # Install the SDK
   script:
-    - aws s3 sync public/ s3://${STAGING_BUCKET_MAINNET_NAME}/current --exclude "*.html" --exclude "page-data/*" --cache-control max-age=31536000,public
-    - aws s3 sync public/ s3://${STAGING_BUCKET_MAINNET_NAME}/current --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
-    - aws s3 sync public/ s3://${STAGING_BUCKET_MAINNET_NAME}/current --exclude "*" --include "page-data/*" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
+    - aws s3 sync public/ s3://${STAGING_BUCKET_NAME}/current --exclude "*.html" --exclude "page-data/*" --cache-control max-age=31536000,public
+    - aws s3 sync public/ s3://${STAGING_BUCKET_NAME}/current --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
+    - aws s3 sync public/ s3://${STAGING_BUCKET_NAME}/current --exclude "*" --include "page-data/*" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
     # Special case - .well-known/apple-app-site-association must have "Content-type: application/json"
-    - aws s3 sync public/ s3://${STAGING_BUCKET_MAINNET_NAME}/current --exclude "*" --include "apple-app-site-association" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
+    - aws s3 sync public/ s3://${STAGING_BUCKET_NAME}/current --exclude "*" --include "apple-app-site-association" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
   only:
     - master
 
@@ -95,11 +77,11 @@ package release version:
   before_script:
     - pip install awscli # Install the SDK
   script:
-    - aws s3 sync public/ s3://${STAGING_BUCKET_MAINNET_NAME}/releases-landing/${CI_COMMIT_TAG} --delete --exclude "*.html" --exclude "page-data/*" --cache-control max-age=31536000,public
-    - aws s3 sync public/ s3://${STAGING_BUCKET_MAINNET_NAME}/releases-landing/${CI_COMMIT_TAG} --delete --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
-    - aws s3 sync public/ s3://${STAGING_BUCKET_MAINNET_NAME}/releases-landing/${CI_COMMIT_TAG} --delete --exclude "*" --include "page-data/*" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
+    - aws s3 sync public/ s3://${STAGING_BUCKET_NAME}/releases-landing/${CI_COMMIT_TAG} --delete --exclude "*.html" --exclude "page-data/*" --cache-control max-age=31536000,public
+    - aws s3 sync public/ s3://${STAGING_BUCKET_NAME}/releases-landing/${CI_COMMIT_TAG} --delete --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
+    - aws s3 sync public/ s3://${STAGING_BUCKET_NAME}/releases-landing/${CI_COMMIT_TAG} --delete --exclude "*" --include "page-data/*" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
     # Special case - .well-known/apple-app-site-association must have "Content-type: application/json"
-    - aws s3 sync public/ s3://${STAGING_BUCKET_MAINNET_NAME}/releases-landing/${CI_COMMIT_TAG} --delete --exclude "*" --include "apple-app-site-association" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
+    - aws s3 sync public/ s3://${STAGING_BUCKET_NAME}/releases-landing/${CI_COMMIT_TAG} --delete --exclude "*" --include "apple-app-site-association" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
   only:
     - tags
 
