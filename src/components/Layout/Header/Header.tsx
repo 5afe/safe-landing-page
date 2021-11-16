@@ -178,7 +178,7 @@ const Header: React.FC<HeaderProps> = ({
             </NavListItem>
             <Divider />
             <NavListItem>
-              <SButtonLink url="/app/#" target="_self" explicitExternal>
+              <SButtonLink url="/app/" target="_self" explicitExternal>
                 <div
                   onClick={() =>
                     trackEvent({

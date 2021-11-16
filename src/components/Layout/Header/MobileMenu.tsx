@@ -118,7 +118,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
             </NavListLink>
           </NavListItem>
           <NavListItem>
-            <SButtonLink url="/app/#" target="_self" explicitExternal>
+            <SButtonLink url="/app/" target="_self" explicitExternal>
               <div
                 onClick={() =>
                   trackEvent({
