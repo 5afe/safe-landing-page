@@ -1,17 +1,8 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
 import {
-  ContentWrapper,
-  Title,
-  Date,
-  Section,
-  TitleSection,
-  Link,
-  Paragraph,
-  RedMessage,
-  Ol,
-  Li,
-  B,
+  B, ContentWrapper, Date, Li, Link, Ol, Paragraph,
+  RedMessage, Section, Title, TitleSection
 } from '../styles/legalPagesStyles'
 
 export default () => (
@@ -934,8 +925,8 @@ export default () => (
           </Li>
           <Li>
             Intercom:{' '}
-            <Link href="https://gnosis-safe.io/app/#/">
-              https://gnosis-safe.io/app/#/
+            <Link href="https://gnosis-safe.io/app/">
+              https://gnosis-safe.io/app/
             </Link>
           </Li>
           <Li>

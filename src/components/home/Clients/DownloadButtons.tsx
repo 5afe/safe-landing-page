@@ -156,73 +156,14 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
             </Text>
             <Text>
               <div>Gnosis Safe supports:</div>
-              <NetworkItem>
-                <a href="https://rinkeby.gnosis-safe.io/app/#" target="_blank">
-                  <InnerLink
-                    onClick={() =>
-                      trackEvent({
-                        category: OVERVIEW_CATEGORY,
-                        action: 'Download clients section',
-                        label: 'Open Rinkeby web app',
-                      })
-                    }
-                  >
-                    Rinkeby
-                    <SLinkIcon />
-                  </InnerLink>
-                </a>
-                ,
-              </NetworkItem>
-              <NetworkItem>
-                <a href="https://xdai.gnosis-safe.io/app/#" target="_blank">
-                  <InnerLink
-                    onClick={() =>
-                      trackEvent({
-                        category: OVERVIEW_CATEGORY,
-                        action: 'Download clients section',
-                        label: 'Open xDai web app',
-                      })
-                    }
-                  >
-                    xDai
-                    <SLinkIcon />
-                  </InnerLink>
-                </a>
-                ,
-              </NetworkItem>
-              <NetworkItem>
-                <a href="https://ewc.gnosis-safe.io/app/#" target="_blank">
-                  <InnerLink
-                    onClick={() =>
-                      trackEvent({
-                        category: OVERVIEW_CATEGORY,
-                        action: 'Download clients section',
-                        label: 'Open EWC web app',
-                      })
-                    }
-                  >
-                    EWC
-                    <SLinkIcon />
-                  </InnerLink>
-                </a>
-                ,
-              </NetworkItem>
-              <NetworkItem>
-                <a href="https://volta.gnosis-safe.io/app/#" target="_blank">
-                  <InnerLink
-                    onClick={() =>
-                      trackEvent({
-                        category: OVERVIEW_CATEGORY,
-                        action: 'Download clients section',
-                        label: 'Open Volta web app',
-                      })
-                    }
-                  >
-                    Volta
-                    <SLinkIcon />
-                  </InnerLink>
-                </a>
-              </NetworkItem>
+              <NetworkItem>Mainnet,</NetworkItem>
+              <NetworkItem>Rinkeby,</NetworkItem>
+              <NetworkItem>xDai,</NetworkItem>
+              <NetworkItem>Arbitrum,</NetworkItem>
+              <NetworkItem>EWC,</NetworkItem>
+              <NetworkItem>Volta,</NetworkItem>
+              <NetworkItem>Polygon,</NetworkItem>
+              <NetworkItem>BSC</NetworkItem>
             </Text>
           </Col>
           <Col>
