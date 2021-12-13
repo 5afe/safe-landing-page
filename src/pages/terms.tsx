@@ -1,8 +1,17 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
 import {
-  B, ContentWrapper, Date, Li, Link, Ol, Paragraph,
-  RedMessage, Section, Title, TitleSection
+  B,
+  ContentWrapper,
+  Date,
+  Li,
+  Link,
+  Ol,
+  Paragraph,
+  RedMessage,
+  Section,
+  Title,
+  TitleSection,
 } from '../styles/legalPagesStyles'
 
 export default () => (
