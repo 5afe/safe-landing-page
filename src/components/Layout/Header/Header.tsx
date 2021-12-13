@@ -6,14 +6,15 @@ import { HEADER_CATEGORY, useAnalytics } from '../../../utils/googleAnalytics'
 import ButtonLink from '../../ui/ButtonLink'
 import Link from '../../ui/Link'
 import Divider from './Divider'
+import Dropdown, { DropdownOption, DropdownWrapper } from './Dropdown'
 import Spacer from './Spacer'
 
-const HeaderItemPadding = css`
-  padding-left: 16px;
-  padding-right: 16px;
+const HeaderItemMargin = css`
+  margin-left: 16px;
+  margin-right: 16px;
   @media screen and (max-width: 980px) {
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 `
 
@@ -35,7 +36,6 @@ const Container = styled.header<ContainerProps>`
   border-bottom: ${(p) =>
     !p.mobileMenuOpened ? `solid 2px ${p.theme.palette.greyPale}` : 'none'};
   background-color: ${(p) => p.theme.palette.white};
-  overflow: hidden;
 `
 
 const NavContainer = styled.nav`
@@ -69,11 +69,15 @@ const BurgerLine = styled.div`
 const NavList = styled.ul`
   display: flex;
   align-items: center;
-  height: 100%;
 `
 
 const NavListItem = styled.li`
-  ${HeaderItemPadding}
+  ${HeaderItemMargin}
+  position: relative;
+  cursor: default;
+  &:hover ${DropdownWrapper} {
+    display: block;
+  }
 `
 
 const NavListLink = styled.a`
@@ -89,7 +93,7 @@ const NavLink = styled(Link)`
 
 const SLogo = styled(Logo)`
   height: 32px;
-  ${HeaderItemPadding}
+  ${HeaderItemMargin}
   width: 172px;
   margin-top: 2px;
 `
@@ -101,6 +105,11 @@ const SButtonLink = styled(ButtonLink)`
     padding: 10px 20px;
   }
 `
+
+export const communityMenu: DropdownOption[] = [
+  { title: 'Forum', link: 'https://forum.gnosis-safe.io/' },
+  { title: 'Chat', link: 'https://discord.gg/7nuNQQQT' },
+]
 
 interface HeaderProps {
   toggleMobileMenu: Function
@@ -161,6 +170,11 @@ const Header: React.FC<HeaderProps> = ({
                 </div>
               </NavListLink>
             </NavListItem>
+            <NavListItem>
+              <div>Community</div>
+              <Dropdown options={communityMenu} />
+            </NavListItem>
+            <Divider />
             <NavListItem>
               <NavListLink href="https://help.gnosis-safe.io" target="_blank">
                 <div

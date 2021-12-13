@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Header from './Header'
-import MobileMenu from './MobileMenu'
+import MobileMenu from './Mobile/MobileMenu'
 
 const HeaderMenu: React.FC<{}> = () => {
   const [mobileMenuOpened, setMobileMenuOpened] = useState<boolean>(false)
