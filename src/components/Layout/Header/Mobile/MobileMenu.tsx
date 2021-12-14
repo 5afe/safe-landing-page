@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
-import { HEADER_CATEGORY, useAnalytics } from '../../../utils/googleAnalytics'
-import ButtonLink from '../../ui/ButtonLink'
-import Link from '../../ui/Link'
-import Header from './Header'
+import { HEADER_CATEGORY, useAnalytics } from '../../../../utils/googleAnalytics'
+import ButtonLink from '../../../ui/ButtonLink'
+import Link from '../../../ui/Link'
+import Header, { communityMenu } from '../Header'
+import Dropdown from './Dropdown'
 
 const Container = styled.div`
   width: 100%;
@@ -22,7 +23,6 @@ const SMobileMenu = styled.div`
 const NavList = styled.ul`
   display: block;
   width: 100%;
-  padding: 0 20px;
   font-weight: 800;
   text-align: center;
   color: ${(p) => p.theme.palette.navy};
@@ -31,6 +31,10 @@ const NavList = styled.ul`
 
 const NavListItem = styled.li`
   padding: 25px 0;
+  position: relative;
+  & > div {
+    cursor: pointer;
+  }
 `
 
 const NavListLink = styled.a`
@@ -62,6 +66,11 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
   mobileMenuOpened,
 }) => {
   const { trackEvent } = useAnalytics()
+  const [showCommunityMenu, setShowCommunityMenu] = useState<boolean>(false)
+
+  const toggleCommunityMenu = () => {
+    setShowCommunityMenu(!showCommunityMenu)
+  }
 
   return (
     <Container>
@@ -101,7 +110,10 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
               </div>
             </NavListLink>
           </NavListItem>
-
+          <NavListItem>
+            <div onClick={toggleCommunityMenu}>Community</div>
+          </NavListItem>
+          {showCommunityMenu && <Dropdown options={communityMenu} />}
           <NavListItem>
             <NavListLink href="https://help.gnosis-safe.io" target="_blank">
               <div

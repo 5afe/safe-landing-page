@@ -13,7 +13,10 @@ export type CookiesProps = {
 const VERSION_PREFIX = 'v1_'
 const PREFIX = `${VERSION_PREFIX}MAINNET__`
 
-export const loadFromCookie = async (key: string, withoutPrefix = false): Promise<any> => {
+export const loadFromCookie = async (
+  key: string,
+  withoutPrefix = false
+): Promise<any> => {
   const prefix = withoutPrefix ? '' : PREFIX
   try {
     const stringifiedValue = await Cookies.get(`${prefix}${key}`)
@@ -32,7 +35,7 @@ export const saveCookie = async (
   key: string,
   value: any,
   options: CookieAttributes,
-  withoutPrefix = false,
+  withoutPrefix = false
 ): Promise<void> => {
   const prefix = withoutPrefix ? '' : PREFIX
   try {
