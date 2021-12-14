@@ -108,7 +108,7 @@ const SButtonLink = styled(ButtonLink)`
 
 export const communityMenu: DropdownOption[] = [
   { title: 'Forum', link: 'https://forum.gnosis-safe.io/' },
-  { title: 'Chat', link: 'https://discord.gg/7nuNQQQT' },
+  { title: 'Chat', link: 'https://discord.gg/AjG7AQD9Qn' },
 ]
 
 interface HeaderProps {
