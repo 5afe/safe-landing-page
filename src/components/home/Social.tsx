@@ -46,7 +46,7 @@ const Social: React.FC = () => (
           <MediumIcon />
         </a>
         <a
-          href="https://discord.gg/FPMRAwK"
+          href="https://discord.gg/AjG7AQD9Qn"
           target="_blank"
           rel="noopener noreferrer"
         >

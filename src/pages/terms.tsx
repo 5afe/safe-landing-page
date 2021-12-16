@@ -11,7 +11,7 @@ import {
   RedMessage,
   Section,
   Title,
-  TitleSection,
+  TitleSection
 } from '../styles/legalPagesStyles'
 
 export default () => (
@@ -940,8 +940,8 @@ export default () => (
           </Li>
           <Li>
             Discord:{' '}
-            <Link href="https://discord.gg/5rjJxUT">
-              https://discord.gg/5rjJxUT
+            <Link href="https://discord.gg/AjG7AQD9Qn">
+            https://discord.gg/AjG7AQD9Qn
             </Link>
           </Li>
         </Ol>
