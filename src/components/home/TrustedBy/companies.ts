@@ -63,7 +63,7 @@ const TRUSTED_BY_COMPANIES: TrustedByEntry[] = [
   {
     name: '1inch',
     imageURL: '/images/1inch.png',
-    websiteURL: 'https://1inch.exchange/#/',
+    websiteURL: 'https://1inch.io/',
   },
 ]
 
