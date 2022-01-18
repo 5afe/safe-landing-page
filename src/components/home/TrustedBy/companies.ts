@@ -53,7 +53,7 @@ const TRUSTED_BY_COMPANIES: TrustedByEntry[] = [
   {
     name: 'Sushiswap',
     imageURL: '/images/sushiswap.png',
-    websiteURL: 'https://sushiswap.fi/',
+    websiteURL: 'https://sushi.com/',
   },
   {
     name: 'Aave',
