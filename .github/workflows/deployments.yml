@@ -10,8 +10,8 @@ on:
       - main
       - dev
   # Launches build when release is published
-  release:
-    types: [published]
+  #release:
+  #  types: [published]
 
 jobs:
   deploy:
@@ -34,22 +34,19 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 16
+          node-version: 14
 
-      - uses: actions/cache@v2
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+      - name: Install
+        run: |
+          rm -rf .cache
+          rm -rf public
+          yarn config set cache-folder .yarn
+          yarn install
+          pip install awscli --upgrade --user
 
-      - run: |
-        sudo apt-get update
-        sudo apt-get -y install python3-pip python3-dev libusb-1.0-0-dev libudev-dev
-        pip install awscli --upgrade --user
-        rm -rf .cache
-        rm -rf public
-        yarn config set cache-folder .yarn
-        yarn install
-        yarn build
+      - name: Build
+        run: |
+          yarn build
 
       # Script to deploy to the dev environment
       # http://safe-team.dev.gnosisdev.com
