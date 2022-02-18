@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 76 76">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#1C9781" d="M16.605 9.854L52.323 0.5 54.874 9.854" transform="translate(3)"/>
+        <g>
+            <path stroke="#001428" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M16.605 9.434L52.323 0.08 54.874 9.434" transform="translate(3) translate(0 .42)"/>
+            <path fill="#1C9781" d="M61.126 57.5H6.046C2.996 57.5.5 55.004.5 51.953V14.892c0-3.051 2.496-5.546 5.546-5.546h55.08c3.051 0 5.547 2.495 5.547 5.546v37.06c0 3.052-2.496 5.548-5.547 5.548" transform="translate(3) translate(0 .42)"/>
+            <path stroke="#001428" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M61.126 57.5H6.046C2.996 57.5.5 55.004.5 51.953V14.892c0-3.051 2.496-5.546 5.546-5.546h55.08c3.051 0 5.547 2.495 5.547 5.546v37.06c0 3.052-2.496 5.548-5.547 5.548z" transform="translate(3) translate(0 .42)"/>
+            <path fill="#1C9781" d="M67.207 42.654h-20.84c-1.81 0-3.293-1.48-3.293-3.293V27.484c0-1.81 1.482-3.293 3.293-3.293h20.84c1.811 0 3.293 1.482 3.293 3.293v11.877c0 1.812-1.482 3.293-3.293 3.293" transform="translate(3) translate(0 .42)"/>
+            <path stroke="#001428" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M67.207 42.654h-20.84c-1.81 0-3.293-1.48-3.293-3.293V27.484c0-1.81 1.482-3.293 3.293-3.293h20.84c1.811 0 3.293 1.482 3.293 3.293v11.877c0 1.812-1.482 3.293-3.293 3.293z" transform="translate(3) translate(0 .42)"/>
+            <path fill="#1C9781" d="M55.304 33.423c0 1.802-1.461 3.262-3.263 3.262-1.801 0-3.261-1.46-3.261-3.262s1.46-3.263 3.261-3.263c1.802 0 3.263 1.46 3.263 3.263" transform="translate(3) translate(0 .42)"/>
+            <path stroke="#001428" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M55.304 33.423c0 1.802-1.461 3.262-3.263 3.262-1.801 0-3.261-1.46-3.261-3.262s1.46-3.263 3.261-3.263c1.802 0 3.263 1.46 3.263 3.263z" transform="translate(3) translate(0 .42)"/>
+        </g>
+    </g>
+</svg>

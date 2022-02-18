@@ -1,0 +1,67 @@
+{
+  "name": "safe-landing-page",
+  "version": "2.5.16",
+  "description": "Gnosis Safe Landing Page",
+  "private": true,
+  "engines": {
+    "node": ">=13.7.0"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{ts,tsx}",
+    "lint": "tslint 'src/**/*.{ts,tsx}'",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "dependencies": {
+    "@gnosis.pm/safe-react-components": "^0.3.0",
+    "@material-ui/core": "^4.11.3",
+    "@types/react": "16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-helmet": "^6.1.0",
+    "@types/styled-components": "5.1.7",
+    "babel-plugin-styled-components": "^1.12.0",
+    "gatsby": "2.32.3",
+    "gatsby-image": "2.11.0",
+    "gatsby-plugin-client-side-redirect": "1.1.0",
+    "gatsby-plugin-mailchimp": "^5.2.2",
+    "gatsby-plugin-react-helmet": "3.10.0",
+    "gatsby-plugin-react-svg": "^3.0.0",
+    "gatsby-plugin-sharp": "2.14.1",
+    "gatsby-plugin-sitemap": "2.12.0",
+    "gatsby-plugin-styled-components": "3.10.0",
+    "gatsby-plugin-typescript": "2.12.0",
+    "gatsby-source-filesystem": "2.11.0",
+    "gatsby-transformer-sharp": "2.12.0",
+    "immutable": "^4.0.0-rc.12",
+    "js-cookie": "^3.0.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-ga": "^3.3.0",
+    "react-headroom": "^3.1.0",
+    "react-helmet": "^6.1.0",
+    "styled-components": "5.2.1",
+    "styled-normalize": "^8.0.7",
+    "styled-reset": "4.3.4",
+    "typescript": "4.1.5"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^2.2.7",
+    "@types/react-headroom": "^2.2.1",
+    "prettier": "2.2.1",
+    "tslint": "6.1.3",
+    "tslint-config-airbnb": "^5.11.2",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^5.0.0",
+    "tslint-react-a11y": "^1.1.0",
+    "tslint-react-hooks": "2.2.2"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

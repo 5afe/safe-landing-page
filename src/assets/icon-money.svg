@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 76">
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <path fill="#1C9781" d="M33.368.218v11.478c0 2.858-7.357 5.176-16.435 5.176C7.858 16.872.5 14.554.5 11.696V.926" transform="translate(7 14) translate(0 26)"/>
+            <path stroke="#001428" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M33.368.218v11.478c0 2.858-7.357 5.176-16.435 5.176C7.858 16.872.5 14.554.5 11.696V.926" transform="translate(7 14) translate(0 26)"/>
+        </g>
+        <g>
+            <path fill="#1C9781" d="M33.368.435v11.478c0 2.858-7.357 5.174-16.435 5.174C7.858 17.087.5 14.77.5 11.913V1.142" transform="translate(7 14) translate(0 16)"/>
+            <path stroke="#001428" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M33.368.435v11.478c0 2.858-7.357 5.174-16.435 5.174C7.858 17.087.5 14.77.5 11.913V1.142" transform="translate(7 14) translate(0 16)"/>
+        </g>
+        <g>
+            <path fill="#1C9781" d="M33.368.125v11.478c0 2.858-7.357 5.174-16.435 5.174C7.858 16.777.5 14.461.5 11.603V.833" transform="translate(7 14) translate(0 5)"/>
+            <path stroke="#001428" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M33.368.125v11.478c0 2.858-7.357 5.174-16.435 5.174C7.858 16.777.5 14.461.5 11.603V.833" transform="translate(7 14) translate(0 5)"/>
+        </g>
+        <path fill="#1C9781" d="M33.368 6.675c0 2.858-7.357 5.176-16.435 5.176C7.858 11.851.5 9.533.5 6.675S7.857 1.5 16.933 1.5c9.079 0 16.435 2.317 16.435 5.175" transform="translate(7 14)"/>
+        <path stroke="#001428" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M33.368 5.675c0 2.858-7.357 5.176-16.435 5.176C7.858 10.851.5 8.533.5 5.675S7.857.5 16.933.5c9.079 0 16.435 2.317 16.435 5.175z" transform="translate(7 14)"/>
+        <g>
+            <path fill="#1C9781" d="M35.359 17.998c0 9.667-7.835 17.502-17.501 17.502C8.193 35.5.357 27.665.357 17.998c0-9.665 7.836-17.5 17.5-17.5 9.667 0 17.502 7.835 17.502 17.5" transform="translate(7 14) translate(26 12)"/>
+            <path stroke="#001428" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M35.359 17.998c0 9.667-7.835 17.502-17.501 17.502C8.193 35.5.357 27.665.357 17.998c0-9.665 7.836-17.5 17.5-17.5 9.667 0 17.502 7.835 17.502 17.5" transform="translate(7 14) translate(26 12)"/>
+        </g>
+    </g>
+</svg>
