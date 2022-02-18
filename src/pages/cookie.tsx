@@ -21,7 +21,7 @@ const Tr = styled.span`
 `
 
 const Td1 = styled.span`
-  width: 110px;
+  width: 200px;
   overflow-wrap: break-word;
 `
 
@@ -582,6 +582,81 @@ export default () => (
             <Td1>_gat</Td1>
             <Td2>Used to throttle request rate</Td2>
             <Td3>1 minute</Td3>
+            <Td4>User activity won't be tracked</Td4>
+          </Tr>
+          <Tr>
+            <Td1>_BEAMER_FIRST_VISIT_{'{productID}'}</Td1>
+            <Td2>Stores the date of this user’s first visit to the site.</Td2>
+            <Td3>300 days</Td3>
+            <Td4>User activity won't be tracked</Td4>
+          </Tr>
+          <Tr>
+            <Td1>_BEAMER_USER_ID_{'{productID}'}</Td1>
+            <Td2>Stores an internal ID for this user.</Td2>
+            <Td3>300 days</Td3>
+            <Td4>User activity won't be tracked</Td4>
+          </Tr>
+          <Tr>
+            <Td1>_BEAMER_LAST_UPDATE_{'{productID}'}</Td1>
+            <Td2>
+              Stores the timestamp for the last time the number of unread posts
+              was updated for this user.
+            </Td2>
+            <Td3>300 days</Td3>
+            <Td4>User activity won't be tracked</Td4>
+          </Tr>
+          <Tr>
+            <Td1>_BEAMER_FILTER_BY_URL_{'{productID}'}</Td1>
+            <Td2>Stores whether to apply URL filtering on the feed.</Td2>
+            <Td3>20 minutes</Td3>
+            <Td4>User activity won't be tracked</Td4>
+          </Tr>
+          <Tr>
+            <Td1>_BEAMER_DATE_{'{productID}'}</Td1>
+            <Td2>Stores the latest date in which the feed was opened.</Td2>
+            <Td3>300 days</Td3>
+            <Td4>User activity won't be tracked</Td4>
+          </Tr>
+          <Tr>
+            <Td1>_BEAMER_BOOSTED_ANNOUNCEMENT_DATE_{'{productID}'}</Td1>
+            <Td2>
+              Stores the latest date in which a boosted announcement was
+              displayed.
+            </Td2>
+            <Td3>300 days</Td3>
+            <Td4>User activity won't be tracked</Td4>
+          </Tr>
+          <Tr>
+            <Td1>_BEAMER_LAST_POST_SHOWN_{'{productID}'}</Td1>
+            <Td2>Stores the ID of the last post shown as a teaser.</Td2>
+            <Td3>300 days</Td3>
+            <Td4>User activity won't be tracked</Td4>
+          </Tr>
+          <Tr>
+            <Td1>_BEAMER_SOUND_PLAYED_{'{productID}'}</Td1>
+            <Td2>
+              Stores whether the notification sound was played since the last
+              time the feed was opened.
+            </Td2>
+            <Td3>7 days</Td3>
+            <Td4>User activity won't be tracked</Td4>
+          </Tr>
+          <Tr>
+            <Td1>_BEAMER_LAST_PUSH_PROMPT_INTERACTION_{'{productID}'}</Td1>
+            <Td2>
+              Stores the date of this user’s latest interaction with the prompt
+              requesting permission to send push notifications.
+            </Td2>
+            <Td3>300 days</Td3>
+            <Td4>User activity won't be tracked</Td4>
+          </Tr>
+          <Tr>
+            <Td1>_BEAMER_NPS_LAST_SHOWN_{'{productID}'}</Td1>
+            <Td2>
+              Stores the latest date in which the NPS prompt was shown to this
+              user.
+            </Td2>
+            <Td3>300 days</Td3>
             <Td4>User activity won't be tracked</Td4>
           </Tr>
         </Paragraph>
