@@ -21,7 +21,7 @@ const Tr = styled.span`
 `
 
 const Td1 = styled.span`
-  width: 110px;
+  width: 200px;
   overflow-wrap: break-word;
 `
 
@@ -584,7 +584,6 @@ export default () => (
             <Td3>1 minute</Td3>
             <Td4>User activity won't be tracked</Td4>
           </Tr>
-          {/* new Beamer cookies */}
           <Tr>
             <Td1>_BEAMER_FIRST_VISIT_{'{productID}'}</Td1>
             <Td2>Stores the date of this user’s first visit to the site.</Td2>
