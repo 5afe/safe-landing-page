@@ -1,0 +1,104 @@
+name: Deploy
+
+# Run on pushes to main or PRs
+on:
+  # Pull request hook without any config. Launches for every pull request
+  # pull_request:
+  # Launches for pushes to main or dev
+  push:
+    branches:
+      - main
+      - dev
+  # Launches build when release is published
+  release:
+   types: [published]
+
+env:
+  GATSBY_GA_MAINNET: ${{ secrets.GATSBY_GA_MAINNET }}
+  GATSBY_GA_RINKEBY: ${{ secrets.GATSBY_GA_RINKEBY }}
+  GATSBY_INTERCOM_ID: ${{ secrets.GATSBY_INTERCOM_ID }}
+  GATSBY_URL_DOWNLOAD_LINUX: ${{ secrets.GATSBY_URL_DOWNLOAD_LINUX }}
+  GATSBY_URL_DOWNLOAD_MAC: ${{ secrets.GATSBY_URL_DOWNLOAD_MAC }}
+  GATSBY_URL_DOWNLOAD_WINDOWS: ${{ secrets.GATSBY_URL_DOWNLOAD_WINDOWS }}
+  GATSBY_USD_WORTH_DATE: ${{ secrets.GATSBY_USD_WORTH_DATE }}
+  GATSBY_USD_WORTH_VALUE: ${{ secrets.GATSBY_USD_WORTH_VALUE }}
+
+jobs:
+  deploy:
+    name: Deployment
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.8.0
+        with:
+          access_token: ${{ github.token }}
+
+      - name: Remove broken apt repos [Ubuntu]
+        if: ${{ matrix.os }} == 'ubuntu-latest'
+        run: |
+          for apt_file in `grep -lr microsoft /etc/apt/sources.list.d/`; do sudo rm $apt_file; done
+
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install
+        run: |
+          rm -rf .cache
+          rm -rf public
+          yarn config set cache-folder .yarn
+          yarn install
+          pip install awscli --upgrade --user
+
+      - name: Build
+        run: |
+          yarn build
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
+
+      # Script to deploy to the dev environment
+      # http://safe-team.dev.gnosisdev.com
+      - name: 'Deploy to S3: Dev'
+        if: github.ref == 'refs/heads/dev'
+        run: |
+          aws s3 sync public/ s3://${{ secrets.DEV_BUCKET_NAME }}/ --exclude "*.html" --exclude "page-data/*" --cache-control max-age=31536000,public
+          aws s3 sync public/ s3://${{ secrets.DEV_BUCKET_NAME }}/ --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
+          aws s3 sync public/ s3://${{ secrets.DEV_BUCKET_NAME }}/ --exclude "*" --include "page-data/*" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
+          aws s3 sync public/ s3://${{ secrets.DEV_BUCKET_NAME }}/ --exclude "*" --include "apple-app-site-association" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
+
+      # Script to deploy to staging environment
+      # http://safe-team.staging.gnosisdev.com
+      - name: 'Deploy to S3: Staging'
+        if: github.ref == 'refs/heads/main'
+        run: |
+          aws s3 sync public/ s3://${{ secrets.STAGING_BUCKET_NAME }}/current --exclude "*.html" --exclude "page-data/*" --cache-control max-age=31536000,public
+          aws s3 sync public/ s3://${{ secrets.STAGING_BUCKET_NAME }}/current --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
+          aws s3 sync public/ s3://${{ secrets.STAGING_BUCKET_NAME }}/current --exclude "*" --include "page-data/*" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
+          aws s3 sync public/ s3://${{ secrets.STAGING_BUCKET_NAME }}/current --exclude "*" --include "apple-app-site-association" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
+
+      # Script to package release files
+      - name: 'Package release version'
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          aws s3 sync public/ s3://${STAGING_BUCKET_NAME}/releases-landing/${{ github.event.release.tag_name }} --delete --exclude "*.html" --exclude "page-data/*" --cache-control max-age=31536000,public
+          aws s3 sync public/ s3://${STAGING_BUCKET_NAME}/releases-landing/${{ github.event.release.tag_name }} --delete --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
+          aws s3 sync public/ s3://${STAGING_BUCKET_NAME}/releases-landing/${{ github.event.release.tag_name }} --delete --exclude "*" --include "page-data/*" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
+          aws s3 sync public/ s3://${STAGING_BUCKET_NAME}/releases-landing/${{ github.event.release.tag_name }} --delete --exclude "*" --include "apple-app-site-association" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type application/json
+
+      # Script to prepare production deployments
+      - name: 'Prepare production deployment flow'
+        if: success() && startsWith(github.ref, 'refs/tags/v')
+        run: bash ./scripts/github/prepare_production_deployment.sh
+        env:
+          PROD_DEPLOYMENT_HOOK_TOKEN: ${{ secrets.PROD_DEPLOYMENT_HOOK_TOKEN }}
+          PROD_DEPLOYMENT_HOOK_URL: ${{ secrets.PROD_DEPLOYMENT_HOOK_URL }}
+          VERSION_TAG: ${{ github.event.release.tag_name }}
