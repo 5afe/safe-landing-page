@@ -3,7 +3,7 @@ name: Deploy
 # Run on pushes to main or PRs
 on:
   # Pull request hook without any config. Launches for every pull request
-  pull_request:
+  # pull_request:
   # Launches for pushes to main or dev
   push:
     branches:
@@ -68,7 +68,7 @@ jobs:
       # Script to deploy to the dev environment
       # http://safe-team.dev.gnosisdev.com
       - name: 'Deploy to S3: Dev'
-        #if: github.ref == 'refs/heads/dev'
+        if: github.ref == 'refs/heads/dev'
         run: |
           aws s3 sync public/ s3://${{ secrets.DEV_BUCKET_NAME }}/ --exclude "*.html" --exclude "page-data/*" --cache-control max-age=31536000,public
           aws s3 sync public/ s3://${{ secrets.DEV_BUCKET_NAME }}/ --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
@@ -78,7 +78,7 @@ jobs:
       # Script to deploy to staging environment
       # http://safe-team.staging.gnosisdev.com
       - name: 'Deploy to S3: Staging'
-        #if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main'
         run: |
           aws s3 sync public/ s3://${{ secrets.STAGING_BUCKET_NAME }}/current --exclude "*.html" --exclude "page-data/*" --cache-control max-age=31536000,public
           aws s3 sync public/ s3://${{ secrets.STAGING_BUCKET_NAME }}/current --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
