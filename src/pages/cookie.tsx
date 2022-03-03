@@ -44,7 +44,7 @@ export default () => (
   <Layout title="Cookie Policy">
     <ContentWrapper>
       <Title>Cookie Policy</Title>
-      <Date>Last updated on April, 2020</Date>
+      <Date>Last updated on March, 2022</Date>
       <Paragraph>
         As described in our Privacy Policy, For general web-browsing of this
         website, your personal data is not revealed to us, although certain
@@ -188,7 +188,7 @@ export default () => (
       </Section>
       <Section>
         <TitleSection>
-          What data are collected by cookies and other technologies on our
+          What data is collected by cookies and other technologies on our
           website?
         </TitleSection>
         <Paragraph>This information may include:</Paragraph>
@@ -230,96 +230,8 @@ export default () => (
             allows this
           </Li>
         </Ol>
-        <Paragraph>
-          We may also use other services, such as{' '}
-          <Link href="https://www.google.com/intl/en/analytics/#?modal_active=none">
-            Google Analytics
-          </Link>{' '}
-          (described below) or other third-party cookies, to assist with
-          analyzing performance on our website. As part of providing these
-          services, these service providers may use cookies and the technologies
-          described below to collect and store information about your device,
-          such as time of visit, pages visited, time spent on each page of our
-          website, links clicked and conversion information, IP address,
-          browser, mobile network information, and type of operating system
-          used.
-        </Paragraph>
       </Section>
-      <Section>
-        <TitleSection>Google Analytics Cookies</TitleSection>
-        <Paragraph>
-          This website uses{' '}
-          <Link href="https://www.google.com/analytics/">Google Analytics</Link>
-          , a web analytics service provided by Google, Inc. ("Google").
-        </Paragraph>
-        <Paragraph>
-          We use Google Analytics to track your preferences and also to identify
-          popular sections of our website. Use of Google Analytics in this way,
-          enables us to adapt the content of our website more specifically to
-          your needs and thereby improve what we can offer to you.
-        </Paragraph>
-        <Paragraph>
-          Google will use this information for the purpose of evaluating your
-          use of our website, compiling reports on website activity for website
-          operators and providing other services relating to website activity
-          and internet usage. Google may also transfer this information to third
-          parties where required to do so by law, or where such third parties
-          process the information on Google's behalf. Google will not associate
-          your IP address with any other data held by Google.
-        </Paragraph>
-        <Paragraph>
-          <B>In particular Google Analytics tells us</B>
-        </Paragraph>
-        <Ol style={{ listStyleType: 'circle' }}>
-          <Li>your IP address (last 3 digits are masked);</Li>
-          <Li>the number of pages visited;</Li>
-          <Li>the time and duration of the visit;</Li>
-          <Li>your location;</Li>
-          <Li>the website you came from (if any);</Li>
-          <Li>
-            the type of hardware you use (i.e. whether you are browsing from a
-            desktop or a mobile device);
-          </Li>
-          <Li>the software used (type of browser); and</Li>
-          <Li>your general interaction with our website.</Li>
-        </Ol>
-        <Paragraph>
-          As stated above, cookie-related information is not used to identify
-          you personally, and what is compiled is only aggregate data that tells
-          us, for example, what countries we are most popular in, but not that
-          you live in a particular country or your precise location when you
-          visited our website (this is because we have only half the
-          information- we know the country the person is browsing from, but not
-          the name of person who is browsing). In such an example Google will
-          analyze the number of users for us, but the relevant cookies do not
-          reveal their identities.
-        </Paragraph>
-        <Paragraph>
-          By using this website, you consent to the processing of data about you
-          by Google in the manner and for the purposes set out above. Google
-          Analytics, its purpose and function is further explained on the{' '}
-          <Link href="https://www.google.com/analytics/">
-            Google Analytics website
-          </Link>
-          .
-        </Paragraph>
-        <Paragraph>
-          For more information about Google Analytics cookies, please see
-          Google's help pages and privacy policy:{' '}
-          <Link href="http://www.google.com/intl/en/policies/privacy/">
-            Google's Privacy Policy
-          </Link>{' '}
-          and{' '}
-          <Link href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage">
-            Google Analytics Help pages
-          </Link>
-          . For further information about the use of these cookies by Google{' '}
-          <Link href="https://support.google.com/analytics/answer/6004245">
-            click here
-          </Link>
-          .
-        </Paragraph>
-      </Section>
+
       <Section>
         <TitleSection>
           What if you don’t agree to us monitoring your use of our website (even
@@ -359,17 +271,6 @@ export default () => (
           reasons, the opt-out cookie will only affect the browser from which
           you actively object from. If you delete the cookies in your browser or
           use a different end device or browser, you will need to opt out again.
-        </Paragraph>
-        <Paragraph>
-          To opt out of being tracked by Google Analytics across all websites,
-          Google has developed Google Analytics opt-out browser add-on. If you
-          would like to opt out of Google Analytics, you have the option of
-          downloading and installing this browser add-on which can be found
-          under the link:{' '}
-          <Link href="http://tools.google.com/dlpage/gaoptout">
-            http://tools.google.com/dlpage/gaoptout
-          </Link>
-          .
         </Paragraph>
       </Section>
       <Section>
@@ -424,26 +325,6 @@ export default () => (
             <Td4>
               <B>Consequences is cookie is not accepted</B>
             </Td4>
-          </Tr>
-          <Tr>
-            <Td1>_ga</Td1>
-            <Td2>Used to distinguish users. Also used by Fortmatic wallet.</Td2>
-            <Td3>2 years from set/update</Td3>
-            <Td4>User activity won't be tracked</Td4>
-          </Tr>
-          <Tr>
-            <Td1>_gid</Td1>
-            <Td2>Used to distinguish users. Also used by Fortmatic wallet.</Td2>
-            <Td3>24 hours</Td3>
-            <Td4>User activity won't be tracked</Td4>
-          </Tr>
-          <Tr>
-            <Td1>_gat</Td1>
-            <Td2>
-              Used to throttle request rate. Also used by Fortmatic wallet.
-            </Td2>
-            <Td3>1 minute</Td3>
-            <Td4>User activity won't be tracked</Td4>
           </Tr>
           <Tr>
             <Td1>APM_TOKEN</Td1>
@@ -564,24 +445,6 @@ export default () => (
               tracking if you have visited before
             </Td2>
             <Td3>1 year</Td3>
-            <Td4>User activity won't be tracked</Td4>
-          </Tr>
-          <Tr>
-            <Td1>_ga</Td1>
-            <Td2>Used to distinguish users</Td2>
-            <Td3>2 years from set/update</Td3>
-            <Td4>User activity won't be tracked</Td4>
-          </Tr>
-          <Tr>
-            <Td1>_gid</Td1>
-            <Td2>Used to distinguish users</Td2>
-            <Td3>24 hours</Td3>
-            <Td4>User activity won't be tracked</Td4>
-          </Tr>
-          <Tr>
-            <Td1>_gat</Td1>
-            <Td2>Used to throttle request rate</Td2>
-            <Td3>1 minute</Td3>
             <Td4>User activity won't be tracked</Td4>
           </Tr>
           <Tr>
