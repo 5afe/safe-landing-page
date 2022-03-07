@@ -338,12 +338,6 @@ export default () => (
             <Td4>User activity won't be tracked</Td4>
           </Tr>
           <Tr>
-            <Td1>_gac_{'<property-id>'}</Td1>
-            <Td2>Contains campaign related information for the user</Td2>
-            <Td3>90 days</Td3>
-            <Td4>User activity won't be tracked</Td4>
-          </Tr>
-          <Tr>
             <Td1>intercom-id-[app_id]</Td1>
             <Td2>Anonymous visitor identifier cookie</Td2>
             <Td3>9 months</Td3>
