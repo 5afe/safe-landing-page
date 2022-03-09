@@ -44,7 +44,7 @@ export default () => (
   <Layout title="Cookie Policy">
     <ContentWrapper>
       <Title>Cookie Policy</Title>
-      <Date>Last updated on February, 2020</Date>
+      <Date>Last updated on February, 2022</Date>
       <Paragraph>
         As described in our Privacy Policy, For general web-browsing of this
         website, your personal data is not revealed to us, although certain
