@@ -250,8 +250,8 @@ const CookiesBanner = () => {
             <FormItem>
               <FormControlLabel
                 control={<SCheckbox checked={localIntercom} />}
-                label="Customer support"
-                name="Customer support"
+                label="Community support & updates"
+                name="Community support & updates"
                 onChange={() => setLocalIntercom((prev) => !prev)}
                 value={localIntercom}
               />
