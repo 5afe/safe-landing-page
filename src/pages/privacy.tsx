@@ -813,6 +813,27 @@ export default () => (
           </Link>
           .
         </Paragraph>
+        <TitleSubSection>4.19 Beamer</TitleSubSection>
+        <Paragraph>
+          We use Beamer{' '}
+          <Link href="https://www.getbeamer.com/">
+            https://www.getbeamer.com/
+          </Link>{' '} for notifications.
+        </Paragraph>
+        <Paragraph>
+          Beamer's purpose and function are further explained under the following link{' '}
+          <Link href="https://www.getbeamer.com/showcase/notification-center">
+            https://www.getbeamer.com/showcase/notification-center
+          </Link>
+          .
+        </Paragraph>
+        <Paragraph>
+          We do not store any information collected by Beamer, Beamer's privacy policy is available at{' '}
+          <Link href="https://www.getbeamer.com/privacy-policy/">
+            https://www.getbeamer.com/privacy-policy/
+          </Link>
+          .
+        </Paragraph>
       </Section>
       <Section id="5">
         <TitleSection>5. Sharing Your Personal Data</TitleSection>
