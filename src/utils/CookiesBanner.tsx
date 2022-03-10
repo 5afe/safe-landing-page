@@ -157,17 +157,17 @@ const CookiesBanner = () => {
       const cookiesState: CookiesProps = await loadFromCookie(COOKIES_KEY)
       if (cookiesState) {
         const {
-          acceptedIntercom,
+          acceptedSupportAndUpdates,
           acceptedAnalytics,
           acceptedNecessary,
         } = cookiesState
         setLocalAnalytics(acceptedAnalytics)
-        setLocalIntercom(acceptedIntercom)
+        setLocalIntercom(acceptedSupportAndUpdates)
         setLocalNecessary(acceptedNecessary)
         const openBanner = acceptedNecessary === false || showBanner
         openCookieBanner(openBanner)
         setShowAnalytics(acceptedAnalytics)
-        setShowIntercom(acceptedIntercom)
+        setShowIntercom(acceptedSupportAndUpdates)
       } else {
         openCookieBanner(true)
       }
@@ -180,7 +180,7 @@ const CookiesBanner = () => {
     const newState = {
       acceptedNecessary: true,
       acceptedAnalytics: true,
-      acceptedIntercom: true,
+      acceptedSupportAndUpdates: true,
     }
     const cookieConfig: CookieAttributes = {
       expires: 365,
@@ -196,7 +196,7 @@ const CookiesBanner = () => {
     const newState = {
       acceptedNecessary: true,
       acceptedAnalytics: localAnalytics,
-      acceptedIntercom: localIntercom,
+      acceptedSupportAndUpdates: localIntercom,
     }
     const cookieConfig: CookieAttributes = {
       expires: localAnalytics ? 365 : 7,

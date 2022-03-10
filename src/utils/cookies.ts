@@ -6,7 +6,7 @@ export const COOKIES_KEY_INTERCOM = `${COOKIES_KEY}_INTERCOM`
 export type CookiesProps = {
   acceptedNecessary: boolean
   acceptedAnalytics: boolean
-  acceptedIntercom: boolean
+  acceptedSupportAndUpdates: boolean
   cookieBannerOpen: boolean
 }
 
