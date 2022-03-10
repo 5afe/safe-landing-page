@@ -828,7 +828,7 @@ export default () => (
           .
         </Paragraph>
         <Paragraph>
-          We do not store any information collected by Beamer, Beamer's privacy policy is available at{' '}
+          We do not store any information collected by Beamer. Beamer's privacy policy is available at{' '}
           <Link href="https://www.getbeamer.com/privacy-policy/">
             https://www.getbeamer.com/privacy-policy/
           </Link>
