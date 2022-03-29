@@ -1,6 +1,6 @@
 {
   "name": "safe-landing-page",
-  "version": "2.6.2",
+  "version": "2.6.3",
   "description": "Gnosis Safe Landing Page",
   "private": true,
   "engines": {
