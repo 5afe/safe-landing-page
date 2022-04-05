@@ -40,7 +40,7 @@ export default () => (
   <Layout title="Privacy Policy">
     <ContentWrapper>
       <Title>Privacy Policy</Title>
-      <Date>Last updated on January 13, 2021</Date>
+      <Date>Last updated on March 4, 2022</Date>
       <Section>
         <Paragraph>
           We are delighted that you have chosen to use our App or visit our
@@ -818,17 +818,20 @@ export default () => (
           We use Beamer{' '}
           <Link href="https://www.getbeamer.com/">
             https://www.getbeamer.com/
-          </Link>{' '} for notifications.
+          </Link>{' '}
+          for notifications.
         </Paragraph>
         <Paragraph>
-          Beamer's purpose and function are further explained under the following link{' '}
+          Beamer's purpose and function are further explained under the
+          following link{' '}
           <Link href="https://www.getbeamer.com/showcase/notification-center">
             https://www.getbeamer.com/showcase/notification-center
           </Link>
           .
         </Paragraph>
         <Paragraph>
-          We do not store any information collected by Beamer. Beamer's privacy policy is available at{' '}
+          We do not store any information collected by Beamer. Beamer's privacy
+          policy is available at{' '}
           <Link href="https://www.getbeamer.com/privacy-policy/">
             https://www.getbeamer.com/privacy-policy/
           </Link>
