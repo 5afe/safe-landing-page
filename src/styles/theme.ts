@@ -16,6 +16,7 @@ export interface ITheme {
     greyPale: string
     darkGreenBlue: string
     slateGray: string
+    primaryBlack500: string
   }
   spacing: {
     unit: number
@@ -40,6 +41,7 @@ const mainTheme = {
     greyPale: '#e8e7e6',
     darkGreenBlue: '#1e594f',
     slateGray: '#5d6d74',
+    primaryBlack500: '#162D45',
   },
   spacing: {
     unit: 8,
