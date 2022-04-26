@@ -190,6 +190,11 @@ const Header: React.FC<HeaderProps> = ({
                 </div>
               </NavListLink>
             </NavListItem>
+            <NavListItem>
+              <NavLink activeClassName="active" to="/careers">
+                Careers
+              </NavLink>
+            </NavListItem>
             <Divider />
             <NavListItem>
               <SButtonLink url="/app/" target="_self" explicitExternal>
