@@ -51,7 +51,7 @@ const LinkContainer = styled.div`
   position: relative;
 `
 
-const CallToAction = () => {
+const InitiativeApplication = () => {
   return (
     <Section>
       <Wrapper>
@@ -68,4 +68,4 @@ const CallToAction = () => {
   )
 }
 
-export default CallToAction
+export default InitiativeApplication
