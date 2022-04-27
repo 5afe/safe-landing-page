@@ -13,6 +13,7 @@ import TokensIcon from '../../../assets/icon-tokens.svg'
 import GlobeIcon from '../../../assets/icon-globe.svg'
 import BgGray from '../../../assets/bg-gray.svg'
 import { SectionTitle, Text } from '../styled'
+import { sizes } from '../../../styles/styleUtils'
 
 const Grid = styled.div`
   width: 100%;
@@ -20,7 +21,7 @@ const Grid = styled.div`
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: ${sizes.md}px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
   }
@@ -52,7 +53,7 @@ const Section = styled.section`
   padding: 100px 0;
   overflow: hidden;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: ${sizes.md}px) {
     padding: 64px 0;
   }
 `

@@ -1,8 +1,9 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import MapPin from '../../../assets/map-pin.svg'
 import ArrowRight from '../../../assets/arrow-right.svg'
-import styled from 'styled-components'
+import { sizes } from '../../../styles/styleUtils'
 
 const Container = styled.div`
   position: relative;
@@ -15,7 +16,7 @@ const Container = styled.div`
   flex-direction: column;
   min-height: 350px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: ${sizes.md}px) {
     min-height: 250px;
   }
 
@@ -48,7 +49,7 @@ const Title = styled.p`
   font-weight: bold;
   margin-bottom: 32px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: ${sizes.md}px) {
     font-size: 28px;
     line-height: 40px;
   }

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { sizes } from '../../styles/styleUtils'
 
 export const SectionTitle = styled.h2<{ noCenter?: boolean }>`
   font-size: 45px;
@@ -6,7 +7,7 @@ export const SectionTitle = styled.h2<{ noCenter?: boolean }>`
   text-align: ${(props) => (props.noCenter ? 'left' : 'center')};
   margin-bottom: 32px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: ${sizes.md}px) {
     font-size: 32px;
     line-height: 38px;
     text-align: center;
@@ -18,7 +19,7 @@ export const Text = styled.p`
   line-height: 32px;
   margin-bottom: 32px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: ${sizes.md}px) {
     font-size: 20px;
     line-height: 28px;
     margin-bottom: 24px;

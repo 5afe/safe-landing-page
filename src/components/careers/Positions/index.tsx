@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import { Card } from './Card'
 import ContentWrapper from '../../Layout/ContentWrapper'
 import { SectionTitle } from '../styled'
+import { sizes } from '../../../styles/styleUtils'
 
 const Text = styled.p`
   text-align: center;
@@ -49,7 +50,7 @@ export type Jobs = {
 const Section = styled.section`
   padding: 100px 0;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: ${sizes.md}px) {
     padding: 64px 0;
   }
 `

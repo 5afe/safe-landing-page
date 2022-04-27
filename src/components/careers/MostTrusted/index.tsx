@@ -4,13 +4,14 @@ import { Grid } from '@material-ui/core'
 
 import ContentWrapper from '../../Layout/ContentWrapper'
 import { Text, SecondaryText, SectionTitle } from '../styled'
+import { sizes } from '../../../styles/styleUtils'
 
 const Section = styled.section`
   width: 100%;
   padding: 170px 0;
   background-color: ${(p) => p.theme.palette.white};
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: ${sizes.md}px) {
     height: auto;
     padding: 64px 0;
   }

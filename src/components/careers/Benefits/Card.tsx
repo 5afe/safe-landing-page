@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { sizes } from '../../../styles/styleUtils'
 
 const CardContainer = styled.div`
   display: flex;
@@ -18,7 +19,7 @@ const Title = styled.p`
   font-size: 24px;
   line-height: 32px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: ${sizes.md}px) {
     font-size: 20px;
     line-height: 28px;
     margin-top: 16px;

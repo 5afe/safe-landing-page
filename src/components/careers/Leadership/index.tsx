@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import ContentWrapper from '../../Layout/ContentWrapper'
 import LeadershipCard from './Card'
+import { sizes } from '../../../styles/styleUtils'
 
 const Grid = styled.div`
   width: 100%;
@@ -11,7 +12,7 @@ const Grid = styled.div`
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: ${sizes.md}px) {
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 48px;
     grid-column-gap: 16px;
@@ -22,7 +23,7 @@ const Section = styled.section`
   padding: 150px 0;
   background-color: ${(p) => p.theme.palette.white};
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: ${sizes.md}px) {
     padding: 64px 0;
   }
 `
