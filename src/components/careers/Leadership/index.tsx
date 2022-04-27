@@ -1,5 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
+
+import ContentWrapper from '../../Layout/ContentWrapper'
 import LeadershipCard from './Card'
 
 const Leadership = () => {
@@ -18,50 +20,52 @@ const Leadership = () => {
 
   return (
     <section>
-      <Grid>
-        <LeadershipCard
-          imageURL="/images/richard.png"
-          name="Richard Meissner"
-          position="Tech lead"
-          social={{
-            twitter: 'https://twitter.com/gnosisSafe',
-            discord: 'https://discord.gg/AjG7AQD9Qn',
-            github: 'https://github.com/safe-global',
-          }}
-        />
-        <LeadershipCard
-          imageURL="/images/tobias.png"
-          name="Tobias Schubotz"
-          position="Product & Operations"
-          social={{
-            twitter: 'https://twitter.com/gnosisSafe',
-            medium: 'https://medium.com/@gnosisPM',
-            discord: 'https://discord.gg/AjG7AQD9Qn',
-            github: 'https://github.com/safe-global',
-          }}
-        />
-        <LeadershipCard
-          imageURL="/images/lukas.png"
-          name="Lukas Schor"
-          position="Ecosystem"
-          social={{
-            twitter: 'https://twitter.com/gnosisSafe',
-            medium: 'https://medium.com/@gnosisPM',
-            discord: 'https://discord.gg/AjG7AQD9Qn',
-            github: 'https://github.com/safe-global',
-          }}
-        />
-        <LeadershipCard
-          imageURL="/images/christoph.png"
-          name="Christoph Simmchen"
-          position="Legal & Operations"
-          social={{
-            twitter: 'https://twitter.com/gnosisSafe',
-            medium: 'https://medium.com/@gnosisPM',
-            discord: 'https://discord.gg/AjG7AQD9Qn',
-          }}
-        />
-      </Grid>
+      <ContentWrapper>
+        <Grid>
+          <LeadershipCard
+            imageURL="/images/richard.png"
+            name="Richard Meissner"
+            position="Tech lead"
+            social={{
+              twitter: 'https://twitter.com/gnosisSafe',
+              discord: 'https://discord.gg/AjG7AQD9Qn',
+              github: 'https://github.com/safe-global',
+            }}
+          />
+          <LeadershipCard
+            imageURL="/images/tobias.png"
+            name="Tobias Schubotz"
+            position="Product & Operations"
+            social={{
+              twitter: 'https://twitter.com/gnosisSafe',
+              medium: 'https://medium.com/@gnosisPM',
+              discord: 'https://discord.gg/AjG7AQD9Qn',
+              github: 'https://github.com/safe-global',
+            }}
+          />
+          <LeadershipCard
+            imageURL="/images/lukas.png"
+            name="Lukas Schor"
+            position="Ecosystem"
+            social={{
+              twitter: 'https://twitter.com/gnosisSafe',
+              medium: 'https://medium.com/@gnosisPM',
+              discord: 'https://discord.gg/AjG7AQD9Qn',
+              github: 'https://github.com/safe-global',
+            }}
+          />
+          <LeadershipCard
+            imageURL="/images/christoph.png"
+            name="Christoph Simmchen"
+            position="Legal & Operations"
+            social={{
+              twitter: 'https://twitter.com/gnosisSafe',
+              medium: 'https://medium.com/@gnosisPM',
+              discord: 'https://discord.gg/AjG7AQD9Qn',
+            }}
+          />
+        </Grid>
+      </ContentWrapper>
     </section>
   )
 }

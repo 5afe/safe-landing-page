@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+
 import DiscordIcon from '../../../assets/discord.svg'
 import GithubIcon from '../../../assets/github.svg'
 import MediumIcon from '../../../assets/medium.svg'
@@ -11,7 +12,6 @@ const CardContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  font-size: 15px;
   letter-spacing: 0.33px;
   min-height: 80px;
   color: ${(p) => p.theme.palette.navy};
@@ -32,9 +32,9 @@ const Image = styled.img`
 `
 
 const Name = styled.p`
-  margin-top: 20px;
+  margin-top: 24px;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 24px;
   line-height: 25px;
   white-space: nowrap;
 `
