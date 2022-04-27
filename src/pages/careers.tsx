@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import Layout from '../components/Layout'
+import MostTrusted from '../components/careers/MostTrusted'
 import Header from '../components/careers/Header'
 import Benefits from '../components/careers/Benefits'
 import Leadership from '../components/careers/Leadership'
@@ -15,6 +16,7 @@ export default () => {
   return (
     <Layout title="Careers">
       <Header openPositions={positions?.meta.total} />
+      <MostTrusted />
       <Benefits />
       <Leadership />
       <Positions positions={positions?.jobs} />
