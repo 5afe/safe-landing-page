@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Grid } from '@material-ui/core'
 import styled from 'styled-components'
 
 import { Card } from './Card'
 import ContentWrapper from '../../Layout/ContentWrapper'
-
-const JOBS_API_URL = 'https://boards-api.greenhouse.io/v1/boards/gnosis/jobs'
+import { usePositions } from './usePositions'
 
 const SectionTitle = styled.h2`
   font-size: 45px;
@@ -35,7 +34,7 @@ type Job = {
   updated_at: string
 }
 
-type Jobs = {
+export type Jobs = {
   jobs: Job[]
   meta: {
     total: number
@@ -43,30 +42,7 @@ type Jobs = {
 }
 
 export const Positions = () => {
-  const [positions, setPositions] = useState<Jobs>()
-
-  useEffect(() => {
-    let isCurrent = true
-
-    const getOpenPositions = async () => {
-      try {
-        const data = await fetch(JOBS_API_URL)
-        const jobs: Jobs = await data.json()
-
-        if (isCurrent) {
-          setPositions(jobs)
-        }
-      } catch (e) {
-        console.error(e)
-      }
-    }
-
-    getOpenPositions()
-
-    return () => {
-      isCurrent = false
-    }
-  }, [])
+  const positions = usePositions()
 
   return (
     <ContentWrapper>
