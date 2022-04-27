@@ -53,12 +53,10 @@ export type Jobs = {
   }
 }
 
-const Positions = () => {
-  const positions = usePositions()
-
+const Positions = ({ positions }: { positions: Job[] | undefined }) => {
   return (
     <ContentWrapper>
-      <SectionTitle>Open positions</SectionTitle>
+      <SectionTitle id="positions">Open positions</SectionTitle>
       {!positions ? (
         <Text>
           Unfortunately, there are <strong>no positions available</strong> at
@@ -67,7 +65,7 @@ const Positions = () => {
         </Text>
       ) : (
         <Grid container spacing={3}>
-          {positions.jobs.map((job) => {
+          {positions.map((job) => {
             return (
               <Grid key={job.id} item xs={12} sm={6} md={4}>
                 <Card

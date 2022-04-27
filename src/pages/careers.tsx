@@ -2,17 +2,26 @@ import * as React from 'react'
 
 import Layout from '../components/Layout'
 import MostTrusted from '../components/careers/MostTrusted'
+import Header from '../components/careers/Header'
 import Benefits from '../components/careers/Benefits'
 import Leadership from '../components/careers/Leadership'
 import Positions from '../components/careers/Positions'
 import Locations from '../components/careers/Locations'
+import InitiativeApplication from '../components/careers/InitiativeApplication'
+import { usePositions } from '../components/careers/Positions/usePositions'
 
-export default () => (
-  <Layout title="Careers">
-    <MostTrusted />
-    <Benefits />
-    <Leadership />
-    <Positions />
-    <Locations />
-  </Layout>
-)
+export default () => {
+  const positions = usePositions()
+
+  return (
+    <Layout title="Careers">
+      <Header openPositions={positions?.meta.total} />
+      <MostTrusted />
+      <Benefits />
+      <Leadership />
+      <Positions positions={positions?.jobs} />
+      <InitiativeApplication />
+      <Locations />
+    </Layout>
+  )
+}
