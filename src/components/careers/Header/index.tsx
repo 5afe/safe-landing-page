@@ -95,9 +95,11 @@ const Header = ({ openPositions }: { openPositions: number | undefined }) => {
       <Wrapper>
         <ContentWrapper>
           <div>
-            <Grid item xs={12}>
-              <Text>{openPositions} Positions</Text>
-            </Grid>
+            {openPositions && (
+              <Grid item xs={12}>
+                <Text>{openPositions} Positions</Text>
+              </Grid>
+            )}
             <Grid container alignItems="center">
               <Grid item xs={12} md={6}>
                 <Title>
