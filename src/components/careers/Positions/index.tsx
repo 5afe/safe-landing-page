@@ -62,8 +62,8 @@ const Positions = () => {
       {!positions ? (
         <Text>
           Unfortunately, there are <strong>no positions available</strong> at
-          the moment. However, you can always send your CV and we will be in
-          touch if a matching position will be open.
+          the moment. However, you can always send us your CV and we will get in
+          touch if a matching position opens up.
         </Text>
       ) : (
         <Grid container spacing={3}>
