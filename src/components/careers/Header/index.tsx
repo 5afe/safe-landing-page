@@ -105,7 +105,7 @@ const Header = ({ openPositions }: { openPositions: number | undefined }) => {
                 <Title>
                   Join us
                   <br />
-                  at Gnosis
+                  at Gnosis Safe
                 </Title>
               </Grid>
               <Grid item xs={12} md={6}>

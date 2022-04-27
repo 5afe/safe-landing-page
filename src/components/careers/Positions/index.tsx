@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 import { Card } from './Card'
 import ContentWrapper from '../../Layout/ContentWrapper'
-import { usePositions } from './usePositions'
 
 const SectionTitle = styled.h2`
   font-size: 45px;
