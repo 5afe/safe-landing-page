@@ -10,7 +10,6 @@ const CardContainer = styled.div`
   padding-bottom: 64px;
   border-radius: 15px;
   background-color: ${(p) => p.theme.palette.pink};
-  max-width: 354px;
 `
 
 const Title = styled.p`
@@ -23,7 +22,7 @@ const Title = styled.p`
 const Text = styled.p`
   line-height: normal;
   flex: 1;
-  font-size: 25px;
+  font-size: 24px;
   line-height: 32px;
 `
 
