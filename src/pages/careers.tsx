@@ -1,9 +1,9 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
-import Benefits from '../components/careers/Benefits'
+import Locations from '../components/careers/Locations'
 
 export default () => (
   <Layout title="Careers">
-    <Benefits />
+    <Locations />
   </Layout>
 )
