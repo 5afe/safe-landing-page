@@ -40,7 +40,6 @@ const Name = styled.p`
 `
 
 const Role = styled.p`
-  line-height: normal;
   flex: 1;
   margin-top: 8px;
   line-height: 24px;

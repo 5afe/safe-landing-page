@@ -8,6 +8,7 @@ import Leadership from '../components/careers/Leadership'
 import Positions from '../components/careers/Positions'
 import Locations from '../components/careers/Locations'
 import InitiativeApplication from '../components/careers/InitiativeApplication'
+import Footer from '../components/careers/Footer'
 import { usePositions } from '../components/careers/Positions/usePositions'
 
 export default () => {
@@ -22,6 +23,7 @@ export default () => {
       <Positions positions={positions?.jobs} />
       <InitiativeApplication />
       <Locations />
+      <Footer />
     </Layout>
   )
 }
