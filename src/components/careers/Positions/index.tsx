@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid } from '@material-ui/core'
+import { Grid, Typography } from '@material-ui/core'
 import styled from 'styled-components'
 
 import { Card } from './Card'
@@ -11,6 +11,11 @@ const SectionTitle = styled.h2`
   font-weight: bolder;
   text-align: center;
   margin-bottom: 56px;
+`
+
+const Text = styled.p`
+  text-align: center;
+  font-size: 20px;
 `
 
 type JobMeta = {
@@ -41,17 +46,22 @@ export type Jobs = {
   }
 }
 
-export const Positions = () => {
+const Positions = () => {
   const positions = usePositions()
 
   return (
     <ContentWrapper>
       <SectionTitle>Open positions</SectionTitle>
-      <Grid container spacing={3}>
-        {positions &&
-          positions.jobs.map((job) => {
+      {!positions ? (
+        <Text>
+          Currently we don't have any open positions, make sure to come back
+          later.
+        </Text>
+      ) : (
+        <Grid container spacing={3}>
+          {positions.jobs.map((job) => {
             return (
-              <Grid key={job.id} item xs={12} md={4}>
+              <Grid key={job.id} item xs={12} sm={6} md={4}>
                 <Card
                   location={job.location.name}
                   title={job.title}
@@ -60,7 +70,10 @@ export const Positions = () => {
               </Grid>
             )
           })}
-      </Grid>
+        </Grid>
+      )}
     </ContentWrapper>
   )
 }
+
+export default Positions
