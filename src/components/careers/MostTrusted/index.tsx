@@ -51,7 +51,10 @@ const Image = styled.img`
   right: 0;
 
   @media screen and (max-width: 960px) {
+    width: auto;
+    height: 360px;
     position: relative;
+    margin-top: 40px;
   }
 `
 
@@ -61,9 +64,13 @@ const Container = styled.div`
   flex-direction: row;
   overflow: hidden;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 960px) {
     flex-direction: column;
     align-items: flex-end;
+  }
+
+  @media screen and (max-width: 480px) {
+    align-items: flex-start;
   }
 `
 
