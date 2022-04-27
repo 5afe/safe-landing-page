@@ -1,3 +1,4 @@
+import { SectionTitle } from '../styled'
 import * as React from 'react'
 import styled from 'styled-components'
 
@@ -18,9 +19,15 @@ const Leadership = () => {
     }
   `
 
+  const Section = styled.section`
+    padding: 150px 0;
+    background-color: ${(p) => p.theme.palette.white};
+  `
+
   return (
-    <section>
+    <Section>
       <ContentWrapper>
+        <SectionTitle>Meet our Leadership team</SectionTitle>
         <Grid>
           <LeadershipCard
             imageURL="/images/richard.png"
@@ -66,7 +73,7 @@ const Leadership = () => {
           />
         </Grid>
       </ContentWrapper>
-    </section>
+    </Section>
   )
 }
 
