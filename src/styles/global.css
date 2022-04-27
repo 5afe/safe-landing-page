@@ -14,6 +14,17 @@
   src: url('/fonts/Averta-ExtraBold.woff2') format('woff2');
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+
 body {
   -webkit-font-smoothing: antialiased;
   min-height: 100%;
