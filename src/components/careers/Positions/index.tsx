@@ -15,7 +15,14 @@ const SectionTitle = styled.h2`
 
 const Text = styled.p`
   text-align: center;
-  font-size: 20px;
+  font-size: 24px;
+  line-height: 32px;
+  max-width: 730px;
+  margin: 0 auto;
+
+  & strong {
+    font-weight: bold;
+  }
 `
 
 type JobMeta = {
@@ -54,8 +61,9 @@ const Positions = () => {
       <SectionTitle>Open positions</SectionTitle>
       {!positions ? (
         <Text>
-          Currently we don't have any open positions, make sure to come back
-          later.
+          Unfortunately, there are <strong>no positions available</strong> at
+          the moment. However, you can always send your CV and we will be in
+          touch if a matching position will be open.
         </Text>
       ) : (
         <Grid container spacing={3}>
