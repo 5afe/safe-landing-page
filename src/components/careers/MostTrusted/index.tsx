@@ -89,7 +89,7 @@ const MostTrusted = () => {
               <SecondaryText>
                 Believing in the power of decentralisation and open-source
                 software development, we are building the Safe web and mobile
-                application, developer tools and an inclusive online community
+                applications, developer tools and an inclusive online community
                 to foster the core building blocks of the Web3 ecosystem.
               </SecondaryText>
             </Grid>
