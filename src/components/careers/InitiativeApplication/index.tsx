@@ -3,25 +3,27 @@ import styled from 'styled-components'
 
 import ContentWrapper from '../../Layout/ContentWrapper'
 import Arrow from '../../../assets/arrow.svg'
+import { SectionTitle } from '../styled'
 
 const Section = styled.section`
   background-color: ${(p) => p.theme.palette.navy};
-`
-
-const Wrapper = styled.div`
   color: white;
   padding: 100px 0;
-`
 
-const Title = styled.h3`
-  font-size: 45px;
-  font-weight: bolder;
-  margin-bottom: 24px;
+  @media screen and (max-width: 768px) {
+    padding: 64px 0;
+  }
 `
 
 const Text = styled.p`
   font-size: 24px;
   line-height: 32px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+  }
 `
 
 const Link = styled.a`
@@ -45,25 +47,34 @@ const StyledArrow = styled(Arrow)`
   position: relative;
   margin-left: 32px;
   top: 12px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `
 
 const LinkContainer = styled.div`
   position: relative;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
 `
 
 const InitiativeApplication = () => {
   return (
     <Section>
-      <Wrapper>
-        <ContentWrapper>
-          <Title>Couldn’t find what you were looking for?</Title>
-          <Text>Send us an initiative application!</Text>
-          <LinkContainer>
-            <Link href="mailto:jobs@gnosis.pm">jobs@gnosis.pm</Link>
-            <StyledArrow />
-          </LinkContainer>
-        </ContentWrapper>
-      </Wrapper>
+      <ContentWrapper>
+        <SectionTitle noCenter>
+          Couldn’t find what you were looking for?
+        </SectionTitle>
+        <Text>Send us an initiative application!</Text>
+        <LinkContainer>
+          <Link href="mailto:jobs@gnosis.pm">jobs@gnosis.pm</Link>
+          <StyledArrow />
+        </LinkContainer>
+      </ContentWrapper>
     </Section>
   )
 }

@@ -6,8 +6,7 @@ const CardContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  font-size: 15px;
-  letter-spacing: 0.33px;
+  font-size: 16px;
   min-height: 80px;
   color: ${(p) => p.theme.palette.navy};
   margin-bottom: 16px;
@@ -16,8 +15,14 @@ const CardContainer = styled.div`
 const Title = styled.p`
   margin-top: 20px;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 24px;
   line-height: 32px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 16px;
+  }
 `
 
 const Text = styled.p`

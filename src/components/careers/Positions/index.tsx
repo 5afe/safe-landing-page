@@ -1,16 +1,10 @@
 import React from 'react'
-import { Grid, Typography } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import styled from 'styled-components'
 
 import { Card } from './Card'
 import ContentWrapper from '../../Layout/ContentWrapper'
-
-const SectionTitle = styled.h2`
-  font-size: 45px;
-  font-weight: bolder;
-  text-align: center;
-  margin-bottom: 56px;
-`
+import { SectionTitle } from '../styled'
 
 const Text = styled.p`
   text-align: center;
@@ -54,6 +48,10 @@ export type Jobs = {
 
 const Section = styled.section`
   padding: 100px 0;
+
+  @media screen and (max-width: 768px) {
+    padding: 64px 0;
+  }
 `
 
 const Positions = ({ positions }: { positions: Job[] | undefined }) => {

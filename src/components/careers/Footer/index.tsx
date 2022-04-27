@@ -2,31 +2,24 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Social from '../../home/Social'
+import { SectionTitle } from '../styled'
 
-const Title = styled.h3`
-  font-size: 45px;
-  line-height: 52px;
-  font-weight: bolder;
-  margin-bottom: 40px;
-
-  @media screen and (max-width: 768px) {
-    font-size: 32px;
-    line-height: 36px;
-  }
-`
-
-const Container = styled.div`
+const Section = styled.div`
   background-color: white;
   padding: 80px 0;
   text-align: center;
+
+  @media screen and (max-width: 768px) {
+    padding: 64px 0;
+  }
 `
 
 const Footer = () => {
   return (
-    <Container>
-      <Title>Find out more about us</Title>
+    <Section>
+      <SectionTitle>Find out more about us</SectionTitle>
       <Social />
-    </Container>
+    </Section>
   )
 }
 

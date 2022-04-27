@@ -9,6 +9,10 @@ import { SectionTitle } from '../styled'
 const Section = styled.section`
   padding: 100px 0;
   background-color: ${(p) => p.theme.palette.white};
+
+  @media screen and (max-width: 768px) {
+    padding: 64px 0;
+  }
 `
 
 const Grid = styled.div`
@@ -30,7 +34,7 @@ const Locations = () => {
       <ContentWrapper>
         <Grid>
           {offices.map((office) => (
-            <LocationCard address={office} />
+            <LocationCard key={office.city} address={office} />
           ))}
         </Grid>
       </ContentWrapper>

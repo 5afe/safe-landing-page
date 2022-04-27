@@ -36,13 +36,19 @@ const Name = styled.p`
   font-weight: bold;
   font-size: 24px;
   line-height: 25px;
-  white-space: nowrap;
+  text-align: center;
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 `
 
 const Role = styled.p`
   flex: 1;
   margin-top: 8px;
   line-height: 24px;
+  text-align: center;
 `
 
 const Row = styled.div`

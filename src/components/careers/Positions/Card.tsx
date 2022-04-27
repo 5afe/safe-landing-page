@@ -15,6 +15,10 @@ const Container = styled.div`
   flex-direction: column;
   min-height: 350px;
 
+  @media screen and (max-width: 768px) {
+    min-height: 250px;
+  }
+
   &:hover {
     background-color: #0e7361;
   }
@@ -43,6 +47,11 @@ const Title = styled.p`
   line-height: 42px;
   font-weight: bold;
   margin-bottom: 32px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 28px;
+    line-height: 40px;
+  }
 `
 
 const JobLink = styled.a`

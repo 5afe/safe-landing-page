@@ -14,40 +14,50 @@ import GlobeIcon from '../../../assets/icon-globe.svg'
 import BgGray from '../../../assets/bg-gray.svg'
 import { SectionTitle, Text } from '../styled'
 
+const Grid = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+`
+
+const SectionHeader = styled.div`
+  margin: 0 auto 80px;
+  max-width: 732px;
+  text-align: center;
+`
+
+const SBgGray = styled(BgGray)`
+  position: absolute;
+  top: 50px;
+  width: 2000px;
+  transform: translateX(-50%);
+  left: 50%;
+  min-width: 100%;
+
+  @media screen and (max-width: 980px) {
+    top: 300px;
+  }
+  fill: #e9e9e9;
+`
+
+const Section = styled.section`
+  background-color: ${(p) => p.theme.palette.white};
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+
+  @media screen and (max-width: 768px) {
+    padding: 64px 0;
+  }
+`
+
 const Benefits = () => {
-  const Grid = styled.div`
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-
-    @media screen and (max-width: 768px) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-  `
-
-  const SectionHeader = styled.div`
-    margin: 0 auto 80px;
-    max-width: 732px;
-    text-align: center;
-  `
-
-  const SBgGray = styled(BgGray)`
-    position: absolute;
-    top: 50px;
-    @media screen and (max-width: 980px) {
-      top: 0;
-    }
-    fill: #e9e9e9;
-  `
-
-  const Section = styled.section`
-    background-color: ${(p) => p.theme.palette.white};
-    position: relative;
-    padding: 100px 0;
-  `
-
   return (
     <Section>
       <SBgGray />

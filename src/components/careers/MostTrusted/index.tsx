@@ -1,7 +1,9 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import ContentWrapper from '../../Layout/ContentWrapper'
 import { Grid } from '@material-ui/core'
+
+import ContentWrapper from '../../Layout/ContentWrapper'
+import { Text, SecondaryText, SectionTitle } from '../styled'
 
 const Section = styled.section`
   width: 100%;
@@ -10,49 +12,17 @@ const Section = styled.section`
 
   @media screen and (max-width: 768px) {
     height: auto;
+    padding: 64px 0;
   }
-`
-
-const Title = styled.p`
-  font-weight: bold;
-  font-size: 45px;
-  line-height: 52px;
-  margin-bottom: 40px;
-
-  @media screen and (max-width: 768px) {
-    font-size: 32px;
-    line-height: 37px;
-    margin-bottom: 32px;
-  }
-`
-
-const Text = styled.p`
-  flex: 1;
-  font-size: 24px;
-  line-height: 32px;
-  margin-bottom: 32px;
-
-  @media screen and (max-width: 768px) {
-    font-size: 20px;
-    line-height: 28px;
-    margin-bottom: 24px;
-  }
-`
-
-const SecondaryText = styled.p`
-  flex: 1;
-  font-size: 16px;
-  line-height: 24px;
 `
 
 const Image = styled.img`
   height: 360px;
+  width: auto;
   position: absolute;
   right: 0;
 
   @media screen and (max-width: 960px) {
-    width: auto;
-    height: 360px;
     position: relative;
     margin-top: 40px;
   }
@@ -81,7 +51,9 @@ const MostTrusted = () => {
         <ContentWrapper>
           <Grid container style={{ position: 'relative' }}>
             <Grid item xs={12} md={6}>
-              <Title>The most trusted wallet on Ethereum</Title>
+              <SectionTitle noCenter>
+                The most trusted wallet on Ethereum
+              </SectionTitle>
               <Text>
                 Gnosis Safe is the most trusted platform to manage digital
                 assets on Ethereum and other leading protocols.
