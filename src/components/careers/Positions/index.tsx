@@ -28,7 +28,11 @@ type JobMeta = {
 
 type Job = {
   absolute_url: string
-  data_compliance: unknown[]
+  data_compliance: {
+    type: string
+    requires_consent: boolean
+    retention_period: number
+  }[]
   id: number
   internal_job_id: number
   location: {

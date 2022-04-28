@@ -17,6 +17,10 @@ const Section = styled.section`
   }
 `
 
+const RelativeGrid = styled(Grid)`
+  position: relative;
+`
+
 const Image = styled.img`
   height: 360px;
   width: auto;
@@ -50,7 +54,7 @@ const MostTrusted = () => {
     <Section>
       <Container>
         <ContentWrapper>
-          <Grid container style={{ position: 'relative' }}>
+          <RelativeGrid container>
             <Grid item xs={12} md={6}>
               <SectionTitle noCenter>
                 The most trusted wallet on Ethereum
@@ -66,7 +70,7 @@ const MostTrusted = () => {
                 to foster the core building blocks of the Web3 ecosystem.
               </SecondaryText>
             </Grid>
-          </Grid>
+          </RelativeGrid>
         </ContentWrapper>
         <Image src="/images/Illustration-wallet.png" />
       </Container>

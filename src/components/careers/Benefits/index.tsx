@@ -82,7 +82,7 @@ const Benefits = () => {
             our ecosystem!
           </BenefitsCard>
           <BenefitsCard icon={BuildingIcon} title="Company & Team Retreats">
-            Build your team spirit on cool trips and retreats
+            Build your team spirit on cool trips and retreats.
           </BenefitsCard>
           <BenefitsCard icon={CalendarIcon} title="Flexibility">
             Flexible working schedules and remote working policies have been a
