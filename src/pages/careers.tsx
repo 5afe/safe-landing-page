@@ -18,11 +18,11 @@ export default () => {
   return (
     <Layout title="Careers">
       <Box overflow="hidden">
-        <Header openPositions={positions?.meta.total} />
+        <Header openPositions={positions.length} />
         <MostTrusted />
         <Benefits />
         <Leadership />
-        <Positions positions={positions?.jobs} />
+        <Positions positions={positions} />
         <InitiativeApplication />
         <Locations />
         <Footer />

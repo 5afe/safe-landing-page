@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
-import { Jobs } from 'components/careers/Positions/index'
+import { Department, Job } from 'components/careers/Positions/index'
 
-const JOBS_API_URL = 'https://boards-api.greenhouse.io/v1/boards/gnosis/jobs'
+const JOBS_API_URL =
+  'https://boards-api.greenhouse.io/v1/boards/gnosis/departments/4065869002'
 
 export const usePositions = () => {
-  const [positions, setPositions] = useState<Jobs>()
+  const [positions, setPositions] = useState<Job[]>([])
 
   useEffect(() => {
     let isCurrent = true
@@ -12,7 +13,8 @@ export const usePositions = () => {
     const getOpenPositions = async () => {
       try {
         const data = await fetch(JOBS_API_URL)
-        const jobs: Jobs = await data.json()
+        const department: Department = await data.json()
+        const jobs = department.jobs
 
         if (isCurrent) {
           setPositions(jobs)

@@ -19,6 +19,14 @@ const Text = styled.p`
   }
 `
 
+export type Department = {
+  id: number
+  name: string
+  jobs: Job[]
+  parent_id: unknown
+  child_ids: number[]
+}
+
 type JobMeta = {
   id: number
   name: string
@@ -26,7 +34,7 @@ type JobMeta = {
   value_type: string
 }
 
-type Job = {
+export type Job = {
   absolute_url: string
   data_compliance: {
     type: string
