@@ -1,6 +1,8 @@
-import { OfficeAddress } from 'components/careers/Locations'
 import React from 'react'
 import styled from 'styled-components'
+
+import { OfficeAddress } from './locations'
+import { sizes } from '../../../styles/styleUtils'
 
 const CardContainer = styled.div`
   display: flex;
@@ -17,13 +19,22 @@ const Title = styled.p`
   font-size: 32px;
   line-height: 42px;
   margin-bottom: 16px;
+
+  @media screen and (max-width: ${sizes.md}px) {
+    font-size: 28px;
+    line-height: 40px;
+  }
 `
 
 const Text = styled.p`
-  line-height: normal;
   flex: 1;
   font-size: 24px;
   line-height: 32px;
+
+  @media screen and (max-width: ${sizes.md}px) {
+    font-size: 20px;
+    line-height: 28px;
+  }
 `
 
 interface CardProps {

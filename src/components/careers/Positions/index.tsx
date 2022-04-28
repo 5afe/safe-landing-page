@@ -1,17 +1,11 @@
 import React from 'react'
-import { Grid, Typography } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import styled from 'styled-components'
 
 import { Card } from './Card'
 import ContentWrapper from '../../Layout/ContentWrapper'
-import { usePositions } from './usePositions'
-
-const SectionTitle = styled.h2`
-  font-size: 45px;
-  font-weight: bolder;
-  text-align: center;
-  margin-bottom: 56px;
-`
+import { SectionTitle } from '../styled'
+import { sizes } from '../../../styles/styleUtils'
 
 const Text = styled.p`
   text-align: center;
@@ -53,32 +47,42 @@ export type Jobs = {
   }
 }
 
+const Section = styled.section`
+  padding: 100px 0;
+
+  @media screen and (max-width: ${sizes.md}px) {
+    padding: 64px 0;
+  }
+`
+
 const Positions = ({ positions }: { positions: Job[] | undefined }) => {
   return (
-    <ContentWrapper>
-      <SectionTitle id="positions">Open positions</SectionTitle>
-      {!positions ? (
-        <Text>
-          Unfortunately, there are <strong>no positions available</strong> at
-          the moment. However, you can always send us your CV and we will get in
-          touch if a matching position opens up.
-        </Text>
-      ) : (
-        <Grid container spacing={3}>
-          {positions.map((job) => {
-            return (
-              <Grid key={job.id} item xs={12} sm={6} md={4}>
-                <Card
-                  location={job.location.name}
-                  title={job.title}
-                  url={job.absolute_url}
-                />
-              </Grid>
-            )
-          })}
-        </Grid>
-      )}
-    </ContentWrapper>
+    <Section>
+      <ContentWrapper>
+        <SectionTitle id="positions">Open positions</SectionTitle>
+        {!positions ? (
+          <Text>
+            Unfortunately, there are <strong>no positions available</strong> at
+            the moment. However, you can always send us your CV and we will get
+            in touch if a matching position opens up.
+          </Text>
+        ) : (
+          <Grid container spacing={3}>
+            {positions.map((job) => {
+              return (
+                <Grid key={job.id} item xs={12} sm={6} md={4}>
+                  <Card
+                    location={job.location.name}
+                    title={job.title}
+                    url={job.absolute_url}
+                  />
+                </Grid>
+              )
+            })}
+          </Grid>
+        )}
+      </ContentWrapper>
+    </Section>
   )
 }
 

@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { HEADER_CATEGORY, useAnalytics } from '../../../../utils/googleAnalytics'
+import {
+  HEADER_CATEGORY,
+  useAnalytics,
+} from '../../../../utils/googleAnalytics'
 import ButtonLink from '../../../ui/ButtonLink'
 import Link from '../../../ui/Link'
 import Header, { communityMenu } from '../Header'
@@ -128,6 +131,11 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
                 Help
               </div>
             </NavListLink>
+          </NavListItem>
+          <NavListItem>
+            <NavLink activeClassName="active" to="/careers">
+              Careers
+            </NavLink>
           </NavListItem>
           <NavListItem>
             <SButtonLink url="/app/" target="_self" explicitExternal>

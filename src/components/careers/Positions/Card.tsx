@@ -1,8 +1,9 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import MapPin from '../../../assets/map-pin.svg'
 import ArrowRight from '../../../assets/arrow-right.svg'
-import styled from 'styled-components'
+import { sizes } from '../../../styles/styleUtils'
 
 const Container = styled.div`
   position: relative;
@@ -14,6 +15,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 350px;
+
+  @media screen and (max-width: ${sizes.md}px) {
+    min-height: 250px;
+  }
 
   &:hover {
     background-color: #0e7361;
@@ -43,6 +48,11 @@ const Title = styled.p`
   line-height: 42px;
   font-weight: bold;
   margin-bottom: 32px;
+
+  @media screen and (max-width: ${sizes.md}px) {
+    font-size: 28px;
+    line-height: 40px;
+  }
 `
 
 const JobLink = styled.a`

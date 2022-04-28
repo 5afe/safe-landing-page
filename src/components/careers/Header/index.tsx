@@ -8,12 +8,10 @@ import ContentWrapper from '../../Layout/ContentWrapper'
 const Container = styled.main`
   height: calc(100vh - 56px);
   position: relative;
-  padding: 0 20px;
   background-color: ${(p) => p.theme.palette.navy};
 
   @media screen and (max-width: 980px) {
     height: auto;
-    padding: 0 16px;
   }
 `
 
@@ -55,6 +53,8 @@ const Title = styled.h1`
 
   @media screen and (max-width: 980px) {
     margin-bottom: 16px;
+    font-size: 42px;
+    line-height: 46px;
   }
 `
 
@@ -69,6 +69,8 @@ const FeatureText = styled.p`
 
   @media screen and (max-width: 980px) {
     margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 28px;
   }
 `
 
@@ -82,6 +84,7 @@ const AnchorLink = styled.a`
   border-radius: 8px;
   text-decoration: none;
   display: inline-block;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 
   &:hover {
     background-color: ${(p) => p.theme.palette.primaryHover};
@@ -105,7 +108,7 @@ const Header = ({ openPositions }: { openPositions: number | undefined }) => {
                 <Title>
                   Join us
                   <br />
-                  at Gnosis
+                  at Gnosis Safe
                 </Title>
               </Grid>
               <Grid item xs={12} md={6}>

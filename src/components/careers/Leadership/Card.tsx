@@ -5,6 +5,7 @@ import DiscordIcon from '../../../assets/discord.svg'
 import GithubIcon from '../../../assets/github.svg'
 import MediumIcon from '../../../assets/medium.svg'
 import TwitterIcon from '../../../assets/twitter.svg'
+import { sizes } from '../../../styles/styleUtils'
 
 const CardContainer = styled.div`
   display: flex;
@@ -25,7 +26,7 @@ const Image = styled.img`
   border-radius: 50%;
   margin: 0 auto;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: ${sizes.md}px) {
     width: 125px;
     height: 125px;
   }
@@ -36,13 +37,19 @@ const Name = styled.p`
   font-weight: bold;
   font-size: 24px;
   line-height: 25px;
-  white-space: nowrap;
+  text-align: center;
+
+  @media screen and (max-width: ${sizes.md}px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 `
 
 const Role = styled.p`
   flex: 1;
   margin-top: 8px;
   line-height: 24px;
+  text-align: center;
 `
 
 const Row = styled.div`
