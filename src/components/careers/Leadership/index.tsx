@@ -39,9 +39,8 @@ const Leadership = () => {
             name="Richard Meissner"
             position="Tech lead"
             social={{
-              twitter: 'https://twitter.com/gnosisSafe',
-              discord: 'https://discord.gg/AjG7AQD9Qn',
-              github: 'https://github.com/safe-global',
+              twitter: 'https://twitter.com/rimeissner',
+              github: 'https://github.com/rmeissner',
             }}
           />
           <LeadershipCard
@@ -49,10 +48,7 @@ const Leadership = () => {
             name="Tobias Schubotz"
             position="Product & Operations"
             social={{
-              twitter: 'https://twitter.com/gnosisSafe',
-              medium: 'https://medium.com/@gnosisPM',
-              discord: 'https://discord.gg/AjG7AQD9Qn',
-              github: 'https://github.com/safe-global',
+              twitter: 'https://twitter.com/tschubotz',
             }}
           />
           <LeadershipCard
@@ -60,20 +56,15 @@ const Leadership = () => {
             name="Lukas Schor"
             position="Ecosystem"
             social={{
-              twitter: 'https://twitter.com/gnosisSafe',
-              medium: 'https://medium.com/@gnosisPM',
-              discord: 'https://discord.gg/AjG7AQD9Qn',
-              github: 'https://github.com/safe-global',
+              twitter: 'https://twitter.com/SchorLukas',
             }}
           />
           <LeadershipCard
             imageURL="/images/christoph.png"
             name="Christoph Simmchen"
-            position="Legal & Operations"
+            position="Governance & Operations"
             social={{
-              twitter: 'https://twitter.com/gnosisSafe',
-              medium: 'https://medium.com/@gnosisPM',
-              discord: 'https://discord.gg/AjG7AQD9Qn',
+              twitter: 'https://twitter.com/CSimmchen',
             }}
           />
         </Grid>
