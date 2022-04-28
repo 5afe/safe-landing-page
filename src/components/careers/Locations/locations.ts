@@ -8,7 +8,7 @@ export interface OfficeAddress {
 export const offices: OfficeAddress[] = [
   {
     city: 'Berlin',
-    street: 'Skalitzer Str.85',
+    street: 'Skalitzer Str. 85',
     postcode: '10997',
     country: 'Germany',
   },

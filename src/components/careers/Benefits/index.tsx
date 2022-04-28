@@ -65,40 +65,39 @@ const Benefits = () => {
         <SectionHeader>
           <SectionTitle>Our Benefits</SectionTitle>
           <Text>
-            To make the lives of our employees better we developed some
-            innovative benefits. We work hard every day to make life of our
-            employees better.
+            We strive to make the lives of our employees better every day. As
+            such, we have developed some innovative benefits for them.
           </Text>
         </SectionHeader>
         <Grid>
           <BenefitsCard icon={BookIcon} title="Continuous Learning">
-            Our personal education and confernce budgets will help you to grow
+            Our personal education and conference budgets will help you grow
             professionally!
           </BenefitsCard>
           <BenefitsCard
             icon={BulbIcon}
             title="Embrace Your Entrepreneurial Spirit"
           >
-            You can use your Friday afternoons on research or a side project in
+            You can use your Friday afternoons for research or a side project in
             our ecosystem!
           </BenefitsCard>
           <BenefitsCard icon={BuildingIcon} title="Company & Team Retreats">
             Build your team spirit on cool trips and retreats
           </BenefitsCard>
           <BenefitsCard icon={CalendarIcon} title="Flexibility">
-            Flexible Working Schedules and remote working policies have been a
-            part of our culture for a long time
+            Flexible working schedules and remote working policies have been a
+            part of our culture for a long time.
           </BenefitsCard>
           <BenefitsCard icon={TeamIcon} title="Flat Hierarchies">
-            You will not get lost in complicated vertical structures here
+            You will not get lost in complicated vertical structures here.
           </BenefitsCard>
           <BenefitsCard icon={LaptopIcon} title="Newest Technology">
-            We make sure to provide you the best equipment, subscriptions and
-            hardware you need!
+            We make sure to provide you with the best equipment, subscriptions
+            and hardware you need.
           </BenefitsCard>
           <BenefitsCard icon={TokensIcon} title="Token Plan">
             We believe it's important for all colleagues to have a stake in our
-            mission, which is why every employee has a bonus token plan.
+            mission, which is why every employee receives a bonus token plan.
           </BenefitsCard>
           <BenefitsCard icon={GlobeIcon} title="Visa Support">
             We'll assist you along the way with all you need to get a visa and

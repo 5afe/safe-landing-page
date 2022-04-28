@@ -53,7 +53,7 @@ const Social: React.FC = () => (
           <DiscordIcon />
         </a>
         <a
-          href="https://github.com/gnosis?utf8=%E2%9C%93&q=safe"
+          href="https://github.com/safe-global"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -38,7 +38,7 @@ interface CardProps {
   children: React.ReactNode
 }
 
-const Card: React.FC<CardProps> = ({ icon: Icon, title, children }) => (
+const Card = ({ icon: Icon, title, children }: CardProps) => (
   <CardContainer>
     <Icon />
     <Title>{title}</Title>

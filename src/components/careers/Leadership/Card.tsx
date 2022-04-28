@@ -80,7 +80,7 @@ interface CardProps {
   social: Partial<Record<'twitter' | 'medium' | 'discord' | 'github', string>>
 }
 
-const Card: React.FC<CardProps> = ({ imageURL, name, position, social }) => (
+const Card = ({ imageURL, name, position, social }: CardProps) => (
   <CardContainer>
     <Image src={imageURL} />
     <Name>{name}</Name>

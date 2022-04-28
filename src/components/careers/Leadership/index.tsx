@@ -32,12 +32,12 @@ const Leadership = () => {
   return (
     <Section>
       <ContentWrapper>
-        <SectionTitle>Meet our Leadership team</SectionTitle>
+        <SectionTitle>Meet our Leadership Team</SectionTitle>
         <Grid>
           <LeadershipCard
             imageURL="/images/richard.png"
             name="Richard Meissner"
-            position="Tech lead"
+            position="Tech Lead"
             social={{
               twitter: 'https://twitter.com/rimeissner',
               github: 'https://github.com/rmeissner',

@@ -100,7 +100,7 @@ const Header = ({ openPositions }: { openPositions: number | undefined }) => {
           <div>
             {openPositions && (
               <Grid item xs={12}>
-                <Text>{openPositions} Positions</Text>
+                <Text>{openPositions} Open Positions</Text>
               </Grid>
             )}
             <Grid container alignItems="center">

@@ -41,7 +41,7 @@ interface CardProps {
   address: OfficeAddress
 }
 
-const Card: React.FC<CardProps> = ({ address }) => (
+const Card = ({ address }: CardProps) => (
   <CardContainer>
     <Title>{address.city}</Title>
     <Text>{address.street},</Text>
