@@ -10,20 +10,23 @@ import Locations from '../components/careers/Locations'
 import InitiativeApplication from '../components/careers/InitiativeApplication'
 import Footer from '../components/careers/Footer'
 import { usePositions } from '../components/careers/Positions/usePositions'
+import { Box } from '@material-ui/core'
 
 export default () => {
   const positions = usePositions()
 
   return (
     <Layout title="Careers">
-      <Header openPositions={positions?.meta.total} />
-      <MostTrusted />
-      <Benefits />
-      <Leadership />
-      <Positions positions={positions?.jobs} />
-      <InitiativeApplication />
-      <Locations />
-      <Footer />
+      <Box overflow="hidden">
+        <Header openPositions={positions?.meta.total} />
+        <MostTrusted />
+        <Benefits />
+        <Leadership />
+        <Positions positions={positions?.jobs} />
+        <InitiativeApplication />
+        <Locations />
+        <Footer />
+      </Box>
     </Layout>
   )
 }

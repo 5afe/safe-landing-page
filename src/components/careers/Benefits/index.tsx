@@ -51,7 +51,6 @@ const Section = styled.section`
   background-color: ${(p) => p.theme.palette.white};
   position: relative;
   padding: 100px 0;
-  overflow: hidden;
 
   @media screen and (max-width: ${sizes.md}px) {
     padding: 64px 0;
