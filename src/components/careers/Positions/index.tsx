@@ -14,7 +14,7 @@ const Text = styled.p`
   max-width: 730px;
   margin: 0 auto;
 
-  & strong {
+  strong {
     font-weight: bold;
   }
 `

@@ -68,7 +68,7 @@ const InitiativeApplication = () => {
     <Section>
       <ContentWrapper>
         <SectionTitle noCenter>
-          Couldn’t find what you were looking for?
+          Couldn't find what you were looking for?
         </SectionTitle>
         <Text>Send us an initiative application!</Text>
         <LinkContainer>

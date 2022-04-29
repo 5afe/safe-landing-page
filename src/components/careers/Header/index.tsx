@@ -49,7 +49,7 @@ const Title = styled.h1`
   color: white;
   font-weight: bolder;
   margin-top: 16px;
-  margin-bottom: 45px;
+  margin-bottom: 16px;
 
   @media screen and (max-width: 980px) {
     margin-bottom: 16px;
@@ -61,6 +61,15 @@ const Title = styled.h1`
 const Text = styled.p`
   font-size: 20px;
   line-height: 26px;
+  margin-bottom: 45px;
+
+  strong {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 980px) {
+    margin-bottom: 24px;
+  }
 `
 
 const FeatureText = styled.p`
@@ -98,11 +107,6 @@ const Header = ({ openPositions }: { openPositions: number | undefined }) => {
       <Wrapper>
         <ContentWrapper>
           <div>
-            {openPositions && (
-              <Grid item xs={12}>
-                <Text>{openPositions} Open Positions</Text>
-              </Grid>
-            )}
             <Grid container alignItems="center">
               <Grid item xs={12} md={6}>
                 <Title>
@@ -110,6 +114,13 @@ const Header = ({ openPositions }: { openPositions: number | undefined }) => {
                   <br />
                   at Gnosis Safe
                 </Title>
+                {openPositions && (
+                  <Grid item xs={12}>
+                    <Text>
+                      <strong>{openPositions}</strong> Open Positions
+                    </Text>
+                  </Grid>
+                )}
               </Grid>
               <Grid item xs={12} md={6}>
                 <FeatureText>
