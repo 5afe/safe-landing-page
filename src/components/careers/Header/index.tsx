@@ -114,13 +114,11 @@ const Header = ({ openPositions }: { openPositions: number | undefined }) => {
                   <br />
                   at Gnosis Safe
                 </Title>
-                {openPositions && (
-                  <Grid item xs={12}>
-                    <Text>
-                      <strong>{openPositions}</strong> Open Positions
-                    </Text>
-                  </Grid>
-                )}
+                <Grid item xs={12}>
+                  <Text>
+                    <strong>{openPositions}</strong> Open Positions
+                  </Text>
+                </Grid>
               </Grid>
               <Grid item xs={12} md={6}>
                 <FeatureText>

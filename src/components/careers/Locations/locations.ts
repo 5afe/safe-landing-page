@@ -20,7 +20,7 @@ export const offices: OfficeAddress[] = [
   },
   {
     city: 'A Coruña',
-    street: 'Calle Orzán, 50',
+    street: 'Calle Orzán 50',
     postcode: '15003',
     country: 'Spain',
   },
