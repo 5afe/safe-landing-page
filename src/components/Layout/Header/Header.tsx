@@ -1,6 +1,7 @@
 import React from 'react'
 import Headroom from 'react-headroom'
 import styled, { css } from 'styled-components'
+import { sizes } from '../../../styles/styleUtils'
 import Logo from '../../../assets/multisig-logo-centered.svg'
 import { HEADER_CATEGORY, useAnalytics } from '../../../utils/googleAnalytics'
 import ButtonLink from '../../ui/ButtonLink'
@@ -12,6 +13,10 @@ import Spacer from './Spacer'
 const HeaderItemMargin = css`
   margin-left: 16px;
   margin-right: 16px;
+  @media screen and (max-width: ${sizes.xl}px) {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
   @media screen and (max-width: 980px) {
     margin-left: 10px;
     margin-right: 10px;
@@ -96,6 +101,9 @@ const SLogo = styled(Logo)`
   ${HeaderItemMargin}
   width: 172px;
   margin-top: 2px;
+  @media screen and (max-width: ${sizes.xl}px) {
+    width: 150px;
+  }
 `
 
 const SButtonLink = styled(ButtonLink)`

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Box, Grid } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 
 import LinesSVG from '../../../assets/bg-lines-03.svg'
 import ContentWrapper from '../../Layout/ContentWrapper'
