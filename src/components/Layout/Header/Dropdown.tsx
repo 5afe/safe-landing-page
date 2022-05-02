@@ -10,8 +10,8 @@ export interface DropdownOption {
 export const DropdownWrapper = styled.div`
   display: none;
   position: absolute;
-  width: 130px;
-  left: -20px;
+  width: 200px;
+  left: -60px;
 `
 
 const Content = styled.div`
