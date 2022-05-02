@@ -61,11 +61,6 @@ const Text = styled.div`
   }
 `
 
-const NetworkItem = styled.div`
-  float: left;
-  margin-right: 7px;
-`
-
 const SButtonLink = styled(ButtonLink)`
   display: flex;
   justify-content: center;
@@ -125,6 +120,8 @@ interface IDownloadButtons {
   desktopAppUrl: string | undefined
 }
 
+const chains = ['Ethereum','Gnosis Chain','Polygon','BNB Smart Chain','Energy Web Chain','Arbitrum','Aurora','Avalanche','Optimism','Goerli','Rinkeby','Volta']
+
 const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
   const { trackEvent } = useAnalytics()
 
@@ -156,14 +153,7 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
             </Text>
             <Text>
               <div>Gnosis Safe supports:</div>
-              <NetworkItem>Mainnet,</NetworkItem>
-              <NetworkItem>Rinkeby,</NetworkItem>
-              <NetworkItem>xDai,</NetworkItem>
-              <NetworkItem>Arbitrum,</NetworkItem>
-              <NetworkItem>EWC,</NetworkItem>
-              <NetworkItem>Volta,</NetworkItem>
-              <NetworkItem>Polygon,</NetworkItem>
-              <NetworkItem>BSC</NetworkItem>
+              {chains.join(', ')}
             </Text>
           </Col>
           <Col>

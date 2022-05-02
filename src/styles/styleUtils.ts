@@ -1,7 +1,7 @@
 import { css, ThemedCssFunction } from 'styled-components'
 import { ITheme } from './theme'
 
-const sizes = {
+export const sizes = {
   xl: 1366,
   lg: 1024,
   md: 768,
