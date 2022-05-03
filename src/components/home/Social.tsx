@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import DiscordIcon from '../../assets/discord.svg'
 import GithubIcon from '../../assets/github.svg'
-import MediumIcon from '../../assets/medium.svg'
+import MirrorIcon from '../../assets/mirror.svg'
 import TwitterIcon from '../../assets/twitter.svg'
 import ContentWrapper from '../Layout/ContentWrapper'
 
@@ -39,11 +39,11 @@ const Social: React.FC = () => (
           <TwitterIcon />
         </a>
         <a
-          href="https://blog.gnosis.pm/tagged/gnosis%20safe"
+          href="https://safe.mirror.xyz"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <MediumIcon />
+          <MirrorIcon />
         </a>
         <a
           href="https://discord.gg/AjG7AQD9Qn"

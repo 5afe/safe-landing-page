@@ -44,7 +44,9 @@ interface CardProps {
 const Card = ({ address }: CardProps) => (
   <CardContainer>
     <Title>{address.city}</Title>
-    <Text>{address.street},</Text>
+
+    {address.extra && <Text>{address.extra}</Text>}
+    <Text>{address.street}</Text>
     <Text>
       {address.postcode} {address.city}
     </Text>

@@ -1,6 +1,7 @@
 export interface OfficeAddress {
   city: string
   street: string
+  extra?: string
   postcode: string
   country: string
 }
@@ -8,7 +9,8 @@ export interface OfficeAddress {
 export const offices: OfficeAddress[] = [
   {
     city: 'Berlin',
-    street: 'Skalitzer Str. 85',
+    street: 'Skalitzer Str. 85-86',
+    extra: 'c/o Full Node',
     postcode: '10997',
     country: 'Germany',
   },
