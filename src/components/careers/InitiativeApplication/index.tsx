@@ -72,7 +72,7 @@ const InitiativeApplication = () => {
         </SectionTitle>
         <Text>Send us an initiative application!</Text>
         <LinkContainer>
-          <Link href="mailto:jobs@gnosis.pm">jobs@gnosis.pm</Link>
+          <Link href="mailto:jobs@safe.global">jobs@safe.global</Link>
           <StyledArrow />
         </LinkContainer>
       </ContentWrapper>
