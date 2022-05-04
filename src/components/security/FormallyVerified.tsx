@@ -2,9 +2,9 @@ import { graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import React from 'react'
 import styled from 'styled-components'
+import { SECURITY_CATEGORY, useAnalytics } from '../../utils/googleAnalytics'
 import ContentWrapper from '../Layout/ContentWrapper'
 import ButtonLink from '../ui/ButtonLink'
-import { SECURITY_CATEGORY, useAnalytics } from '../../utils/googleAnalytics'
 
 const Block = styled.div`
   padding: 0 20px;
@@ -120,7 +120,7 @@ const FormallyVerified = () => {
             <SecondRow>
               <LCol>
                 <ButtonLink
-                  url="https://github.com/gnosis/safe-contracts/blob/78494bcdbc61b3db52308a25f0556c42cf656ab1/docs/Gnosis_Safe_Formal_Verification_Report_1_0_0.pdf"
+                  url="https://github.com/safe-global/safe-contracts/blob/78494bcdbc61b3db52308a25f0556c42cf656ab1/docs/Gnosis_Safe_Formal_Verification_Report_1_0_0.pdf"
                   colorScheme="navy"
                 >
                   <div

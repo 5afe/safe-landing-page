@@ -928,8 +928,8 @@ export default () => (
           </Li>
           <Li>
             Github:{' '}
-            <Link href="https://github.com/gnosis/">
-              https://github.com/gnosis/
+            <Link href="https://github.com/safe-global/">
+              https://github.com/safe-global/
             </Link>
           </Li>
           <Li>
@@ -941,7 +941,7 @@ export default () => (
           <Li>
             Discord:{' '}
             <Link href="https://discord.gg/AjG7AQD9Qn">
-            https://discord.gg/AjG7AQD9Qn
+              https://discord.gg/AjG7AQD9Qn
             </Link>
           </Li>
         </Ol>

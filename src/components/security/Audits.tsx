@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import BgGray from '../../assets/bg-gray.svg'
-import ContentWrapper from '../Layout/ContentWrapper'
 import { SECURITY_CATEGORY, useAnalytics } from '../../utils/googleAnalytics'
+import ContentWrapper from '../Layout/ContentWrapper'
 
 const Link = styled.a`
   text-decoration: none;
@@ -155,7 +155,7 @@ const Audits = () => {
                 }
               >
                 <Link
-                  href="https://github.com/gnosis/safe-contracts/blob/v1.1.1/docs/alexey_audit.md"
+                  href="https://github.com/safe-global/safe-contracts/blob/v1.1.1/docs/alexey_audit.md"
                   target="_blank"
                 >
                   <Audit
@@ -174,7 +174,7 @@ const Audits = () => {
                 }
               >
                 <Link
-                  href="https://github.com/gnosis/safe-contracts/blob/v1.1.1/docs/Gnosis_Safe_Formal_Verification_Report_1_0_0.pdf"
+                  href="https://github.com/safe-global/safe-contracts/blob/v1.1.1/docs/Gnosis_Safe_Formal_Verification_Report_1_0_0.pdf"
                   target="_blank"
                 >
                   <Audit
@@ -193,7 +193,7 @@ const Audits = () => {
                 }
               >
                 <Link
-                  href="https://github.com/gnosis/safe-contracts/blob/v1.1.1/docs/audit_1_1_1.md"
+                  href="https://github.com/safe-global/safe-contracts/blob/v1.1.1/docs/audit_1_1_1.md"
                   target="_blank"
                 >
                   <Audit
@@ -212,7 +212,7 @@ const Audits = () => {
                 }
               >
                 <Link
-                  href="https://github.com/gnosis/safe-contracts/blob/v1.2.0/docs/Gnosis_Safe_Audit_Report_1_2_0.pdf"
+                  href="https://github.com/safe-global/safe-contracts/blob/v1.2.0/docs/Gnosis_Safe_Audit_Report_1_2_0.pdf"
                   target="_blank"
                 >
                   <Audit date="May 4th, 2020" author="G0 Group (v1.2.0)" />
@@ -228,7 +228,7 @@ const Audits = () => {
                 }
               >
                 <Link
-                  href="https://github.com/gnosis/safe-contracts/blob/186a21a74b327f17fc41217a927dea7064f74604/docs/audit_1_3_0.md"
+                  href="https://github.com/safe-global/safe-contracts/blob/186a21a74b327f17fc41217a927dea7064f74604/docs/audit_1_3_0.md"
                   target="_blank"
                 >
                   <Audit date="May 5th, 2021" author="G0 Group (v1.3.0)" />
