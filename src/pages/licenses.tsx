@@ -2,13 +2,13 @@ import * as React from 'react'
 import styled from 'styled-components'
 import Layout from '../components/Layout'
 import {
-  ContentWrapper,
-  Title,
-  Section,
-  TitleSection,
-  Paragraph,
-  Link,
   B,
+  ContentWrapper,
+  Link,
+  Paragraph,
+  Section,
+  Title,
+  TitleSection
 } from '../styles/legalPagesStyles'
 
 const Tr = styled.span`
@@ -376,18 +376,18 @@ export default () => (
             </Td2>
           </Tr>
           <Tr>
-            <Td1>@gnosis.pm/safe-conTracts</Td1>
+            <Td1>@gnosis.pm/safe-contracts</Td1>
             <Td2>
-              <Link href="https://github.com/gnosis/safe-conTracts/blob/development/LICENSE">
-                https://github.com/gnosis/safe-conTracts/blob/development/LICENSE
+              <Link href="https://github.com/safe-global/safe-contracts/blob/main/LICENSE">
+                https://github.com/safe-global/safe-contracts/blob/main/LICENSE
               </Link>
             </Td2>
           </Tr>
           <Tr>
-            <Td1>@gnosis.pm/util-conTracts</Td1>
+            <Td1>@gnosis.pm/util-contracts</Td1>
             <Td2>
-              <Link href="https://github.com/gnosis/util-conTracts/blob/master/LICENSE">
-                https://github.com/gnosis/util-conTracts/blob/master/LICENSE
+              <Link href="https://github.com/gnosis/util-contracts/blob/master/LICENSE">
+                https://github.com/gnosis/util-contracts/blob/master/LICENSE
               </Link>
             </Td2>
           </Tr>
@@ -1162,10 +1162,10 @@ export default () => (
             </Td2>
           </Tr>
           <Tr>
-            <Td1>run-with-tesTrpc</Td1>
+            <Td1>run-with-testrpc</Td1>
             <Td2>
-              <Link href="https://github.com/gnosis/run-with-tesTrpc/blob/master/LICENSE">
-                https://github.com/gnosis/run-with-tesTrpc/blob/master/LICENSE
+              <Link href="https://github.com/gnosis/run-with-testrpc/blob/master/LICENSE">
+                https://github.com/gnosis/run-with-testrpc/blob/master/LICENSE
               </Link>
             </Td2>
           </Tr>
@@ -1202,10 +1202,10 @@ export default () => (
             </Td2>
           </Tr>
           <Tr>
-            <Td1>Truffle-conTract</Td1>
+            <Td1>Truffle-contract</Td1>
             <Td2>
-              <Link href="https://github.com/Trufflesuite/Truffle/blob/master/packages/conTract/LICENSE">
-                https://github.com/Trufflesuite/Truffle/blob/master/packages/conTract/LICENSE
+              <Link href="https://github.com/Trufflesuite/Truffle/blob/master/packages/contract/LICENSE">
+                https://github.com/Trufflesuite/Truffle/blob/master/packages/contract/LICENSE
               </Link>
             </Td2>
           </Tr>
