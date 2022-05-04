@@ -180,7 +180,7 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
             </Text>
             <Text>
               <a
-                href="https://github.com/gnosis/safe-react/releases"
+                href="https://github.com/safe-global/safe-react/releases"
                 target="_blank"
                 rel="noopener noreferrer"
               >

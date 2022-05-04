@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import LinesSVG from '../../assets/bg-lines-03.svg'
+import { DEVELOPERS_CATEGORY, useAnalytics } from '../../utils/googleAnalytics'
 import ContentWrapper from '../Layout/ContentWrapper'
 import ButtonLink from '../ui/ButtonLink'
 import Heading from '../ui/Heading'
-import { DEVELOPERS_CATEGORY, useAnalytics } from '../../utils/googleAnalytics'
 
 const Container = styled.div`
   position: relative;
@@ -143,7 +143,7 @@ const Repositories = () => {
                 <SubRow>
                   <SubCol>
                     <SButtonLink
-                      url="https://github.com/gnosis/safe-contracts/blob/main/contracts/GnosisSafe.sol"
+                      url="https://github.com/safe-global/safe-contracts/blob/main/contracts/GnosisSafe.sol"
                       colorScheme="navy"
                     >
                       <div
@@ -161,7 +161,7 @@ const Repositories = () => {
                   </SubCol>
                   <SubCol>
                     <SButtonLink
-                      url="https://github.com/gnosis/safe-modules"
+                      url="https://github.com/safe-global/safe-modules"
                       colorScheme="navy"
                     >
                       <div
@@ -188,7 +188,7 @@ const Repositories = () => {
                 <SubRow>
                   <SubCol>
                     <SButtonLink
-                      url="https://github.com/gnosis/safe-transaction-service"
+                      url="https://github.com/safe-global/safe-transaction-service"
                       colorScheme="navy"
                     >
                       <div
@@ -237,7 +237,7 @@ const Repositories = () => {
                 <SubRow>
                   <SubCol>
                     <SButtonLink
-                      url="https://github.com/gnosis/safe-react"
+                      url="https://github.com/safe-global/safe-react"
                       colorScheme="green"
                     >
                       <div
@@ -280,7 +280,7 @@ const Repositories = () => {
                 <SubRow>
                   <SubCol>
                     <SButtonLink
-                      url="https://github.com/gnosis/safe-android"
+                      url="https://github.com/safe-global/safe-android"
                       colorScheme="green"
                     >
                       <div
@@ -298,7 +298,7 @@ const Repositories = () => {
                   </SubCol>
                   <SubCol>
                     <SButtonLink
-                      url="https://github.com/gnosis/safe-ios"
+                      url="https://github.com/safe-global/safe-ios"
                       colorScheme="green"
                     >
                       <div

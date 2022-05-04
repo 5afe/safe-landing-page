@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import LinesSVG from '../../assets/bg-lines-03.svg'
+import { DEVELOPERS_CATEGORY, useAnalytics } from '../../utils/googleAnalytics'
 import ContentWrapper from '../Layout/ContentWrapper'
 import ButtonLink from '../ui/ButtonLink'
-import { DEVELOPERS_CATEGORY, useAnalytics } from '../../utils/googleAnalytics'
 
 const Container = styled.div`
   position: relative;
@@ -129,7 +129,7 @@ const Contracts = () => {
                 </Row>
                 <Row>
                   <SButtonLink
-                    url="https://github.com/gnosis/safe-contracts/releases"
+                    url="https://github.com/safe-global/safe-contracts/releases"
                     colorScheme="navy"
                   >
                     <div
