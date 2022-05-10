@@ -40,12 +40,12 @@ const SHeading = styled.h2`
 `
 
 const StyledGnosisChain = styled(GnosisChain)`
-  max-height: 60px;
+  max-height: 50px;
   width: auto;
 `
 
 const StyledEthereum = styled(Ethereum)`
-  max-height: 60px;
+  max-height: 50px;
   width: auto;
 `
 
