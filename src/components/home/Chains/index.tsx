@@ -40,7 +40,7 @@ const SHeading = styled.h2`
 `
 
 const StyledGnosisChain = styled(GnosisChain)`
-  max-height: 50px;
+  max-height: 45px;
   width: auto;
 `
 
@@ -49,43 +49,47 @@ const StyledEthereum = styled(Ethereum)`
   width: auto;
 `
 
+const StyledGridItem = styled(Grid)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
 
 const Chains = () => {
   return (
     <Container>
       <ContentWrapper>
-        <Box textAlign="center">
           <SHeading>Gnosis Safe Supports</SHeading>
           <Grid container spacing={6} alignItems="center" justifyContent="center">
-            <Grid item xs={12} sm={6} md={3}>
+            <StyledGridItem item xs={12} sm={6} md={3}>
               <StyledEthereum />
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
+            </StyledGridItem>
+            <StyledGridItem item xs={12} sm={6} md={3}>
               <EnergyWeb />
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
+            </StyledGridItem>
+            <StyledGridItem item xs={12} sm={6} md={3}>
               <Polygon />
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
+            </StyledGridItem>
+            <StyledGridItem item xs={12} sm={6} md={3}>
               <StyledGnosisChain />
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
+            </StyledGridItem>
+            <StyledGridItem item xs={12} sm={6} md={3}>
               <Avax />
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
+            </StyledGridItem>
+            <StyledGridItem item xs={12} sm={6} md={3}>
               <BSC />
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
+            </StyledGridItem>
+            <StyledGridItem item xs={12} sm={6} md={3}>
               <Arbitrum />
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
+            </StyledGridItem>
+            <StyledGridItem item xs={12} sm={6} md={3}>
               <Optimism />
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
+            </StyledGridItem>
+            <StyledGridItem item xs={12} sm={6} md={3}>
               <Aurora />
-            </Grid>
+            </StyledGridItem>
           </Grid>
-        </Box>
       </ContentWrapper>
     </Container>
   )
