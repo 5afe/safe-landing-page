@@ -120,8 +120,6 @@ interface IDownloadButtons {
   desktopAppUrl: string | undefined
 }
 
-const chains = ['Ethereum','Gnosis Chain','Polygon','BNB Smart Chain','Energy Web Chain','Arbitrum','Aurora','Avalanche','Optimism','Goerli','Rinkeby','Volta']
-
 const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
   const { trackEvent } = useAnalytics()
 
@@ -150,10 +148,6 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
             <Text>
               Access the most recent version of the Gnosis Safe directly in your
               browser.
-            </Text>
-            <Text>
-              <div>Gnosis Safe supports:</div>
-              {chains.join(', ')}
             </Text>
           </Col>
           <Col>

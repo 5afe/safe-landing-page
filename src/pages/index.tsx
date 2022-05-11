@@ -9,12 +9,14 @@ import GettingStarted from '../components/home/GettingStarted'
 import Testimonials from '../components/home/Testimonials'
 import MultisigMobile from '../components/home/MultisigMobile'
 import Social from '../components/home/Social'
+import Chains from "../components/home/Chains";
 
 export default () => (
   <Layout title="Overview">
     <MainSection />
     <TrustedBy />
     <Clients />
+    <Chains />
     <Features />
     <StorageComparison />
     <GettingStarted />
