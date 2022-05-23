@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react'
-import { Department, Job } from 'components/careers/Positions/index'
+import { Job } from 'components/careers/Positions/index'
 
-const JOBS_API_URL =
-  'https://boards-api.greenhouse.io/v1/boards/gnosis/departments/4065869002'
+const JOBS_API_URL = 'https://safe-global.breezy.hr/json'
 
 export const usePositions = () => {
   const [positions, setPositions] = useState<Job[]>([])
@@ -13,8 +12,7 @@ export const usePositions = () => {
     const getOpenPositions = async () => {
       try {
         const data = await fetch(JOBS_API_URL)
-        const department: Department = await data.json()
-        const jobs = department.jobs
+        const jobs: Job[] = await data.json()
 
         if (isCurrent) {
           setPositions(jobs)
