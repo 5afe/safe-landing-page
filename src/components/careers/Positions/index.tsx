@@ -19,43 +19,30 @@ const Text = styled.p`
   }
 `
 
-export type Department = {
-  id: number
-  name: string
-  jobs: Job[]
-  parent_id: unknown
-  child_ids: number[]
-}
-
-type JobMeta = {
-  id: number
-  name: string
-  value: unknown
-  value_type: string
-}
-
 export type Job = {
-  absolute_url: string
-  data_compliance: {
-    type: string
-    requires_consent: boolean
-    retention_period: number
-  }[]
-  id: number
-  internal_job_id: number
-  location: {
+  id: string
+  friendly_id: string
+  name: string
+  url: string
+  published_date: string
+  type: {
+    id: string
     name: string
   }
-  metadata: JobMeta[]
-  requisition_id: unknown
-  title: string
-  updated_at: string
-}
-
-export type Jobs = {
-  jobs: Job[]
-  meta: {
-    total: number
+  location: {
+    country: {
+      name: string
+      id: string
+    }
+    city: string
+    is_remote: boolean
+    name: string
+  }
+  department: string
+  company: {
+    name: string
+    logo_url: string | null
+    friendly_id: string
   }
 }
 
@@ -85,8 +72,8 @@ const Positions = ({ positions }: { positions: Job[] | undefined }) => {
                 <Grid key={job.id} item xs={12} sm={6} md={4}>
                   <Card
                     location={job.location.name}
-                    title={job.title}
-                    url={job.absolute_url}
+                    title={job.name}
+                    url={job.url}
                   />
                 </Grid>
               )
