@@ -85,7 +85,7 @@ const Benefits = () => {
             Build your team spirit on cool trips and retreats.
           </BenefitsCard>
           <BenefitsCard icon={CalendarIcon} title="Flexibility">
-            Flexible working schedules and remote working policies have been a
+            Flexible working schedules and hybrid working policies have been a
             part of our culture for a long time.
           </BenefitsCard>
           <BenefitsCard icon={TeamIcon} title="Flat Hierarchies">
