@@ -158,7 +158,7 @@ const MainSection = () => {
             <UsdWorthValue>{process.env.GATSBY_USD_WORTH_VALUE}</UsdWorthValue>
           </UsdWorthValueContainer>
           <UsdWorthNotes>
-            {'USD worth of digital assets securely stored in Gnosis Safes '}
+            {'USD worth of digital assets securely stored in Safes '}
           </UsdWorthNotes>
           <UsdWorthDate>
             <a

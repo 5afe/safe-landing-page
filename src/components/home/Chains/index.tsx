@@ -60,7 +60,7 @@ const Chains = () => {
   return (
     <Container>
       <ContentWrapper>
-          <SHeading>Gnosis Safe Supports</SHeading>
+          <SHeading>Safe Supports</SHeading>
           <Grid container spacing={6} alignItems="center" justifyContent="center">
             <StyledGridItem item xs={12} sm={6} md={3}>
               <StyledEthereum />

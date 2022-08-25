@@ -1,8 +1,8 @@
 import React from 'react'
 import Headroom from 'react-headroom'
 import styled, { css } from 'styled-components'
-import { sizes } from '../../../styles/styleUtils'
 import Logo from '../../../assets/multisig-logo-centered.svg'
+import { sizes } from '../../../styles/styleUtils'
 import { HEADER_CATEGORY, useAnalytics } from '../../../utils/googleAnalytics'
 import ButtonLink from '../../ui/ButtonLink'
 import Link from '../../ui/Link'
@@ -99,11 +99,7 @@ const NavLink = styled(Link)`
 const SLogo = styled(Logo)`
   height: 32px;
   ${HeaderItemMargin}
-  width: 172px;
   margin-top: 2px;
-  @media screen and (max-width: ${sizes.xl}px) {
-    width: 150px;
-  }
 `
 
 const SButtonLink = styled(ButtonLink)`

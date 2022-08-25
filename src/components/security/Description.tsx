@@ -74,12 +74,12 @@ const Description = () => (
       <SGnosisSafeOutline />
       <LCol></LCol>
       <Col>
-        There are currently more than 50,000 Gnosis wallets deployed, with the
+        There are currently more than 50,000 Safe wallets deployed, with the
         top 25 instances alone holding a combined volume of 1.7M Ether and more
         than $90B equivalent in digital assets.
       </Col>
       <Col>
-        Our most advanced wallet solution, Gnosis Safe, sets the industry-wide,
+        Our most advanced wallet solution, Safe, sets the industry-wide,
         highest security standards.
       </Col>
     </SWrapper>

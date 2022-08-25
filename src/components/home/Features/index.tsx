@@ -260,8 +260,8 @@ const Features = () => {
               <Text>
                 <Title>Assets</Title>
                 <Description>
-                  Gnosis Safe supports ETH, ERC20 (Tokens) and ERC721
-                  (Collectibles). You can also see the fiat values of your
+                  Safe supports ETH, ERC20 (Tokens) and ERC721
+                  (NFTs). You can also see the fiat values of your
                   assets.
                 </Description>
               </Text>
@@ -286,7 +286,7 @@ const Features = () => {
                 <Title>Safe Apps</Title>
                 <Description>
                   Bringing multisig security to DeFi, you can now put your funds
-                  to work directly from the Gnosis Safe interface. Use your
+                  to work directly from the Safe interface. Use your
                   digital assets to invest, earn, borrow, invoice, do payroll
                   and more.
                   <br />

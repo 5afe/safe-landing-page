@@ -111,7 +111,7 @@ const FormallyVerified = () => {
               </LCol>
               <RCol>
                 <SHeading2>
-                  The Gnosis Safe core smart contracts have passed the highest
+                  The Safe core smart contracts have passed the highest
                   possible security standard in the industry: Formal
                   Verification.
                 </SHeading2>
@@ -144,7 +144,7 @@ const FormallyVerified = () => {
                     formal verification, over a six-month period.
                   </Text>
                   <Text>
-                    Gnosis Safe is the only formally verified smart
+                    Safe is the only formally verified smart
                     contract-based wallet solution.
                   </Text>
                 </Row>

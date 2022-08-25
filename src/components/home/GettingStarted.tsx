@@ -135,14 +135,14 @@ const GettingStarted = () => {
                 trackEvent({
                   category: OVERVIEW_CATEGORY,
                   action: 'Getting started section',
-                  label: 'Open article: What is Gnosis Safe?',
+                  label: 'Open article: What is Safe?',
                 })
               }
             >
               <CardItem>
-                <Title>What is Gnosis Safe?</Title>
+                <Title>What is Safe?</Title>
                 <Text>
-                  Read about the basics of Gnosis Safe and how it compares to
+                  Read about the basics of Safe and how it compares to
                   other solutions
                 </Text>
                 <SLinkIcon>
@@ -161,14 +161,14 @@ const GettingStarted = () => {
                 trackEvent({
                   category: OVERVIEW_CATEGORY,
                   action: 'Getting started section',
-                  label: 'Open article: Create a Gnosis Safe account',
+                  label: 'Open article: Create a Safe account',
                 })
               }
             >
               <CardItem>
-                <Title>Create a Gnosis Safe account</Title>
+                <Title>Create a Safe account</Title>
                 <Text>
-                  The full process of creating a new Gnosis Safe account in just
+                  The full process of creating a new Safe account in just
                   60 seconds
                 </Text>
                 <SLinkIcon>
@@ -187,15 +187,15 @@ const GettingStarted = () => {
                 trackEvent({
                   category: OVERVIEW_CATEGORY,
                   action: 'Getting started section',
-                  label: 'Open article: What Gnosis Safe setup should I use?',
+                  label: 'Open article: What Safe setup should I use?',
                 })
               }
             >
               <CardItem>
-                <Title>What Gnosis Safe setup should I use?</Title>
+                <Title>What Safe setup should I use?</Title>
                 <Text>
                   This article provides some information on what to consider
-                  when setting up a Gnosis Safe
+                  when setting up a Safe
                 </Text>
                 <SLinkIcon>
                   <LinkIcon />
@@ -214,12 +214,12 @@ const GettingStarted = () => {
                   category: OVERVIEW_CATEGORY,
                   action: 'Getting started section',
                   label:
-                    'Open article: Costs of creating a Gnosis Safe account',
+                    'Open article: Costs of creating a Safe account',
                 })
               }
             >
               <CardItemLast>
-                <Title>Costs of creating a Gnosis Safe account</Title>
+                <Title>Costs of creating a Safe account</Title>
                 <Text>
                   This article provides an overview on how much gas it costs
                   approximately to create a Safe

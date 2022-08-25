@@ -34,8 +34,8 @@ export default () => (
       <Section>
         <TitleSection>Libraries We Use</TitleSection>
         <Paragraph>
-          This page contains a list of atTribution notices for third party
-          software that may be contained in portions of the Gnosis Safe. We
+          This page contains a list of attribution notices for third party
+          software that may be contained in portions of the Safe. We
           thank the open source community for all of their contributions.
         </Paragraph>
         <TitleSection>Android</TitleSection>

@@ -112,7 +112,7 @@ const Header = ({ openPositions }: { openPositions: number | undefined }) => {
                 <Title>
                   Join us
                   <br />
-                  at Gnosis Safe
+                  at Safe
                 </Title>
                 <Grid item xs={12}>
                   <Text>

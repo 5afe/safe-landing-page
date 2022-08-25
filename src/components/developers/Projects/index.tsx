@@ -83,7 +83,7 @@ const Projects = () => {
     <Container>
       <SWrapper>
         <LCol>
-          <SHeading>Projects building on Gnosis Safe</SHeading>
+          <SHeading>Projects building on Safe</SHeading>
         </LCol>
         <RCol>
           {PROJECTS.map((project) => (

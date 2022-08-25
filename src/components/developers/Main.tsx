@@ -180,7 +180,7 @@ const MainSection = () => {
     <Container>
       <SWrapper>
         <LCol>
-          <SHeading>Build with Gnosis Safe</SHeading>
+          <SHeading>Build with Safe</SHeading>
           <Text>
             The tools you need to build world-class applications on Ethereum
           </Text>
