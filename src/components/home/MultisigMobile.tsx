@@ -116,7 +116,7 @@ const MultisigMobile = () => {
       {(data) => (
         <Container id="mobile">
           <SWrapper>
-            <SHeading>Gnosis Safe Mobile</SHeading>
+            <SHeading>Safe Mobile</SHeading>
             <Description>
               Track your assets and transactions on
               <br />

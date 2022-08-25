@@ -68,7 +68,7 @@ const Footer = ({ title }: FooterProps) => {
 
   return (
     <FooterContainer>
-      <Item title={title}>©{date.getFullYear()} Gnosis</Item>
+      <Item title={title}>©{date.getFullYear()} Safe Ecosystem Foundation</Item>
       <Sep title={title}>|</Sep>
       <SLink
         to="/terms"

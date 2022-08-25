@@ -10,7 +10,7 @@ interface IHeadProps {
 }
 
 const getTitle = (title?: string) =>
-  title ? `${title} - Gnosis Safe` : 'Gnosis Safe'
+  title ? `${title} - Safe` : 'Safe'
 
 export default ({ title, description, thumbnail, article }: IHeadProps) => (
   <StaticQuery

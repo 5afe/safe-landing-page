@@ -60,7 +60,7 @@ const MostTrusted = () => {
                 The most trusted wallet on Ethereum
               </SectionTitle>
               <Text>
-                Gnosis Safe is the most trusted platform to manage digital
+                Safe is the most trusted platform to manage digital
                 assets on Ethereum and other leading protocols.
               </Text>
               <SecondaryText>

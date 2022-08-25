@@ -319,7 +319,7 @@ const Repositories = () => {
             </RCol>
           </Col>
         </Row>
-        <LoveMessage>Gnosis &hearts; Developers</LoveMessage>
+        <LoveMessage>Safe &hearts; Developers</LoveMessage>
       </ContentWrapper>
     </Container>
   )

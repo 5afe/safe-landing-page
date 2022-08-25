@@ -109,7 +109,7 @@ const Insurance = () => {
           <CCol>
             <Text>
               <b>Still have doubts about the smart contracts’ security?</b> You
-              can insure funds stored in the Gnosis Safe against potential smart
+              can insure funds stored in the Safe against potential smart
               contract attacks, through Nexus Mutual services.
             </Text>
           </CCol>

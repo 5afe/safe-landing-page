@@ -146,7 +146,7 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
               </div>
             </SButtonLink>
             <Text>
-              Access the most recent version of the Gnosis Safe directly in your
+              Access the most recent version of the Safe directly in your
               browser.
             </Text>
           </Col>
@@ -169,7 +169,7 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
               </div>
             </SButtonLink>
             <Text>
-              Download the Gnosis Safe as a static desktop application for
+              Download the Safe as a static desktop application for
               Windows, MacOS or Linux.
             </Text>
             <Text>

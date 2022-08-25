@@ -24,7 +24,7 @@ const Description = () => (
   <Container>
     <ContentWrapper>
       <SHeading>
-        The Gnosis Safe is an enterprise-ready wallet solution for managing
+        The Safe is an enterprise-ready wallet solution for managing
         digital assets. Multi-signature means wallet owners are always in
         control of their own assets and can set granular permission on fund
         management.
