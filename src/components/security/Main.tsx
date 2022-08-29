@@ -169,7 +169,7 @@ const MainSection = () => {
             </a>
           </UsdWorthDate>
           <SButtonLink
-            url="https://explore.duneanalytics.com/dashboard/gnosis-safe_2"
+            url="https://gnosis-safe.io/security"
             target="_blank"
             explicitExternal
           >
