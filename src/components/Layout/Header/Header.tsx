@@ -8,7 +8,6 @@ import Link from '../../ui/Link'
 import Divider from './Divider'
 import Dropdown, { DropdownOption, DropdownWrapper } from './Dropdown'
 import Spacer from './Spacer'
-import AnimatedLogo from './AnimatedLogo'
 
 const HeaderItemMargin = css`
   margin-left: 16px;
@@ -115,6 +114,17 @@ export const communityMenu: DropdownOption[] = [
   { title: 'Safe Guardians', link: 'https://guardians.gnosis-safe.io' },
 ]
 
+const useInterval = (delay = 2 * 60e3): number => {
+  const [count, setCount] = React.useState<number>(0)
+  React.useEffect(() => {
+    const id = setInterval(() => {
+      setCount((prev) => prev + 1)
+    }, delay)
+    return () => clearInterval(id)
+  }, [delay])
+  return count
+}
+
 interface HeaderProps {
   toggleMobileMenu: Function
   mobileMenuOpened: boolean
@@ -130,9 +140,7 @@ const Header: React.FC<HeaderProps> = ({
     <SHeadroom>
       <Container mobileMenuOpened={mobileMenuOpened}>
         <Link to="/">
-          <AnimatedLogo>
-            <SLogo src="/images/transition-logo.gif" />
-          </AnimatedLogo>
+          <SLogo src={`/images/transition-logo.gif?${useInterval()}`} />
         </Link>
         <Spacer />
         <MobileNavContainer onClick={() => toggleMobileMenu()}>
