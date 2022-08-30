@@ -1,7 +1,6 @@
 import React from 'react'
 import Headroom from 'react-headroom'
 import styled, { css } from 'styled-components'
-import Logo from '../../../assets/multisig-logo-centered.svg'
 import { sizes } from '../../../styles/styleUtils'
 import { HEADER_CATEGORY, useAnalytics } from '../../../utils/googleAnalytics'
 import ButtonLink from '../../ui/ButtonLink'
@@ -9,6 +8,7 @@ import Link from '../../ui/Link'
 import Divider from './Divider'
 import Dropdown, { DropdownOption, DropdownWrapper } from './Dropdown'
 import Spacer from './Spacer'
+import AnimatedLogo from './AnimatedLogo'
 
 const HeaderItemMargin = css`
   margin-left: 16px;
@@ -96,10 +96,9 @@ const NavLink = styled(Link)`
   }
 `
 
-const SLogo = styled(Logo)`
-  height: 32px;
+const SLogo = styled.img`
+  height: 36px;
   ${HeaderItemMargin}
-  margin-top: 2px;
 `
 
 const SButtonLink = styled(ButtonLink)`
@@ -131,7 +130,9 @@ const Header: React.FC<HeaderProps> = ({
     <SHeadroom>
       <Container mobileMenuOpened={mobileMenuOpened}>
         <Link to="/">
-          <SLogo />
+          <AnimatedLogo>
+            <SLogo src="/images/transition-logo.gif" />
+          </AnimatedLogo>
         </Link>
         <Spacer />
         <MobileNavContainer onClick={() => toggleMobileMenu()}>
