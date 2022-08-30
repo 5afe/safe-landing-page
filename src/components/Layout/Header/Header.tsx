@@ -1,7 +1,6 @@
 import React from 'react'
 import Headroom from 'react-headroom'
 import styled, { css } from 'styled-components'
-import Logo from '../../../assets/multisig-logo-centered.svg'
 import { sizes } from '../../../styles/styleUtils'
 import { HEADER_CATEGORY, useAnalytics } from '../../../utils/googleAnalytics'
 import ButtonLink from '../../ui/ButtonLink'
@@ -96,10 +95,9 @@ const NavLink = styled(Link)`
   }
 `
 
-const SLogo = styled(Logo)`
-  height: 32px;
+const SLogo = styled.img`
+  height: 36px;
   ${HeaderItemMargin}
-  margin-top: 2px;
 `
 
 const SButtonLink = styled(ButtonLink)`
@@ -131,7 +129,7 @@ const Header: React.FC<HeaderProps> = ({
     <SHeadroom>
       <Container mobileMenuOpened={mobileMenuOpened}>
         <Link to="/">
-          <SLogo />
+          <SLogo src="/images/transition-logo.gif" />
         </Link>
         <Spacer />
         <MobileNavContainer onClick={() => toggleMobileMenu()}>
