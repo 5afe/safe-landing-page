@@ -8,6 +8,7 @@ import Link from '../../ui/Link'
 import Divider from './Divider'
 import Dropdown, { DropdownOption, DropdownWrapper } from './Dropdown'
 import Spacer from './Spacer'
+import AnimatedLogo from './AnimatedLogo'
 
 const HeaderItemMargin = css`
   margin-left: 16px;
@@ -129,7 +130,9 @@ const Header: React.FC<HeaderProps> = ({
     <SHeadroom>
       <Container mobileMenuOpened={mobileMenuOpened}>
         <Link to="/">
-          <SLogo src="/images/transition-logo.gif" />
+          <AnimatedLogo>
+            <SLogo src="/images/transition-logo.gif" />
+          </AnimatedLogo>
         </Link>
         <Spacer />
         <MobileNavContainer onClick={() => toggleMobileMenu()}>
