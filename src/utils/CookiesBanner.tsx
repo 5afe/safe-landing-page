@@ -3,10 +3,8 @@ import FormControlLabel from '@material-ui/core/FormControlLabel'
 import { withStyles } from '@material-ui/core/styles'
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import AlertRedIcon from '../assets/alert-red.svg'
 import Button from '../components/ui/Button'
 import Link from '../components/ui/Link'
-import IntercomIcon from '../images/intercom.png'
 import {
   CookiesProps,
   COOKIES_KEY,
@@ -14,31 +12,9 @@ import {
   saveCookie,
 } from './cookies'
 import { loadGoogleAnalytics } from './googleAnalytics'
-import { closeIntercom, isIntercomLoaded, loadIntercom } from './intercom'
 import { CookieAttributes } from 'js-cookie'
 
 const Container = styled.div``
-
-const IntercomAlert = styled.div`
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  padding: 0 0 13px 0;
-  svg {
-    margin-right: 5px;
-  }
-`
-
-const IntercomImage = styled.img`
-  position: fixed;
-  cursor: pointer;
-  height: 80px;
-  width: 80px;
-  bottom: 8px;
-  right: 10px;
-  z-index: 1000;
-  box-shadow: 1px 2px 10px 0 var(rgba(40, 54, 61, 0.18));
-`
 
 const SCookieBanner = styled.div`
   background-color: #fff;
@@ -116,10 +92,8 @@ interface CookiesBannerFormProps {
 
 const CookiesBanner = () => {
   const [showAnalytics, setShowAnalytics] = useState(false)
-  const [showIntercom, setShowIntercom] = useState(false)
   const [localNecessary, setLocalNecessary] = useState(true)
   const [localAnalytics, setLocalAnalytics] = useState(false)
-  const [localIntercom, setLocalIntercom] = useState(false)
 
   const [showBanner, setShowBanner] = useState(false)
   const [showAlertMessage, setShowAlertMessage] = useState(false)
@@ -147,12 +121,6 @@ const CookiesBanner = () => {
   }
 
   useEffect(() => {
-    if (showIntercom) {
-      loadIntercom()
-    }
-  }, [showIntercom])
-
-  useEffect(() => {
     const fetchCookiesFromStorage = async () => {
       const cookiesState: CookiesProps = await loadFromCookie(COOKIES_KEY)
       if (cookiesState) {
@@ -162,12 +130,10 @@ const CookiesBanner = () => {
           acceptedNecessary,
         } = cookiesState
         setLocalAnalytics(acceptedAnalytics)
-        setLocalIntercom(acceptedSupportAndUpdates)
         setLocalNecessary(acceptedNecessary)
         const openBanner = acceptedNecessary === false || showBanner
         openCookieBanner(openBanner)
         setShowAnalytics(acceptedAnalytics)
-        setShowIntercom(acceptedSupportAndUpdates)
       } else {
         openCookieBanner(true)
       }
@@ -187,7 +153,6 @@ const CookiesBanner = () => {
     }
     await saveCookie(COOKIES_KEY, newState, cookieConfig)
     setShowAnalytics(true)
-    setShowIntercom(true)
     openCookieBanner(false)
   }
 
@@ -196,17 +161,12 @@ const CookiesBanner = () => {
     const newState = {
       acceptedNecessary: true,
       acceptedAnalytics: localAnalytics,
-      acceptedSupportAndUpdates: localIntercom,
     }
     const cookieConfig: CookieAttributes = {
       expires: localAnalytics ? 365 : 7,
     }
     await saveCookie(COOKIES_KEY, newState, cookieConfig)
     setShowAnalytics(localAnalytics)
-    setShowIntercom(localIntercom)
-    if (!localIntercom && isIntercomLoaded()) {
-      closeIntercom()
-    }
     openCookieBanner(false)
   }
 
@@ -219,13 +179,6 @@ const CookiesBanner = () => {
     return (
       <SCookieBanner>
         <Content>
-          {alertMessage && (
-            <IntercomAlert>
-              <AlertRedIcon />
-              You attempted to open the customer support chat. Please accept the
-              customer support cookie.
-            </IntercomAlert>
-          )}
           <Text>
             We use cookies to provide you with the best experience and to help
             improve our website and application.
@@ -245,15 +198,6 @@ const CookiesBanner = () => {
                 name="Necessary"
                 onChange={() => setLocalNecessary((prev) => !prev)}
                 value={localNecessary}
-              />
-            </FormItem>
-            <FormItem>
-              <FormControlLabel
-                control={<SCheckbox checked={localIntercom} />}
-                label="Community support & updates"
-                name="Community support & updates"
-                onChange={() => setLocalIntercom((prev) => !prev)}
-                value={localIntercom}
               />
             </FormItem>
             <FormItem>
@@ -288,12 +232,6 @@ const CookiesBanner = () => {
 
   return (
     <Container>
-      {!showIntercom && (
-        <IntercomImage
-          src={IntercomIcon}
-          onClick={() => openCookieBanner(true, true)}
-        />
-      )}
       {showBanner && <CookiesBannerForm alertMessage={showAlertMessage} />}
     </Container>
   )
