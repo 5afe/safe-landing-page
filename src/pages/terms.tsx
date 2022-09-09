@@ -11,7 +11,7 @@ import {
   RedMessage,
   Section,
   Title,
-  TitleSection
+  TitleSection,
 } from '../styles/legalPagesStyles'
 
 export default () => (
@@ -934,8 +934,8 @@ export default () => (
           </Li>
           <Li>
             Intercom:{' '}
-            <Link href="https://gnosis-safe.io/app/">
-              https://gnosis-safe.io/app/
+            <Link href="https://help.gnosis-safe.io/">
+              https://help.gnosis-safe.io/
             </Link>
           </Li>
           <Li>

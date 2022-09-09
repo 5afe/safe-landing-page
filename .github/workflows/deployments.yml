@@ -11,12 +11,11 @@ on:
       - dev
   # Launches build when release is published
   release:
-   types: [published]
+    types: [published]
 
 env:
   GATSBY_GA_MAINNET: ${{ secrets.GATSBY_GA_MAINNET }}
   GATSBY_GA_RINKEBY: ${{ secrets.GATSBY_GA_RINKEBY }}
-  GATSBY_INTERCOM_ID: ${{ secrets.GATSBY_INTERCOM_ID }}
   GATSBY_URL_DOWNLOAD_LINUX: ${{ secrets.GATSBY_URL_DOWNLOAD_LINUX }}
   GATSBY_URL_DOWNLOAD_MAC: ${{ secrets.GATSBY_URL_DOWNLOAD_MAC }}
   GATSBY_URL_DOWNLOAD_WINDOWS: ${{ secrets.GATSBY_URL_DOWNLOAD_WINDOWS }}

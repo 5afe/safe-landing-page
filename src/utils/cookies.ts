@@ -1,7 +1,6 @@
 import Cookies, { CookieAttributes } from 'js-cookie'
 
 export const COOKIES_KEY = 'COOKIES'
-export const COOKIES_KEY_INTERCOM = `${COOKIES_KEY}_INTERCOM`
 
 export type CookiesProps = {
   acceptedNecessary: boolean
