@@ -32,7 +32,7 @@ const Social: React.FC = () => (
     <ContentWrapper>
       <Row>
         <a
-          href="https://twitter.com/gnosisSafe"
+          href="https://twitter.com/safe"
           target="_blank"
           rel="noopener noreferrer"
         >
