@@ -8,7 +8,7 @@ module.exports = {
     siteUrl: `https://gnosis-safe.io`,
     language: `en`,
     color: `#003580`,
-    twitter: 'gnosisSafe',
+    twitter: 'safe',
   },
   plugins: [
     {
@@ -40,6 +40,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-client-side-redirect`
+    `gatsby-plugin-client-side-redirect`,
   ],
 }
