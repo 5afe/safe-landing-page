@@ -922,8 +922,8 @@ export default () => (
           </Li>
           <Li>
             Twitter:{' '}
-            <Link href="https://twitter.com/gnosisSafe">
-              https://twitter.com/gnosisSafe
+            <Link href="https://twitter.com/safe">
+              https://twitter.com/safe
             </Link>
           </Li>
           <Li>
