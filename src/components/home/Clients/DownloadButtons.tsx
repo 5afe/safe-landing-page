@@ -132,7 +132,7 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
             <ImageWrapper>
               <Img src="/images/web.png" />
             </ImageWrapper>
-            <SButtonLink url="/app/" target="_self" explicitExternal>
+            <SButtonLink url="https://app.safe.global" target="_self" explicitExternal>
               <div
                 onClick={() =>
                   trackEvent({
@@ -155,7 +155,7 @@ const DownloadButtons = ({ desktopAppUrl }: IDownloadButtons) => {
             <ImageWrapper>
               <Img src="/images/desktop.png" />
             </ImageWrapper>
-            <SButtonLink url={desktopAppUrl || '/app/'}>
+            <SButtonLink url={desktopAppUrl || ''}>
               <div
                 onClick={() =>
                   trackEvent({

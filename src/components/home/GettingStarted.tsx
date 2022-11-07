@@ -233,7 +233,7 @@ const GettingStarted = () => {
         </Row>
         <TryDemo>
           <SButtonLink
-            url="https://gnosis-safe.io/app/eth:0xfF501B324DC6d78dC9F983f140B9211c3EdB4dc7/balances"
+            url="https://app.safe.global/eth:0xfF501B324DC6d78dC9F983f140B9211c3EdB4dc7"
             target="_blank"
             explicitExternal
           >
