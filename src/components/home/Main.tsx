@@ -252,7 +252,7 @@ const MainSection = () => {
             <video width="100%" autoPlay muted ref={videoRef}>
               <source
                 type="video/mp4"
-                src="https://gnosis-safe.io/gnosis-safe-final.mp4"
+                src="https://safe.global/gnosis-safe-final.mp4"
               />
             </video>
             <PlayIcon onClick={playVideo} />

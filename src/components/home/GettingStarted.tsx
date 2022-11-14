@@ -126,7 +126,7 @@ const GettingStarted = () => {
         <SHeading>Getting started</SHeading>
         <Row>
           <Link
-            href="https://help.gnosis-safe.io/en/articles/3876456-what-is-gnosis-safe"
+            href="https://help.safe.global/en/articles/3876456-what-is-gnosis-safe"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -142,8 +142,8 @@ const GettingStarted = () => {
               <CardItem>
                 <Title>What is Safe?</Title>
                 <Text>
-                  Read about the basics of Safe and how it compares to
-                  other solutions
+                  Read about the basics of Safe and how it compares to other
+                  solutions
                 </Text>
                 <SLinkIcon>
                   <LinkIcon />
@@ -152,7 +152,7 @@ const GettingStarted = () => {
             </div>
           </Link>
           <Link
-            href="https://help.gnosis-safe.io/en/articles/3876461-create-a-gnosis-safe-account"
+            href="https://help.safe.global/en/articles/3876461-create-a-gnosis-safe-account"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -168,8 +168,8 @@ const GettingStarted = () => {
               <CardItem>
                 <Title>Create a Safe account</Title>
                 <Text>
-                  The full process of creating a new Safe account in just
-                  60 seconds
+                  The full process of creating a new Safe account in just 60
+                  seconds
                 </Text>
                 <SLinkIcon>
                   <LinkIcon />
@@ -178,7 +178,7 @@ const GettingStarted = () => {
             </div>
           </Link>
           <Link
-            href="https://help.gnosis-safe.io/en/articles/4772567-what-gnosis-safe-setup-should-i-use"
+            href="https://help.safe.global/en/articles/4772567-what-gnosis-safe-setup-should-i-use"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -204,7 +204,7 @@ const GettingStarted = () => {
             </div>
           </Link>
           <Link
-            href="https://help.gnosis-safe.io/en/articles/4290276-costs-of-creating-a-gnosis-safe-account"
+            href="https://help.safe.global/en/articles/4290276-costs-of-creating-a-gnosis-safe-account"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -213,8 +213,7 @@ const GettingStarted = () => {
                 trackEvent({
                   category: OVERVIEW_CATEGORY,
                   action: 'Getting started section',
-                  label:
-                    'Open article: Costs of creating a Safe account',
+                  label: 'Open article: Costs of creating a Safe account',
                 })
               }
             >

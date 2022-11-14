@@ -109,9 +109,9 @@ const SButtonLink = styled(ButtonLink)`
 `
 
 export const communityMenu: DropdownOption[] = [
-  { title: 'Forum', link: 'https://forum.gnosis-safe.io/' },
+  { title: 'Forum', link: 'https://forum.safe.global/' },
   { title: 'Chat', link: 'https://discord.gg/AjG7AQD9Qn' },
-  { title: 'Safe Guardians', link: 'https://guardians.gnosis-safe.io' },
+  { title: 'Safe Guardians', link: 'https://guardians.safe.global' },
 ]
 
 const useInterval = (delay = 2 * 60e3): number => {
@@ -170,7 +170,7 @@ const Header: React.FC<HeaderProps> = ({
             </NavListItem>
             <Divider />
             <NavListItem>
-              <NavListLink href="https://docs.gnosis-safe.io" target="_blank">
+              <NavListLink href="https://docs.safe.global" target="_blank">
                 <div
                   onClick={() =>
                     trackEvent({
@@ -190,7 +190,7 @@ const Header: React.FC<HeaderProps> = ({
             </NavListItem>
             <Divider />
             <NavListItem>
-              <NavListLink href="https://help.gnosis-safe.io" target="_blank">
+              <NavListLink href="https://help.safe.global" target="_blank">
                 <div
                   onClick={() =>
                     trackEvent({
@@ -211,7 +211,11 @@ const Header: React.FC<HeaderProps> = ({
             </NavListItem>
             <Divider />
             <NavListItem>
-              <SButtonLink url="https://app.safe.global" target="_self" explicitExternal>
+              <SButtonLink
+                url="https://app.safe.global"
+                target="_self"
+                explicitExternal
+              >
                 <div
                   onClick={() =>
                     trackEvent({

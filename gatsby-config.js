@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     site: `safe`,
     description: `Safe is the most trusted platform to manage digital assets on Ethereum`,
-    siteUrl: `https://gnosis-safe.io`,
+    siteUrl: `https://safe.global`,
     language: `en`,
     color: `#003580`,
     twitter: 'safe',

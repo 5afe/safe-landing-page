@@ -99,7 +99,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
             </NavLink>
           </NavListItem>
           <NavListItem>
-            <NavListLink href="https://docs.gnosis-safe.io" target="_blank">
+            <NavListLink href="https://docs.safe.global" target="_blank">
               <div
                 onClick={() =>
                   trackEvent({
@@ -118,7 +118,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
           </NavListItem>
           {showCommunityMenu && <Dropdown options={communityMenu} />}
           <NavListItem>
-            <NavListLink href="https://help.gnosis-safe.io" target="_blank">
+            <NavListLink href="https://help.safe.global" target="_blank">
               <div
                 onClick={() =>
                   trackEvent({
@@ -138,7 +138,11 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
             </NavLink>
           </NavListItem>
           <NavListItem>
-            <SButtonLink url="https://app.safe.global" target="_self" explicitExternal>
+            <SButtonLink
+              url="https://app.safe.global"
+              target="_self"
+              explicitExternal
+            >
               <div
                 onClick={() =>
                   trackEvent({
