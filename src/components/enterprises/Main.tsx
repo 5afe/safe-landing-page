@@ -2,9 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import LinesSVG from '../../assets/bg-lines-03.svg'
 import ContentWrapper from '../Layout/ContentWrapper'
-import ButtonLink from '../ui/ButtonLink'
 import Heading from '../ui/Heading'
-import { ENTERPRISES_CATEGORY, useAnalytics } from '../../utils/googleAnalytics'
 
 const Container = styled.main`
   height: calc(100vh - 56px);
@@ -55,33 +53,7 @@ const LCol = styled.div`
   flex-direction: column;
 `
 
-const ButtonsRow = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 410px;
-  @media screen and (max-width: 980px) {
-    display: block;
-    width: 180px;
-  }
-`
-
-const SButtonLink = styled(ButtonLink)`
-  text-align: center;
-  width: 185px;
-  box-shadow: none;
-  padding: 0;
-  & > div {
-    width: 185px;
-    padding: 10px 20px;
-  }
-  @media screen and (max-width: 980px) {
-    margin-bottom: 20px;
-  }
-`
-
 const MainSection = () => {
-  const { trackEvent } = useAnalytics()
-
   return (
     <Container>
       <SLinesSVG />
@@ -90,26 +62,6 @@ const MainSection = () => {
           <SHeading>
             The digital asset management solution for enterprises
           </SHeading>
-          <ButtonsRow>
-            <SButtonLink
-              colorScheme="green"
-              url="https://gnosis1.typeform.com/to/Zt71a4yB"
-              target="_blank"
-              explicitExternal
-            >
-              <div
-                onClick={() =>
-                  trackEvent({
-                    category: ENTERPRISES_CATEGORY,
-                    action: 'Main section',
-                    label: 'Click Get in touch',
-                  })
-                }
-              >
-                Get in touch
-              </div>
-            </SButtonLink>
-          </ButtonsRow>
         </LCol>
       </SWrapper>
     </Container>
