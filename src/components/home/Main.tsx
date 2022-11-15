@@ -76,7 +76,6 @@ const SButtonLink = styled(ButtonLink)`
 const SButtonLinkLeft = styled(SButtonLink)`
   margin-right: 20px;
 `
-const SButtonLinkRight = styled(SButtonLink)``
 
 const SLinesMainSVG = styled(LinesMainSVG)`
   position: absolute;
@@ -211,23 +210,6 @@ const MainSection = () => {
           </SHeading>
           <ButtonsRow>
             <SButtonLinkLeft
-              url="https://gnosis1.typeform.com/to/DOxbpZP3"
-              target="_blank"
-              explicitExternal
-            >
-              <div
-                onClick={() =>
-                  trackEvent({
-                    category: OVERVIEW_CATEGORY,
-                    action: 'Main section',
-                    label: 'Click Get in touch',
-                  })
-                }
-              >
-                Get in touch
-              </div>
-            </SButtonLinkLeft>
-            <SButtonLinkRight
               colorScheme="green"
               url="/#getting-started"
               target="_self"
@@ -244,7 +226,7 @@ const MainSection = () => {
               >
                 How it works
               </div>
-            </SButtonLinkRight>
+            </SButtonLinkLeft>
           </ButtonsRow>
         </LCol>
         <RCol>
