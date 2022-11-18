@@ -7,9 +7,7 @@
 
 # Deployed environments
 
-- Production: https://gnosis-safe.io
-- Staging: http://safe-team.staging.gnosisdev.com
-- Development: http://safe-team.dev.gnosisdev.com
+- Production: https://safe.global
 
 ## Getting Started
 

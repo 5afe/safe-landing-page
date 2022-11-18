@@ -110,7 +110,7 @@ const BugBounty = () => {
           <LCol>
             <LHeading>Our biggest bug bounty program ever</LHeading>
             <SButtonLink
-              url="https://docs.gnosis-safe.io/introduction/security/bug-bounty-program"
+              url="https://docs.safe.global/introduction/security/bug-bounty-program"
               colorScheme="white"
             >
               <div

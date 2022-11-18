@@ -260,9 +260,8 @@ const Features = () => {
               <Text>
                 <Title>Assets</Title>
                 <Description>
-                  Safe supports ETH, ERC20 (Tokens) and ERC721
-                  (NFTs). You can also see the fiat values of your
-                  assets.
+                  Safe supports ETH, ERC20 (Tokens) and ERC721 (NFTs). You can
+                  also see the fiat values of your assets.
                 </Description>
               </Text>
               <Image>
@@ -286,12 +285,11 @@ const Features = () => {
                 <Title>Safe Apps</Title>
                 <Description>
                   Bringing multisig security to DeFi, you can now put your funds
-                  to work directly from the Safe interface. Use your
-                  digital assets to invest, earn, borrow, invoice, do payroll
-                  and more.
+                  to work directly from the Safe interface. Use your digital
+                  assets to invest, earn, borrow, invoice, do payroll and more.
                   <br />
                   <a
-                    href="https://help.gnosis-safe.io/en/articles/4022022-what-are-safe-apps"
+                    href="https://help.safe.global/en/articles/4022022-what-are-safe-apps"
                     target="_blank"
                   >
                     <InnerLink
