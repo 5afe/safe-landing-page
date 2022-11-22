@@ -110,7 +110,7 @@ const SButtonLink = styled(ButtonLink)`
 
 export const communityMenu: DropdownOption[] = [
   { title: 'Forum', link: 'https://forum.safe.global/' },
-  { title: 'Chat', link: 'https://discord.gg/AjG7AQD9Qn' },
+  { title: 'Chat', link: 'https://chat.safe.global' },
   { title: 'Safe Guardians', link: 'https://guardians.safe.global' },
 ]
 

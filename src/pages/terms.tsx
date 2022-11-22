@@ -940,8 +940,8 @@ export default () => (
           </Li>
           <Li>
             Discord:{' '}
-            <Link href="https://discord.gg/AjG7AQD9Qn">
-              https://discord.gg/AjG7AQD9Qn
+            <Link href="https://chat.safe.global">
+              https://chat.safe.global
             </Link>
           </Li>
         </Ol>

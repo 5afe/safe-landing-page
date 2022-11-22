@@ -46,7 +46,7 @@ const Social: React.FC = () => (
           <MirrorIcon />
         </a>
         <a
-          href="https://discord.gg/AjG7AQD9Qn"
+          href="https://chat.safe.global"
           target="_blank"
           rel="noopener noreferrer"
         >
