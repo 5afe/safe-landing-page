@@ -10,7 +10,7 @@ export const FOOTER_CATEGORY = 'FOOTER_CATEGORY'
 
 const getGoogleAnalyticsTrackingID = () => {
   return typeof window !== 'undefined' &&
-    window.location.hostname.split('.')[0] === 'gnosis-safe'
+    window.location.hostname.split('.')[0] === 'safe'
     ? process.env.GATSBY_GA_MAINNET
     : process.env.GATSBY_GA_RINKEBY
 }
