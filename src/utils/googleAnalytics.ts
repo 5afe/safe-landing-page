@@ -9,9 +9,9 @@ export const DEVELOPERS_CATEGORY = 'DEVELOPERS'
 export const FOOTER_CATEGORY = 'FOOTER_CATEGORY'
 
 const getGoogleAnalyticsTrackingID = () => {
-  return (typeof window !== 'undefined' &&
-    window.location.hostname.split('.')[0] === 'safe') ||
-    window.location.hostname.split('.')[0] === 'gnosis-safe'
+  return typeof window !== 'undefined' &&
+    (window.location.hostname === 'safe.global' ||
+      window.location.hostname === 'gnosis-safe.io')
     ? process.env.GATSBY_GA_PROD
     : process.env.GATSBY_GA_STAGING
 }
