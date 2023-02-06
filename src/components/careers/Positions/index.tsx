@@ -54,12 +54,12 @@ const Section = styled.section`
   }
 `
 
-const Positions = ({ positions }: { positions: Job[] | undefined }) => {
+const Positions = ({ positions }: { positions: Job[] }) => {
   return (
     <Section>
       <ContentWrapper>
         <SectionTitle id="positions">Open positions</SectionTitle>
-        {!positions ? (
+        {positions.length === 0 ? (
           <Text>
             Unfortunately, there are <strong>no positions available</strong> at
             the moment. However, you can always send us your CV and we will get

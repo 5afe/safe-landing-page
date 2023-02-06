@@ -123,13 +123,12 @@ const Header = ({ openPositions }: { openPositions: number | undefined }) => {
               <Grid item xs={12} md={6}>
                 <FeatureText>
                   By designing fairer markets, we aim to build a more evenly
-                  distributed future, together. Be a part of a team building
-                  leading decentralized finance products.
+                  distributed future, together.
                 </FeatureText>
               </Grid>
-            </Grid>
-            <Grid item xs={12}>
-              <AnchorLink href="#positions">Explore positions</AnchorLink>
+              <Grid item xs={12}>
+                <AnchorLink href="#positions">Explore positions</AnchorLink>
+              </Grid>
             </Grid>
           </div>
         </ContentWrapper>
