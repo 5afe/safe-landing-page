@@ -1,3 +1,9 @@
+# <div align="center">‼️ This repository is deprecated ‼️</div>
+
+<div align="center">Please go to <a href="https://github.com/safe-global/safe-homepage">safe-global/safe-homepage</a> instead</div>
+
+---
+
 # Safe Landing Page
 
 ![license](https://img.shields.io/github/license/safe-global/safe-landing-page)
